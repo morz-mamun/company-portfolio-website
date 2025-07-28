@@ -34,7 +34,7 @@ import { useState } from 'react';
 export default function Navbar() {
   const [theme, setTheme] = useState('light');
   return (
-    <nav className="flex items-center justify-between border-b py-4 md:px-8">
+    <nav className="flex items-center justify-between border-b py-4 shadow-xs shadow-red-50 md:px-8">
       {/* Website logo */}
       <div>
         <Link href="/">
