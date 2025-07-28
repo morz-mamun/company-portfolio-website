@@ -1,12 +1,5 @@
 'use client';
-import {
-  ArrowUp,
-  ArrowUpToLine,
-  Github,
-  Linkedin,
-  Mail,
-  Twitter,
-} from 'lucide-react';
+import { ArrowUpFromLine, Github, Linkedin, Mail, Twitter } from 'lucide-react';
 import Link from 'next/link';
 
 export default function Footer() {
@@ -103,7 +96,7 @@ export default function Footer() {
               onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
               className="hover:text-primary hover:text-brand shadow-primary/70 dark:shadow-brand/50 flex cursor-pointer items-center gap-2 rounded-full px-4 py-3 shadow-lg transition-colors"
             >
-              <ArrowUpToLine
+              <ArrowUpFromLine
                 size={24}
                 className="dark:text-brand animate-bounce"
               />
@@ -113,8 +106,11 @@ export default function Footer() {
         </div>
         {/* back to top button for medium and small screens */}
         <div className="mt-4 flex items-center justify-center lg:hidden">
-          <button className="hover:text-primary hover:text-brand shadow-primary/70 dark:shadow-brand/50 flex cursor-pointer items-center gap-2 rounded-full px-4 py-3 shadow-lg transition-colors">
-            <ArrowUp
+          <button
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            className="hover:text-primary hover:text-brand shadow-primary/70 dark:shadow-brand/50 flex cursor-pointer items-center gap-2 rounded-full px-4 py-3 shadow-lg transition-colors"
+          >
+            <ArrowUpFromLine
               size={24}
               className="text-primary dark:text-brand animate-bounce"
             />
