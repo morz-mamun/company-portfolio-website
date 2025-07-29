@@ -1,3 +1,4 @@
+import Analytics from '@/components/home/analytics';
 import Banner from '@/components/home/banner';
 import OurServices from '@/components/home/our-services';
 import PrimaryBtn from '@/components/shared/primary-btn';
@@ -10,6 +11,9 @@ export default function HomePage() {
       <Banner />
       {/* Our Services */}
       <OurServices />
+
+      {/* analytics */}
+      <Analytics />
     </main>
   );
 }
