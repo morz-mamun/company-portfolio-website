@@ -1,3 +1,4 @@
+import AiAutomation from '@/components/home/ai-automation';
 import Analytics from '@/components/home/analytics';
 import Banner from '@/components/home/banner';
 import OtherServices from '@/components/home/other-services';
@@ -16,6 +17,8 @@ export default function HomePage() {
       <Analytics />
       {/* Other Services */}
       <OtherServices />
+      {/* Ai Automation */}
+      <AiAutomation />
     </main>
   );
 }
