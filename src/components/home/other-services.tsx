@@ -1,5 +1,4 @@
 import { ChevronRight } from 'lucide-react';
-import { Button } from '../ui/button';
 
 const otherServices = [
   {
