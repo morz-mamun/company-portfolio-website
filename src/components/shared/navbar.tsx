@@ -30,41 +30,61 @@ import {
 } from '../ui/dropdown-menu';
 import { Button } from '../ui/button';
 import { useState } from 'react';
+import PrimaryBtn from './primary-btn';
 
 export default function Navbar() {
   const [theme, setTheme] = useState('light');
   return (
-    <nav className="flex items-center justify-between border-b py-4 shadow-xs shadow-red-50 md:px-8">
+    <nav className="flex items-center justify-between bg-[#000000] px-20 py-3 shadow-xs">
       {/* Website logo */}
       <div>
         <Link href="/">
-          <Image src="/globe.svg" alt="Website logo" width={24} height={24} />
+          <Image src="/logo.png" alt="Website logo" width={107} height={69} />
         </Link>
       </div>
 
       {/* Navigation Links */}
       <NavigationMenu viewport={false}>
         <NavigationMenuList>
-          {/* Item One - Services */}
-          <NavigationMenuItem>
+          {/* Item One - who we do */}
+          <Button
+            variant="ghost"
+            className="hover:text-brand hover:bg-[] text-xl font-semibold text-white"
+          >
+            <Link href="/">Who we do</Link>
+          </Button>
+          <Button
+            variant="ghost"
+            className="hover:text-brand hover:bg-[] text-xl font-semibold text-white"
+          >
+            <Link href="/">Who we are</Link>
+          </Button>
+          <Button
+            variant="ghost"
+            className="hover:text-brand hover:bg-[] text-xl font-semibold text-white"
+          >
+            <Link href="/">Result</Link>
+          </Button>
+          <Button
+            variant="ghost"
+            className="hover:text-brand hover:bg-[] text-xl font-semibold text-white"
+          >
+            <Link href="/">Resources</Link>
+          </Button>
+
+          {/* This are use in future if we want to add more pages */}
+          {/* <NavigationMenuItem>
             <NavigationMenuLink
               asChild
-              className={navigationMenuTriggerStyle()}
-            >
-              <Link href="/services">Services</Link>
-            </NavigationMenuLink>
-          </NavigationMenuItem>
-          {/* Item Two - about */}
-          <NavigationMenuItem>
-            <NavigationMenuLink
-              asChild
-              className={navigationMenuTriggerStyle()}
+              // className={navigationMenuTriggerStyle() } --- if want to use default style
+              className='text-white font-semibold text-xl hover:text-brand hover:bg-[]'
             >
               <Link href="/about">About</Link>
             </NavigationMenuLink>
-          </NavigationMenuItem>
-          <NavigationMenuItem>
-            <NavigationMenuTrigger>List</NavigationMenuTrigger>
+          </NavigationMenuItem> */}
+          {/* dropdown menu */}
+          {/* <NavigationMenuItem>
+            <NavigationMenuTrigger className='bg-black text-white hover:bg-[]'>List</NavigationMenuTrigger>
             <NavigationMenuContent>
               <ul className="grid w-[300px] gap-4">
                 <li>
@@ -95,88 +115,12 @@ export default function Navbar() {
                 </li>
               </ul>
             </NavigationMenuContent>
-          </NavigationMenuItem>
+          </NavigationMenuItem> */}
         </NavigationMenuList>
       </NavigationMenu>
 
-      {/* Notifications and Profile / others  */}
-      <div className="flex items-center gap-2">
-        <DropdownMenu>
-          <DropdownMenuTrigger asChild>
-            <Button variant="outline" size="icon" className="rounded-full">
-              <Bell className="h-4 w-4" />
-              <span className="sr-only">Notifications</span>
-            </Button>
-          </DropdownMenuTrigger>
-          <DropdownMenuContent align="end">
-            <DropdownMenuLabel>Notifications</DropdownMenuLabel>
-            <DropdownMenuSeparator />
-            <DropdownMenuItem>No new notifications</DropdownMenuItem>
-          </DropdownMenuContent>
-        </DropdownMenu>
-        {/* dark and light mode toggle dropdown */}
-        <DropdownMenu>
-          <DropdownMenuTrigger asChild>
-            <Button variant="ghost" size="icon">
-              <Sun className="h-[1.2rem] w-[1.2rem] scale-100 rotate-0 transition-all dark:scale-0 dark:-rotate-90" />
-              <Moon className="absolute h-[1.2rem] w-[1.2rem] scale-0 rotate-90 transition-all dark:scale-100 dark:rotate-0" />
-              <span className="sr-only">Toggle theme</span>
-            </Button>
-          </DropdownMenuTrigger>
-          <DropdownMenuContent align="end">
-            <DropdownMenuItem onClick={() => setTheme('light')}>
-              Light
-            </DropdownMenuItem>
-            <DropdownMenuItem onClick={() => setTheme('dark')}>
-              Dark
-            </DropdownMenuItem>
-            <DropdownMenuItem onClick={() => setTheme('system')}>
-              System
-            </DropdownMenuItem>
-          </DropdownMenuContent>
-        </DropdownMenu>
-
-        {/* Profile dropdown */}
-        <DropdownMenu>
-          <DropdownMenuTrigger asChild>
-            <Button
-              className="cursor-pointer gap-2"
-              variant="outline"
-              size="sm"
-            >
-              <span>Mamun</span>
-              <Menu className="h-4 w-4" />
-            </Button>
-          </DropdownMenuTrigger>
-          <DropdownMenuContent align="end">
-            <DropdownMenuLabel>My Account</DropdownMenuLabel>
-            <DropdownMenuSeparator />
-            <DropdownMenuItem>Profile</DropdownMenuItem>
-            <DropdownMenuItem>Team</DropdownMenuItem>
-            <DropdownMenuItem>Subscription</DropdownMenuItem>
-          </DropdownMenuContent>
-        </DropdownMenu>
-      </div>
+      {/* contact button  */}
+      <PrimaryBtn label="Contact" />
     </nav>
-  );
-}
-
-function ListItem({
-  title,
-  children,
-  href,
-  ...props
-}: React.ComponentPropsWithoutRef<'li'> & { href: string }) {
-  return (
-    <li {...props}>
-      <NavigationMenuLink asChild>
-        <Link href={href}>
-          <div className="text-sm leading-none font-medium">{title}</div>
-          <p className="text-muted-foreground line-clamp-2 text-sm leading-snug">
-            {children}
-          </p>
-        </Link>
-      </NavigationMenuLink>
-    </li>
   );
 }
