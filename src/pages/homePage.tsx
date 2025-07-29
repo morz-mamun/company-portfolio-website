@@ -1,10 +1,11 @@
-import AiAutomation from '@/components/home/ai-automation';
+import AiAutomationServices from '@/components/home/ai-automation-services';
 import Analytics from '@/components/home/analytics';
 import Banner from '@/components/home/banner';
+import Development from '@/components/home/development';
 import OtherServices from '@/components/home/other-services';
 import OurServices from '@/components/home/our-services';
-import PrimaryBtn from '@/components/shared/primary-btn';
-import React from 'react';
+import SasAndAffiliateTool from '@/components/home/sas-affiliate-tool';
+import SeoAndMarketing from '@/components/home/seo-marketing';
 
 export default function HomePage() {
   return (
@@ -17,8 +18,14 @@ export default function HomePage() {
       <Analytics />
       {/* Other Services */}
       <OtherServices />
-      {/* Ai Automation */}
-      <AiAutomation />
+      {/* Ai Automation services */}
+      <AiAutomationServices />
+      {/* Development section */}
+      <Development />
+      {/* SEO and Marketing */}
+      <SeoAndMarketing />
+      {/* Sas & Affiliate tools */}
+      <SasAndAffiliateTool />
     </main>
   );
 }
