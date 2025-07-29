@@ -1,5 +1,6 @@
 import Analytics from '@/components/home/analytics';
 import Banner from '@/components/home/banner';
+import OtherServices from '@/components/home/other-services';
 import OurServices from '@/components/home/our-services';
 import PrimaryBtn from '@/components/shared/primary-btn';
 import React from 'react';
@@ -11,9 +12,10 @@ export default function HomePage() {
       <Banner />
       {/* Our Services */}
       <OurServices />
-
       {/* analytics */}
       <Analytics />
+      {/* Other Services */}
+      <OtherServices />
     </main>
   );
 }
