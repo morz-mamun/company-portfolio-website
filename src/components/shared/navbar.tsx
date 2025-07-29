@@ -33,7 +33,6 @@ import { useState } from 'react';
 import PrimaryBtn from './primary-btn';
 
 export default function Navbar() {
-  const [theme, setTheme] = useState('light');
   return (
     <nav className="flex items-center justify-between bg-[#000000] px-20 py-3 shadow-xs">
       {/* Website logo */}
@@ -120,7 +119,7 @@ export default function Navbar() {
       </NavigationMenu>
 
       {/* contact button  */}
-      <PrimaryBtn label="Contact" />
+      <PrimaryBtn label="Contact" className="px-[27px] py-[14px]" />
     </nav>
   );
 }

@@ -7,7 +7,7 @@ export default function PrimaryBtn({
 }) {
   return (
     <button
-      className={`${className} bg-brand px-[27px] py-[14px] text-[22px] font-bold text-white`}
+      className={`${className} bg-brand p-5 text-[22px] font-bold text-white`}
     >
       {label}
     </button>
