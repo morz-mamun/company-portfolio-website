@@ -1,7 +1,9 @@
 import AiAutomationServices from '@/components/home/ai-automation-services';
 import Analytics from '@/components/home/analytics';
 import Banner from '@/components/home/banner';
+import Blogs from '@/components/home/blogs';
 import Development from '@/components/home/development';
+import Feedback from '@/components/home/feedback';
 import OtherServices from '@/components/home/other-services';
 import OurServices from '@/components/home/our-services';
 import SasAndAffiliateTool from '@/components/home/sas-affiliate-tool';
@@ -26,6 +28,10 @@ export default function HomePage() {
       <SeoAndMarketing />
       {/* Sas & Affiliate tools */}
       <SasAndAffiliateTool />
+      {/* Feedback */}
+      <Feedback />
+      {/* Blogs */}
+      <Blogs />
     </main>
   );
 }
