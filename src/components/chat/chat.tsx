@@ -1,163 +1,178 @@
 'use client';
 
-import { useRef, useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
+import { Button } from '@/components/ui/button';
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from '@/components/ui/card';
+import { Send } from 'lucide-react';
+import ChatMessage from './chat-message';
+import { Input } from '../ui/input';
+import { ScrollArea } from '../ui/scroll-area';
+import AudioRecorder from './audio-recorder';
+
+interface Message {
+  role: 'user' | 'assistant';
+  content: string;
+}
 
 export default function Chat() {
-  const [recording, setRecording] = useState(false);
-  const [chat, setChat] = useState<{ role: string; content: string }[]>([]);
-  const [textInput, setTextInput] = useState('');
-  const mediaRecorderRef = useRef<MediaRecorder | null>(null);
-  const audioChunks = useRef<Blob[]>([]);
+  const [messages, setMessages] = useState<Message[]>([]);
+  const [input, setInput] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
+  const [isRecording, setIsRecording] = useState(false);
+  const chatContainerRef = useRef<HTMLDivElement>(null);
 
-  const startRecording = async () => {
-    const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
-    const recorder = new MediaRecorder(stream);
-    mediaRecorderRef.current = recorder;
-    audioChunks.current = [];
+  useEffect(() => {
+    if (chatContainerRef.current) {
+      chatContainerRef.current.scrollTop =
+        chatContainerRef.current.scrollHeight;
+    }
+  }, [messages]);
 
-    recorder.ondataavailable = (e) => {
-      if (e.data.size > 0) {
-        audioChunks.current.push(e.data);
-      }
-    };
+  const handleSendMessage = async (text: string) => {
+    if (!text.trim()) return;
 
-    recorder.onstop = async () => {
-      const blob = new Blob(audioChunks.current, { type: 'audio/webm' });
-      const formData = new FormData();
-      formData.append('file', blob, 'audio.webm');
+    const newUserMessage: Message = { role: 'user', content: text };
+    setMessages((prev) => [...prev, newUserMessage]);
+    setInput('');
+    setIsLoading(true);
 
-      const whisperRes = await fetch('/api/whisper', {
+    try {
+      const response = await fetch('/api/chat', {
         method: 'POST',
-        body: formData,
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ prompt: text }),
       });
 
-      const whisperData = await whisperRes.json();
-      const userSpoken = whisperData.transcript || '[unknown]';
-      const prompt = whisperData.prompt;
-
-      handleSendMessage(userSpoken, prompt);
-    };
-
-    recorder.start();
-    setRecording(true);
-  };
-
-  const stopRecording = () => {
-    mediaRecorderRef.current?.stop();
-    setRecording(false);
-  };
-
-  const handleSendMessage = async (userInput: string, prompt: string) => {
-    setChat((prev) => [
-      ...prev,
-      { role: 'user', content: userInput },
-      { role: 'assistant', content: '' },
-    ]);
-
-    const res = await fetch('/api/chat', {
-      method: 'POST',
-      body: JSON.stringify({ prompt }),
-      headers: { 'Content-Type': 'application/json' },
-    });
-
-    const reader = res.body?.getReader();
-    const decoder = new TextDecoder();
-    let reply = '';
-    let buffer = '';
-
-    while (true) {
-      const { done, value } = await reader!.read();
-      if (done) break;
-
-      buffer += decoder.decode(value, { stream: true });
-
-      const lines = buffer
-        .split('\n')
-        .filter((line) => line.trim().startsWith('data:'));
-      buffer = '';
-
-      for (const line of lines) {
-        const jsonStr = line.replace(/^data:\s*/, '');
-        if (jsonStr === '[DONE]') break;
-
-        try {
-          const parsed = JSON.parse(jsonStr);
-          const content = parsed.choices?.[0]?.delta?.content;
-          if (content) {
-            reply += content;
-            setChat((prev) => [
-              ...prev.slice(0, -1),
-              { role: 'assistant', content: reply },
-            ]);
-          }
-        } catch (err) {
-          console.error('Stream parse error:', err);
-        }
+      if (!response.ok || !response.body) {
+        throw new Error(`HTTP error! status: ${response.status}`);
       }
+
+      const reader = response.body.getReader();
+      const decoder = new TextDecoder();
+      let assistantMessageContent = '';
+      const newAssistantMessage: Message = { role: 'assistant', content: '' };
+
+      setMessages((prev) => [...prev, newAssistantMessage]);
+
+      while (true) {
+        const { value, done } = await reader.read();
+        if (done) break;
+
+        const chunk = decoder.decode(value, { stream: true });
+        // Server-Sent Events (SSE) format: data: {json_payload}\n\n
+        // We need to parse each line that starts with 'data: '
+        chunk.split('\n\n').forEach((event) => {
+          if (event.startsWith('data: ')) {
+            const data = event.substring(6);
+            if (data === '[DONE]') {
+              return;
+            }
+            try {
+              const parsed = JSON.parse(data);
+              if (
+                parsed.choices &&
+                parsed.choices[0] &&
+                parsed.choices[0].delta &&
+                parsed.choices[0].delta.content
+              ) {
+                assistantMessageContent += parsed.choices[0].delta.content;
+                setMessages((prev) => {
+                  const lastMessage = prev[prev.length - 1];
+                  if (lastMessage && lastMessage.role === 'assistant') {
+                    return [
+                      ...prev.slice(0, -1),
+                      { ...lastMessage, content: assistantMessageContent },
+                    ];
+                  }
+                  return prev;
+                });
+              }
+            } catch (e) {
+              console.error('Failed to parse SSE chunk:', e, 'Chunk:', data);
+            }
+          }
+        });
+      }
+    } catch (error) {
+      console.error('Error sending message:', error);
+      setMessages((prev) => [
+        ...prev,
+        {
+          role: 'assistant',
+          content: 'Sorry, something went wrong. Please try again.',
+        },
+      ]);
+    } finally {
+      setIsLoading(false);
     }
   };
 
-  // Handle text input submit button
-  const handleTextSubmit = async () => {
-    if (!textInput.trim()) return;
-    await handleSendMessage(textInput, textInput);
-    setTextInput('');
+  const handleAudioTranscription = async (transcribedText: string) => {
+    if (transcribedText) {
+      await handleSendMessage(transcribedText);
+    }
   };
 
   return (
-    <div className="mx-auto max-w-xl space-y-4 py-8">
-      <div className="space-y-2">
-        {chat.map((msg, idx) => (
-          <div
-            key={idx}
-            className={msg.role === 'user' ? 'text-blue-600' : 'text-green-600'}
-          >
-            <strong>{msg.role === 'user' ? 'You' : 'Bot'}:</strong>{' '}
-            {msg.content}
+    <main className="flex min-h-screen flex-col items-center justify-center bg-gray-100 p-4 dark:bg-gray-900">
+      <Card className="flex h-[80vh] w-full max-w-2xl flex-col">
+        <CardHeader>
+          <CardTitle className="text-center">AI Chat Assistant</CardTitle>
+        </CardHeader>
+        <CardContent className="flex-1 overflow-hidden p-0">
+          <ScrollArea className="h-full p-4" ref={chatContainerRef}>
+            {messages.length === 0 ? (
+              <div className="flex h-full items-center justify-center text-gray-500 dark:text-gray-400">
+                Start a conversation by typing or speaking!
+              </div>
+            ) : (
+              messages.map((msg, index) => (
+                <ChatMessage
+                  key={index}
+                  role={msg.role}
+                  content={msg.content}
+                />
+              ))
+            )}
+          </ScrollArea>
+        </CardContent>
+        <CardFooter className="flex flex-col gap-2 border-t p-4">
+          <div className="flex w-full gap-2">
+            <Input
+              placeholder="Type your message..."
+              value={input}
+              onChange={(e) => setInput(e.target.value)}
+              onKeyPress={(e) => {
+                if (e.key === 'Enter' && !isLoading) {
+                  handleSendMessage(input);
+                }
+              }}
+              disabled={isLoading || isRecording}
+              className="flex-1"
+            />
+            <Button
+              onClick={() => handleSendMessage(input)}
+              disabled={isLoading || isRecording}
+            >
+              <Send className="h-5 w-5" />
+              <span className="sr-only">Send message</span>
+            </Button>
           </div>
-        ))}
-      </div>
-
-      <div className="flex gap-2">
-        <input
-          type="text"
-          value={textInput}
-          onChange={(e) => setTextInput(e.target.value)}
-          placeholder="Type your message here..."
-          className="flex-grow rounded border px-3 py-2"
-          onKeyDown={(e) => {
-            if (e.key === 'Enter') {
-              e.preventDefault();
-              handleTextSubmit();
-            }
-          }}
-        />
-        <button
-          onClick={handleTextSubmit}
-          className="rounded bg-blue-500 px-4 py-2 text-white"
-          disabled={!textInput.trim()}
-        >
-          Send
-        </button>
-      </div>
-
-      <div>
-        {!recording ? (
-          <button
-            onClick={startRecording}
-            className="rounded bg-blue-500 px-4 py-2 text-white"
-          >
-            Start Recording
-          </button>
-        ) : (
-          <button
-            onClick={stopRecording}
-            className="rounded bg-red-500 px-4 py-2 text-white"
-          >
-            Stop Recording
-          </button>
-        )}
-      </div>
-    </div>
+          <AudioRecorder
+            onTranscribe={handleAudioTranscription}
+            onRecordingChange={setIsRecording}
+            disabled={isLoading}
+          />
+        </CardFooter>
+      </Card>
+    </main>
   );
 }

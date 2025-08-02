@@ -1,5 +1,4 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-
 import { NextResponse } from 'next/server';
 import { OpenAI } from 'openai';
 import { createReadStream } from 'fs';
@@ -13,7 +12,6 @@ const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY! });
 export async function POST(req: Request) {
   const formData = await req.formData();
   const file = formData.get('file') as File;
-
   const buffer = Buffer.from(await file.arrayBuffer());
   const tempFilePath = `/tmp/${randomUUID()}.webm`;
   await fs.writeFile(tempFilePath, buffer);
