@@ -1,13 +1,12 @@
 'use client';
 
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
-export default function Chat() {
+export default function VoiceChat() {
   const [isRecording, setIsRecording] = useState(false);
   const [chat, setChat] = useState<{ role: string; content: string }[]>([]);
   const [selectedLang, setSelectedLang] = useState('en');
-  const [userInput, setUserInput] = useState('');
-
+  const [textInput, setTextInput] = useState('');
   const mediaRecorder = useRef<MediaRecorder | null>(null);
   const audioChunks = useRef<Blob[]>([]);
 
@@ -17,9 +16,7 @@ export default function Chat() {
     audioChunks.current = [];
 
     mediaRecorder.current.ondataavailable = (event) => {
-      if (event.data.size > 0) {
-        audioChunks.current.push(event.data);
-      }
+      if (event.data.size > 0) audioChunks.current.push(event.data);
     };
 
     mediaRecorder.current.onstop = async () => {
@@ -29,19 +26,20 @@ export default function Chat() {
         'file',
         new File([audioBlob], 'speech.webm', { type: 'audio/webm' }),
       );
-      formData.append('targetLang', selectedLang);
 
-      const res = await fetch('/api/whisper', {
+      const res = await fetch(`/api/whisper?targetLang=${selectedLang}`, {
         method: 'POST',
-        body: formData,
+        body: audioBlob,
       });
 
       const { detectedLang, translatedText } = await res.json();
+      setChat((prev) => [
+        ...prev,
+        { role: 'user', content: `[${detectedLang}] ${translatedText}` },
+        { role: 'assistant', content: '' },
+      ]);
 
-      await handleSendMessage(
-        `[${detectedLang}] ${translatedText}`,
-        translatedText,
-      );
+      await streamToChatResponse(translatedText);
     };
 
     mediaRecorder.current.start();
@@ -53,22 +51,29 @@ export default function Chat() {
     setIsRecording(false);
   };
 
-  const handleSendMessage = async (displayText: string, promptText: string) => {
+  const handleSendText = async () => {
+    const input = textInput.trim();
+    if (!input) return;
     setChat((prev) => [
       ...prev,
-      { role: 'user', content: displayText },
+      { role: 'user', content: input },
       { role: 'assistant', content: '' },
     ]);
+    setTextInput('');
+    await streamToChatResponse(input);
+  };
 
-    const gptRes = await fetch('/api/stream', {
+  const streamToChatResponse = async (input: string) => {
+    const res = await fetch('/api/stream', {
       method: 'POST',
-      body: JSON.stringify({ prompt: promptText }),
       headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ prompt: input }),
     });
 
-    const reader = gptRes.body?.getReader();
+    const reader = res.body?.getReader();
     const decoder = new TextDecoder('utf-8');
     let reply = '';
+
     let buffer = '';
 
     while (true) {
@@ -77,45 +82,36 @@ export default function Chat() {
 
       buffer += decoder.decode(value, { stream: true });
 
-      const lines = buffer.split('\n');
-      buffer = lines.pop() || '';
+      const lines = buffer.split('\n').filter((line) => line.trim() !== '');
+      buffer = '';
 
       for (const line of lines) {
-        const trimmed = line.trim();
-        if (!trimmed.startsWith('data:')) continue;
+        if (line.startsWith('data:')) {
+          const json = line.replace(/^data:\s*/, '');
+          if (json === '[DONE]') break;
 
-        const json = trimmed.replace('data: ', '');
-        if (json === '[DONE]') break;
-
-        try {
-          const parsed = JSON.parse(json);
-          const content = parsed.choices?.[0]?.delta?.content;
-          if (content) {
-            reply += content;
-            setChat((prev) => [
-              ...prev.slice(0, -1),
-              { role: 'assistant', content: reply },
-            ]);
+          try {
+            const parsed = JSON.parse(json);
+            const content = parsed?.choices?.[0]?.delta?.content;
+            if (content) {
+              reply += content;
+              setChat((prev) => [
+                ...prev.slice(0, -1),
+                { role: 'assistant', content: reply },
+              ]);
+            }
+          } catch (e) {
+            console.error('Failed to parse stream chunk:', e);
           }
-        } catch (err) {
-          console.error('Streaming parse error:', err);
         }
       }
     }
   };
 
-  const handleTextSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!userInput.trim()) return;
-
-    await handleSendMessage(userInput, userInput);
-    setUserInput('');
-  };
-
   return (
     <div className="mx-auto max-w-xl p-4">
       <h1 className="mb-4 text-xl font-bold">
-        🌍 Multilingual Voice + Text Chat
+        🌍 Multilingual Voice/Text Chat
       </h1>
 
       <div className="mb-4 flex gap-2">
@@ -131,6 +127,7 @@ export default function Chat() {
           <option value="de">German</option>
           <option value="hi">Hindi</option>
         </select>
+
         <button
           onClick={startRecording}
           disabled={isRecording}
@@ -147,27 +144,29 @@ export default function Chat() {
         </button>
       </div>
 
-      <form onSubmit={handleTextSubmit} className="mb-4 flex gap-2">
+      <div className="mb-4 flex gap-2">
         <input
           type="text"
-          value={userInput}
-          onChange={(e) => setUserInput(e.target.value)}
-          className="flex-1 border px-2 py-1"
-          placeholder="Type your message..."
+          value={textInput}
+          onChange={(e) => setTextInput(e.target.value)}
+          className="w-full border p-2"
+          placeholder="Type a message..."
         />
         <button
-          type="submit"
-          className="rounded bg-blue-500 px-4 py-1 text-white"
+          onClick={handleSendText}
+          className="rounded bg-blue-600 px-4 py-2 text-white"
         >
-          ➤ Send
+          Send
         </button>
-      </form>
+      </div>
 
       <div className="space-y-2">
         {chat.map((msg, i) => (
           <div
             key={i}
-            className={`rounded p-2 ${msg.role === 'user' ? 'bg-blue-100' : 'bg-gray-100'}`}
+            className={`rounded p-2 ${
+              msg.role === 'user' ? 'bg-blue-100' : 'bg-gray-100'
+            }`}
           >
             <strong>{msg.role === 'user' ? 'You' : 'AI'}:</strong> {msg.content}
           </div>

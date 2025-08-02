@@ -1,71 +1,90 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
-import { NextRequest } from 'next/server';
-import { tmpdir } from 'os';
-import path from 'path';
+import { NextRequest, NextResponse } from 'next/server';
+import { Readable } from 'stream';
+import { createReadStream } from 'fs';
+import formidable from 'formidable';
+import fs from 'fs/promises';
 
-import { createReadStream, unlinkSync } from 'fs';
-import { writeFile } from 'fs/promises';
+export const config = {
+  api: {
+    bodyParser: false,
+  },
+};
+
+async function parseFormData(
+  req: Request,
+): Promise<{ fields: any; file: any }> {
+  const buffers: Uint8Array[] = [];
+  const reader = req.body?.getReader();
+  if (!reader) throw new Error('No reader');
+
+  while (true) {
+    const { done, value } = await reader.read();
+    if (done) break;
+    if (value) buffers.push(value);
+  }
+
+  const formData = Buffer.concat(buffers);
+
+  const uploadDir = '/tmp';
+  const tmpFilePath = `${uploadDir}/temp.webm`;
+  await fs.writeFile(tmpFilePath, formData);
+
+  return {
+    fields: {},
+    file: {
+      filepath: tmpFilePath,
+    },
+  };
+}
 
 export async function POST(req: NextRequest) {
   try {
-    const formData = await req.formData();
-    const file = formData.get('file') as File;
-    const targetLang = (formData.get('targetLang') as string) || 'en';
+    const { searchParams } = new URL(req.url);
+    const targetLang = searchParams.get('targetLang') || 'en';
 
-    if (!file) {
-      return new Response(JSON.stringify({ error: 'No file provided' }), {
-        status: 400,
-      });
-    }
+    const { file } = await parseFormData(req);
 
-    const buffer = Buffer.from(await file.arrayBuffer());
-    const filePath = path.join(tmpdir(), `upload-${Date.now()}.webm`);
-    await writeFile(filePath, buffer);
+    const stream = createReadStream(file.filepath);
 
     // Whisper transcription
-    const whisperRes = await fetch(
+    const whisperForm = new FormData();
+    whisperForm.append('file', stream as any);
+    whisperForm.append('model', 'whisper-1');
+
+    const transcriptionRes = await fetch(
       'https://api.openai.com/v1/audio/transcriptions',
       {
         method: 'POST',
         headers: {
-          Authorization: `Bearer ${process.env.OPENAI_API_KEY}`,
+          Authorization: `Bearer ${process.env.OPENAI_API_KEY!}`,
         },
-        body: (() => {
-          const form = new FormData();
-          form.append('file', createReadStream(filePath) as any);
-          form.append('model', 'whisper-1');
-          return form;
-        })(),
+        body: whisperForm,
       },
     );
 
-    const whisperData = await whisperRes.json();
-    const originalText = whisperData.text;
-    const detectedLang = whisperData.language || 'unknown';
+    const transcriptionData = await transcriptionRes.json();
+    const originalText = transcriptionData.text;
+    const detectedLang = transcriptionData.language || 'unknown';
 
-    await unlinkSync(filePath); // Cleanup
-
-    // Translate using GPT
+    // Translate
     const translationRes = await fetch(
       'https://api.openai.com/v1/chat/completions',
       {
         method: 'POST',
         headers: {
-          Authorization: `Bearer ${process.env.OPENAI_API_KEY}`,
+          Authorization: `Bearer ${process.env.OPENAI_API_KEY!}`,
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          model: 'gpt-3.5-turbo',
+          model: 'gpt-4',
           messages: [
             {
               role: 'system',
-              content: `Translate the following to ${targetLang} only. Do not explain.`,
+              content: `Translate this to ${targetLang}. Only translate.`,
             },
-            {
-              role: 'user',
-              content: originalText,
-            },
+            { role: 'user', content: originalText },
           ],
         }),
       },
@@ -74,14 +93,12 @@ export async function POST(req: NextRequest) {
     const translationData = await translationRes.json();
     const translatedText = translationData.choices?.[0]?.message?.content ?? '';
 
-    return new Response(JSON.stringify({ detectedLang, translatedText }), {
-      status: 200,
-      headers: { 'Content-Type': 'application/json' },
-    });
-  } catch (err) {
-    console.error(err);
-    return new Response(JSON.stringify({ error: 'Internal server error' }), {
-      status: 500,
-    });
+    return NextResponse.json({ detectedLang, translatedText });
+  } catch (error) {
+    console.error(error);
+    return NextResponse.json(
+      { error: 'Something went wrong' },
+      { status: 500 },
+    );
   }
 }
