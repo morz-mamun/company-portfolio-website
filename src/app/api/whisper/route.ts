@@ -1,12 +1,12 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
 import { NextResponse } from 'next/server';
+import { OpenAI } from 'openai';
 import { createReadStream } from 'fs';
 import fs from 'fs/promises';
-import { OpenAI } from 'openai';
 import { randomUUID } from 'crypto';
 
-export const runtime = 'edge'; // or 'nodejs' if using fs
+export const runtime = 'nodejs'; // or 'nodejs' if using fs
 
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY! });
 

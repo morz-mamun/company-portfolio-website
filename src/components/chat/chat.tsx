@@ -2,7 +2,7 @@
 
 import { useRef, useState } from 'react';
 
-export default function VoiceChat() {
+export default function Chat() {
   const [recording, setRecording] = useState(false);
   const [chat, setChat] = useState<{ role: string; content: string }[]>([]);
   const [textInput, setTextInput] = useState('');
