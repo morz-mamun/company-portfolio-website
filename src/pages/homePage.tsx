@@ -1,3 +1,4 @@
+import Chat from '@/components/chat/chat';
 import AiAutomationServices from '@/components/home/ai-automation-services';
 import Analytics from '@/components/home/analytics';
 import Banner from '@/components/home/banner';
@@ -14,6 +15,8 @@ export default function HomePage() {
     <main className="min-h-screen overflow-hidden">
       {/* Banner Section */}
       <Banner />
+      {/* Test chat interface */}
+      <Chat />
       {/* Our Services */}
       <OurServices />
       {/* analytics */}
