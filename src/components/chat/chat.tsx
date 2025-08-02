@@ -1,79 +1,68 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 
 export default function VoiceChat() {
-  const [isRecording, setIsRecording] = useState(false);
+  const [recording, setRecording] = useState(false);
   const [chat, setChat] = useState<{ role: string; content: string }[]>([]);
-  const [selectedLang, setSelectedLang] = useState('en');
   const [textInput, setTextInput] = useState('');
-  const mediaRecorder = useRef<MediaRecorder | null>(null);
+  const mediaRecorderRef = useRef<MediaRecorder | null>(null);
   const audioChunks = useRef<Blob[]>([]);
 
   const startRecording = async () => {
     const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
-    mediaRecorder.current = new MediaRecorder(stream);
+    const recorder = new MediaRecorder(stream);
+    mediaRecorderRef.current = recorder;
     audioChunks.current = [];
 
-    mediaRecorder.current.ondataavailable = (event) => {
-      if (event.data.size > 0) audioChunks.current.push(event.data);
+    recorder.ondataavailable = (e) => {
+      if (e.data.size > 0) {
+        audioChunks.current.push(e.data);
+      }
     };
 
-    mediaRecorder.current.onstop = async () => {
-      const audioBlob = new Blob(audioChunks.current, { type: 'audio/webm' });
+    recorder.onstop = async () => {
+      const blob = new Blob(audioChunks.current, { type: 'audio/webm' });
       const formData = new FormData();
-      formData.append(
-        'file',
-        new File([audioBlob], 'speech.webm', { type: 'audio/webm' }),
-      );
+      formData.append('file', blob, 'audio.webm');
 
-      const res = await fetch(`/api/whisper?targetLang=${selectedLang}`, {
+      const whisperRes = await fetch('/api/whisper', {
         method: 'POST',
-        body: audioBlob,
+        body: formData,
       });
 
-      const { detectedLang, translatedText } = await res.json();
-      setChat((prev) => [
-        ...prev,
-        { role: 'user', content: `[${detectedLang}] ${translatedText}` },
-        { role: 'assistant', content: '' },
-      ]);
+      const whisperData = await whisperRes.json();
+      const userSpoken = whisperData.transcript || '[unknown]';
+      const prompt = whisperData.prompt;
 
-      await streamToChatResponse(translatedText);
+      handleSendMessage(userSpoken, prompt);
     };
 
-    mediaRecorder.current.start();
-    setIsRecording(true);
+    recorder.start();
+    setRecording(true);
   };
 
   const stopRecording = () => {
-    mediaRecorder.current?.stop();
-    setIsRecording(false);
+    mediaRecorderRef.current?.stop();
+    setRecording(false);
   };
 
-  const handleSendText = async () => {
-    const input = textInput.trim();
-    if (!input) return;
+  const handleSendMessage = async (userInput: string, prompt: string) => {
     setChat((prev) => [
       ...prev,
-      { role: 'user', content: input },
+      { role: 'user', content: userInput },
       { role: 'assistant', content: '' },
     ]);
-    setTextInput('');
-    await streamToChatResponse(input);
-  };
 
-  const streamToChatResponse = async (input: string) => {
-    const res = await fetch('/api/stream', {
+    const res = await fetch('/api/chat', {
       method: 'POST',
+      body: JSON.stringify({ prompt }),
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ prompt: input }),
     });
 
     const reader = res.body?.getReader();
-    const decoder = new TextDecoder('utf-8');
+    const decoder = new TextDecoder();
     let reply = '';
-
     let buffer = '';
 
     while (true) {
@@ -82,95 +71,92 @@ export default function VoiceChat() {
 
       buffer += decoder.decode(value, { stream: true });
 
-      const lines = buffer.split('\n').filter((line) => line.trim() !== '');
+      const lines = buffer
+        .split('\n')
+        .filter((line) => line.trim().startsWith('data:'));
       buffer = '';
 
       for (const line of lines) {
-        if (line.startsWith('data:')) {
-          const json = line.replace(/^data:\s*/, '');
-          if (json === '[DONE]') break;
+        const jsonStr = line.replace(/^data:\s*/, '');
+        if (jsonStr === '[DONE]') break;
 
-          try {
-            const parsed = JSON.parse(json);
-            const content = parsed?.choices?.[0]?.delta?.content;
-            if (content) {
-              reply += content;
-              setChat((prev) => [
-                ...prev.slice(0, -1),
-                { role: 'assistant', content: reply },
-              ]);
-            }
-          } catch (e) {
-            console.error('Failed to parse stream chunk:', e);
+        try {
+          const parsed = JSON.parse(jsonStr);
+          const content = parsed.choices?.[0]?.delta?.content;
+          if (content) {
+            reply += content;
+            setChat((prev) => [
+              ...prev.slice(0, -1),
+              { role: 'assistant', content: reply },
+            ]);
           }
+        } catch (err) {
+          console.error('Stream parse error:', err);
         }
       }
     }
   };
 
+  // Handle text input submit button
+  const handleTextSubmit = async () => {
+    if (!textInput.trim()) return;
+    await handleSendMessage(textInput, textInput);
+    setTextInput('');
+  };
+
   return (
-    <div className="mx-auto max-w-xl p-4">
-      <h1 className="mb-4 text-xl font-bold">
-        🌍 Multilingual Voice/Text Chat
-      </h1>
-
-      <div className="mb-4 flex gap-2">
-        <select
-          value={selectedLang}
-          onChange={(e) => setSelectedLang(e.target.value)}
-          className="border px-2 py-1"
-        >
-          <option value="en">English</option>
-          <option value="bn">Bengali</option>
-          <option value="es">Spanish</option>
-          <option value="fr">French</option>
-          <option value="de">German</option>
-          <option value="hi">Hindi</option>
-        </select>
-
-        <button
-          onClick={startRecording}
-          disabled={isRecording}
-          className="rounded bg-green-500 px-4 py-2 text-white"
-        >
-          🎙 Start
-        </button>
-        <button
-          onClick={stopRecording}
-          disabled={!isRecording}
-          className="rounded bg-red-500 px-4 py-2 text-white"
-        >
-          ⏹ Stop
-        </button>
+    <div className="mx-auto max-w-xl space-y-4 py-8">
+      <div className="space-y-2">
+        {chat.map((msg, idx) => (
+          <div
+            key={idx}
+            className={msg.role === 'user' ? 'text-blue-600' : 'text-green-600'}
+          >
+            <strong>{msg.role === 'user' ? 'You' : 'Bot'}:</strong>{' '}
+            {msg.content}
+          </div>
+        ))}
       </div>
 
-      <div className="mb-4 flex gap-2">
+      <div className="flex gap-2">
         <input
           type="text"
           value={textInput}
           onChange={(e) => setTextInput(e.target.value)}
-          className="w-full border p-2"
-          placeholder="Type a message..."
+          placeholder="Type your message here..."
+          className="flex-grow rounded border px-3 py-2"
+          onKeyDown={(e) => {
+            if (e.key === 'Enter') {
+              e.preventDefault();
+              handleTextSubmit();
+            }
+          }}
         />
         <button
-          onClick={handleSendText}
-          className="rounded bg-blue-600 px-4 py-2 text-white"
+          onClick={handleTextSubmit}
+          className="rounded bg-blue-500 px-4 py-2 text-white"
+          disabled={!textInput.trim()}
         >
           Send
         </button>
       </div>
 
-      <div className="space-y-2">
-        {chat.map((msg, i) => (
-          <div
-            key={i}
-            className={`rounded p-2 ${
-              msg.role === 'user' ? 'bg-blue-100' : 'bg-gray-100'
-            }`}
+      <div>
+        {!recording ? (
+          <button
+            onClick={startRecording}
+            className="rounded bg-blue-500 px-4 py-2 text-white"
           >
-            <strong>{msg.role === 'user' ? 'You' : 'AI'}:</strong> {msg.content}
-          </div>
-        ))}
+            Start Recording
+          </button>
+        ) : (
+          <button
+            onClick={stopRecording}
+            className="rounded bg-red-500 px-4 py-2 text-white"
+          >
+            Stop Recording
+          </button>
+        )}
       </div>
     </div>
   );

@@ -1,104 +1,46 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
-import { NextRequest, NextResponse } from 'next/server';
-import { Readable } from 'stream';
+import { NextResponse } from 'next/server';
 import { createReadStream } from 'fs';
-import formidable from 'formidable';
 import fs from 'fs/promises';
+import { OpenAI } from 'openai';
+import { randomUUID } from 'crypto';
 
-export const config = {
-  api: {
-    bodyParser: false,
-  },
-};
+export const runtime = 'edge'; // or 'nodejs' if using fs
 
-async function parseFormData(
-  req: Request,
-): Promise<{ fields: any; file: any }> {
-  const buffers: Uint8Array[] = [];
-  const reader = req.body?.getReader();
-  if (!reader) throw new Error('No reader');
+const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY! });
 
-  while (true) {
-    const { done, value } = await reader.read();
-    if (done) break;
-    if (value) buffers.push(value);
-  }
+export async function POST(req: Request) {
+  const formData = await req.formData();
+  const file = formData.get('file') as File;
 
-  const formData = Buffer.concat(buffers);
+  const buffer = Buffer.from(await file.arrayBuffer());
+  const tempFilePath = `/tmp/${randomUUID()}.webm`;
+  await fs.writeFile(tempFilePath, buffer);
 
-  const uploadDir = '/tmp';
-  const tmpFilePath = `${uploadDir}/temp.webm`;
-  await fs.writeFile(tmpFilePath, formData);
-
-  return {
-    fields: {},
-    file: {
-      filepath: tmpFilePath,
-    },
-  };
-}
-
-export async function POST(req: NextRequest) {
   try {
-    const { searchParams } = new URL(req.url);
-    const targetLang = searchParams.get('targetLang') || 'en';
+    const transcription = await openai.audio.transcriptions.create({
+      file: createReadStream(tempFilePath) as any,
+      model: 'whisper-1',
+      response_format: 'json',
+      language: 'auto', // auto-detect spoken language
+      temperature: 0,
+    });
 
-    const { file } = await parseFormData(req);
+    // This gives translated prompt in English (for GPT)
+    const prompt = transcription.text;
 
-    const stream = createReadStream(file.filepath);
-
-    // Whisper transcription
-    const whisperForm = new FormData();
-    whisperForm.append('file', stream as any);
-    whisperForm.append('model', 'whisper-1');
-
-    const transcriptionRes = await fetch(
-      'https://api.openai.com/v1/audio/transcriptions',
-      {
-        method: 'POST',
-        headers: {
-          Authorization: `Bearer ${process.env.OPENAI_API_KEY!}`,
-        },
-        body: whisperForm,
-      },
-    );
-
-    const transcriptionData = await transcriptionRes.json();
-    const originalText = transcriptionData.text;
-    const detectedLang = transcriptionData.language || 'unknown';
-
-    // Translate
-    const translationRes = await fetch(
-      'https://api.openai.com/v1/chat/completions',
-      {
-        method: 'POST',
-        headers: {
-          Authorization: `Bearer ${process.env.OPENAI_API_KEY!}`,
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          model: 'gpt-4',
-          messages: [
-            {
-              role: 'system',
-              content: `Translate this to ${targetLang}. Only translate.`,
-            },
-            { role: 'user', content: originalText },
-          ],
-        }),
-      },
-    );
-
-    const translationData = await translationRes.json();
-    const translatedText = translationData.choices?.[0]?.message?.content ?? '';
-
-    return NextResponse.json({ detectedLang, translatedText });
+    return NextResponse.json({
+      prompt, // for GPT input
+      transcript: prompt, // original spoken text (you may enhance later)
+    });
   } catch (error) {
-    console.error(error);
+    console.error('Whisper error:', error);
     return NextResponse.json(
-      { error: 'Something went wrong' },
+      { error: 'Failed to transcribe' },
       { status: 500 },
     );
+  } finally {
+    await fs.unlink(tempFilePath); // Clean up temp file
   }
 }
