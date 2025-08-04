@@ -10,7 +10,7 @@ export default function PublicLayout({
     <main className="mx-auto min-h-screen max-w-screen-xl border">
       {/* NAVBAR */}
       <WebSiteNavbar />
-      <div>{children}</div>
+      <div className="mx-6 border-x">{children}</div>
       {/* FOOTER */}
       <Footer />
     </main>
