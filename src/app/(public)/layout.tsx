@@ -1,6 +1,5 @@
 import Footer from '@/components/shared/footer';
-import Navbar from '@/components/shared/navbar';
-import React from 'react';
+import WebSiteNavbar from '@/components/shared/navbar';
 
 export default function PublicLayout({
   children,
@@ -10,7 +9,7 @@ export default function PublicLayout({
   return (
     <main className="mx-auto min-h-screen">
       {/* NAVBAR */}
-      <Navbar />
+      <WebSiteNavbar />
       <div>{children}</div>
       {/* FOOTER */}
       <Footer />

@@ -1,12 +1,19 @@
 import type { Metadata } from 'next';
-import { Geist, Geist_Mono, Poppins } from 'next/font/google';
+import {
+  Geist,
+  Geist_Mono,
+  Inter,
+  Sansita,
+  Space_Grotesk,
+} from 'next/font/google';
 import './globals.css';
 import { Toaster } from '@/components/ui/sonner';
+import { ThemeProvider } from 'next-themes';
 
-// const geistSans = Geist({
-//   variable: '--font-geist-sans',
-//   subsets: ['latin'],
-// });
+const geistSans = Geist({
+  variable: '--font-geist-sans',
+  subsets: ['latin'],
+});
 
 // register the font
 const geistMono = Geist_Mono({
@@ -14,11 +21,23 @@ const geistMono = Geist_Mono({
   subsets: ['latin'],
 });
 
-// Poppins font
-const poppins = Poppins({
-  variable: '--font-poppins',
+const inter = Inter({
+  variable: '--font-inter',
   subsets: ['latin'],
-  weight: ['300', '400', '500', '600', '700', '800', '900'],
+  display: 'swap',
+});
+
+const spaceGrotesk = Space_Grotesk({
+  variable: '--font-space-grotesk',
+  subsets: ['latin'],
+  display: 'swap',
+});
+
+// for logo's font family
+const sansita = Sansita({
+  variable: '--font-sansita',
+  subsets: ['latin'],
+  weight: ['400', '700', '800', '900'],
   display: 'swap',
 });
 
@@ -33,9 +52,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${poppins.variable} ${geistMono.variable} antialiased`}>
-        <main className="mx-auto max-w-[1440px] font-sans">{children}</main>
+    <html lang="en" suppressHydrationWarning>
+      <body
+        className={`${geistSans.variable} ${inter.variable} ${spaceGrotesk.variable} ${sansita.variable} ${geistMono.variable} antialiased`}
+      >
+        <ThemeProvider
+          attribute="class"
+          // defaultTheme="system"
+          defaultTheme="light"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <main className="font-inter mx-auto max-w-[1440px]">{children}</main>
+        </ThemeProvider>
+
         <Toaster />
       </body>
     </html>

@@ -8,7 +8,9 @@
   /* Custom website brand color */
   --color-brand: var(--brand);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-poppins);
+  --font-inter: var(--font-inter);
+  --font-space-grotesk: var(--font-space-grotesk);
+  --font-sansita: var(--font-sansita);
   /* --font-poppins: var(--font-poppins); */
   /* --font-sans: var(--font-geist-sans); */
   /* --font-mono: var(--font-geist-mono); */
@@ -122,6 +124,7 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
