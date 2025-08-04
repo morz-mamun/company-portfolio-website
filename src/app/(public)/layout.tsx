@@ -7,7 +7,7 @@ export default function PublicLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <main className="mx-auto min-h-screen">
+    <main className="mx-auto min-h-screen max-w-screen-xl border">
       {/* NAVBAR */}
       <WebSiteNavbar />
       <div>{children}</div>
