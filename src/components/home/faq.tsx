@@ -6,6 +6,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '../ui/accordion';
+import BorderXPattern from '../shared/border-x-pattern';
 
 export default function FAQ() {
   return (
@@ -37,8 +38,8 @@ export default function FAQ() {
         </Accordion>
 
         {/* border x design */}
-        <div className="text-primary/5 absolute top-0 -left-4 h-full w-4 [background-image:repeating-linear-gradient(315deg,currentColor_0_1px,#0000_0_50%)] bg-[size:10px_10px] md:-left-44 md:w-44"></div>
-        <div className="text-primary/5 absolute top-0 -right-4 h-full w-4 [background-image:repeating-linear-gradient(315deg,currentColor_0_1px,#0000_0_50%)] bg-[size:10px_10px] md:-right-44 md:w-44"></div>
+        <BorderXPattern className="-left-4 w-4 md:-left-44 md:w-44" />
+        <BorderXPattern className="-right-4 w-4 md:-right-44 md:w-44" />
       </div>
     </section>
   );
