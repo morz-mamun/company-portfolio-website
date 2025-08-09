@@ -4,6 +4,7 @@ import HowWeManageWork from '@/components/home/how-we-manage-work/how-we-manage-
 import JoiningOurTeam from '@/components/home/joining-our-team';
 import OurBlogs from '@/components/home/our-blogs';
 import OurServices from '@/components/home/our-services/our-services';
+import TestimonialCarousel from '@/components/home/testimonial-carousel/testimonial-carousel';
 import TransformIdeaToReality from '@/components/home/transform-idea-to-reality/transform-idea-to-reality';
 import TrustedBy from '@/components/home/trusted-by';
 import VideoSection from '@/components/home/video-section';
@@ -33,6 +34,11 @@ export default function HomePage() {
       {/* How We Manage Work */}
       <div className="my-20">
         <HowWeManageWork />
+      </div>
+
+      {/* Testimonial Carousel */}
+      <div className="mb-20">
+        <TestimonialCarousel />
       </div>
 
       {/* Our latest blogs */}

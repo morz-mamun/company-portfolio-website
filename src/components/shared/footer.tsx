@@ -6,7 +6,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="border-t pt-12">
+    <footer className="border-t pt-20">
       <div className="border-t border-b">
         <div className="mx-auto max-w-7xl px-4 md:px-6">
           <div className="border-x">
@@ -125,7 +125,7 @@ export default function Footer() {
         </div>
       </div>
       {/* copyright */}
-      <div className="py-4 text-center text-zinc-500">
+      <div className="py-5 text-center text-zinc-500">
         <p className="text-sm">
           © {currentYear} Global Trust Communications. All rights reserved.
         </p>
