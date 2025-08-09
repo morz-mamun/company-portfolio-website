@@ -14,7 +14,7 @@ const blogs = [
   {
     _id: '2',
     imageUrl:
-      'https://pub-3c3fbc3b66a54a4ab707f64d0f564e7d.r2.dev/service06.jpg',
+      'https://pub-3c3fbc3b66a54a4ab707f64d0f564e7d.r2.dev/service01.png',
     date: '2025-08-02T00:00:00.000Z',
     title: 'Smart Security in 2025',
     description:
@@ -23,7 +23,7 @@ const blogs = [
   {
     _id: '3',
     imageUrl:
-      'https://pub-3c3fbc3b66a54a4ab707f64d0f564e7d.r2.dev/service06.jpg',
+      'https://pub-3c3fbc3b66a54a4ab707f64d0f564e7d.r2.dev/service02.png',
     date: '2025-08-02T00:00:00.000Z',
     title: 'Smart Security in 2025',
     description:

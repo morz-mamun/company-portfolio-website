@@ -1,5 +1,5 @@
+import PrimaryBtn from '../buttons/primary-btn';
 import BorderXPattern from '../shared/border-x-pattern';
-import { Button } from '../ui/button';
 import { Icon } from '@iconify/react';
 
 export default function JoiningOurTeam() {
@@ -7,9 +7,7 @@ export default function JoiningOurTeam() {
     <section className="border-y px-6">
       <div className="relative border-x px-[120px] pt-[70px] pb-[150px]">
         <div className="flex flex-col items-center justify-center">
-          <Button className="bg-brand dark:text-brand shadow-primary/60 hover:text-brand dark:hover:bg-brand mt-10 cursor-pointer rounded-full p-6 text-white shadow-lg transition duration-300 ease-in-out hover:scale-105 hover:bg-gray-100 hover:font-bold dark:hover:text-white">
-            Current Job Opening
-          </Button>
+          <PrimaryBtn title="Current Job Opening" iconName="" />
 
           {/* title */}
           <h3 className="text-brand mt-2 text-[28px] font-semibold">
@@ -28,12 +26,7 @@ export default function JoiningOurTeam() {
 
               <button className="group text-brand shadow-primary/60 hover:bg-brand flex cursor-pointer items-center gap-2 rounded-[17px] bg-[#FAFAFA] px-5 py-4 font-semibold shadow-lg duration-500 ease-in-out hover:text-white hover:transition">
                 <span className="text-xl"> View open positions</span>
-                <Icon
-                  icon="icons8:right-round"
-                  width={20}
-                  height={20}
-                  color="#7E7E7E"
-                />
+                <Icon icon="icons8:right-round" width={20} height={20} />
               </button>
             </div>
           </div>

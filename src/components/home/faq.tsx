@@ -11,7 +11,7 @@ import BorderXPattern from '../shared/border-x-pattern';
 export default function FAQ() {
   return (
     <section className="relative mx-auto my-20 max-w-7xl border-y">
-      <div className="relative mx-auto max-w-4xl border-x px-10 py-5">
+      <div className="relative mx-auto max-w-4xl border-x px-10 py-14">
         <SectionHeading
           title="Frequently Asked Questions"
           description="Answers to common questions about Trust Global and its features."
