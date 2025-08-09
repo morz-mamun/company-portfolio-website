@@ -28,7 +28,7 @@ export default function FAQ() {
               <AccordionTrigger className="rounded-none border-b px-3">
                 {title}
               </AccordionTrigger>
-              <AccordionContent className="flex flex-col gap-4 p-3 text-balance">
+              <AccordionContent className="flex flex-col gap-4 border-b p-3 text-balance">
                 {content.map((para, i) => (
                   <p key={i}>{para}</p>
                 ))}

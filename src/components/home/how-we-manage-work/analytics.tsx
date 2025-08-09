@@ -1,5 +1,5 @@
 'use client';
-import { startCounting } from '@/components/utils/startCounting';
+import { startCounting } from '@/utils/startCounting';
 import { motion } from 'framer-motion';
 import React, { useEffect, useRef, useState } from 'react';
 

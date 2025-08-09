@@ -9,12 +9,10 @@ export default function SectionHeading({
 }) {
   return (
     <div className={`${className} mx-auto max-w-[640px] space-y-3 text-center`}>
-      <h2
-        className={`${className} font-space-grotesk text-brand text-4xl font-bold`}
-      >
+      <h2 className={`font-space-grotesk text-brand text-4xl font-bold`}>
         {title}
       </h2>
-      <p className={`${className} text-brand/90 text-xl`}>{description}</p>
+      <p className={`text-brand/90 text-xl`}>{description}</p>
     </div>
   );
 }
