@@ -1,6 +1,7 @@
 import Banner from '@/components/home/banner';
 import FAQ from '@/components/home/faq';
 import HowWeManageWork from '@/components/home/how-we-manage-work/how-we-manage-work';
+import JoiningOurTeam from '@/components/home/joining-our-team';
 import TrustedBy from '@/components/home/trusted-by';
 import VideoSection from '@/components/home/video-section';
 
@@ -25,6 +26,9 @@ export default function HomePage() {
       <div className="my-20">
         <HowWeManageWork />
       </div>
+
+      {/* joining our team */}
+      <JoiningOurTeam />
 
       {/* FAQ Section */}
       <FAQ />

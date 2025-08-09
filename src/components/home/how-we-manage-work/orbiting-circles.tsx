@@ -2,20 +2,41 @@ import { OrbitingCircles } from '@/components/magicui/orbiting-circles';
 
 export default function OrbitingCirclesAnimation() {
   return (
-    <div className="relative flex h-[400px] w-full flex-col items-center justify-center overflow-hidden border">
-      <OrbitingCircles iconSize={40}>
-        <Icons.whatsapp />
-        <Icons.notion />
-        <Icons.openai />
-        <Icons.googleDrive />
-        <Icons.whatsapp />
-      </OrbitingCircles>
-      <OrbitingCircles iconSize={30} radius={100} reverse speed={2}>
-        <Icons.whatsapp />
-        <Icons.notion />
-        <Icons.openai />
-        <Icons.googleDrive />
-      </OrbitingCircles>
+    <div className="group h-[500px] cursor-pointer border border-t-0 border-r-0">
+      <div className="relative flex h-[374px] w-full flex-col items-center justify-center overflow-hidden">
+        <OrbitingCircles iconSize={30} radius={160}>
+          <Icons.whatsapp />
+          <Icons.notion />
+          <Icons.openai />
+          <Icons.googleDrive />
+          <Icons.whatsapp />
+        </OrbitingCircles>
+        <OrbitingCircles iconSize={25} radius={120} reverse speed={3}>
+          <Icons.whatsapp />
+          <Icons.notion />
+          <Icons.openai />
+          <Icons.googleDrive />
+        </OrbitingCircles>
+        <OrbitingCircles iconSize={20} radius={80} speed={2}>
+          <Icons.notion />
+          <Icons.openai />
+          <Icons.googleDrive />
+        </OrbitingCircles>
+        <OrbitingCircles iconSize={15} radius={40} reverse speed={3}>
+          <Icons.openai />
+          <Icons.googleDrive />
+        </OrbitingCircles>
+      </div>
+      {/* bottom content */}
+      <div className="mx-2 max-w-[544px] p-2 transition-transform duration-300 group-hover:-translate-y-8">
+        <h4 className="font-space-grotesk text-[24px] font-bold">
+          Next-level work with next-gen tools
+        </h4>
+        <p className="text-brand">
+          It is a long established fact that a reader will be distracted by the
+          readable content of a page when looking at its layout.
+        </p>
+      </div>
     </div>
   );
 }

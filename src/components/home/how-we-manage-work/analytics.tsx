@@ -1,5 +1,4 @@
 'use client';
-
 import { startCounting } from '@/components/utils/startCounting';
 import { motion } from 'framer-motion';
 import React, { useEffect, useRef, useState } from 'react';
@@ -12,7 +11,6 @@ const Analytics = () => {
   // Loop the counter when it ends
   useEffect(() => {
     let isCancelled = false;
-
     const animateLoop = async () => {
       while (!isCancelled) {
         await startCounting(end, setCount);
@@ -27,7 +25,7 @@ const Analytics = () => {
   }, []);
 
   return (
-    <div className="relative flex size-full h-full items-center justify-center overflow-hidden">
+    <div className="group relative cursor-pointer overflow-hidden border border-b-0 border-l-0">
       <div
         className="relative flex size-full h-[300px] items-center justify-center overflow-hidden pt-10"
         style={{ '--color': 'rgba(21, 93, 252, 1)' } as React.CSSProperties}
@@ -114,6 +112,14 @@ const Analytics = () => {
             />
           ))}
         </svg>
+      </div>
+      {/* bottom content */}
+      <div className="mx-2 max-w-[544px] p-2 transition-transform duration-300 group-hover:-translate-y-8">
+        <h4 className="font-space-grotesk text-[24px] font-bold">Analytics</h4>
+        <p className="text-brand">
+          It is a long established fact that a reader will be distracted by the
+          readable content of a page when looking at its layout.
+        </p>
       </div>
     </div>
   );

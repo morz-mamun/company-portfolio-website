@@ -1,9 +1,9 @@
-import React from 'react';
 import SectionHeading from '../../shared/section-heading';
 import BorderXPattern from '../../shared/border-x-pattern';
 import OrbitingCirclesAnimation from './orbiting-circles';
 import { WorldMapDemo } from './world-map';
 import Analytics from './analytics';
+import ChatBotPreview from './chat-bot-preview/chat-bot-preview';
 
 export default function HowWeManageWork() {
   return (
@@ -18,8 +18,8 @@ export default function HowWeManageWork() {
         {/* content container */}
         <div className="relative border-x">
           {/* contain */}
-          <div className="grid grid-cols-2 gap-[2px] p-[2px]">
-            <OrbitingCirclesAnimation />
+          <div className="grid grid-cols-2 gap-[2px]">
+            <ChatBotPreview />
             <OrbitingCirclesAnimation />
             <Analytics />
             <WorldMapDemo />
