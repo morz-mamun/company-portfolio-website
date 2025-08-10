@@ -18,7 +18,7 @@ export default function HomePage() {
         <Banner />
       </div>
       {/* Video Section */}
-      <div className="">
+      <div className="px-2 lg:px-0">
         <VideoSection />
       </div>
 

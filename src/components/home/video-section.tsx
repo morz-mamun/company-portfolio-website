@@ -4,7 +4,7 @@ export default function VideoSection() {
   return (
     <section className="relative mx-auto my-16 max-w-screen-xl">
       <div className="mx-auto max-w-screen-lg">
-        <div className="min-h-[calc(100vh-2rem)] rounded-[28px] border border-gray-200 bg-gray-50 p-4 dark:border-gray-700 dark:bg-gray-800">
+        <div className="rounded-[28px] border border-gray-200 bg-gray-50 p-4 lg:min-h-[calc(100vh-2rem)] dark:border-gray-700 dark:bg-gray-800">
           <div className="relative">
             <HeroVideoDialog
               className="block dark:hidden"
@@ -22,7 +22,7 @@ export default function VideoSection() {
             />
           </div>
         </div>
-        <div className="from-background via-background pointer-events-none absolute inset-x-0 -bottom-12 h-1/3 bg-gradient-to-t to-transparent lg:h-2/4"></div>
+        <div className="from-background via-background pointer-events-none absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t to-transparent md:-bottom-0 lg:-bottom-12 lg:h-2/4"></div>
       </div>
     </section>
   );
