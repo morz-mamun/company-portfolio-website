@@ -65,7 +65,6 @@ export default function RootLayout({
         >
           <main className="font-inter mx-auto max-w-[1440px]">{children}</main>
         </ThemeProvider>
-
         <Toaster />
       </body>
     </html>

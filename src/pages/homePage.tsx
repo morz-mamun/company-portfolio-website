@@ -14,7 +14,7 @@ export default function HomePage() {
   return (
     <main className="mx-auto min-h-screen max-w-7xl overflow-hidden">
       {/* Banner Section */}
-      <div className="mt-32">
+      <div className="mt-20 md:mt-32">
         <Banner />
       </div>
       {/* Video Section */}
