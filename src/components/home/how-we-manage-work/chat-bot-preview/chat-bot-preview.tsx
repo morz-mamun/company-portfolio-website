@@ -1,74 +1,9 @@
 'use client';
-
 import { cn } from '@/lib/utils';
 import { AnimatedList } from '@/components/magicui/animated-list';
+import { chatMessagesData, IChatMessage } from '@/constants/chat-messages-data';
 
-interface ChatMessage {
-  id: string;
-  message: string;
-  sender: string;
-  avatar: string;
-  time: string;
-  isOwn: boolean;
-  type: 'text' | 'image' | 'file';
-}
-
-let chatMessages: ChatMessage[] = [
-  {
-    id: '1',
-    message: "Hey! How's the project coming along?",
-    sender: 'Alice',
-    avatar: '👩‍💻',
-    time: '2:30 PM',
-    isOwn: false,
-    type: 'text',
-  },
-  {
-    id: '2',
-    message: 'Going great! Just finished the new feature',
-    sender: 'You',
-    avatar: '😊',
-    time: '2:31 PM',
-    isOwn: true,
-    type: 'text',
-  },
-  {
-    id: '3',
-    message: "That's awesome! Can you show me a demo?",
-    sender: 'Alice',
-    avatar: '👩‍💻',
-    time: '2:32 PM',
-    isOwn: false,
-    type: 'text',
-  },
-  {
-    id: '4',
-    message: 'Let me record a quick video',
-    sender: 'You',
-    avatar: '😊',
-    time: '2:33 PM',
-    isOwn: true,
-    type: 'text',
-  },
-  {
-    id: '5',
-    message: "Perfect! I'll be waiting 🎉",
-    sender: 'Alice',
-    avatar: '👩‍💻',
-    time: '2:34 PM',
-    isOwn: false,
-    type: 'text',
-  },
-  {
-    id: '6',
-    message: "Here's the demo video!",
-    sender: 'You',
-    avatar: '😊',
-    time: '2:45 PM',
-    isOwn: true,
-    type: 'file',
-  },
-];
+let chatMessages = chatMessagesData;
 
 // Duplicate messages to create a longer chat
 chatMessages = Array.from({ length: 20 }, () => chatMessages).flat();
@@ -80,7 +15,7 @@ const ChatBubble = ({
   time,
   isOwn,
   type,
-}: ChatMessage) => {
+}: IChatMessage) => {
   return (
     <div
       className={cn(

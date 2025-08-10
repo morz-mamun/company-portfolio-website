@@ -1,4 +1,5 @@
 import Banner from '@/components/home/banner';
+import ContactUs from '@/components/home/contact-us';
 import FAQ from '@/components/home/faq';
 import HowWeManageWork from '@/components/home/how-we-manage-work/how-we-manage-work';
 import JoiningOurTeam from '@/components/home/joining-our-team';
@@ -51,6 +52,11 @@ export default function HomePage() {
 
       {/* FAQ Section */}
       <FAQ />
+
+      {/* Contact us */}
+      <div className="mb-20">
+        <ContactUs />
+      </div>
 
       {/* user feedbacks and book your strategy call */}
       <div>
