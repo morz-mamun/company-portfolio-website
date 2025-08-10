@@ -120,19 +120,28 @@ export default function WebSiteNavbar() {
                 <PopoverContent align="end" className="w-28 p-2 font-normal">
                   <div>
                     <button
-                      onClick={() => setTheme('light')}
+                      onClick={() => {
+                        setTheme('light');
+                        setIsOpen(false);
+                      }}
                       className="hover:bg-muted w-full rounded-md px-2 py-1.5 text-left text-sm"
                     >
                       Light
                     </button>
                     <button
-                      onClick={() => setTheme('dark')}
+                      onClick={() => {
+                        setTheme('dark');
+                        setIsOpen(false);
+                      }}
                       className="hover:bg-muted w-full rounded-md px-2 py-1.5 text-left text-sm"
                     >
                       Dark
                     </button>
                     <button
-                      onClick={() => setTheme('system')}
+                      onClick={() => {
+                        setTheme('system');
+                        setIsOpen(false);
+                      }}
                       className="hover:bg-muted w-full rounded-md px-2 py-1.5 text-left text-sm"
                     >
                       System
