@@ -2,7 +2,7 @@ import { OrbitingCircles } from '@/components/magicui/orbiting-circles';
 
 export default function OrbitingCirclesAnimation() {
   return (
-    <div className="group h-[500px] cursor-pointer border border-t-0 border-r-0">
+    <div className="group h-[500px] cursor-pointer border border-t border-r-0 border-l-0 md:border-t-0 md:border-l">
       <div className="relative flex h-[374px] w-full flex-col items-center justify-center overflow-hidden">
         <OrbitingCircles iconSize={30} radius={160}>
           <Icons.whatsapp />
@@ -28,11 +28,11 @@ export default function OrbitingCirclesAnimation() {
         </OrbitingCircles>
       </div>
       {/* bottom content */}
-      <div className="mx-2 max-w-[544px] p-2 transition-transform duration-300 group-hover:-translate-y-8">
-        <h4 className="font-space-grotesk text-[24px] font-bold">
+      <div className="max-w-[544px] space-y-2 p-2 transition-transform duration-300 group-hover:-translate-y-8 md:mx-2">
+        <h4 className="font-space-grotesk text-lg font-bold md:text-2xl">
           Next-level work with next-gen tools
         </h4>
-        <p className="text-brand">
+        <p className="text-brand dark:text-primary text-xs md:text-base">
           It is a long established fact that a reader will be distracted by the
           readable content of a page when looking at its layout.
         </p>

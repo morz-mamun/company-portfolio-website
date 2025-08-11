@@ -40,7 +40,9 @@ export default function TrustedBy() {
       <Marquee pauseOnHover className="[--duration:20s]">
         {trustedByTeam.map((review, index) => (
           <div key={index} className="flex items-center gap-2 p-3">
-            <p className="text-xl text-[#A1A1A1]">{review.username}</p>
+            <p className="text-base text-[#A1A1A1] md:text-xl">
+              {review.username}
+            </p>
           </div>
         ))}
       </Marquee>

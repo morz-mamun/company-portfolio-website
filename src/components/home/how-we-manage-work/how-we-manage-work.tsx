@@ -14,11 +14,11 @@ export default function HowWeManageWork() {
         description="We build smarter systems, powerful websites and scalable automation workflows for modern brands, e-commerce stores and SaaS platforms across the U.S and beyond."
         className="mx-auto max-w-[975px] text-center"
       />
-      <div className="relative mt-10 overflow-hidden border-y px-6">
+      <div className="relative mt-10 overflow-hidden border-y px-4 md:px-6">
         {/* content container */}
         <div className="relative border-x">
           {/* contain */}
-          <div className="grid grid-cols-2 gap-[2px]">
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-[2px]">
             <ChatBotPreview />
             <OrbitingCirclesAnimation />
             <Analytics />

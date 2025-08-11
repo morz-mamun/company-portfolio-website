@@ -6,7 +6,7 @@ import React, { useEffect, useRef, useState } from 'react';
 const Analytics = () => {
   const countRef = useRef(null);
   const [count, setCount] = useState(0);
-  const end = 125;
+  const end = 349;
 
   // Loop the counter when it ends
   useEffect(() => {
@@ -25,9 +25,9 @@ const Analytics = () => {
   }, []);
 
   return (
-    <div className="group relative cursor-pointer overflow-hidden border border-b-0 border-l-0">
+    <div className="group relative cursor-pointer overflow-hidden border border-r-0 border-b border-l-0 md:border-r md:border-b-0">
       <div
-        className="relative flex size-full h-[300px] items-center justify-center overflow-hidden pt-10"
+        className="relative flex size-full h-[300px] items-center justify-center overflow-hidden border-red-600 pt-10"
         style={{ '--color': 'rgba(21, 93, 252, 1)' } as React.CSSProperties}
       >
         {/* Vertical Line */}
@@ -36,7 +36,7 @@ const Analytics = () => {
         {/* Animated Number */}
         <div
           ref={countRef}
-          className="absolute top-32 left-[42%] flex h-8 -translate-x-1/2 items-center justify-center rounded-full border border-white/[0.07] bg-[#1A1B25] px-4 py-1 font-mono text-sm text-white opacity-100 shadow-[0px_1.1px_0px_0px_rgba(255,255,255,0.20)_inset,0px_4.4px_6.6px_0px_rgba(255,255,255,0.01)_inset,0px_2.2px_6.6px_0px_rgba(18,43,105,0.04),0px_1.1px_2.2px_0px_rgba(18,43,105,0.08),0px_0px_0px_1.1px_rgba(18,43,105,0.08)] transition-opacity duration-300 ease-in-out"
+          className="absolute top-32 left-[42%] flex h-8 -translate-x-1/2 items-center justify-center rounded-full border border-white/[0.07] bg-[#1A1B25] px-4 py-1 font-mono text-sm text-white opacity-100 shadow transition-opacity duration-300 ease-in-out"
         >
           <p className="w-10 text-center">{count}</p>
         </div>
@@ -114,9 +114,11 @@ const Analytics = () => {
         </svg>
       </div>
       {/* bottom content */}
-      <div className="mx-2 max-w-[544px] p-2 transition-transform duration-300 group-hover:-translate-y-8">
-        <h4 className="font-space-grotesk text-[24px] font-bold">Analytics</h4>
-        <p className="text-brand">
+      <div className="max-w-[544px] space-y-2 p-2 transition-transform duration-300 group-hover:-translate-y-8 md:mx-2">
+        <h4 className="font-space-grotesk text-lg font-bold md:text-2xl">
+          Analytics
+        </h4>
+        <p className="text-brand dark:text-primary text-xs md:text-base">
           It is a long established fact that a reader will be distracted by the
           readable content of a page when looking at its layout.
         </p>
