@@ -15,8 +15,6 @@ export default function Banner() {
           as="h2"
           delay={0.1}
           duration={1}
-          // startOnView
-          // once
           by="character"
           animation="fadeIn"
           className="font-space-grotesk dark:text-primary hidden bg-[linear-gradient(to_bottom,_#100F0F,_#5C5B5B)] bg-clip-text text-3xl font-bold text-transparent md:block md:text-[48px] lg:text-[50px]"
