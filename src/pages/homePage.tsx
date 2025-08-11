@@ -38,12 +38,12 @@ export default function HomePage() {
       </div>
 
       {/* Testimonial Carousel */}
-      <div className="mb-20">
+      <div className="mb-10 md:mb-20">
         <TestimonialCarousel />
       </div>
 
       {/* Our latest blogs */}
-      <div className="mb-20">
+      <div className="mb-10 md:mb-20">
         <OurBlogs />
       </div>
 
@@ -54,7 +54,7 @@ export default function HomePage() {
       <FAQ />
 
       {/* Contact us */}
-      <div className="mb-20">
+      <div className="mb-10 md:mb-20">
         <ContactUs />
       </div>
 

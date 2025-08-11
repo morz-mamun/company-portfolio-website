@@ -27,7 +27,7 @@ const Analytics = () => {
   return (
     <div className="group relative cursor-pointer overflow-hidden border border-r-0 border-b border-l-0 md:border-r md:border-b-0">
       <div
-        className="relative flex size-full h-[300px] items-center justify-center overflow-hidden border-red-600 pt-10"
+        className="relative flex size-full h-[300px] items-center justify-center overflow-hidden border-red-600 pt-10 md:h-[220px] lg:h-[300px]"
         style={{ '--color': 'rgba(21, 93, 252, 1)' } as React.CSSProperties}
       >
         {/* Vertical Line */}
@@ -36,7 +36,7 @@ const Analytics = () => {
         {/* Animated Number */}
         <div
           ref={countRef}
-          className="absolute top-32 left-[42%] flex h-8 -translate-x-1/2 items-center justify-center rounded-full border border-white/[0.07] bg-[#1A1B25] px-4 py-1 font-mono text-sm text-white opacity-100 shadow transition-opacity duration-300 ease-in-out"
+          className="absolute top-32 left-[42%] flex h-8 -translate-x-1/2 items-center justify-center rounded-full border border-white/[0.07] bg-[#1A1B25] px-4 py-1 font-mono text-sm text-white opacity-100 shadow transition-opacity duration-300 ease-in-out md:top-22 md:left-[35%] lg:top-32 lg:left-[42%]"
         >
           <p className="w-10 text-center">{count}</p>
         </div>
@@ -114,11 +114,11 @@ const Analytics = () => {
         </svg>
       </div>
       {/* bottom content */}
-      <div className="max-w-[544px] space-y-2 p-2 transition-transform duration-300 group-hover:-translate-y-8 md:mx-2">
-        <h4 className="font-space-grotesk text-lg font-bold md:text-2xl">
+      <div className="max-w-[544px] space-y-2 p-2 transition-transform duration-300 group-hover:-translate-y-8 lg:mx-2">
+        <h4 className="font-space-grotesk text-lg font-bold md:text-xl lg:text-2xl">
           Analytics
         </h4>
-        <p className="text-brand dark:text-primary text-xs md:text-base">
+        <p className="text-brand dark:text-primary mt-0 text-xs md:mt-8 md:text-sm lg:mt-0 lg:text-base">
           It is a long established fact that a reader will be distracted by the
           readable content of a page when looking at its layout.
         </p>

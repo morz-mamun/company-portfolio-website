@@ -50,7 +50,7 @@ export default function ContactUs() {
   }, [register]);
 
   return (
-    <section className="mx-auto max-w-2xl">
+    <section className="mx-auto max-w-xl lg:max-w-2xl">
       {/* section heading */}
       <SectionHeading
         title="Contact Us"
@@ -58,7 +58,7 @@ export default function ContactUs() {
       />
 
       {/* contact form */}
-      <form className="mt-8" onSubmit={handleSubmit(onSubmit)}>
+      <form className="mt-8 px-3 md:px-0" onSubmit={handleSubmit(onSubmit)}>
         <div className="my-4 grid grid-cols-2 items-start gap-3 md:gap-4">
           {/* Email */}
           <div className="space-y-2">
@@ -68,7 +68,7 @@ export default function ContactUs() {
             <Input
               type="email"
               placeholder="Email"
-              className="mt-2"
+              className="mt-2 placeholder:text-xs md:placeholder:text-sm"
               {...register('email', {
                 required: 'Email is required',
                 pattern: {
@@ -89,7 +89,7 @@ export default function ContactUs() {
             </label>
             <Input
               type="text"
-              className="mt-2"
+              className="mt-2 placeholder:text-xs md:placeholder:text-sm"
               placeholder="Full Name"
               {...register('name', {
                 required: 'Full Name is required',
@@ -119,7 +119,9 @@ export default function ContactUs() {
                 onChange={(phone) =>
                   setValue('phone', phone, { shouldValidate: true })
                 }
-                inputClass="!w-full !border !border-gray-300 !rounded-md focus:!border-gray-500 dark:focus:!border-primary"
+                inputClass="!w-full !border !border-gray-300 dark:!border-gray-600 !rounded-md !bg-white dark:!bg-input/20 !text-gray-900 dark:!text-gray-100 focus:!border-gray-500 dark:focus:!border-primary"
+                dropdownClass="!border !border-gray-300 dark:!border-gray-600 !rounded-md !bg-white dark:!bg-gray-800 !text-gray-900 dark:!text-gray-100 focus:!border-gray-500 dark:focus:!border-primary"
+                searchClass="!border !border-gray-300 dark:!border-gray-600 !rounded-md !bg-white dark:!bg-gray-800 !text-gray-900 dark:!text-gray-100 focus:!border-gray-500 dark:focus:!border-primary"
               />
             </div>
             {errors.phone && (
@@ -134,7 +136,7 @@ export default function ContactUs() {
             </label>
             <Input
               type="text"
-              className="mt-2"
+              className="mt-2 placeholder:text-xs md:placeholder:text-sm"
               placeholder="Company Name"
               {...register('company', { required: 'Company Name is required' })}
             />
@@ -150,7 +152,7 @@ export default function ContactUs() {
             Write your message here
           </label>
           <Textarea
-            className="mt-2"
+            className="mt-2 placeholder:text-xs md:placeholder:text-sm"
             placeholder="What we can do for you?"
             {...register('message', {
               required: 'Message is required',
@@ -169,9 +171,9 @@ export default function ContactUs() {
         <div className="flex justify-center pt-5">
           <button
             type="submit"
-            className="dark:text-primary bg-brand dark:bg-primary hover:text-brand flex transform cursor-pointer items-center gap-2 rounded-md border px-4 py-2 font-semibold text-white transition duration-300 ease-in-out hover:scale-95 hover:bg-gray-100"
+            className="dark:text-primary bg-brand dark:bg-primary hover:text-brand flex transform cursor-pointer items-center gap-2 rounded-md border px-4 py-2 text-sm font-semibold text-white transition duration-300 ease-in-out hover:scale-95 hover:bg-gray-100 md:text-base"
           >
-            Submit <ArrowBigRight size={20} />
+            Submit <ArrowBigRight size={18} />
           </button>
         </div>
       </form>

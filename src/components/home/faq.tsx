@@ -10,8 +10,8 @@ import BorderXPattern from '../shared/border-x-pattern';
 
 export default function FAQ() {
   return (
-    <section className="relative mx-auto my-20 max-w-7xl border-y">
-      <div className="relative mx-auto max-w-4xl border-x px-10 py-14">
+    <section className="relative mx-auto my-10 max-w-7xl border-y md:my-20">
+      <div className="relative mx-4 max-w-4xl border-x px-2 py-14 md:mx-10 md:px-10 lg:mx-auto">
         <SectionHeading
           title="Frequently Asked Questions"
           description="Answers to common questions about Trust Global and its features."
@@ -38,8 +38,8 @@ export default function FAQ() {
         </Accordion>
 
         {/* border x design */}
-        <BorderXPattern className="-left-4 w-4 md:-left-44 md:w-44" />
-        <BorderXPattern className="-right-4 w-4 md:-right-44 md:w-44" />
+        <BorderXPattern className="-left-4 w-4 md:-left-10 md:w-10 lg:-left-44 lg:w-44" />
+        <BorderXPattern className="-right-4 w-4 md:-right-10 md:w-10 lg:-right-44 lg:w-44" />
       </div>
     </section>
   );

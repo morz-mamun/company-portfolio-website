@@ -4,7 +4,7 @@ import WorldMap from '@/components/ui/world-map';
 export function WorldMapDemo() {
   return (
     <div className="group cursor-pointer border border-r-0 border-b-0 border-l-0 md:border-l">
-      <div className="w-full bg-white dark:bg-black">
+      <div className="w-full bg-white pb-0 md:pb-11 lg:pb-0 dark:bg-black">
         <WorldMap
           dots={[
             {
@@ -42,11 +42,11 @@ export function WorldMapDemo() {
       </div>
 
       {/* bottom content */}
-      <div className="max-w-[544px] space-y-2 p-2 transition-transform duration-300 group-hover:-translate-y-8 md:mx-2">
-        <h4 className="font-space-grotesk text-lg font-bold md:text-2xl">
+      <div className="max-w-[544px] space-y-2 p-2 transition-transform duration-300 group-hover:-translate-y-8 lg:mx-2">
+        <h4 className="font-space-grotesk text-lg font-bold md:text-xl lg:text-2xl">
           Collaborate our clients with AI Chatbot
         </h4>
-        <p className="text-brand dark:text-primary text-xs md:text-base">
+        <p className="text-brand dark:text-primary text-xs md:text-sm lg:text-base">
           AI Chatbot is a powerful tool that can help you automate your business
           processes, improve customer service, and save you time and money.
         </p>

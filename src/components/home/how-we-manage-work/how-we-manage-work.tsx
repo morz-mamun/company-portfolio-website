@@ -14,7 +14,7 @@ export default function HowWeManageWork() {
         description="We build smarter systems, powerful websites and scalable automation workflows for modern brands, e-commerce stores and SaaS platforms across the U.S and beyond."
         className="mx-auto max-w-[975px] text-center"
       />
-      <div className="relative mt-10 overflow-hidden border-y px-4 md:px-6">
+      <div className="relative mt-10 overflow-hidden border-y px-4 lg:px-6">
         {/* content container */}
         <div className="relative border-x">
           {/* contain */}
@@ -25,8 +25,8 @@ export default function HowWeManageWork() {
             <WorldMapDemo />
           </div>
           {/* border x design */}
-          <BorderXPattern className="-left-4 w-4 md:-left-6 md:w-6" />
-          <BorderXPattern className="-right-4 w-4 md:-right-6 md:w-6" />
+          <BorderXPattern className="-left-4 w-4 lg:-left-6 lg:w-6" />
+          <BorderXPattern className="-right-4 w-4 lg:-right-6 lg:w-6" />
         </div>
       </div>
     </section>

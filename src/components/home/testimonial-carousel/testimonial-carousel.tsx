@@ -122,11 +122,11 @@ export default function TestimonialCarousel() {
   const currentTestimonial = testimonials[currentIndex];
 
   return (
-    <section className="mx-auto max-w-4xl overflow-hidden bg-white p-8">
+    <section className="mx-auto max-w-4xl overflow-hidden p-2 md:p-6 lg:p-8">
       {/* section heading */}
       <SectionHeading
         title="People love working with Trust Global Communication."
-        className="mb-14"
+        className="mb-8 md:mb-10 lg:mb-14"
       />
       <div className="relative text-center">
         {/* Quote with sliding animation */}
@@ -137,8 +137,8 @@ export default function TestimonialCarousel() {
           onTouchStart={() => setIsPaused(true)}
           onTouchEnd={() => setIsPaused(false)}
         >
-          <div className="absolute top-6 left-8">
-            <Icon icon="pixel:quote-left-solid" width={20} height={20} />
+          <div className="absolute top-5 -left-0 md:top-6 md:left-8">
+            <Icon icon="pixel:quote-left-solid" width={18} height={18} />
           </div>
 
           <div
@@ -150,12 +150,12 @@ export default function TestimonialCarousel() {
                 : 'translate-x-0 opacity-100'
             }`}
           >
-            <blockquote className="text-brand max-w-3xl px-8 text-lg leading-relaxed">
+            <blockquote className="text-brand dark:text-primary/80 max-w-3xl px-4 text-sm leading-relaxed md:px-8 md:text-lg">
               {currentTestimonial.quote}
             </blockquote>
           </div>
 
-          <div className="absolute right-8 bottom-8">
+          <div className="absolute right-0 bottom-5 md:right-8 md:bottom-8">
             <Icon icon="pixel:quote-right-solid" width={20} height={20} />
           </div>
         </div>
@@ -170,7 +170,7 @@ export default function TestimonialCarousel() {
               : 'translate-x-0 opacity-100'
           }`}
         >
-          <div className="relative h-12 w-12">
+          <div className="relative h-10 w-10 md:h-12 md:w-12">
             <Image
               src={currentTestimonial.image}
               alt={currentTestimonial.name}
@@ -179,10 +179,10 @@ export default function TestimonialCarousel() {
             />
           </div>
           <div className="text-left">
-            <div className="font-semibold text-gray-900">
+            <div className="text-brand dark:text-primary/80 text-sm font-semibold md:text-base">
               {currentTestimonial.name}
             </div>
-            <div className="text-sm text-gray-500">
+            <div className="text-xs text-gray-500 md:text-sm">
               {currentTestimonial.title}
             </div>
           </div>

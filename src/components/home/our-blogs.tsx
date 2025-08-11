@@ -1,5 +1,6 @@
 import SectionHeading from '../shared/section-heading';
 import BlogCard from '../cards/blog-card';
+import PrimaryBtn from '../buttons/primary-btn';
 
 const blogs = [
   {
@@ -33,7 +34,7 @@ const blogs = [
 
 export default function OurBlogs() {
   return (
-    <section className="border-y py-14">
+    <section className="border-y py-10 lg:py-14">
       {/* section heading */}
       <SectionHeading
         title="Our Latest Blogs"
@@ -41,10 +42,21 @@ export default function OurBlogs() {
       />
 
       {/* blogs */}
-      <div className="mt-10 grid grid-cols-1 gap-4 px-4 md:grid-cols-2 lg:grid-cols-3">
+      <div className="mt-10 hidden gap-4 px-4 lg:grid lg:grid-cols-3">
         {blogs?.map((blog, index) => (
           <BlogCard blog={blog} key={index} />
         ))}
+      </div>
+      {/* for medium device */}
+      <div className="mt-10 grid grid-cols-1 gap-2 px-2 md:grid-cols-2 md:gap-4 md:px-4 lg:hidden">
+        {blogs?.slice(0, 2)?.map((blog, index) => (
+          <BlogCard blog={blog} key={index} />
+        ))}
+      </div>
+
+      {/* view all button */}
+      <div className="mt-10 flex items-center justify-center">
+        <PrimaryBtn title="View All Blogs" iconName="" />
       </div>
     </section>
   );
