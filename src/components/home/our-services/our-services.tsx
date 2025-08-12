@@ -8,7 +8,7 @@ export default function OurServices() {
       <SectionHeading
         title="Our Services"
         description="We build smarter systems, powerful websites and scalable automation workflows for modern brands, ecommerce stores and SaaS platforms across the U.S and beyond."
-        className="mb-10 max-w-[950px]"
+        className="mb-10 lg:max-w-[850px] xl:max-w-[974px]"
       />
 
       {/* our services with bento grid card */}

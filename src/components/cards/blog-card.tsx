@@ -1,4 +1,5 @@
 import { formatDate } from '@/utils/formatDate';
+import { BorderBeam } from '../magicui/border-beam';
 
 type TBlog = {
   _id: string;
@@ -13,7 +14,7 @@ export default function BlogCard({ blog }: { blog: TBlog }) {
   return (
     <div
       key={_id}
-      className="group/bento shadow-input row-span-1 flex cursor-pointer flex-col justify-between space-y-4 rounded-xl border border-neutral-200 bg-white p-4 transition duration-200 hover:shadow-xl dark:border-white/[0.2] dark:bg-black dark:shadow-none"
+      className="group/bento shadow-input relative row-span-1 flex cursor-pointer flex-col justify-between space-y-4 overflow-hidden rounded-xl border border-neutral-200 bg-white p-4 transition duration-200 hover:shadow-xl dark:border-white/[0.2] dark:bg-black dark:shadow-none"
     >
       {/* image */}
       <div className="h-[184px] w-full overflow-hidden rounded-t-xl border">
@@ -32,6 +33,7 @@ export default function BlogCard({ blog }: { blog: TBlog }) {
         </h3>
         <p className="text-brand/90 dark:text-neutral-300">{description}</p>
       </div>
+      <BorderBeam duration={6} size={300} />
     </div>
   );
 }
