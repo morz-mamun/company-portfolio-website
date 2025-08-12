@@ -10,7 +10,7 @@ export default function Footer() {
     <footer className="border-t pt-10 md:pt-20">
       <div className="border-t border-b">
         <div className="mx-auto max-w-7xl px-4 md:px-6">
-          <div className="relative border-x bg-[#F5F5F5]">
+          <div className="relative border-x bg-[#F5F5F5] dark:bg-[#0D0D0D]">
             {/* footer content */}
             <div className="grid grid-cols-2 gap-8 px-4 py-8 md:grid-cols-3 md:px-6 md:py-12 lg:grid-cols-5">
               {/* about us and contact us */}
@@ -204,6 +204,8 @@ export default function Footer() {
           © {currentYear} Global Trust Communications. All rights reserved.
         </p>
       </div>
+
+      {/* bottom pattern */}
     </footer>
   );
 }

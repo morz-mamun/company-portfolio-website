@@ -6,7 +6,7 @@ import AnimatedText from '../shared/animated-text';
 
 export default function Banner() {
   return (
-    <section className="lg:h-[calc(100vh-250px)]">
+    <section className="">
       <BannerTitleBtn />
       {/* content */}
       <div className="mx-2 mt-[28px] max-w-5xl text-center lg:mx-auto">
