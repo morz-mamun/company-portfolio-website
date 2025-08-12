@@ -2,14 +2,7 @@
 
 import { motion } from 'framer-motion';
 
-export default function AnimatedText() {
-  const parts = [
-    'Empowering Business',
-    'with AI automation,',
-    'Digital Marketing &',
-    'Technology Solutions',
-  ];
-
+export default function AnimatedText({ data }: { data: string[] }) {
   return (
     <motion.div
       className="font-space-grotesk flex flex-wrap justify-center text-center text-3xl font-bold md:text-[50px]"
@@ -26,7 +19,7 @@ export default function AnimatedText() {
         },
       }}
     >
-      {parts.map((part, index) => (
+      {data?.map((part, index) => (
         <motion.span
           key={index}
           className="dark:text-primary inline-block bg-[linear-gradient(to_bottom,_#100F0F,_#5C5B5B)] bg-clip-text text-transparent"
@@ -43,7 +36,7 @@ export default function AnimatedText() {
           }}
         >
           {part}
-          {index < parts.length - 1 && ' '} {/* Add space between parts */}
+          {index < data?.length - 1 && ' '} {/* Add space between parts */}
         </motion.span>
       ))}
     </motion.div>
