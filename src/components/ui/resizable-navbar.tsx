@@ -10,6 +10,8 @@ import {
 import Link from 'next/link';
 
 import React, { useRef, useState } from 'react';
+import { Popover, PopoverContent, PopoverTrigger } from './popover';
+import { whatWeDoItemsData } from '@/constants/navbar-data/what-we-do-items-data';
 
 interface NavbarProps {
   children: React.ReactNode;
@@ -115,37 +117,88 @@ export const NavBody = ({ children, className, visible }: NavBodyProps) => {
 
 export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
   const [hovered, setHovered] = useState<number | null>(null);
+  const [open, setOpen] = useState(false);
 
   return (
     <motion.div
-      onMouseLeave={() => setHovered(null)}
+      onMouseLeave={() => {
+        setHovered(null);
+        setOpen(false);
+      }}
       className={cn(
         'absolute inset-0 hidden flex-1 flex-row items-center justify-center space-x-2 text-base font-medium text-zinc-600 transition duration-200 hover:text-zinc-800 lg:flex lg:space-x-2',
         className,
       )}
     >
-      {items.map((item, idx) => (
-        <a
-          onMouseEnter={() => setHovered(idx)}
-          onClick={onItemClick}
-          // i want to add active navItem class, please let me know
-          className={`relative px-4 py-2 text-[#000000] dark:text-neutral-300`}
-          key={`link-${idx}`}
-          href={item.link}
-        >
-          {hovered === idx && (
-            <motion.div
-              layoutId="hovered"
-              className="absolute inset-0 h-full w-full rounded-full bg-[#CCCCCC] dark:bg-neutral-800"
-            />
-          )}
-          <span className="relative z-20">{item.name}</span>
-        </a>
-      ))}
+      {items.map((item, idx) => {
+        if (item.name === 'What we do') {
+          return (
+            <Popover key={`nav-${idx}`} open={open} onOpenChange={setOpen}>
+              <PopoverTrigger asChild>
+                <button
+                  onMouseEnter={() => {
+                    setHovered(idx);
+                    setOpen(true);
+                  }}
+                  className="text-brand relative rounded-full px-4 py-1 dark:text-neutral-300"
+                >
+                  {hovered === idx && (
+                    <motion.div
+                      layoutId="hovered"
+                      className="absolute inset-0 h-full w-full rounded-full bg-[#CCCCCC] dark:bg-neutral-800"
+                    />
+                  )}
+                  <span className="relative z-20">{item.name}</span>
+                </button>
+              </PopoverTrigger>
+              <PopoverContent
+                align="start"
+                sideOffset={8}
+                className="p-2"
+                onMouseEnter={() => setOpen(true)}
+                onMouseLeave={() => setOpen(false)}
+              >
+                <div className="flex flex-col gap-1">
+                  {whatWeDoItemsData?.map((item, idx) => (
+                    <Link
+                      href={item.link}
+                      key={`link-${idx}`}
+                      onClick={onItemClick}
+                      className="text-brand/70 rounded-md px-3 py-1 hover:bg-[#CCCCCC]/40 dark:text-neutral-300 dark:hover:bg-neutral-800/60"
+                    >
+                      {item.name}
+                    </Link>
+                  ))}
+                </div>
+              </PopoverContent>
+            </Popover>
+          );
+        }
+
+        return (
+          <Link
+            href={item.link}
+            onMouseEnter={() => {
+              setHovered(idx);
+              setOpen(false);
+            }}
+            onClick={onItemClick}
+            className="text-brand relative px-4 py-2 dark:text-neutral-300"
+            key={`link-${idx}`}
+          >
+            {hovered === idx && (
+              <motion.div
+                layoutId="hovered"
+                className="absolute inset-0 h-full w-full rounded-full bg-[#CCCCCC] dark:bg-neutral-800"
+              />
+            )}
+            <span className="relative z-20">{item.name}</span>
+          </Link>
+        );
+      })}
     </motion.div>
   );
 };
-
 export const MobileNav = ({ children, className, visible }: MobileNavProps) => {
   return (
     <motion.div
