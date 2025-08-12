@@ -3,7 +3,7 @@ import { homeBannerData } from '@/constants/banner-data/home-banner-data';
 import BannerTitleBtn from '../buttons/banner-title-btn';
 import BannerTitleAndDescription from '../shared/banner-title-description';
 
-export default function Banner() {
+export default function HomeBanner() {
   const { title, description } = homeBannerData;
   return (
     <section className="">

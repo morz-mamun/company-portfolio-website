@@ -1,4 +1,4 @@
-import Banner from '@/components/home/banner';
+import HomeBanner from '@/components/home/banner';
 import ContactUs from '@/components/home/contact-us';
 import FAQ from '@/components/home/faq';
 import HowWeManageWork from '@/components/home/how-we-manage-work/how-we-manage-work';
@@ -15,7 +15,7 @@ export default function HomePage() {
     <main className="mx-auto min-h-screen max-w-7xl overflow-hidden">
       {/* Banner Section */}
       <div className="mt-20 md:mt-28 lg:mt-32">
-        <Banner />
+        <HomeBanner />
       </div>
       {/* Video Section */}
       <div className="px-2 lg:px-0">
