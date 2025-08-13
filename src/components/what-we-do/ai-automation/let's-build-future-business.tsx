@@ -1,0 +1,34 @@
+import PrimaryBtn from '@/components/buttons/primary-btn';
+export default function LetsBuildFutureBusiness() {
+  return (
+    <div className="py-10 md:py-14">
+      <div className="relative flex w-full flex-col items-center justify-center overflow-hidden border-y px-10 py-[120px]">
+        <div className="z-10 mt-4 flex flex-col items-center text-center text-black dark:text-white">
+          <h3 className="font-space-grotesk mb-4 text-2xl font-bold md:text-3xl lg:text-[42px]">
+            Let&apos;s Build the Future of Your Business
+          </h3>
+          <p className="mb-4 text-base font-medium">
+            Whether it&apos;s a website, app, or complex software system
+            we&apos;ll bring your vision to life.
+          </p>
+          <PrimaryBtn
+            title="Contact Now"
+            iconName="icons8:right-round"
+            className="mt-5"
+          />
+        </div>
+        {/* Rotated marquee group */}
+        <div className="absolute">
+          <div className="group overflow-hidden[--duration:20s] flex flex-col [--gap:1rem]">
+            <img
+              className="object-cover"
+              src="https://pub-3c3fbc3b66a54a4ab707f64d0f564e7d.r2.dev/hexagon.png"
+              alt=""
+            />
+          </div>
+        </div>
+        <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-b from-transparent to-white to-70% dark:to-black"></div>
+      </div>
+    </div>
+  );
+}

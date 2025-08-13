@@ -1,25 +1,7 @@
 import { Marquee } from '@/components/magicui/marquee';
 import SectionHeading from '@/components/shared/section-heading';
+import { whyChooseUsData } from '@/constants/ai-automation-data/ai-automation-data';
 import { Icon } from '@iconify/react/dist/iconify.js';
-
-const whyChooseUsData = [
-  {
-    icon: 'streamline-cyber:business-target',
-    title: 'Full-cycle development from strategy to launch and beyond.',
-  },
-  {
-    icon: 'hugeicons:apple-intelligence',
-    title: 'Scalable, secure architecture tailored to your needs.',
-  },
-  {
-    icon: 'fluent:shifts-team-20-regular',
-    title: 'Dedicated support even after deployment.',
-  },
-  {
-    icon: 'fluent:iot-16-regular',
-    title: 'Agile process with real-time collaboration.',
-  },
-];
 
 export default function WhyChooseUs() {
   return (
@@ -31,7 +13,7 @@ export default function WhyChooseUs() {
       />
       {/* marque */}
       <Marquee pauseOnHover className="mt-14 [--duration:20s]">
-        {whyChooseUsData.map((item, index) => (
+        {whyChooseUsData?.map((item, index) => (
           <div
             key={index}
             className="flex max-w-[300px] cursor-pointer flex-col items-center justify-center space-y-5 rounded-[32px] border px-6 py-10 shadow-[0_2px_4.8px_1px_rgba(0,0,0,0.25)]"

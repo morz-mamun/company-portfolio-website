@@ -163,3 +163,23 @@ export const facilityAndSecurityAutomation: TServices = {
     subServicesClass: 'order-1',
   },
 };
+
+// why client choose us data -->
+export const whyChooseUsData = [
+  {
+    icon: 'streamline-cyber:business-target',
+    title: 'Full-cycle development from strategy to launch and beyond.',
+  },
+  {
+    icon: 'hugeicons:apple-intelligence',
+    title: 'Scalable, secure architecture tailored to your needs.',
+  },
+  {
+    icon: 'fluent:shifts-team-20-regular',
+    title: 'Dedicated support even after deployment.',
+  },
+  {
+    icon: 'fluent:iot-16-regular',
+    title: 'Agile process with real-time collaboration.',
+  },
+];
