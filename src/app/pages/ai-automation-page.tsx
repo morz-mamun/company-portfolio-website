@@ -1,5 +1,6 @@
 import AiAutomationBanner from '@/components/what-we-do/ai-automation/ai-automation-banner';
 import ExploreOurSolution from '@/components/what-we-do/ai-automation/explore-our-solution/explore-our-solution';
+import WhyChooseUs from '@/components/what-we-do/ai-automation/explore-our-solution/why-choose-us';
 import ServiceDescription from '@/components/what-we-do/ai-automation/service-description';
 
 export default function AiAutomationPage() {
@@ -16,6 +17,10 @@ export default function AiAutomationPage() {
       {/* explore our services / solutions */}
       <div className="my-14">
         <ExploreOurSolution />
+      </div>
+      {/* why client choose us */}
+      <div className="my-14">
+        <WhyChooseUs />
       </div>
     </main>
   );
