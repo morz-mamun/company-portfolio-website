@@ -88,7 +88,7 @@ export const workflowAutomationData: TServices = {
     },
     {
       title: 'Customized automations built around your business rules.',
-      icon: 'pixel:machine-learning',
+      icon: 'streamline-plump:cog-automation-solid',
     },
   ] as TSubServices[],
   styleClasses: {
@@ -109,20 +109,20 @@ export const multiAgentOrchestrationData: TServices = {
   subServices: [
     {
       title: 'Modular agent architecture with role-specific logic.',
-      icon: 'tabler:message-chatbot-filled',
+      icon: 'mdi:face-agent',
     },
     {
       title: 'Real-time orchestration with MQTT, webhooks, and API comms.',
-      icon: 'mingcute:voice-fill',
+      icon: 'ic:baseline-api',
     },
     {
       title: 'Self-learning behaviors and autonomous decision-making.',
-      icon: 'pixel:calender-solid',
+      icon: 'ri:speak-ai-fill',
     },
     {
       title:
         'Use cases: logistics, customer service, smart buildings, and more.',
-      icon: 'pixel:machine-learning',
+      icon: 'fluent:settings-cog-multiple-24-filled',
     },
   ] as TSubServices[],
   styleClasses: {
@@ -143,19 +143,19 @@ export const facilityAndSecurityAutomation: TServices = {
   subServices: [
     {
       title: 'AI-powered CCTV, smart locks, and biometric access.',
-      icon: 'mingcute:code-fill',
+      icon: 'hugeicons:ai-security-03',
     },
     {
       title: 'Environmental sensors (temperature, motion, smoke, etc.).',
-      icon: 'ix:workspace',
+      icon: 'material-symbols:sensors-rounded',
     },
     {
       title: 'Automated energy, lighting, and equipment scheduling.',
-      icon: 'pixel:calender-solid',
+      icon: 'ri:calendar-schedule-fill',
     },
     {
       title: 'Custom dashboards for multi-location monitoring.',
-      icon: 'pixel:machine-learning',
+      icon: 'material-symbols:dashboard-2-rounded',
     },
   ] as TSubServices[],
   styleClasses: {

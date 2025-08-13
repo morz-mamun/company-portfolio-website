@@ -18,8 +18,6 @@ export default function ExploreOurSolution() {
         {/* Workflow Automation */}
         <Service sectionData={workflowAutomationData} />
         {/* Multi-Agent Orchestration */}
-        <Service sectionData={workflowAutomationData} />
-        {/* Facility and Security Automation */}
         <Service sectionData={multiAgentOrchestrationData} />
         {/* Facility and Security Automation */}
         <Service sectionData={facilityAndSecurityAutomation} />
