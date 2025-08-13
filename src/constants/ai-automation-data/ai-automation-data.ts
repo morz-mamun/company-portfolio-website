@@ -183,3 +183,16 @@ export const whyChooseUsData = [
     title: 'Agile process with real-time collaboration.',
   },
 ];
+
+export type TLetsBuildFutureBusiness = {
+  title: string;
+  description: string;
+  image: string;
+};
+// let's build future of your business data -->
+export const letsBuildFutureBusinessData: TLetsBuildFutureBusiness = {
+  title: 'Let’s Build the Future of Your Business',
+  description:
+    'Whether it’s a website, app, or complex software system, we’ll bring your vision to life.',
+  image: 'https://pub-3c3fbc3b66a54a4ab707f64d0f564e7d.r2.dev/hexagon.png',
+};

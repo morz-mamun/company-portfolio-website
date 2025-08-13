@@ -3,6 +3,7 @@ import ExploreOurSolution from '@/components/what-we-do/ai-automation/explore-ou
 import WhyChooseUs from '@/components/what-we-do/ai-automation/explore-our-solution/why-choose-us';
 import LetsBuildFutureBusiness from "@/components/what-we-do/ai-automation/let's-build-future-business";
 import ServiceDescription from '@/components/what-we-do/ai-automation/service-description';
+import { letsBuildFutureBusinessData } from '@/constants/ai-automation-data/ai-automation-data';
 
 export default function AiAutomationPage() {
   return (
@@ -25,7 +26,7 @@ export default function AiAutomationPage() {
       </div>
       {/* let's build future of your business */}
       <div>
-        <LetsBuildFutureBusiness />
+        <LetsBuildFutureBusiness sectionData={letsBuildFutureBusinessData} />
       </div>
     </main>
   );

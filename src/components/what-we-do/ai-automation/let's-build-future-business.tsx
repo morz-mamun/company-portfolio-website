@@ -1,15 +1,19 @@
 import PrimaryBtn from '@/components/buttons/primary-btn';
-export default function LetsBuildFutureBusiness() {
+import { TLetsBuildFutureBusiness } from '@/constants/ai-automation-data/ai-automation-data';
+export default function LetsBuildFutureBusiness({
+  sectionData,
+}: {
+  sectionData: TLetsBuildFutureBusiness;
+}) {
   return (
     <div className="py-10 md:py-14">
       <div className="relative flex w-full flex-col items-center justify-center overflow-hidden border-y px-10 py-[120px]">
         <div className="z-10 mt-4 flex flex-col items-center text-center text-black dark:text-white">
           <h3 className="font-space-grotesk mb-4 text-2xl font-bold md:text-3xl lg:text-[42px]">
-            Let&apos;s Build the Future of Your Business
+            {sectionData?.title}
           </h3>
           <p className="mb-4 text-base font-medium">
-            Whether it&apos;s a website, app, or complex software system
-            we&apos;ll bring your vision to life.
+            {sectionData?.description}
           </p>
           <PrimaryBtn
             title="Contact Now"
@@ -22,8 +26,8 @@ export default function LetsBuildFutureBusiness() {
           <div className="group overflow-hidden[--duration:20s] flex flex-col [--gap:1rem]">
             <img
               className="object-cover"
-              src="https://pub-3c3fbc3b66a54a4ab707f64d0f564e7d.r2.dev/hexagon.png"
-              alt=""
+              src={sectionData?.image}
+              alt="background-image"
             />
           </div>
         </div>
