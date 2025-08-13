@@ -1,4 +1,6 @@
 import AiAutomationBanner from '@/components/what-we-do/ai-automation/ai-automation-banner';
+import ExploreOurSolution from '@/components/what-we-do/ai-automation/explore-our-solution/explore-our-solution';
+import ServiceDescription from '@/components/what-we-do/ai-automation/service-description';
 
 export default function AiAutomationPage() {
   return (
@@ -6,6 +8,14 @@ export default function AiAutomationPage() {
       {/* Banner Section */}
       <div className="mt-20 md:mt-28 lg:mt-32">
         <AiAutomationBanner />
+      </div>
+      {/* service description section */}
+      <div className="mt-14">
+        <ServiceDescription />
+      </div>
+      {/* explore our services / solutions */}
+      <div className="my-14">
+        <ExploreOurSolution />
       </div>
     </main>
   );
