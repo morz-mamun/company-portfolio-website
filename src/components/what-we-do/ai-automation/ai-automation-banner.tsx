@@ -1,5 +1,5 @@
 import BannerTitleAndDescription from '@/components/shared/banner-title-description';
-import { aiAutomationBannerData } from '@/constants/banner-data/ai-automation-data';
+import { aiAutomationBannerData } from '@/constants/banner-data/ai-automation-banner-data';
 import React from 'react';
 
 export default function AiAutomationBanner() {

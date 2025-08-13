@@ -1,7 +1,8 @@
-import { serviceDescriptionData } from '@/constants/ai-automation-data/service-decription';
+import { serviceDescriptionData } from '@/constants/ai-automation-data/ai-automation-data';
 
 export default function ServiceDescription() {
-  const { title, descriptionOne, descriptionTwo } = serviceDescriptionData;
+  const { title, descriptionOne, descriptionTwo, image } =
+    serviceDescriptionData;
   return (
     <section className="bg-[#FAFAFA] p-10 shadow-[0px_2px_4px_rgba(0,0,0,0.25)]">
       <div className="mx-auto grid max-w-6xl grid-cols-5 gap-10 p-[32px]">
@@ -9,7 +10,7 @@ export default function ServiceDescription() {
         <div className="col-span-2 h-full">
           <img
             className="h-full rounded-[32px] object-cover"
-            src="https://pub-3c3fbc3b66a54a4ab707f64d0f564e7d.r2.dev/service11.png"
+            src={image}
             alt="ai-automation"
           />
         </div>
