@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 
-export default function AnimatedText({ data }: { data: string[] }) {
+export default function AnimatedText({ data }: { data: string[] | undefined }) {
   return (
     <motion.div
       className="font-space-grotesk flex flex-wrap justify-center text-center text-3xl font-bold md:text-[50px]"

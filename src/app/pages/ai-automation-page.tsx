@@ -21,7 +21,7 @@ export default function AiAutomationPage() {
       <div className="mt-14">
         <ServiceDescription
           sectionData={serviceDescriptionData}
-          TitleClassName="max-w-lg"
+          TitleClassName="md:max-w-lg max-w-sm px-[2px]"
           descriptionTwoClassName="mt-3"
         />
       </div>

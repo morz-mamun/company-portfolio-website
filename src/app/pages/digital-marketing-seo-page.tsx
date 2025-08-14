@@ -24,7 +24,7 @@ export default function DigitalMarketingAndSeoPage() {
       <div className="mt-14">
         <ServiceDescription
           sectionData={serviceDescriptionData}
-          TitleClassName="max-w-2xl"
+          TitleClassName="lg:max-w-2xl "
           descriptionTwoClassName="mt-4"
         />
       </div>

@@ -11,24 +11,24 @@ export default function ServiceDescription({
 }) {
   const { title, descriptionOne, descriptionTwo, image } = sectionData;
   return (
-    <section className="bg-[#FAFAFA] p-10 shadow-[0px_2px_4px_rgba(0,0,0,0.25)]">
-      <div className="mx-auto grid max-w-7xl grid-cols-5 gap-10 p-8">
+    <section className="bg-[#FAFAFA] shadow-[0px_2px_4px_rgba(0,0,0,0.25)] md:p-10">
+      <div className="mx-auto grid max-w-7xl grid-cols-1 gap-10 p-4 md:p-6 lg:grid-cols-5 lg:p-8">
         {/* image */}
-        <div className="col-span-2 h-full">
+        <div className="col-span-1 h-full w-full lg:col-span-2">
           <img
-            className="h-full rounded-[32px] object-cover"
+            className="h-full w-full rounded-[32px] object-cover"
             src={image}
             alt="ai-automation"
           />
         </div>
         {/* description */}
-        <div className="col-span-3 space-y-4">
+        <div className="col-span-1 mx-auto space-y-4 lg:col-span-3">
           <h3
-            className={`${TitleClassName} text-brand dark:text-primary font-space-grotesk text-[30px] font-bold`}
+            className={`text-brand dark:text-primary font-space-grotesk mx-auto text-center text-xl font-bold md:text-[30px] lg:mx-0 lg:text-start ${TitleClassName}`}
           >
             {title}
           </h3>
-          <div className="max-w-xl">
+          <div className="max-w-xl text-sm md:text-base">
             <p className="text-brand/70 dark:text-primary/70">
               {descriptionOne}
             </p>

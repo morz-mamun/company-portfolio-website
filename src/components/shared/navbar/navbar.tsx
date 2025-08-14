@@ -126,9 +126,9 @@ export default function WebSiteNavbar() {
                     <PopoverContent
                       align="start"
                       side="right"
-                      sideOffset={-30}
+                      sideOffset={-40}
                       alignOffset={30}
-                      className="w-[250px] p-1"
+                      className="w-[260px] p-2 md:w-[300px]"
                     >
                       <div className="flex flex-col gap-1">
                         {whatWeDoItemsData?.map((item, idx) => (
