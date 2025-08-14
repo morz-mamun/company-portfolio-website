@@ -3,22 +3,30 @@ import ExploreOurSolution from '@/components/what-we-do/ai-automation/explore-ou
 import WhyChooseUs from '@/components/what-we-do/shared/why-choose-us';
 import LetsBuildFutureBusiness from "@/components/what-we-do/shared/let's-build-future-business";
 import ServiceDescription from '@/components/what-we-do/shared/service-description';
+
 import {
   letsBuildFutureBusinessData,
   serviceDescriptionData,
-} from '@/constants/what-we-do-data/ai-automation-data';
-import { aiAutomationBannerData } from '@/constants/banner-data/ai-automation-banner-data';
+  whyChooseUsData,
+} from '@/constants/what-we-do-data/digital-marketing-seo-data';
+import { digitalMarketingSeoBannerData } from '@/constants/banner-data/digital-marketing-seo-banner-data';
 
 export default function DigitalMarketingAndSeoPage() {
   return (
     <main className="mx-auto min-h-screen max-w-7xl overflow-hidden">
       {/* Banner Section */}
       <div className="mt-20 md:mt-28 lg:mt-32">
-        <BannerTitleAndDescription sectionData={aiAutomationBannerData} />
+        <BannerTitleAndDescription
+          sectionData={digitalMarketingSeoBannerData}
+        />
       </div>
       {/* service description section */}
       <div className="mt-14">
-        <ServiceDescription sectionData={serviceDescriptionData} />
+        <ServiceDescription
+          sectionData={serviceDescriptionData}
+          TitleClassName="max-w-2xl"
+          descriptionTwoClassName="mt-4"
+        />
       </div>
       {/* explore our services / solutions */}
       <div className="my-14">
@@ -26,7 +34,7 @@ export default function DigitalMarketingAndSeoPage() {
       </div>
       {/* why client choose us */}
       <div className="my-14">
-        <WhyChooseUs />
+        <WhyChooseUs sectionData={whyChooseUsData} />
       </div>
       {/* let's build future of your business */}
       <div>

@@ -1,11 +1,11 @@
 import SectionHeading from '@/components/shared/section-heading';
 import Service from '../shared/service/service';
 import {
-  aiChatBotAndVoiceAssistantData,
-  facilityAndSecurityAutomation,
-  multiAgentOrchestrationData,
-  workflowAutomationData,
-} from '@/constants/what-we-do-data/ai-automation-data';
+  fullStackWebAndAppDevelopmentData,
+  ongoinTechnicalSupportAndMaintenanceData,
+  softwareArchitectureAndIntegrationData,
+  webPortalsCmsAndApisData,
+} from '@/constants/what-we-do-data/web-software-development-data';
 
 export default function ExploreOurSolution() {
   return (
@@ -14,13 +14,13 @@ export default function ExploreOurSolution() {
       <SectionHeading title="Explore Our Solutions" />
       <div className="mt-14 space-y-32 border-y bg-[#FEFEFE] py-14">
         {/* Ai Chatbot and Voice Assistant */}
-        <Service sectionData={aiChatBotAndVoiceAssistantData} />
+        <Service sectionData={fullStackWebAndAppDevelopmentData} />
         {/* Workflow Automation */}
-        <Service sectionData={workflowAutomationData} />
+        <Service sectionData={webPortalsCmsAndApisData} />
         {/* Multi-Agent Orchestration */}
-        <Service sectionData={multiAgentOrchestrationData} />
+        <Service sectionData={softwareArchitectureAndIntegrationData} />
         {/* Facility and Security Automation */}
-        <Service sectionData={facilityAndSecurityAutomation} />
+        <Service sectionData={ongoinTechnicalSupportAndMaintenanceData} />
       </div>
     </section>
   );

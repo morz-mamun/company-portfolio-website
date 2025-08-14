@@ -1,9 +1,14 @@
 import { Marquee } from '@/components/magicui/marquee';
 import SectionHeading from '@/components/shared/section-heading';
-import { whyChooseUsData } from '@/constants/what-we-do-data/ai-automation-data';
+import { TWhyChooseUs } from '@/types/services';
 import { Icon } from '@iconify/react/dist/iconify.js';
 
-export default function WhyChooseUs() {
+export default function WhyChooseUs({
+  sectionData,
+}: {
+  sectionData: TWhyChooseUs;
+}) {
+  const { sectionTitle, marqueeData } = sectionData;
   return (
     <section className="relative mx-auto flex max-w-6xl flex-col items-center justify-center overflow-hidden">
       {/* section heading */}
@@ -13,7 +18,7 @@ export default function WhyChooseUs() {
       />
       {/* marque */}
       <Marquee pauseOnHover className="mt-14 [--duration:20s]">
-        {whyChooseUsData?.map((item, index) => (
+        {marqueeData?.map((item, index) => (
           <div
             key={index}
             className="flex max-w-[300px] cursor-pointer flex-col items-center justify-center space-y-5 rounded-[32px] border px-6 py-10 shadow-[0_2px_4.8px_1px_rgba(0,0,0,0.25)]"

@@ -1,42 +1,43 @@
-import { TServiceDescription, TServices } from '@/types/services';
+import { TMarqueeData, TServiceDescription, TServices } from '@/types/services';
 
 export const serviceDescriptionData: TServiceDescription = {
-  title: 'Automate Smarter. Scale Faster. Think Beyond Tasks.',
+  title:
+    'Attract the Right Traffic. Build a Memorable Brand. Convert With Confidence.',
   descriptionOne:
-    'At Trust Global Communications, we don’t just automate we build intelligent systems that think, act, and evolve. Our AI Automation & Multi-Agent Systems (MAS) solutions help businesses streamline operations, reduce manual work, and build self-adapting environments that can learn, decide, and collaborate in real time.',
+    "At Trust Global Communications, we blend creative strategy with performance-driven execution to grow your brand, traffic, and revenue across every digital touchpoint. Whether you're launching a new product, scaling your online presence, or optimizing conversions—we build campaigns that connect, convert, and compound your growth.",
   descriptionTwo:
-    'From chatbots and workflow automation to coordinated AI agents and secure smart facilities—we bring together intelligence and innovation to power the future of business.',
-  image: 'https://pub-3c3fbc3b66a54a4ab707f64d0f564e7d.r2.dev/service11.png',
+    'From SEO and paid ads to content and brand visibility, our digital marketing team is your engine for sustainable success.',
+  image: 'https://pub-3c3fbc3b66a54a4ab707f64d0f564e7d.r2.dev/baner04.jpg',
 };
 
 // indivisual sub services data -->
 
-// AI Chatbots and Voice Assistants data -->
-export const aiChatBotAndVoiceAssistantData: TServices = {
+// all services section title data -->
+export const servicesSectionTitleData = 'Discover how we can add value';
+// SEO data -->
+export const seoData: TServices = {
   data: {
-    title: '1. (AI Chatbots & Voice Assistants)',
+    title: '1. SEO (On-Page, Off-Page, Technical)',
     description:
-      'Your customers deserve more than canned responses. We build intelligent chatbots and voice assistants that offer instant, personalized, and human-like interactions anytime, anywhere.',
+      'We take a 360° approach to SEO optimizing your website inside and out. From technical health to high-authority backlinks, we make sure your brand shows up where it matters most.',
     image: 'https://pub-3c3fbc3b66a54a4ab707f64d0f564e7d.r2.dev/service10.png',
-    imageAlt: 'ai-chatbot-and-voice-assistant',
+    imageAlt: 'seo-on-page-off-page-technical',
   },
   subServices: [
     {
-      title:
-        'GPT-powered chatbots for web, WhatsApp, Messenger and mobile apps.',
+      title: 'On-Page SEO: keyword mapping, meta tags, internal linking.',
       icon: 'tabler:message-chatbot-filled',
     },
     {
-      title: 'Voice assistants for smart devices, IVR and custom platforms.',
+      title: 'Off-Page SEO: white-hat link building, citations, digital PR.',
       icon: 'mingcute:voice-fill',
     },
     {
-      title:
-        'Seamless integration with CRMs, calendars and customer service tools.',
+      title: 'Technical SEO: speed, schema, mobile optimization, crawl audits.',
       icon: 'pixel:calender-solid',
     },
     {
-      title: 'Multilingual, omnichannel support with real-time learning.',
+      title: 'Tools: Surfer SEO, Ahrefs, SEMrush, Screaming Frog',
       icon: 'pixel:machine-learning',
     },
   ],
@@ -46,32 +47,31 @@ export const aiChatBotAndVoiceAssistantData: TServices = {
   },
 };
 
-// Workflow Automation data -->
-export const workflowAutomationData: TServices = {
+// Paid Ads data -->
+export const paidAdsData: TServices = {
   data: {
-    title: '2. Workflow Automation (n8n, Zapier, Make)',
+    title: '2. Paid Ads (Google, Meta, TikTok)',
     description:
-      'We connect your apps, tools, and systems through visual workflow builders like n8n, Zapier, and Make—automating everything from lead follow-ups to report generation.',
+      'We design, launch, and optimize paid campaigns that put your offer in front of the right audience at the right time. Whether it’s search intent or scroll-stopping visuals, we deliver clicks that turn into customers.',
     image: 'https://pub-3c3fbc3b66a54a4ab707f64d0f564e7d.r2.dev/service09.png',
-    imageAlt: 'workflow-automation',
+    imageAlt: 'paid-ads-google-meta-tiktok',
   },
   subServices: [
     {
-      title:
-        'GPT-powered chatbots for web, WhatsApp, Messenger and mobile apps.',
+      title: 'Google Ads(Search, Display, YouTube)',
       icon: 'mingcute:code-fill',
     },
     {
       title:
-        'Real-time sync across Google Workspace, CRMs, eCommerce, Slack and more.',
+        'Meta Ads (Facebook & Instagram retargeting + lookalike audiences)',
       icon: 'ix:workspace',
     },
     {
-      title: 'Multi-step flows with logic, AI integrations and smart triggers.',
+      title: 'TikTok & short-form video ad campaigns',
       icon: 'pixel:calender-solid',
     },
     {
-      title: 'Customized automations built around your business rules.',
+      title: 'Conversion tracking, budget optimization, and A/B testing',
       icon: 'streamline-plump:cog-automation-solid',
     },
   ],
@@ -81,31 +81,31 @@ export const workflowAutomationData: TServices = {
   },
 };
 
-// Multi-Agent Orchestration data -->
-export const multiAgentOrchestrationData: TServices = {
+// Social Media data -->
+export const socialMediaData: TServices = {
   data: {
-    title: '3. (Multi-Agent Orchestration)',
+    title: '3. (Social Media Marketing & Analytics)',
     description:
-      'Imagine AI agents that can independently solve problems and work together as a team. We design Multi-Agent Systems (MAS) that coordinate in real-time to complete complex tasks, manage environments, and adapt to changing data.',
+      'Social media should do more than just post,it should perform. We create platform-specific strategies that blend storytelling, social proof, and trend awareness to drive engagement and conversions.',
     image: 'https://pub-3c3fbc3b66a54a4ab707f64d0f564e7d.r2.dev/service09.png',
-    imageAlt: 'multi-agent-orchestration',
+    imageAlt: 'social-media-marketing-analytics',
   },
   subServices: [
     {
-      title: 'Modular agent architecture with role-specific logic.',
+      title:
+        'Content calendars, reels, and stories for Meta, TikTok, LinkedIn, and X.',
       icon: 'mdi:face-agent',
     },
     {
-      title: 'Real-time orchestration with MQTT, webhooks, and API comms.',
+      title: 'Brand voice development + visual consistency.',
       icon: 'ic:baseline-api',
     },
     {
-      title: 'Self-learning behaviors and autonomous decision-making.',
+      title: 'Community management and engagement tracking.',
       icon: 'ri:speak-ai-fill',
     },
     {
-      title:
-        'Use cases: logistics, customer service, smart buildings, and more.',
+      title: 'Real-time analytics dashboards and insights.',
       icon: 'fluent:settings-cog-multiple-24-filled',
     },
   ],
@@ -115,30 +115,30 @@ export const multiAgentOrchestrationData: TServices = {
   },
 };
 
-// Workflow Automation data -->
-export const facilityAndSecurityAutomation: TServices = {
+// Content Strategy data -->
+export const contentStrategyData: TServices = {
   data: {
-    title: '4. Facility & Security Automation',
+    title: '4. Content Strategy & Funnel Copy',
     description:
-      'We create intelligent facility systems powered by IoT and AI to help you automate physical spaces and secure them remotely. From energy efficiency to smart surveillance your operations stay connected, safe, and under control.',
+      'From top of funnel awareness to post-purchase retention, we create content that moves people. Backed by SEO and behavioral insights, every word is crafted to educate, persuade, and inspire action.',
     image: 'https://pub-3c3fbc3b66a54a4ab707f64d0f564e7d.r2.dev/service10.png',
     imageAlt: 'facility-and-security-automation',
   },
   subServices: [
     {
-      title: 'AI-powered CCTV, smart locks, and biometric access.',
+      title: 'SEO blog strategy, topic clustering and content briefs.',
       icon: 'hugeicons:ai-security-03',
     },
     {
-      title: 'Environmental sensors (temperature, motion, smoke, etc.).',
+      title: 'Landing pages, service pages, and product copy.',
       icon: 'material-symbols:sensors-rounded',
     },
     {
-      title: 'Automated energy, lighting, and equipment scheduling.',
+      title: 'Email sequences, social captions, ad copy and funnel flows.',
       icon: 'ri:calendar-schedule-fill',
     },
     {
-      title: 'Custom dashboards for multi-location monitoring.',
+      title: 'Human-written, AI-assisted, and conversion-optimized.',
       icon: 'material-symbols:dashboard-2-rounded',
     },
   ],
@@ -148,26 +148,62 @@ export const facilityAndSecurityAutomation: TServices = {
   },
 };
 
-// why client choose us data -->
-export const whyChooseUsData = [
-  {
-    icon: 'streamline-cyber:business-target',
-    title: 'Full-cycle development from strategy to launch and beyond.',
+// Branding and Lead Generation data -->
+export const brandingAndLeadGenerationData: TServices = {
+  data: {
+    title: '5. Branding & Lead Generation Campaigns',
+    description:
+      'We help you create a brand that stands out and a lead gen system that brings in qualified prospects daily. From the first click to the final sale, we engineer every step of the customer journey to build trust and drive conversions.',
+    image: 'https://pub-3c3fbc3b66a54a4ab707f64d0f564e7d.r2.dev/service10.png',
+    imageAlt: 'facility-and-security-automation',
   },
-  {
-    icon: 'hugeicons:apple-intelligence',
-    title: 'Scalable, secure architecture tailored to your needs.',
+  subServices: [
+    {
+      title: 'Brand identity, messaging and creative guidelines.',
+      icon: 'hugeicons:ai-security-03',
+    },
+    {
+      title: 'Lead magnets, opt-in flows, and personaligated content.',
+      icon: 'material-symbols:sensors-rounded',
+    },
+    {
+      title: 'Landing pages and nurturing sequences.',
+      icon: 'ri:calendar-schedule-fill',
+    },
+    {
+      title: 'Campaigns across social, email, paid media and more.',
+      icon: 'material-symbols:dashboard-2-rounded',
+    },
+  ],
+  styleClasses: {
+    ServiceTitleAndDescriptionClass: 'order-1',
+    subServicesClass: 'order-2',
   },
-  {
-    icon: 'fluent:shifts-team-20-regular',
-    title: 'Dedicated support even after deployment.',
-  },
-  {
-    icon: 'fluent:iot-16-regular',
-    title: 'Agile process with real-time collaboration.',
-  },
-];
+};
 
+// why client choose us data -->
+export const whyChooseUsData = {
+  sectionTitle: 'Why Brands Trust TGC for Digital Growth',
+  marqueeData: [
+    {
+      icon: 'streamline-cyber:business-target',
+      title:
+        'Strategies tailored to your brand and audience not generic templates.',
+    },
+    {
+      icon: 'hugeicons:apple-intelligence',
+      title: 'Clear ROI reporting across SEO, paid media, and social.',
+    },
+    {
+      icon: 'fluent:shifts-team-20-regular',
+      title: 'Consistent brand voice across every channel.',
+    },
+    {
+      icon: 'fluent:iot-16-regular',
+      title: 'Full-funnel approach: awareness to conversion and beyond.',
+    },
+  ] as TMarqueeData[],
+};
 export type TLetsBuildFutureBusiness = {
   title: string;
   description: string;
@@ -175,8 +211,8 @@ export type TLetsBuildFutureBusiness = {
 };
 // let's build future of your business data -->
 export const letsBuildFutureBusinessData: TLetsBuildFutureBusiness = {
-  title: 'Let’s Build the Future of Your Business',
+  title: 'Let’s Elevate Your Brand and Performance',
   description:
-    'Whether it’s a website, app, or complex software system, we’ll bring your vision to life.',
+    'Book your free strategy session today—we’ll map your growth roadmap from visibility to profitability.',
   image: 'https://pub-3c3fbc3b66a54a4ab707f64d0f564e7d.r2.dev/hexagon.png',
 };

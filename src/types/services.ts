@@ -23,3 +23,13 @@ export type TServices = {
     subServicesClass?: string;
   };
 };
+
+// why choose us data type
+export type TMarqueeData = {
+  icon: string;
+  title: string;
+};
+export type TWhyChooseUs = {
+  marqueeData: TMarqueeData[];
+  sectionTitle: string;
+};

@@ -6,6 +6,7 @@ import ServiceDescription from '@/components/what-we-do/shared/service-descripti
 import {
   letsBuildFutureBusinessData,
   serviceDescriptionData,
+  whyChooseUsData,
 } from '@/constants/what-we-do-data/ai-automation-data';
 import { aiAutomationBannerData } from '@/constants/banner-data/ai-automation-banner-data';
 
@@ -18,7 +19,11 @@ export default function AiAutomationPage() {
       </div>
       {/* service description section */}
       <div className="mt-14">
-        <ServiceDescription sectionData={serviceDescriptionData} />
+        <ServiceDescription
+          sectionData={serviceDescriptionData}
+          TitleClassName="max-w-lg"
+          descriptionTwoClassName="mt-3"
+        />
       </div>
       {/* explore our services / solutions */}
       <div className="my-14">
@@ -26,7 +31,7 @@ export default function AiAutomationPage() {
       </div>
       {/* why client choose us */}
       <div className="my-14">
-        <WhyChooseUs />
+        <WhyChooseUs sectionData={whyChooseUsData} />
       </div>
       {/* let's build future of your business */}
       <div>

@@ -10,7 +10,8 @@ export const serviceDescriptionData: TServiceDescription = {
 };
 
 // indivisual sub services data -->
-
+// all services section title data -->
+export const servicesSectionTitleData = 'Explore our solutions';
 // AI Chatbots and Voice Assistants data -->
 export const aiChatBotAndVoiceAssistantData: TServices = {
   data: {

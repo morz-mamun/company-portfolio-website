@@ -1,5 +1,5 @@
 export const digitalMarketingSeoBannerData = {
-  title: 'AI Automation & Multi-Agent Systems',
+  title: 'Digital Marketing & SEO',
   description:
-    'Revolutionize operations using intelligent AI agents and automation workflows that can reduce manual tasks, optimize productivity, and improve response time.',
+    'Boost your digital visibility through AI-powered marketing strategies that convert leads and scale brand impact.',
 };

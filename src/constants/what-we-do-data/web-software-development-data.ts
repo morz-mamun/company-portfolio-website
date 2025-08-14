@@ -1,4 +1,4 @@
-import { TServiceDescription, TServices } from '@/types/services';
+import { TMarqueeData, TServiceDescription, TServices } from '@/types/services';
 
 export const serviceDescriptionData: TServiceDescription = {
   title: 'Custom-Built. Scalable. Future-Ready.',
@@ -8,33 +8,32 @@ export const serviceDescriptionData: TServiceDescription = {
 };
 
 // indivisual sub services data -->
-
-// AI Chatbots and Voice Assistants data -->
-export const aiChatBotAndVoiceAssistantData: TServices = {
+// all services section title data -->
+export const servicesSectionTitleData = 'Explore our solutions';
+// Full Stack Web & App Development data -->
+export const fullStackWebAndAppDevelopmentData: TServices = {
   data: {
-    title: '1. (AI Chatbots & Voice Assistants)',
+    title: '1. (Full-Stack Web & App Development)',
     description:
-      'Your customers deserve more than canned responses. We build intelligent chatbots and voice assistants that offer instant, personalized, and human-like interactions anytime, anywhere.',
-    image: 'https://pub-3c3fbc3b66a54a4ab707f64d0f564e7d.r2.dev/service10.png',
-    imageAlt: 'ai-chatbot-and-voice-assistant',
+      'We build robust, user-friendly websites and applications using modern frontend and backend technologies. Our full-stack team handles everything from UI design to server-side logic so your product looks great and performs flawlessly.',
+    image: 'https://pub-3c3fbc3b66a54a4ab707f64d0f564e7d.r2.dev/service15.png',
+    imageAlt: 'full-stack-web-and-app-development',
   },
   subServices: [
     {
-      title:
-        'GPT-powered chatbots for web, WhatsApp, Messenger and mobile apps.',
+      title: 'Responsive websites, mobile apps and PWA solutions.',
       icon: 'tabler:message-chatbot-filled',
     },
     {
-      title: 'Voice assistants for smart devices, IVR and custom platforms.',
+      title: 'React, Vue, Angular, Node.js, Laravel, Python, Next.js, etc.',
       icon: 'mingcute:voice-fill',
     },
     {
-      title:
-        'Seamless integration with CRMs, calendars and customer service tools.',
+      title: 'UX/UI design, secure coding and clean architecture.',
       icon: 'pixel:calender-solid',
     },
     {
-      title: 'Multilingual, omnichannel support with real-time learning.',
+      title: 'Optimized for speed, SEO, and cross-device performance.',
       icon: 'pixel:machine-learning',
     },
   ],
@@ -44,32 +43,30 @@ export const aiChatBotAndVoiceAssistantData: TServices = {
   },
 };
 
-// Workflow Automation data -->
-export const workflowAutomationData: TServices = {
+// Web portals, CMS & APIs data -->
+export const webPortalsCmsAndApisData: TServices = {
   data: {
-    title: '2. Workflow Automation (n8n, Zapier, Make)',
+    title: '2. Web Portals, CMS & APIs',
     description:
-      'We connect your apps, tools, and systems through visual workflow builders like n8n, Zapier, and Make—automating everything from lead follow-ups to report generation.',
-    image: 'https://pub-3c3fbc3b66a54a4ab707f64d0f564e7d.r2.dev/service09.png',
-    imageAlt: 'workflow-automation',
+      'We create custom web portals and powerful CMS platforms that make managing your digital presence easy. We develop secure, scalable APIs to connect systems and streamline operations.',
+    image: 'https://pub-3c3fbc3b66a54a4ab707f64d0f564e7d.r2.dev/service14.png',
+    imageAlt: 'web-portals-cms-and-apis',
   },
   subServices: [
     {
-      title:
-        'GPT-powered chatbots for web, WhatsApp, Messenger and mobile apps.',
+      title: 'Custom CMS & Software Architecture & Integration.',
       icon: 'mingcute:code-fill',
     },
     {
-      title:
-        'Real-time sync across Google Workspace, CRMs, eCommerce, Slack and more.',
+      title: 'Client and admin portals for B2B/B2C platforms.',
       icon: 'ix:workspace',
     },
     {
-      title: 'Multi-step flows with logic, AI integrations and smart triggers.',
+      title: 'Restful & GraphQL APIs for seamless integrations.',
       icon: 'pixel:calender-solid',
     },
     {
-      title: 'Customized automations built around your business rules.',
+      title: 'Single sign-on (SSO), permissions and user roles.',
       icon: 'streamline-plump:cog-automation-solid',
     },
   ],
@@ -79,31 +76,30 @@ export const workflowAutomationData: TServices = {
   },
 };
 
-// Multi-Agent Orchestration data -->
-export const multiAgentOrchestrationData: TServices = {
+// Software Architecture & Integration data -->
+export const softwareArchitectureAndIntegrationData: TServices = {
   data: {
-    title: '3. (Multi-Agent Orchestration)',
+    title: '3. (Software Architecture & Integration)',
     description:
-      'Imagine AI agents that can independently solve problems and work together as a team. We design Multi-Agent Systems (MAS) that coordinate in real-time to complete complex tasks, manage environments, and adapt to changing data.',
-    image: 'https://pub-3c3fbc3b66a54a4ab707f64d0f564e7d.r2.dev/service09.png',
-    imageAlt: 'multi-agent-orchestration',
+      'We don’t just build software we architect it. Our team designs scalable, modular systems that integrate smoothly with your existing tech stack, helping you save time, reduce costs, and avoid technical debt.',
+    image: 'https://pub-3c3fbc3b66a54a4ab707f64d0f564e7d.r2.dev/service12.png',
+    imageAlt: 'software-architecture-and-integration',
   },
   subServices: [
     {
-      title: 'Modular agent architecture with role-specific logic.',
+      title: 'Clean architecture and scalable backend systems.',
       icon: 'mdi:face-agent',
     },
     {
-      title: 'Real-time orchestration with MQTT, webhooks, and API comms.',
+      title: 'Third-party platform integrations (CRMs, ERPs, IoT, AI APIs).',
       icon: 'ic:baseline-api',
     },
     {
-      title: 'Self-learning behaviors and autonomous decision-making.',
+      title: 'Microservices, containers (Docker) and CI/CD pipelines.',
       icon: 'ri:speak-ai-fill',
     },
     {
-      title:
-        'Use cases: logistics, customer service, smart buildings, and more.',
+      title: 'Database design: SQL, NoSQL, Firebase, MongoDB.',
       icon: 'fluent:settings-cog-multiple-24-filled',
     },
   ],
@@ -113,30 +109,30 @@ export const multiAgentOrchestrationData: TServices = {
   },
 };
 
-// Workflow Automation data -->
-export const facilityAndSecurityAutomation: TServices = {
+// Ongoing Technical Support & Maintenance data -->
+export const ongoinTechnicalSupportAndMaintenanceData: TServices = {
   data: {
-    title: '4. Facility & Security Automation',
+    title: '4. Ongoing Technical Support & Maintenance',
     description:
-      'We create intelligent facility systems powered by IoT and AI to help you automate physical spaces and secure them remotely. From energy efficiency to smart surveillance your operations stay connected, safe, and under control.',
-    image: 'https://pub-3c3fbc3b66a54a4ab707f64d0f564e7d.r2.dev/service10.png',
-    imageAlt: 'facility-and-security-automation',
+      'Technology doesn’t stop at launch and neither do we. We provide proactive technical support, maintenance, and performance optimization to ensure your product stays updated, fast, and secure.',
+    image: 'https://pub-3c3fbc3b66a54a4ab707f64d0f564e7d.r2.dev/service12.png',
+    imageAlt: 'ongoing-technical-support-and-maintenance',
   },
   subServices: [
     {
-      title: 'AI-powered CCTV, smart locks, and biometric access.',
+      title: 'Bug fixes, feature updates and code audits.',
       icon: 'hugeicons:ai-security-03',
     },
     {
-      title: 'Environmental sensors (temperature, motion, smoke, etc.).',
+      title: 'Uptime monitoring, SSL, backups and firewall setup.',
       icon: 'material-symbols:sensors-rounded',
     },
     {
-      title: 'Automated energy, lighting, and equipment scheduling.',
+      title: 'Performance optimization and server scaling.',
       icon: 'ri:calendar-schedule-fill',
     },
     {
-      title: 'Custom dashboards for multi-location monitoring.',
+      title: 'Ongoing UX improvements and roadmap planning.',
       icon: 'material-symbols:dashboard-2-rounded',
     },
   ],
@@ -147,24 +143,27 @@ export const facilityAndSecurityAutomation: TServices = {
 };
 
 // why client choose us data -->
-export const whyChooseUsData = [
-  {
-    icon: 'streamline-cyber:business-target',
-    title: 'Full-cycle development from strategy to launch and beyond.',
-  },
-  {
-    icon: 'hugeicons:apple-intelligence',
-    title: 'Scalable, secure architecture tailored to your needs.',
-  },
-  {
-    icon: 'fluent:shifts-team-20-regular',
-    title: 'Dedicated support even after deployment.',
-  },
-  {
-    icon: 'fluent:iot-16-regular',
-    title: 'Agile process with real-time collaboration.',
-  },
-];
+export const whyChooseUsData = {
+  sectionTitle: 'Why Clients Choose TGC for Web Software Development',
+  marqueeData: [
+    {
+      icon: 'streamline-cyber:business-target',
+      title: 'Full-cycle development from strategy to launch and beyond.',
+    },
+    {
+      icon: 'hugeicons:apple-intelligence',
+      title: 'Scalable, secure architecture tailored to your needs.',
+    },
+    {
+      icon: 'fluent:shifts-team-20-regular',
+      title: 'Dedicated support even after deployment.',
+    },
+    {
+      icon: 'fluent:iot-16-regular',
+      title: 'Agile process with real-time collaboration.',
+    },
+  ] as TMarqueeData[],
+};
 
 export type TLetsBuildFutureBusiness = {
   title: string;

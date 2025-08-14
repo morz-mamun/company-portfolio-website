@@ -1,4 +1,9 @@
-import { TServiceDescription, TServices } from '@/types/services';
+import {
+  TMarqueeData,
+  TServiceDescription,
+  TServices,
+  TWhyChooseUs,
+} from '@/types/services';
 
 export const serviceDescriptionData: TServiceDescription = {
   title: 'Automate Smarter. Scale Faster. Think Beyond Tasks.',
@@ -10,6 +15,9 @@ export const serviceDescriptionData: TServiceDescription = {
 };
 
 // indivisual sub services data -->
+
+// all services section title data -->
+export const servicesSectionTitleData = 'Explore our solutions';
 
 // AI Chatbots and Voice Assistants data -->
 export const aiChatBotAndVoiceAssistantData: TServices = {
@@ -149,24 +157,27 @@ export const facilityAndSecurityAutomation: TServices = {
 };
 
 // why client choose us data -->
-export const whyChooseUsData = [
-  {
-    icon: 'streamline-cyber:business-target',
-    title: 'Full-cycle development from strategy to launch and beyond.',
-  },
-  {
-    icon: 'hugeicons:apple-intelligence',
-    title: 'Scalable, secure architecture tailored to your needs.',
-  },
-  {
-    icon: 'fluent:shifts-team-20-regular',
-    title: 'Dedicated support even after deployment.',
-  },
-  {
-    icon: 'fluent:iot-16-regular',
-    title: 'Agile process with real-time collaboration.',
-  },
-];
+export const whyChooseUsData = {
+  sectionTitle: 'Why Clients Choose TGC for AI Automation',
+  marqueeData: [
+    {
+      icon: 'streamline-cyber:business-target',
+      title: 'Business processes that run smarter not just faster.',
+    },
+    {
+      icon: 'hugeicons:apple-intelligence',
+      title: 'Real-time coordination and adaptive intelligence.',
+    },
+    {
+      icon: 'fluent:shifts-team-20-regular',
+      title: 'Modular solutions that scale with your team or infrastructure.',
+    },
+    {
+      icon: 'fluent:iot-16-regular',
+      title: 'Integrated AI + IoT systems, managed from one place.',
+    },
+  ] as TMarqueeData[],
+};
 
 export type TLetsBuildFutureBusiness = {
   title: string;
@@ -175,8 +186,8 @@ export type TLetsBuildFutureBusiness = {
 };
 // let's build future of your business data -->
 export const letsBuildFutureBusinessData: TLetsBuildFutureBusiness = {
-  title: 'Let’s Build the Future of Your Business',
+  title: 'Let’s Bring Intelligence to Your Business',
   description:
-    'Whether it’s a website, app, or complex software system, we’ll bring your vision to life.',
+    'Ready to build smarter systems that talk, think, and work together?',
   image: 'https://pub-3c3fbc3b66a54a4ab707f64d0f564e7d.r2.dev/hexagon.png',
 };
