@@ -1,20 +1,23 @@
 import BannerTitleAndDescription from '@/components/shared/banner-title-description';
-import ExploreOurSolution from '@/components/what-we-do/ai-automation/explore-our-solution';
 import WhyChooseUs from '@/components/what-we-do/shared/why-choose-us';
 import LetsBuildFutureBusiness from "@/components/what-we-do/shared/let's-build-future-business";
 import ServiceDescription from '@/components/what-we-do/shared/service-description';
 import {
   letsBuildFutureBusinessData,
   serviceDescriptionData,
-} from '@/constants/what-we-do-data/ai-automation-data';
-import { aiAutomationBannerData } from '@/constants/banner-data/ai-automation-banner-data';
+  whyChooseUsData,
+} from '@/constants/what-we-do-data/saas-affiliated-tools-data';
+import { saasAffiliatedToolsBannerData } from '@/constants/banner-data/saas-affiliated-tools-banner-data';
+import ExploreOurSolution from '@/components/what-we-do/sass-affiliated-tools/explore-our-solution';
 
 export default function SaasAffiliatedToolsPage() {
   return (
     <main className="mx-auto min-h-screen max-w-7xl overflow-hidden">
       {/* Banner Section */}
       <div className="mt-20 md:mt-28 lg:mt-32">
-        <BannerTitleAndDescription sectionData={aiAutomationBannerData} />
+        <BannerTitleAndDescription
+          sectionData={saasAffiliatedToolsBannerData}
+        />
       </div>
       {/* service description section */}
       <div className="mt-14">
@@ -26,7 +29,7 @@ export default function SaasAffiliatedToolsPage() {
       </div>
       {/* why client choose us */}
       <div className="my-14">
-        <WhyChooseUs />
+        <WhyChooseUs sectionData={whyChooseUsData} />
       </div>
       {/* let's build future of your business */}
       <div>

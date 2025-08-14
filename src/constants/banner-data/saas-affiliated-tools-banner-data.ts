@@ -1,5 +1,5 @@
 export const saasAffiliatedToolsBannerData = {
-  title: 'AI Automation & Multi-Agent Systems',
+  title: 'SaaS & Affiliate Tools',
   description:
-    'Revolutionize operations using intelligent AI agents and automation workflows that can reduce manual tasks, optimize productivity, and improve response time.',
+    'Design and launch custom Micro SaaS tools and affiliate automation systems to drive recurring revenue and engagement.',
 };

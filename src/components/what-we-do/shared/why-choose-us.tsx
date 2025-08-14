@@ -12,10 +12,7 @@ export default function WhyChooseUs({
   return (
     <section className="relative mx-auto flex max-w-6xl flex-col items-center justify-center overflow-hidden">
       {/* section heading */}
-      <SectionHeading
-        title="Why Clients Choose TGC for AI Automation"
-        titleClassName="max-w-[500px] mx-auto"
-      />
+      <SectionHeading title={sectionTitle} titleClassName="max-w-lg mx-auto" />
       {/* marque */}
       <Marquee pauseOnHover className="mt-14 [--duration:20s]">
         {marqueeData?.map((item, index) => (

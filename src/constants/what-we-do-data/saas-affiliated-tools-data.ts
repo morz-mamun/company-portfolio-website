@@ -1,44 +1,42 @@
 import { TMarqueeData, TServiceDescription, TServices } from '@/types/services';
 
 export const serviceDescriptionData: TServiceDescription = {
-  title: 'Automate Smarter. Scale Faster. Think Beyond Tasks.',
+  title: 'Build Smarter Platforms. Track Performance. Scale Recurring Revenue.',
   descriptionOne:
-    'At Trust Global Communications, we don’t just automate we build intelligent systems that think, act, and evolve. Our AI Automation & Multi-Agent Systems (MAS) solutions help businesses streamline operations, reduce manual work, and build self-adapting environments that can learn, decide, and collaborate in real time.',
+    "At Trust Global Communications, we design and develop scalable SaaS products and affiliate marketing tools that fuel growth. Whether you're launching a micro SaaS, managing partners, or building recurring revenue systems—we turn your vision into streamlined, profitable platforms.",
   descriptionTwo:
-    'From chatbots and workflow automation to coordinated AI agents and secure smart facilities—we bring together intelligence and innovation to power the future of business.',
-  image: 'https://pub-3c3fbc3b66a54a4ab707f64d0f564e7d.r2.dev/service11.png',
+    'Our approach blends technical precision with marketing insight, so your software isn’t just functional—it’s conversion-ready, monetizable, and built for scale.',
+  image: 'https://pub-3c3fbc3b66a54a4ab707f64d0f564e7d.r2.dev/banner03.png',
 };
 
 // indivisual sub services data -->
 // all services section title data -->
-export const servicesSectionTitleData = 'Explore our solutions';
+export const servicesSectionTitleData = 'Discover how we can add value';
 
-// AI Chatbots and Voice Assistants data -->
-export const aiChatBotAndVoiceAssistantData: TServices = {
+// Micro SaaS Development data -->
+export const microSaaSDevelopmentData: TServices = {
   data: {
-    title: '1. (AI Chatbots & Voice Assistants)',
+    title: '1. Micro SaaS Development',
     description:
-      'Your customers deserve more than canned responses. We build intelligent chatbots and voice assistants that offer instant, personalized, and human-like interactions anytime, anywhere.',
+      "We specialize in building lightweight SaaS tools that solve specific pain points—fast. Whether it's a CRM add-on, AI assistant, dashboard tool, or automation service, we handle everything from idea to MVP and beyond.",
     image: 'https://pub-3c3fbc3b66a54a4ab707f64d0f564e7d.r2.dev/service10.png',
-    imageAlt: 'ai-chatbot-and-voice-assistant',
+    imageAlt: 'micro-saas-development',
   },
   subServices: [
     {
-      title:
-        'GPT-powered chatbots for web, WhatsApp, Messenger and mobile apps.',
+      title: 'Custom MVP design and full-stack development.',
       icon: 'tabler:message-chatbot-filled',
     },
     {
-      title: 'Voice assistants for smart devices, IVR and custom platforms.',
+      title: 'Admin dashboards, user accounts and subscription logic.',
       icon: 'mingcute:voice-fill',
     },
     {
-      title:
-        'Seamless integration with CRMs, calendars and customer service tools.',
+      title: 'API integrations, security and backend infrastructure.',
       icon: 'pixel:calender-solid',
     },
     {
-      title: 'Multilingual, omnichannel support with real-time learning.',
+      title: 'Scalable architecture with SaaS metrics built-in.',
       icon: 'pixel:machine-learning',
     },
   ],
@@ -48,32 +46,31 @@ export const aiChatBotAndVoiceAssistantData: TServices = {
   },
 };
 
-// Workflow Automation data -->
-export const workflowAutomationData: TServices = {
+// Affiliate Tracking Dashboards data -->
+export const affiliateTrackingDashboardsData: TServices = {
   data: {
-    title: '2. Workflow Automation (n8n, Zapier, Make)',
+    title: '2. Affiliate Tracking Dashboards',
     description:
       'We connect your apps, tools, and systems through visual workflow builders like n8n, Zapier, and Make—automating everything from lead follow-ups to report generation.',
     image: 'https://pub-3c3fbc3b66a54a4ab707f64d0f564e7d.r2.dev/service09.png',
-    imageAlt: 'workflow-automation',
+    imageAlt: 'affiliate-tracking-dashboards',
   },
   subServices: [
     {
       title:
-        'GPT-powered chatbots for web, WhatsApp, Messenger and mobile apps.',
+        'Custom or third-party (Post Affiliate Pro, Tapfiliate) dashboard setups.',
       icon: 'mingcute:code-fill',
     },
     {
-      title:
-        'Real-time sync across Google Workspace, CRMs, eCommerce, Slack and more.',
+      title: 'Click tracking, referral codes and commission logic.',
       icon: 'ix:workspace',
     },
     {
-      title: 'Multi-step flows with logic, AI integrations and smart triggers.',
+      title: 'Payout workflows and exportable reports.',
       icon: 'pixel:calender-solid',
     },
     {
-      title: 'Customized automations built around your business rules.',
+      title: 'Partner onboarding, status tracking and alerts.',
       icon: 'streamline-plump:cog-automation-solid',
     },
   ],
@@ -84,30 +81,31 @@ export const workflowAutomationData: TServices = {
 };
 
 // Multi-Agent Orchestration data -->
-export const multiAgentOrchestrationData: TServices = {
+export const ecommerceFunnelsAndIntegrationsData: TServices = {
   data: {
-    title: '3. (Multi-Agent Orchestration)',
+    title: '3. E-commerce Funnels & Integrations',
     description:
-      'Imagine AI agents that can independently solve problems and work together as a team. We design Multi-Agent Systems (MAS) that coordinate in real-time to complete complex tasks, manage environments, and adapt to changing data.',
+      'From landing pages to checkouts, we build ecommerce funnels that convert visitors into buyersand buyers into loyal subscribers. We also connect your store to everything: CRMs, payment gateways, inventory, and email.',
     image: 'https://pub-3c3fbc3b66a54a4ab707f64d0f564e7d.r2.dev/service09.png',
     imageAlt: 'multi-agent-orchestration',
   },
   subServices: [
     {
-      title: 'Modular agent architecture with role-specific logic.',
+      title:
+        'One-click upsells, abandoned cart flows, and checkout optimization.',
       icon: 'mdi:face-agent',
     },
     {
-      title: 'Real-time orchestration with MQTT, webhooks, and API comms.',
+      title:
+        'Shopify, WooCommerce, Stripe, PayPal, Mailchimp, Klaviyo integrations.',
       icon: 'ic:baseline-api',
     },
     {
-      title: 'Self-learning behaviors and autonomous decision-making.',
+      title: 'Zapier/n8n automation for post-purchase workflows.',
       icon: 'ri:speak-ai-fill',
     },
     {
-      title:
-        'Use cases: logistics, customer service, smart buildings, and more.',
+      title: 'GA4 & Facebook Pixel event tracking and reporting.',
       icon: 'fluent:settings-cog-multiple-24-filled',
     },
   ],
@@ -118,29 +116,31 @@ export const multiAgentOrchestrationData: TServices = {
 };
 
 // Workflow Automation data -->
-export const facilityAndSecurityAutomation: TServices = {
+export const subscriptionAndPaymentSystemsData: TServices = {
   data: {
-    title: '4. Facility & Security Automation',
+    title: '4. Subscription & Payment Systems',
     description:
-      'We create intelligent facility systems powered by IoT and AI to help you automate physical spaces and secure them remotely. From energy efficiency to smart surveillance your operations stay connected, safe, and under control.',
+      'We build secure, scalable subscription and billing systems that work across currencies, platforms, and business models. Whether it’s monthly access, digital downloads, or premium upgrades, we make getting paid frictionless.',
     image: 'https://pub-3c3fbc3b66a54a4ab707f64d0f564e7d.r2.dev/service10.png',
     imageAlt: 'facility-and-security-automation',
   },
   subServices: [
     {
-      title: 'AI-powered CCTV, smart locks, and biometric access.',
+      title:
+        'Stripe, Paddle, PayPal, Razorpay, and Coinbase Commerce integrations.',
       icon: 'hugeicons:ai-security-03',
     },
     {
-      title: 'Environmental sensors (temperature, motion, smoke, etc.).',
+      title:
+        'Subscription logic (free trials, upgrades, downgrades, cancellations).',
       icon: 'material-symbols:sensors-rounded',
     },
     {
-      title: 'Automated energy, lighting, and equipment scheduling.',
+      title: 'Auto-renewals, failed payment handling and webhook events.',
       icon: 'ri:calendar-schedule-fill',
     },
     {
-      title: 'Custom dashboards for multi-location monitoring.',
+      title: 'Detailed revenue reporting and dashboard integration.',
       icon: 'material-symbols:dashboard-2-rounded',
     },
   ],
@@ -152,24 +152,24 @@ export const facilityAndSecurityAutomation: TServices = {
 
 // why client choose us data -->
 export const whyChooseUsData = {
-  sectionTitle: 'Why Brands Trust TGC for Digital Growth',
+  sectionTitle: 'Why Entrepreneurs Choose TGC for SaaS & Affiliate Builds',
   marqueeData: [
     {
       icon: 'streamline-cyber:business-target',
-      title:
-        'Strategies tailored to your brand and audience not generic templates.',
+      title: 'Tech that aligns with your growth and monetization goals.',
     },
     {
       icon: 'hugeicons:apple-intelligence',
-      title: 'Clear ROI reporting across SEO, paid media, and social.',
+      title: 'Ready-to-scale infrastructure for MVPs and beyond.',
     },
     {
       icon: 'fluent:shifts-team-20-regular',
-      title: 'Consistent brand voice across every channel.',
+      title:
+        'Performance tracking, automation and partner visibility built-in.',
     },
     {
       icon: 'fluent:iot-16-regular',
-      title: 'Full-funnel approach: awareness to conversion and beyond.',
+      title: 'Ongoing support, optimization, and roadmap guidance.',
     },
   ] as TMarqueeData[],
 };
@@ -180,7 +180,7 @@ export type TLetsBuildFutureBusiness = {
 };
 // let's build future of your business data -->
 export const letsBuildFutureBusinessData: TLetsBuildFutureBusiness = {
-  title: ' Let’s Elevate Your Brand and Performance',
+  title: 'Ready to Build Your Platform, Product, or Passive Income Machine?',
   description:
     'Book your free strategy session today—we’ll map your growth roadmap from visibility to profitability.',
   image: 'https://pub-3c3fbc3b66a54a4ab707f64d0f564e7d.r2.dev/hexagon.png',
