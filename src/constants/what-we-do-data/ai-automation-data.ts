@@ -1,4 +1,6 @@
-export const serviceDescriptionData = {
+import { TServiceDescription, TServices } from '@/types/services';
+
+export const serviceDescriptionData: TServiceDescription = {
   title: 'Automate Smarter. Scale Faster. Think Beyond Tasks.',
   descriptionOne:
     'At Trust Global Communications, we don’t just automate we build intelligent systems that think, act, and evolve. Our AI Automation & Multi-Agent Systems (MAS) solutions help businesses streamline operations, reduce manual work, and build self-adapting environments that can learn, decide, and collaborate in real time.',
@@ -8,24 +10,6 @@ export const serviceDescriptionData = {
 };
 
 // indivisual sub services data -->
-export type TSubServices = {
-  title: string;
-  icon: string;
-};
-
-export type TServices = {
-  data: {
-    title: string;
-    description: string;
-    image: string;
-    imageAlt?: string;
-  };
-  subServices: TSubServices[];
-  styleClasses?: {
-    ServiceTitleAndDescriptionClass?: string;
-    subServicesClass?: string;
-  };
-};
 
 // AI Chatbots and Voice Assistants data -->
 export const aiChatBotAndVoiceAssistantData: TServices = {
@@ -55,7 +39,7 @@ export const aiChatBotAndVoiceAssistantData: TServices = {
       title: 'Multilingual, omnichannel support with real-time learning.',
       icon: 'pixel:machine-learning',
     },
-  ] as TSubServices[],
+  ],
   styleClasses: {
     ServiceTitleAndDescriptionClass: 'order-1',
     subServicesClass: 'order-2',
@@ -90,7 +74,7 @@ export const workflowAutomationData: TServices = {
       title: 'Customized automations built around your business rules.',
       icon: 'streamline-plump:cog-automation-solid',
     },
-  ] as TSubServices[],
+  ],
   styleClasses: {
     ServiceTitleAndDescriptionClass: 'order-2',
     subServicesClass: 'order-1',
@@ -124,7 +108,7 @@ export const multiAgentOrchestrationData: TServices = {
         'Use cases: logistics, customer service, smart buildings, and more.',
       icon: 'fluent:settings-cog-multiple-24-filled',
     },
-  ] as TSubServices[],
+  ],
   styleClasses: {
     ServiceTitleAndDescriptionClass: 'order-1',
     subServicesClass: 'order-2',
@@ -157,7 +141,7 @@ export const facilityAndSecurityAutomation: TServices = {
       title: 'Custom dashboards for multi-location monitoring.',
       icon: 'material-symbols:dashboard-2-rounded',
     },
-  ] as TSubServices[],
+  ],
   styleClasses: {
     ServiceTitleAndDescriptionClass: 'order-2',
     subServicesClass: 'order-1',

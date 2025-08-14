@@ -4,12 +4,11 @@ import BannerTitleBtn from '../buttons/banner-title-btn';
 import BannerTitleAndDescription from '../shared/banner-title-description';
 
 export default function HomeBanner() {
-  const { title, description } = homeBannerData;
   return (
     <section className="">
       <BannerTitleBtn />
       {/* Banner title and description */}
-      <BannerTitleAndDescription title={title} description={description} />
+      <BannerTitleAndDescription sectionData={homeBannerData} />
     </section>
   );
 }

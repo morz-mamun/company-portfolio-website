@@ -5,22 +5,22 @@ export const whatWeDoItemsData = [
   },
   {
     name: 'Web & Software Development',
-    link: '#/',
+    link: 'web-software-development',
   },
   {
     name: 'Digital Marketing & SEO',
-    link: '#/',
+    link: 'digital-marketing-seo',
   },
   {
     name: 'SaaS & Affiliate Tools',
-    link: '#/',
+    link: 'saas-affiliate-tools',
   },
   {
     name: 'E-commerce & Affiliate Services',
-    link: '#/',
+    link: 'e-commerce-affiliate-service',
   },
   {
     name: 'IoT & Smart Security Solutions',
-    link: '#/',
+    link: 'iot-smart-security-solutions',
   },
 ];

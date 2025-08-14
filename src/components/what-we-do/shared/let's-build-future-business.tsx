@@ -1,5 +1,5 @@
 import PrimaryBtn from '@/components/buttons/primary-btn';
-import { TLetsBuildFutureBusiness } from '@/constants/ai-automation-data/ai-automation-data';
+import { TLetsBuildFutureBusiness } from '@/constants/what-we-do-data/ai-automation-data';
 export default function LetsBuildFutureBusiness({
   sectionData,
 }: {

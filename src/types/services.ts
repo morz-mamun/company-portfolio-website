@@ -1,0 +1,25 @@
+export type TServiceDescription = {
+  title: string;
+  descriptionOne?: string;
+  descriptionTwo?: string;
+  image: string;
+};
+
+export type TSubServices = {
+  title: string;
+  icon: string;
+};
+
+export type TServices = {
+  data: {
+    title: string;
+    description: string;
+    image: string;
+    imageAlt?: string;
+  };
+  subServices: TSubServices[];
+  styleClasses?: {
+    ServiceTitleAndDescriptionClass?: string;
+    subServicesClass?: string;
+  };
+};

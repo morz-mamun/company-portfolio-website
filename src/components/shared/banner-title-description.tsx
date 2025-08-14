@@ -2,14 +2,14 @@ import { homeBannerDataForMobile } from '@/constants/banner-data/home-banner-dat
 import PrimaryBtn from '../buttons/primary-btn';
 import { TextAnimate } from '../magicui/text-animate';
 import AnimatedText from './animated-text';
+import { TBannerData } from '@/types/banners';
 
 export default function BannerTitleAndDescription({
-  title,
-  description,
+  sectionData,
 }: {
-  title: string;
-  description: string;
+  sectionData: TBannerData;
 }) {
+  const { title, description } = sectionData;
   return (
     <div className="mx-2 mt-[28px] max-w-5xl text-center lg:mx-auto">
       {/* Content title with animation for desktop */}
@@ -22,8 +22,6 @@ export default function BannerTitleAndDescription({
         className="font-space-grotesk dark:text-primary hidden bg-[linear-gradient(to_bottom,_#100F0F,_#5C5B5B)] bg-clip-text text-3xl font-bold text-transparent md:block md:text-[48px] lg:text-[50px]"
       >
         {title}
-        {/* Empowering Business with AI automation, Digital Marketing & Technology
-        Solutions */}
       </TextAnimate>
       {/* Content title with animation for mobile */}
       <div className="md:hidden">
@@ -32,9 +30,6 @@ export default function BannerTitleAndDescription({
       {/* Content description */}
       <p className="text-brand/80 dark:text-primary/70 mx-auto mt-[14px] max-w-[320px] text-sm md:max-w-[800px] md:text-xl">
         {description}
-        {/* We build smarter systems, powerful websites and scalable automation
-        workflows for modern brands, e-commerce stores and SaaS platforms
-        across the U.S and beyond. */}
       </p>
 
       {/* Get free discovery call button */}

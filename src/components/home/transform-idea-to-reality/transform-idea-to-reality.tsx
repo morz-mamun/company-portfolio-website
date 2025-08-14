@@ -2,7 +2,7 @@ import PrimaryBtn from '@/components/buttons/primary-btn';
 import { Marquee } from '@/components/magicui/marquee';
 import ReviewCard from './review-card';
 import IconSvg from './icon-svg';
-import { reviews } from '@/constants/idea-to-reality-review-data';
+import { reviews } from '@/constants/what-we-do-data/idea-to-reality-review-data';
 
 const firstRow = reviews?.slice(0, reviews.length / 2);
 const secondRow = reviews?.slice(reviews.length / 2);

@@ -1,11 +1,11 @@
 import SectionHeading from '@/components/shared/section-heading';
-import Service from './service/service';
+import Service from '../shared/service/service';
 import {
   aiChatBotAndVoiceAssistantData,
   facilityAndSecurityAutomation,
   multiAgentOrchestrationData,
   workflowAutomationData,
-} from '@/constants/ai-automation-data/ai-automation-data';
+} from '@/constants/what-we-do-data/ai-automation-data';
 
 export default function ExploreOurSolution() {
   return (

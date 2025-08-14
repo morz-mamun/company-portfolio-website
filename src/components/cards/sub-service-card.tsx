@@ -1,5 +1,5 @@
 'use client';
-import { TSubServices } from '@/constants/ai-automation-data/ai-automation-data';
+import { TSubServices } from '@/constants/what-we-do-data/ai-automation-data';
 import { Icon } from '@iconify/react/dist/iconify.js';
 
 export default function SubServiceCard({ item }: { item: TSubServices }) {

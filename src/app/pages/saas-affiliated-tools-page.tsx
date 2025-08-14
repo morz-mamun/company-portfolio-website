@@ -9,7 +9,7 @@ import {
 } from '@/constants/what-we-do-data/ai-automation-data';
 import { aiAutomationBannerData } from '@/constants/banner-data/ai-automation-banner-data';
 
-export default function AiAutomationPage() {
+export default function SaasAffiliatedToolsPage() {
   return (
     <main className="mx-auto min-h-screen max-w-7xl overflow-hidden">
       {/* Banner Section */}

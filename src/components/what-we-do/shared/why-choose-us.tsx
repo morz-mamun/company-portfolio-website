@@ -1,6 +1,6 @@
 import { Marquee } from '@/components/magicui/marquee';
 import SectionHeading from '@/components/shared/section-heading';
-import { whyChooseUsData } from '@/constants/ai-automation-data/ai-automation-data';
+import { whyChooseUsData } from '@/constants/what-we-do-data/ai-automation-data';
 import { Icon } from '@iconify/react/dist/iconify.js';
 
 export default function WhyChooseUs() {

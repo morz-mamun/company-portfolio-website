@@ -1,6 +1,6 @@
 import PrimaryBtn from '@/components/buttons/primary-btn';
 import ServiceTitleAndDescription from './service-title-description';
-import { TServices } from '@/constants/ai-automation-data/ai-automation-data';
+import { TServices } from '@/constants/what-we-do-data/ai-automation-data';
 import SubServiceCard from '@/components/cards/sub-service-card';
 
 export default function Service({ sectionData }: { sectionData: TServices }) {
