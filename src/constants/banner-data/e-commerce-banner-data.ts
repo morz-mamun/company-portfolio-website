@@ -1,5 +1,5 @@
 export const eCommerceBannerData = {
-  title: 'AI Automation & Multi-Agent Systems',
+  title: 'E-commerce & Affiliate Services',
   description:
-    'Revolutionize operations using intelligent AI agents and automation workflows that can reduce manual tasks, optimize productivity, and improve response time.',
+    'Launch and scale your online business with modern affiliate models, automation and performance-driven strategies.',
 };

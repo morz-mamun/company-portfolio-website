@@ -9,7 +9,7 @@ export default function LetsBuildFutureBusiness({
     <div className="py-10 md:py-14">
       <div className="relative flex w-full flex-col items-center justify-center overflow-hidden border-y px-10 py-[120px]">
         <div className="z-10 mt-4 flex flex-col items-center text-center text-black dark:text-white">
-          <h3 className="font-space-grotesk mb-4 text-2xl font-bold md:text-3xl lg:text-[42px]">
+          <h3 className="font-space-grotesk mb-4 max-w-4xl text-2xl font-bold md:text-3xl lg:text-[42px]">
             {sectionData?.title}
           </h3>
           <p className="mb-4 text-base font-medium">

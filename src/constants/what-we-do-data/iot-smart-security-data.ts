@@ -1,44 +1,43 @@
-import { TServiceDescription, TServices } from '@/types/services';
+import { TMarqueeData, TServiceDescription, TServices } from '@/types/services';
 
 export const serviceDescriptionData: TServiceDescription = {
-  title: 'Automate Smarter. Scale Faster. Think Beyond Tasks.',
+  title: 'Secure Smarter. Monitor in Real Time. Control from Anywhere.',
   descriptionOne:
-    'At Trust Global Communications, we don’t just automate we build intelligent systems that think, act, and evolve. Our AI Automation & Multi-Agent Systems (MAS) solutions help businesses streamline operations, reduce manual work, and build self-adapting environments that can learn, decide, and collaborate in real time.',
+    "At Trust Global Communications, we build secure, connected environments using IoT, AI, and automation—so you can manage, monitor, and protect your assets with confidence. Whether you're securing a building, monitoring a remote facility, or integrating smart systems into daily operations, our solutions offer visibility, control, and peace of mind.",
   descriptionTwo:
-    'From chatbots and workflow automation to coordinated AI agents and secure smart facilities—we bring together intelligence and innovation to power the future of business.',
-  image: 'https://pub-3c3fbc3b66a54a4ab707f64d0f564e7d.r2.dev/service11.png',
+    'From offices and retail spaces to industrial sites and smart buildings—we make your infrastructure intelligent, secure, and scalable',
+  image: 'https://pub-3c3fbc3b66a54a4ab707f64d0f564e7d.r2.dev/banner01.png',
 };
 
 // indivisual sub services data -->
 // all services section title data -->
-export const servicesSectionTitleData = 'Explore our solutions';
+export const servicesSectionTitleData = 'Discover how we can add value';
 
-// AI Chatbots and Voice Assistants data -->
-export const aiChatBotAndVoiceAssistantData: TServices = {
+// IoT Access Control & Real-Time Monitoring data -->
+export const iotAccessControlAndRealTimeMonitoringData: TServices = {
   data: {
-    title: '1. (AI Chatbots & Voice Assistants)',
+    title: '1. IoT Access Control & Real-Time Monitoring',
     description:
-      'Your customers deserve more than canned responses. We build intelligent chatbots and voice assistants that offer instant, personalized, and human-like interactions anytime, anywhere.',
-    image: 'https://pub-3c3fbc3b66a54a4ab707f64d0f564e7d.r2.dev/service10.png',
-    imageAlt: 'ai-chatbot-and-voice-assistant',
+      'We help you modernize physical access with IoT-powered systems that track entries, control access remotely, and alert you in real time.',
+    image: 'https://pub-3c3fbc3b66a54a4ab707f64d0f564e7d.r2.dev/banner01.png',
+    imageAlt: 'iot-access-control-and-real-time-monitoring',
   },
   subServices: [
     {
-      title:
-        'GPT-powered chatbots for web, WhatsApp, Messenger and mobile apps.',
+      title: 'Biometric, RFID, and voice activated smart locks.',
       icon: 'tabler:message-chatbot-filled',
     },
     {
-      title: 'Voice assistants for smart devices, IVR and custom platforms.',
+      title: 'Entry logging and role-based access permissions.',
       icon: 'mingcute:voice-fill',
     },
     {
-      title:
-        'Seamless integration with CRMs, calendars and customer service tools.',
+      title: 'Real-time mobile notifications and dashboard monitoring.',
       icon: 'pixel:calender-solid',
     },
     {
-      title: 'Multilingual, omnichannel support with real-time learning.',
+      title:
+        'Cloud-based access history synced to apps like Google Sheets or Notion.',
       icon: 'pixel:machine-learning',
     },
   ],
@@ -48,32 +47,31 @@ export const aiChatBotAndVoiceAssistantData: TServices = {
   },
 };
 
-// Workflow Automation data -->
-export const workflowAutomationData: TServices = {
+// Smart Alarms, Sensors & Surveillance data -->
+export const smartAlarmsSensorsAndSurveillanceData: TServices = {
   data: {
-    title: '2. Workflow Automation (n8n, Zapier, Make)',
+    title: '2. Smart Alarms, Sensors & Surveillance',
     description:
-      'We connect your apps, tools, and systems through visual workflow builders like n8n, Zapier, and Make—automating everything from lead follow-ups to report generation.',
+      'Our intelligent sensor and surveillance systems detect, analyze, and respond to threats before they escalate giving you proactive security, not just reactive alerts.',
     image: 'https://pub-3c3fbc3b66a54a4ab707f64d0f564e7d.r2.dev/service09.png',
     imageAlt: 'workflow-automation',
   },
   subServices: [
     {
-      title:
-        'GPT-powered chatbots for web, WhatsApp, Messenger and mobile apps.',
+      title: 'Smart CCTV with AI motion and facial recognition.',
       icon: 'mingcute:code-fill',
     },
     {
-      title:
-        'Real-time sync across Google Workspace, CRMs, eCommerce, Slack and more.',
+      title: 'Smoke, gas, motion, temperature and glass break sensors.',
       icon: 'ix:workspace',
     },
     {
-      title: 'Multi-step flows with logic, AI integrations and smart triggers.',
+      title:
+        'Mobile video feeds, instant alerts, and automated safety workflows.',
       icon: 'pixel:calender-solid',
     },
     {
-      title: 'Customized automations built around your business rules.',
+      title: 'Integration with emergency response systems.',
       icon: 'streamline-plump:cog-automation-solid',
     },
   ],
@@ -83,31 +81,30 @@ export const workflowAutomationData: TServices = {
   },
 };
 
-// Multi-Agent Orchestration data -->
-export const multiAgentOrchestrationData: TServices = {
+// Cybersecurity for Websites & IoT Devices data -->
+export const cybersecurityForWebsitesAndIoTDevicesData: TServices = {
   data: {
-    title: '3. (Multi-Agent Orchestration)',
+    title: '3. Cybersecurity for Websites & IoT Devices',
     description:
-      'Imagine AI agents that can independently solve problems and work together as a team. We design Multi-Agent Systems (MAS) that coordinate in real-time to complete complex tasks, manage environments, and adapt to changing data.',
+      'We secure both digital infrastructure and physical devices offering end-to-end cybersecurity for websites, apps, and smart systems. Our approach combines human expertise with AI-enhanced threat detection and response.',
     image: 'https://pub-3c3fbc3b66a54a4ab707f64d0f564e7d.r2.dev/service09.png',
     imageAlt: 'multi-agent-orchestration',
   },
   subServices: [
     {
-      title: 'Modular agent architecture with role-specific logic.',
+      title: 'Firewalls, malware protection, and DDoS mitigation.',
       icon: 'mdi:face-agent',
     },
     {
-      title: 'Real-time orchestration with MQTT, webhooks, and API comms.',
+      title: 'SSL, 2FA, token systems and website hardening.',
       icon: 'ic:baseline-api',
     },
     {
-      title: 'Self-learning behaviors and autonomous decision-making.',
+      title: 'Encrypted data flows across IoT devices and APIs.',
       icon: 'ri:speak-ai-fill',
     },
     {
-      title:
-        'Use cases: logistics, customer service, smart buildings, and more.',
+      title: 'Risk assessments, audits and real-time security alerts.',
       icon: 'fluent:settings-cog-multiple-24-filled',
     },
   ],
@@ -118,29 +115,29 @@ export const multiAgentOrchestrationData: TServices = {
 };
 
 // Workflow Automation data -->
-export const facilityAndSecurityAutomation: TServices = {
+export const industrialAndOfficeAutomationData: TServices = {
   data: {
-    title: '4. Facility & Security Automation',
+    title: '4. Industrial & Office Automation',
     description:
-      'We create intelligent facility systems powered by IoT and AI to help you automate physical spaces and secure them remotely. From energy efficiency to smart surveillance your operations stay connected, safe, and under control.',
+      'Transform your workplace into a smart, self-regulating environment. Our automation solutions help reduce energy usage, increase safety, and simplify facility management through real-time data and control.',
     image: 'https://pub-3c3fbc3b66a54a4ab707f64d0f564e7d.r2.dev/service10.png',
     imageAlt: 'facility-and-security-automation',
   },
   subServices: [
     {
-      title: 'AI-powered CCTV, smart locks, and biometric access.',
+      title: 'Automated lighting, HVAC and environmental controls.',
       icon: 'hugeicons:ai-security-03',
     },
     {
-      title: 'Environmental sensors (temperature, motion, smoke, etc.).',
+      title: 'AI-triggered workflows based on motion, schedule, or behavior.',
       icon: 'material-symbols:sensors-rounded',
     },
     {
-      title: 'Automated energy, lighting, and equipment scheduling.',
+      title: 'Smart scheduling for utilities and device usage.',
       icon: 'ri:calendar-schedule-fill',
     },
     {
-      title: 'Custom dashboards for multi-location monitoring.',
+      title: 'Central dashboard for multiple locations or departments.',
       icon: 'material-symbols:dashboard-2-rounded',
     },
   ],
@@ -151,24 +148,27 @@ export const facilityAndSecurityAutomation: TServices = {
 };
 
 // why client choose us data -->
-export const whyChooseUsData = [
-  {
-    icon: 'streamline-cyber:business-target',
-    title: 'Full-cycle development from strategy to launch and beyond.',
-  },
-  {
-    icon: 'hugeicons:apple-intelligence',
-    title: 'Scalable, secure architecture tailored to your needs.',
-  },
-  {
-    icon: 'fluent:shifts-team-20-regular',
-    title: 'Dedicated support even after deployment.',
-  },
-  {
-    icon: 'fluent:iot-16-regular',
-    title: 'Agile process with real-time collaboration.',
-  },
-];
+export const whyChooseUsData = {
+  sectionTitle: 'Why Businesses Trust TGC for Smart Security & IoT',
+  marqueeData: [
+    {
+      icon: 'streamline-cyber:business-target',
+      title: 'End-to-end visibility across physical and digital systems.',
+    },
+    {
+      icon: 'hugeicons:apple-intelligence',
+      title: 'Real-time monitoring, alerts, and autonomous response.',
+    },
+    {
+      icon: 'fluent:shifts-team-20-regular',
+      title: 'Unified platform for facility control, access, and safety.',
+    },
+    {
+      icon: 'fluent:iot-16-regular',
+      title: 'Scalable across offices, warehouses, campuses & retail.',
+    },
+  ] as TMarqueeData[],
+};
 
 export type TLetsBuildFutureBusiness = {
   title: string;
@@ -177,8 +177,8 @@ export type TLetsBuildFutureBusiness = {
 };
 // let's build future of your business data -->
 export const letsBuildFutureBusinessData: TLetsBuildFutureBusiness = {
-  title: 'Let’s Build the Future of Your Business',
+  title: 'Make Your Spaces Smarter. Make Your Operations Safer',
   description:
-    'Whether it’s a website, app, or complex software system, we’ll bring your vision to life.',
+    'Let’s build a secure, intelligent environment tailored to your business.',
   image: 'https://pub-3c3fbc3b66a54a4ab707f64d0f564e7d.r2.dev/hexagon.png',
 };

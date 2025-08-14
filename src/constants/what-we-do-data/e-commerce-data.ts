@@ -1,43 +1,41 @@
-import { TServiceDescription, TServices } from '@/types/services';
+import { TMarqueeData, TServiceDescription, TServices } from '@/types/services';
 
 export const serviceDescriptionData: TServiceDescription = {
-  title: 'Automate Smarter. Scale Faster. Think Beyond Tasks.',
+  title: 'Sell More. Automate Smarter. Grow Without Limits.',
   descriptionOne:
-    'At Trust Global Communications, we don’t just automate we build intelligent systems that think, act, and evolve. Our AI Automation & Multi-Agent Systems (MAS) solutions help businesses streamline operations, reduce manual work, and build self-adapting environments that can learn, decide, and collaborate in real time.',
+    "At Trust Global Communications, we help businesses and creators build, scale, and optimize e-commerce and affiliate revenue streams. Whether you're launching your first Shopify store, managing a growing WooCommerce brand, or optimizing affiliate funnels—we provide end-to-end solutions that combine strategy, automation, and data to drive growth.",
   descriptionTwo:
-    'From chatbots and workflow automation to coordinated AI agents and secure smart facilities—we bring together intelligence and innovation to power the future of business.',
-  image: 'https://pub-3c3fbc3b66a54a4ab707f64d0f564e7d.r2.dev/service11.png',
+    'From product research to backend systems, we make your online business smarter, faster, and more profitable.',
+  image: 'https://pub-3c3fbc3b66a54a4ab707f64d0f564e7d.r2.dev/banner02.jpg',
 };
 
 // indivisual sub services data -->
 // all services section title data -->
-export const servicesSectionTitleData = 'Explore our solutions';
-// AI Chatbots and Voice Assistants data -->
-export const aiChatBotAndVoiceAssistantData: TServices = {
+export const servicesSectionTitleData = 'Discover how we can add value';
+// Shopify, WooCommerce & Custom Stores data -->
+export const shopifyWooCommerceData: TServices = {
   data: {
-    title: '1. (AI Chatbots & Voice Assistants)',
+    title: '1. Shopify, WooCommerce & Custom Stores',
     description:
-      'Your customers deserve more than canned responses. We build intelligent chatbots and voice assistants that offer instant, personalized, and human-like interactions anytime, anywhere.',
-    image: 'https://pub-3c3fbc3b66a54a4ab707f64d0f564e7d.r2.dev/service10.png',
-    imageAlt: 'ai-chatbot-and-voice-assistant',
+      "We design and develop high-performance online stores tailored to your products and audience. Whether it's Shopify, WooCommerce, or a fully custom solution, your store will look great, load fast, and sell efficiently.",
+    image: 'https://pub-3c3fbc3b66a54a4ab707f64d0f564e7d.r2.dev/banner02.jpg',
+    imageAlt: 'shopify-woocommerce-and-custom-stores',
   },
   subServices: [
     {
-      title:
-        'GPT-powered chatbots for web, WhatsApp, Messenger and mobile apps.',
+      title: 'Store setup, theme customization and mobile optimization.',
       icon: 'tabler:message-chatbot-filled',
     },
     {
-      title: 'Voice assistants for smart devices, IVR and custom platforms.',
+      title: 'Product pages, cart flows, and upsell/downsell integration.',
       icon: 'mingcute:voice-fill',
     },
     {
-      title:
-        'Seamless integration with CRMs, calendars and customer service tools.',
+      title: 'Shopify apps, WooCommerce plugins and custom functionality.',
       icon: 'pixel:calender-solid',
     },
     {
-      title: 'Multilingual, omnichannel support with real-time learning.',
+      title: 'Payment, shipping, CRM, and analytics integrations.',
       icon: 'pixel:machine-learning',
     },
   ],
@@ -47,32 +45,30 @@ export const aiChatBotAndVoiceAssistantData: TServices = {
   },
 };
 
-// Workflow Automation data -->
-export const workflowAutomationData: TServices = {
+// Product Research & Trend Analysis data -->
+export const productResearchAndTrendAnalysisData: TServices = {
   data: {
-    title: '2. Workflow Automation (n8n, Zapier, Make)',
+    title: '2. Product Research & Trend Analysis',
     description:
-      'We connect your apps, tools, and systems through visual workflow builders like n8n, Zapier, and Make—automating everything from lead follow-ups to report generation.',
+      "We help you stay ahead of the curve with data-driven product research and market trend insights. Whether you're dropshipping or managing inventory, we identify winning products and categories before they peak.",
     image: 'https://pub-3c3fbc3b66a54a4ab707f64d0f564e7d.r2.dev/service09.png',
-    imageAlt: 'workflow-automation',
+    imageAlt: 'product-research-and-trend-analysis',
   },
   subServices: [
     {
-      title:
-        'GPT-powered chatbots for web, WhatsApp, Messenger and mobile apps.',
+      title: 'Niche validation and competitor research.',
       icon: 'mingcute:code-fill',
     },
     {
-      title:
-        'Real-time sync across Google Workspace, CRMs, eCommerce, Slack and more.',
+      title: 'Trend tracking via Google Trends, TikTok, and marketplaces.',
       icon: 'ix:workspace',
     },
     {
-      title: 'Multi-step flows with logic, AI integrations and smart triggers.',
+      title: 'Profit margin, demand, and supply chain analysis.',
       icon: 'pixel:calender-solid',
     },
     {
-      title: 'Customized automations built around your business rules.',
+      title: 'Seasonal planning and influencer market mapping.',
       icon: 'streamline-plump:cog-automation-solid',
     },
   ],
@@ -82,31 +78,30 @@ export const workflowAutomationData: TServices = {
   },
 };
 
-// Multi-Agent Orchestration data -->
-export const multiAgentOrchestrationData: TServices = {
+// Dropshipping & Inventory Automation data -->
+export const dropshippingAndInventoryAutomationData: TServices = {
   data: {
-    title: '3. (Multi-Agent Orchestration)',
+    title: '3. Dropshipping & Inventory Automation',
     description:
-      'Imagine AI agents that can independently solve problems and work together as a team. We design Multi-Agent Systems (MAS) that coordinate in real-time to complete complex tasks, manage environments, and adapt to changing data.',
+      'Want to run a store without touching stock? We set up fully automated dropshipping systems that handle product import, order fulfillment, and inventory syncing so you can focus on marketing and growth.',
     image: 'https://pub-3c3fbc3b66a54a4ab707f64d0f564e7d.r2.dev/service09.png',
     imageAlt: 'multi-agent-orchestration',
   },
   subServices: [
     {
-      title: 'Modular agent architecture with role-specific logic.',
+      title: 'Shopify, WooCommerce + DSers, AutoDS, or AliExpress integration.',
       icon: 'mdi:face-agent',
     },
     {
-      title: 'Real-time orchestration with MQTT, webhooks, and API comms.',
+      title: 'Real-time stock updates and supplier sync.',
       icon: 'ic:baseline-api',
     },
     {
-      title: 'Self-learning behaviors and autonomous decision-making.',
+      title: 'Order automation, shipping rules and email notifications.',
       icon: 'ri:speak-ai-fill',
     },
     {
-      title:
-        'Use cases: logistics, customer service, smart buildings, and more.',
+      title: 'Branded fulfillment and supplier sourcing support.',
       icon: 'fluent:settings-cog-multiple-24-filled',
     },
   ],
@@ -116,30 +111,31 @@ export const multiAgentOrchestrationData: TServices = {
   },
 };
 
-// Workflow Automation data -->
-export const facilityAndSecurityAutomation: TServices = {
+// Affiliate Optimization & Link Management data -->
+export const affiliateOptimizationAndLinkManagementData: TServices = {
   data: {
-    title: '4. Facility & Security Automation',
+    title: '4. Affiliate Optimization & Link Management',
     description:
-      'We create intelligent facility systems powered by IoT and AI to help you automate physical spaces and secure them remotely. From energy efficiency to smart surveillance your operations stay connected, safe, and under control.',
+      'Whether you’re a content creator, publisher, or eCom brand, we optimize your affiliate strategy for maximum visibility and ROI. From link management to analytics, we make sure every click counts.',
     image: 'https://pub-3c3fbc3b66a54a4ab707f64d0f564e7d.r2.dev/service10.png',
     imageAlt: 'facility-and-security-automation',
   },
   subServices: [
     {
-      title: 'AI-powered CCTV, smart locks, and biometric access.',
+      title:
+        'Link tracking and shortening (Pretty Links, Thirsty Affiliates, Bitly).',
       icon: 'hugeicons:ai-security-03',
     },
     {
-      title: 'Environmental sensors (temperature, motion, smoke, etc.).',
+      title: 'Affiliate landing pages, CTAs and bridge pages.',
       icon: 'material-symbols:sensors-rounded',
     },
     {
-      title: 'Automated energy, lighting, and equipment scheduling.',
+      title: 'UTM tagging, pixel setup, and multi-channel attribution.',
       icon: 'ri:calendar-schedule-fill',
     },
     {
-      title: 'Custom dashboards for multi-location monitoring.',
+      title: 'Affiliate program setup and influencer outreach.',
       icon: 'material-symbols:dashboard-2-rounded',
     },
   ],
@@ -150,25 +146,27 @@ export const facilityAndSecurityAutomation: TServices = {
 };
 
 // why client choose us data -->
-export const whyChooseUsData = [
-  {
-    icon: 'streamline-cyber:business-target',
-    title: 'Full-cycle development from strategy to launch and beyond.',
-  },
-  {
-    icon: 'hugeicons:apple-intelligence',
-    title: 'Scalable, secure architecture tailored to your needs.',
-  },
-  {
-    icon: 'fluent:shifts-team-20-regular',
-    title: 'Dedicated support even after deployment.',
-  },
-  {
-    icon: 'fluent:iot-16-regular',
-    title: 'Agile process with real-time collaboration.',
-  },
-];
-
+export const whyChooseUsData = {
+  sectionTitle: 'Why Online Sellers & Creators Trust TGC',
+  marqueeData: [
+    {
+      icon: 'streamline-cyber:business-target',
+      title: 'Stores designed for conversions not just clicks.',
+    },
+    {
+      icon: 'hugeicons:apple-intelligence',
+      title: 'Full automation to save time and scale faster.',
+    },
+    {
+      icon: 'fluent:shifts-team-20-regular',
+      title: 'Strategic affiliate and product growth plans.',
+    },
+    {
+      icon: 'fluent:iot-16-regular',
+      title: 'Tech & marketing combined for real, measurable ROI.',
+    },
+  ] as TMarqueeData[],
+};
 export type TLetsBuildFutureBusiness = {
   title: string;
   description: string;
@@ -176,8 +174,8 @@ export type TLetsBuildFutureBusiness = {
 };
 // let's build future of your business data -->
 export const letsBuildFutureBusinessData: TLetsBuildFutureBusiness = {
-  title: 'Let’s Build the Future of Your Business',
+  title: 'Let’s Build, Launch, and Scale Your Online Store or Affiliate System',
   description:
-    'Whether it’s a website, app, or complex software system, we’ll bring your vision to life.',
+    'Get expert guidance and powerful automation so your online business runs itself.',
   image: 'https://pub-3c3fbc3b66a54a4ab707f64d0f564e7d.r2.dev/hexagon.png',
 };

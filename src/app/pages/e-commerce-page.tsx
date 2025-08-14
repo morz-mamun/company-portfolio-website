@@ -3,18 +3,20 @@ import ExploreOurSolution from '@/components/what-we-do/ai-automation/explore-ou
 import WhyChooseUs from '@/components/what-we-do/shared/why-choose-us';
 import LetsBuildFutureBusiness from "@/components/what-we-do/shared/let's-build-future-business";
 import ServiceDescription from '@/components/what-we-do/shared/service-description';
+
 import {
   letsBuildFutureBusinessData,
   serviceDescriptionData,
-} from '@/constants/what-we-do-data/ai-automation-data';
-import { aiAutomationBannerData } from '@/constants/banner-data/ai-automation-banner-data';
+  whyChooseUsData,
+} from '@/constants/what-we-do-data/e-commerce-data';
+import { eCommerceBannerData } from '@/constants/banner-data/e-commerce-banner-data';
 
 export default function ECommercePage() {
   return (
     <main className="mx-auto min-h-screen max-w-7xl overflow-hidden">
       {/* Banner Section */}
       <div className="mt-20 md:mt-28 lg:mt-32">
-        <BannerTitleAndDescription sectionData={aiAutomationBannerData} />
+        <BannerTitleAndDescription sectionData={eCommerceBannerData} />
       </div>
       {/* service description section */}
       <div className="mt-14">
@@ -26,7 +28,7 @@ export default function ECommercePage() {
       </div>
       {/* why client choose us */}
       <div className="my-14">
-        <WhyChooseUs />
+        <WhyChooseUs sectionData={whyChooseUsData} />
       </div>
       {/* let's build future of your business */}
       <div>
