@@ -12,6 +12,7 @@ import Link from 'next/link';
 import React, { useRef, useState } from 'react';
 import { Popover, PopoverContent, PopoverTrigger } from './popover';
 import { whatWeDoItemsData } from '@/constants/navbar-data/what-we-do-items-data';
+import { Icon } from '@iconify/react/dist/iconify.js';
 
 interface NavbarProps {
   children: React.ReactNode;
@@ -130,7 +131,7 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
         className,
       )}
     >
-      {items.map((item, idx) => {
+      {items?.map((item, idx) => {
         if (item.name === 'What we do') {
           return (
             <Popover key={`nav-${idx}`} open={open} onOpenChange={setOpen}>
@@ -154,18 +155,19 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
               <PopoverContent
                 align="start"
                 sideOffset={8}
-                className="p-2"
+                className="w-[300px] p-2"
                 onMouseEnter={() => setOpen(true)}
                 onMouseLeave={() => setOpen(false)}
               >
-                <div className="flex flex-col gap-1">
+                <div>
                   {whatWeDoItemsData?.map((item, idx) => (
                     <Link
                       href={item.link}
                       key={`link-${idx}`}
                       onClick={onItemClick}
-                      className="text-brand/70 rounded-md px-3 py-1 hover:bg-[#CCCCCC]/40 dark:text-neutral-300 dark:hover:bg-neutral-800/60"
+                      className="text-brand/70 flex items-center gap-2 rounded-md px-3 py-1 hover:bg-[#CCCCCC]/40 dark:text-neutral-300 dark:hover:bg-neutral-800/60"
                     >
+                      <Icon icon={item?.icon} width={16} height={16} />
                       {item.name}
                     </Link>
                   ))}

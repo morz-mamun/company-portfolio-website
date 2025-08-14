@@ -17,6 +17,7 @@ import { useTheme } from 'next-themes';
 import { Popover, PopoverContent, PopoverTrigger } from '../../ui/popover';
 import Link from 'next/link';
 import { whatWeDoItemsData } from '@/constants/navbar-data/what-we-do-items-data';
+import { Icon } from '@iconify/react/dist/iconify.js';
 
 export default function WebSiteNavbar() {
   const { theme, setTheme } = useTheme();
@@ -113,7 +114,7 @@ export default function WebSiteNavbar() {
             isOpen={isMobileMenuOpen}
             onClose={() => setIsMobileMenuOpen(false)}
           >
-            {navItems.map((item, idx) => {
+            {navItems?.map((item, idx) => {
               if (item.name === 'What we do') {
                 return (
                   <Popover key={`nav-${idx}`}>
@@ -125,17 +126,18 @@ export default function WebSiteNavbar() {
                     <PopoverContent
                       align="start"
                       side="right"
-                      sideOffset={-10}
-                      alignOffset={20}
-                      className="max-w-[230px] p-1"
+                      sideOffset={-30}
+                      alignOffset={30}
+                      className="w-[250px] p-1"
                     >
                       <div className="flex flex-col gap-1">
                         {whatWeDoItemsData?.map((item, idx) => (
                           <Link
                             href={item.link}
                             key={`link-${idx}`}
-                            className="relative rounded-full px-2 py-1 text-sm text-neutral-600 transition hover:bg-[#CCCCCC]/40 md:text-base dark:text-neutral-300 dark:hover:bg-neutral-800/60"
+                            className="relative flex items-center rounded-full px-2 py-1 text-sm text-neutral-600 transition hover:bg-[#CCCCCC]/40 md:text-base dark:text-neutral-300 dark:hover:bg-neutral-800/60"
                           >
+                            <Icon icon={item?.icon} className="mr-2" />
                             {item.name}
                           </Link>
                         ))}
