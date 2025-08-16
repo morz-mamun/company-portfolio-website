@@ -1,4 +1,5 @@
 import BannerTitleAndDescription from '@/components/shared/banner-title-description';
+import LetsBuildFutureBusiness from '@/components/what-we-do/shared/lets-build-future-business';
 import ServiceDescription from '@/components/what-we-do/shared/service-description';
 import WhyChooseUs from '@/components/what-we-do/shared/why-choose-us';
 import ExploreOurSolution from '@/components/what-we-do/web-software-development/explore-our-solution';
@@ -6,6 +7,7 @@ import { webAndSoftwareDevelopmentBannerData } from '@/constants/banner-data/web
 import {
   serviceDescriptionData,
   whyChooseUsData,
+  letsBuildFutureBusinessData,
 } from '@/constants/what-we-do-data/web-software-development-data';
 
 export default function WebAndSoftwareDevlopmentPage() {
@@ -33,9 +35,9 @@ export default function WebAndSoftwareDevlopmentPage() {
         <WhyChooseUs sectionData={whyChooseUsData} />
       </div>
       {/* let's build future of your business */}
-      {/* <div>
-           <LetsBuildFutureBusiness sectionData={letsBuildFutureBusinessData} />
-         </div> */}
+      <div>
+        <LetsBuildFutureBusiness sectionData={letsBuildFutureBusinessData} />
+      </div>
     </main>
   );
 }
