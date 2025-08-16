@@ -13,6 +13,7 @@ import React, { useRef, useState } from 'react';
 import { Popover, PopoverContent, PopoverTrigger } from './popover';
 import { whatWeDoItemsData } from '@/constants/navbar-data/what-we-do-items-data';
 import { Icon } from '@iconify/react/dist/iconify.js';
+import { usePathname } from 'next/navigation';
 
 interface NavbarProps {
   children: React.ReactNode;
@@ -119,6 +120,7 @@ export const NavBody = ({ children, className, visible }: NavBodyProps) => {
 export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
   const [hovered, setHovered] = useState<number | null>(null);
   const [open, setOpen] = useState(false);
+  const pathName = usePathname();
 
   return (
     <motion.div
@@ -159,18 +161,21 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
                 onMouseEnter={() => setOpen(true)}
                 onMouseLeave={() => setOpen(false)}
               >
-                <div>
-                  {whatWeDoItemsData?.map((item, idx) => (
-                    <Link
-                      href={item.link}
-                      key={`link-${idx}`}
-                      onClick={onItemClick}
-                      className="text-brand/70 flex items-center gap-2 rounded-md px-3 py-1 hover:bg-[#CCCCCC]/40 dark:text-neutral-300 dark:hover:bg-neutral-800/60"
-                    >
-                      <Icon icon={item?.icon} width={16} height={16} />
-                      {item.name}
-                    </Link>
-                  ))}
+                <div className="space-y-1">
+                  {whatWeDoItemsData?.map((item, idx) => {
+                    const subIsActive = item?.link === pathName;
+                    return (
+                      <Link
+                        href={item.link}
+                        key={`link-${idx}`}
+                        onClick={onItemClick}
+                        className={`relative flex items-center rounded-md px-2 py-1 text-sm text-neutral-600 transition hover:bg-[#CCCCCC]/40 md:text-base dark:text-neutral-300 dark:hover:bg-neutral-800/60 ${subIsActive ? 'bg-[#CCCCCC]/40 px-2 py-1 dark:bg-neutral-800/60' : ''}`}
+                      >
+                        <Icon icon={item?.icon} width={16} height={16} />
+                        {item.name}
+                      </Link>
+                    );
+                  })}
                 </div>
               </PopoverContent>
             </Popover>

@@ -10,7 +10,7 @@ import {
   MobileNavToggle,
   MobileNavMenu,
 } from '@/components/ui/resizable-navbar';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Button } from '../../ui/button';
 import { Moon, Sun } from 'lucide-react';
 import { useTheme } from 'next-themes';
@@ -18,27 +18,17 @@ import { Popover, PopoverContent, PopoverTrigger } from '../../ui/popover';
 import Link from 'next/link';
 import { whatWeDoItemsData } from '@/constants/navbar-data/what-we-do-items-data';
 import { Icon } from '@iconify/react/dist/iconify.js';
+import { usePathname } from 'next/navigation';
+import { navItems } from '@/constants/navbar-data/main-nav-items-data';
 
 export default function WebSiteNavbar() {
-  const { theme, setTheme } = useTheme();
-  const navItems = [
-    {
-      name: 'What we do',
-      link: '#/what-we-do',
-    },
-    {
-      name: 'Who we are',
-      link: '#/who-we-are',
-    },
-    {
-      name: 'Results',
-      link: '#/results',
-    },
-    {
-      name: 'Resources',
-      link: '#/resources',
-    },
-  ];
+  const { resolvedTheme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+  const pathname = usePathname();
+  console.log('this is path name', pathname);
+
+  // Effect to check if the theme is mounted - to avoid hydration errors
+  useEffect(() => setMounted(true), []);
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   return (
@@ -50,7 +40,7 @@ export default function WebSiteNavbar() {
           <NavItems items={navItems} />
           <div className="z-[999] flex items-center gap-4">
             {/* Theme Toggle Button */}
-            {theme === 'light' ? (
+            {mounted && resolvedTheme === 'light' ? (
               <Button
                 variant="outline"
                 className="rounded-full"
@@ -84,7 +74,7 @@ export default function WebSiteNavbar() {
             <NavbarLogo />
             <div className="z-[999] flex items-center gap-2">
               {/* Theme Toggle Button */}
-              {theme === 'light' ? (
+              {mounted && resolvedTheme === 'light' ? (
                 <Button
                   variant="outline"
                   size="icon"
@@ -128,19 +118,22 @@ export default function WebSiteNavbar() {
                       side="right"
                       sideOffset={-40}
                       alignOffset={30}
-                      className="w-[260px] p-2 md:w-[300px]"
+                      className="w-[260px] p-2 md:w-[300px] dark:bg-[#0A0A0A]"
                     >
                       <div className="flex flex-col gap-1">
-                        {whatWeDoItemsData?.map((item, idx) => (
-                          <Link
-                            href={item.link}
-                            key={`link-${idx}`}
-                            className="relative flex items-center rounded-full px-2 py-1 text-sm text-neutral-600 transition hover:bg-[#CCCCCC]/40 md:text-base dark:text-neutral-300 dark:hover:bg-neutral-800/60"
-                          >
-                            <Icon icon={item?.icon} className="mr-2" />
-                            {item.name}
-                          </Link>
-                        ))}
+                        {whatWeDoItemsData?.map((item, idx) => {
+                          const subIsActive = item?.link === pathname;
+                          return (
+                            <Link
+                              href={item.link}
+                              key={`link-${idx}`}
+                              className={`relative flex items-center rounded-md px-2 py-1 text-sm text-neutral-600 transition hover:bg-[#CCCCCC]/40 md:text-base dark:text-neutral-300 dark:hover:bg-neutral-800/60 ${subIsActive ? 'bg-[#CCCCCC]/40 px-2 py-1 dark:bg-neutral-800/60' : ''}`}
+                            >
+                              <Icon icon={item?.icon} className="mr-2" />
+                              {item.name}
+                            </Link>
+                          );
+                        })}
                       </div>
                     </PopoverContent>
                   </Popover>

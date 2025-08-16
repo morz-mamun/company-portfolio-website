@@ -11,7 +11,7 @@ export default function ServiceDescription({
 }) {
   const { title, descriptionOne, descriptionTwo, image } = sectionData;
   return (
-    <section className="bg-[#FAFAFA] shadow-[0px_2px_4px_rgba(0,0,0,0.25)] md:p-10 dark:bg-[#0D0D0D]">
+    <section className="bg-[#FAFAFA] shadow-[0px_2px_4px_rgba(0,0,0,0.25)] md:p-10 dark:bg-[#030712]">
       <div className="mx-auto grid max-w-7xl grid-cols-1 gap-10 p-4 md:p-6 lg:grid-cols-5 lg:p-8">
         {/* image */}
         <div className="col-span-1 h-full w-full lg:col-span-2">

@@ -15,7 +15,7 @@ export default function ExploreOurSolution() {
     <section className="pt-14">
       {/* section heading */}
       <SectionHeading title={servicesSectionTitleData} />
-      <div className="space-y-14 border-y bg-[#FEFEFE] py-14 md:mt-14 md:space-y-32">
+      <div className="space-y-14 border-y bg-[#FEFEFE] py-14 md:mt-14 md:space-y-32 dark:bg-[#030712]">
         {/* seo and marketing */}
         <Service sectionData={seoData} />
         {/* Workflow Automation */}
