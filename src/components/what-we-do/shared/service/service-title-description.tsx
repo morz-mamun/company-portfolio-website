@@ -1,23 +1,22 @@
-type TData = {
-  title: string;
-  description: string;
-  image: string;
-  imageAlt?: string;
-};
+import { TSubServiceTitleAndDescription } from '@/types/services';
 
 export default function ServiceTitleAndDescription({
   data,
   className,
 }: {
-  data: TData;
+  data: TSubServiceTitleAndDescription;
   className?: string;
 }) {
   return (
-    <div className={`col-span-2 flex flex-col space-y-5 ${className}`}>
-      <h3 className="font-space-grotesk text-[32px] font-bold">
+    <div
+      className={`mx-auto flex flex-col space-y-4 lg:col-span-2 lg:mx-0 lg:space-y-5 ${className}`}
+    >
+      <h3 className="font-space-grotesk text-xl font-bold md:text-[32px]">
         {data?.title}
       </h3>
-      <p className="text-brand/70">{data?.description}</p>
+      <p className="text-brand/70 dark:text-primary/70 text-sm md:text-base">
+        {data?.description}
+      </p>
       {/* image */}
       <div className="flex-1 overflow-hidden rounded-[24px] border">
         <img

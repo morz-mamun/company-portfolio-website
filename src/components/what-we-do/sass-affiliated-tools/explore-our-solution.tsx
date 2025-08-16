@@ -13,7 +13,7 @@ export default function ExploreOurSolution() {
     <section className="pt-14">
       {/* section heading */}
       <SectionHeading title={servicesSectionTitleData} />
-      <div className="mt-14 space-y-32 border-y bg-[#FEFEFE] py-14">
+      <div className="space-y-14 border-y bg-[#FEFEFE] py-14 md:mt-14 md:space-y-32">
         {/* Ai Chatbot and Voice Assistant */}
         <Service sectionData={microSaaSDevelopmentData} />
         {/* Workflow Automation */}

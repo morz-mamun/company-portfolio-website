@@ -1,27 +1,31 @@
 import SectionHeading from '@/components/shared/section-heading';
 import Service from '../shared/service/service';
+
 import {
-  aiChatBotAndVoiceAssistantData,
-  facilityAndSecurityAutomation,
-  multiAgentOrchestrationData,
-  workflowAutomationData,
-} from '@/constants/what-we-do-data/ai-automation-data';
-import { servicesSectionTitleData } from '@/constants/what-we-do-data/digital-marketing-seo-data';
+  brandingAndLeadGenerationData,
+  contentStrategyData,
+  paidAdsData,
+  seoData,
+  servicesSectionTitleData,
+  socialMediaData,
+} from '@/constants/what-we-do-data/digital-marketing-seo-data';
 
 export default function ExploreOurSolution() {
   return (
     <section className="pt-14">
       {/* section heading */}
       <SectionHeading title={servicesSectionTitleData} />
-      <div className="mt-14 space-y-32 border-y bg-[#FEFEFE] py-14">
-        {/* Ai Chatbot and Voice Assistant */}
-        <Service sectionData={aiChatBotAndVoiceAssistantData} />
+      <div className="space-y-14 border-y bg-[#FEFEFE] py-14 md:mt-14 md:space-y-32">
+        {/* seo and marketing */}
+        <Service sectionData={seoData} />
         {/* Workflow Automation */}
-        <Service sectionData={workflowAutomationData} />
+        <Service sectionData={paidAdsData} />
         {/* Multi-Agent Orchestration */}
-        <Service sectionData={multiAgentOrchestrationData} />
+        <Service sectionData={socialMediaData} />
         {/* Facility and Security Automation */}
-        <Service sectionData={facilityAndSecurityAutomation} />
+        <Service sectionData={contentStrategyData} />
+        {/* Branding and Lead Generation */}
+        <Service sectionData={brandingAndLeadGenerationData} />
       </div>
     </section>
   );

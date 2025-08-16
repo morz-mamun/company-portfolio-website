@@ -5,6 +5,12 @@ export type TServiceDescription = {
   image: string;
 };
 
+export type TSubServiceTitleAndDescription = {
+  title: string;
+  description: string;
+  image: string;
+  imageAlt?: string;
+};
 export type TSubServices = {
   title: string;
   icon: string;

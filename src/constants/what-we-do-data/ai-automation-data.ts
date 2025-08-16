@@ -1,9 +1,4 @@
-import {
-  TMarqueeData,
-  TServiceDescription,
-  TServices,
-  TWhyChooseUs,
-} from '@/types/services';
+import { TMarqueeData, TServiceDescription, TServices } from '@/types/services';
 
 export const serviceDescriptionData: TServiceDescription = {
   title: 'Automate Smarter. Scale Faster. Think Beyond Tasks.',
@@ -49,8 +44,8 @@ export const aiChatBotAndVoiceAssistantData: TServices = {
     },
   ],
   styleClasses: {
-    ServiceTitleAndDescriptionClass: 'order-1',
-    subServicesClass: 'order-2',
+    ServiceTitleAndDescriptionClass: 'lg:order-first',
+    subServicesClass: 'lg:order-last',
   },
 };
 
@@ -84,8 +79,8 @@ export const workflowAutomationData: TServices = {
     },
   ],
   styleClasses: {
-    ServiceTitleAndDescriptionClass: 'order-2',
-    subServicesClass: 'order-1',
+    ServiceTitleAndDescriptionClass: 'lg:order-last',
+    subServicesClass: 'lg:order-first',
   },
 };
 
@@ -118,8 +113,8 @@ export const multiAgentOrchestrationData: TServices = {
     },
   ],
   styleClasses: {
-    ServiceTitleAndDescriptionClass: 'order-1',
-    subServicesClass: 'order-2',
+    ServiceTitleAndDescriptionClass: 'lg:order-first',
+    subServicesClass: 'lg:order-last',
   },
 };
 
@@ -151,8 +146,8 @@ export const facilityAndSecurityAutomation: TServices = {
     },
   ],
   styleClasses: {
-    ServiceTitleAndDescriptionClass: 'order-2',
-    subServicesClass: 'order-1',
+    ServiceTitleAndDescriptionClass: 'lg:order-last',
+    subServicesClass: 'lg:order-first',
   },
 };
 

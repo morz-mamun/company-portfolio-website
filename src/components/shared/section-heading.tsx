@@ -12,7 +12,7 @@ export default function SectionHeading({
   return (
     <div className={`mx-auto max-w-[974px] space-y-3 text-center`}>
       <h2
-        className={`font-space-grotesk text-brand dark:text-primary text-xl font-bold md:text-4xl ${titleClassName}`}
+        className={`font-space-grotesk text-brand dark:text-primary text-[22px] font-bold md:text-4xl ${titleClassName}`}
       >
         {title}
       </h2>
