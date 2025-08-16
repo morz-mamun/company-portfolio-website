@@ -7,21 +7,29 @@ import {
   servicesSectionTitleData,
   workflowAutomationData,
 } from '@/constants/what-we-do-data/ai-automation-data';
+import BorderXPattern from '@/components/shared/border-x-pattern';
 
 export default function ExploreOurSolution() {
   return (
-    <section className="md:pt-14">
+    <section className="relative md:pt-14">
       {/* section heading */}
-      <SectionHeading title={servicesSectionTitleData} />
-      <div className="space-y-14 border-y bg-[#FEFEFE] py-14 md:mt-14 md:space-y-32 dark:bg-[#030712]">
-        {/* Ai Chatbot and Voice Assistant */}
-        <Service sectionData={aiChatBotAndVoiceAssistantData} />
-        {/* Workflow Automation */}
-        <Service sectionData={workflowAutomationData} />
-        {/* Multi-Agent Orchestration */}
-        <Service sectionData={multiAgentOrchestrationData} />
-        {/* Facility and Security Automation */}
-        <Service sectionData={facilityAndSecurityAutomation} />
+      <SectionHeading title={servicesSectionTitleData} className="md:mb-14" />
+      {/* py-14 md:mt-14 space-y-14 md:space-y-32 */}
+      <div className="relative border-y bg-[#FEFEFE] px-4 md:px-6 dark:bg-[#030712]">
+        <div className="relative space-y-14 border-x py-14 md:space-y-32">
+          {/* Ai Chatbot and Voice Assistant */}
+          <Service sectionData={aiChatBotAndVoiceAssistantData} />
+          {/* Workflow Automation */}
+          <Service sectionData={workflowAutomationData} />
+          {/* Multi-Agent Orchestration */}
+          <Service sectionData={multiAgentOrchestrationData} />
+          {/* Facility and Security Automation */}
+          <Service sectionData={facilityAndSecurityAutomation} />
+
+          {/* border-x pattern design */}
+          <BorderXPattern className="absolute top-0 -left-4 w-4 md:-left-44 md:w-44" />
+          <BorderXPattern className="absolute top-0 -right-4 w-4 md:-right-44 md:w-44" />
+        </div>
       </div>
     </section>
   );

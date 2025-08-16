@@ -7,21 +7,27 @@ import {
   servicesSectionTitleData,
   shopifyWooCommerceData,
 } from '@/constants/what-we-do-data/e-commerce-data';
+import BorderXPattern from '@/components/shared/border-x-pattern';
 
 export default function ExploreOurSolution() {
   return (
     <section className="pt-14">
       {/* section heading */}
       <SectionHeading title={servicesSectionTitleData} />
-      <div className="space-y-14 border-y bg-[#FEFEFE] py-14 md:mt-14 md:space-y-32 dark:bg-[#030712]">
-        {/* Ai Chatbot and Voice Assistant */}
-        <Service sectionData={shopifyWooCommerceData} />
-        {/* Workflow Automation */}
-        <Service sectionData={productResearchAndTrendAnalysisData} />
-        {/* Multi-Agent Orchestration */}
-        <Service sectionData={dropshippingAndInventoryAutomationData} />
-        {/* Facility and Security Automation */}
-        <Service sectionData={affiliateOptimizationAndLinkManagementData} />
+      <div className="relative border-y bg-[#FEFEFE] px-4 md:px-6 dark:bg-[#030712]">
+        <div className="relative space-y-14 border-x py-14 md:space-y-32">
+          {/* Ai Chatbot and Voice Assistant */}
+          <Service sectionData={shopifyWooCommerceData} />
+          {/* Workflow Automation */}
+          <Service sectionData={productResearchAndTrendAnalysisData} />
+          {/* Multi-Agent Orchestration */}
+          <Service sectionData={dropshippingAndInventoryAutomationData} />
+          {/* Facility and Security Automation */}
+          <Service sectionData={affiliateOptimizationAndLinkManagementData} />
+          {/* border-x pattern design */}
+          <BorderXPattern className="absolute top-0 -left-4 w-4 md:-left-44 md:w-44" />
+          <BorderXPattern className="absolute top-0 -right-4 w-4 md:-right-44 md:w-44" />
+        </div>
       </div>
     </section>
   );

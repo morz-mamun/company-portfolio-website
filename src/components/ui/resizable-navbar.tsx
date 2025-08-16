@@ -134,7 +134,7 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
       )}
     >
       {items?.map((item, idx) => {
-        if (item.name === 'What we do') {
+        if (item?.name === 'What we do') {
           return (
             <Popover key={`nav-${idx}`} open={open} onOpenChange={setOpen}>
               <PopoverTrigger asChild>
@@ -151,7 +151,7 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
                       className="absolute inset-0 h-full w-full rounded-full bg-[#CCCCCC] dark:bg-neutral-800"
                     />
                   )}
-                  <span className="relative z-20">{item.name}</span>
+                  <span className="relative z-20">{item?.name}</span>
                 </button>
               </PopoverTrigger>
               <PopoverContent
@@ -168,7 +168,7 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
                       <Link
                         href={item.link}
                         key={`link-${idx}`}
-                        onClick={onItemClick}
+                        onClick={() => setOpen(false)}
                         className={`relative flex items-center gap-2 rounded-md px-2 py-1 text-sm text-neutral-600 transition hover:bg-[#CCCCCC]/40 md:text-base dark:text-neutral-300 dark:hover:bg-neutral-800/60 ${subIsActive ? 'bg-[#CCCCCC]/40 px-2 py-1 dark:bg-neutral-800/60' : ''}`}
                       >
                         <Icon icon={item?.icon} width={16} height={16} />

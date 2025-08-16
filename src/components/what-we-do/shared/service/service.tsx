@@ -6,7 +6,7 @@ import { TServices } from '@/types/services';
 export default function Service({ sectionData }: { sectionData: TServices }) {
   const { data, subServices, styleClasses } = sectionData;
   return (
-    <div className="flex flex-col items-center px-3 md:px-4 lg:px-0">
+    <div className="flex flex-col items-center px-2 md:px-4 lg:px-0">
       <div className="mx-auto grid max-w-6xl gap-4 md:gap-5 lg:grid-cols-5 lg:gap-10">
         <ServiceTitleAndDescription
           className={styleClasses?.ServiceTitleAndDescriptionClass}

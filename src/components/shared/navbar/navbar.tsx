@@ -24,8 +24,8 @@ import { navItems } from '@/constants/navbar-data/main-nav-items-data';
 export default function WebSiteNavbar() {
   const { resolvedTheme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
+  const [open, setOpen] = useState(false);
   const pathname = usePathname();
-  console.log('this is path name', pathname);
 
   // Effect to check if the theme is mounted - to avoid hydration errors
   useEffect(() => setMounted(true), []);
@@ -107,7 +107,11 @@ export default function WebSiteNavbar() {
             {navItems?.map((item, idx) => {
               if (item.name === 'What we do') {
                 return (
-                  <Popover key={`nav-${idx}`}>
+                  <Popover
+                    key={`nav-${idx}`}
+                    open={open}
+                    onOpenChange={setOpen}
+                  >
                     <PopoverTrigger asChild>
                       <button className="text-brand relative rounded-full px-3 py-1 text-sm md:text-base dark:text-neutral-300">
                         <span className="relative z-20">{item.name}</span>
@@ -127,6 +131,7 @@ export default function WebSiteNavbar() {
                             <Link
                               href={item.link}
                               key={`link-${idx}`}
+                              onClick={() => setOpen(false)}
                               className={`relative flex items-center rounded-md px-2 py-1 text-sm text-neutral-600 transition hover:bg-[#CCCCCC]/40 md:text-base dark:text-neutral-300 dark:hover:bg-neutral-800/60 ${subIsActive ? 'bg-[#CCCCCC]/40 px-2 py-1 dark:bg-neutral-800/60' : ''}`}
                             >
                               <Icon icon={item?.icon} className="mr-2" />
