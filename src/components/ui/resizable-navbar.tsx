@@ -143,7 +143,7 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
                     setHovered(idx);
                     setOpen(true);
                   }}
-                  className="text-brand relative rounded-full px-4 py-1 dark:text-neutral-300"
+                  className="text-brand relative cursor-pointer rounded-full px-4 py-1 dark:text-neutral-300"
                 >
                   {hovered === idx && (
                     <motion.div
@@ -169,7 +169,7 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
                         href={item.link}
                         key={`link-${idx}`}
                         onClick={onItemClick}
-                        className={`relative flex items-center rounded-md px-2 py-1 text-sm text-neutral-600 transition hover:bg-[#CCCCCC]/40 md:text-base dark:text-neutral-300 dark:hover:bg-neutral-800/60 ${subIsActive ? 'bg-[#CCCCCC]/40 px-2 py-1 dark:bg-neutral-800/60' : ''}`}
+                        className={`relative flex items-center gap-2 rounded-md px-2 py-1 text-sm text-neutral-600 transition hover:bg-[#CCCCCC]/40 md:text-base dark:text-neutral-300 dark:hover:bg-neutral-800/60 ${subIsActive ? 'bg-[#CCCCCC]/40 px-2 py-1 dark:bg-neutral-800/60' : ''}`}
                       >
                         <Icon icon={item?.icon} width={16} height={16} />
                         {item.name}

@@ -1,18 +1,17 @@
 import PrimaryBtn from '../buttons/primary-btn';
 import BorderXPattern from '../shared/border-x-pattern';
 import { Icon } from '@iconify/react';
+import SectionHeading from '../shared/section-heading';
 
 export default function JoiningOurTeam() {
   return (
     <section className="border-y px-4 md:px-6">
       <div className="relative border-x px-2 pt-10 pb-[50px] md:px-4 md:pt-[50px] md:pb-[80px] lg:px-[120px] lg:pt-[70px] lg:pb-[150px]">
         <div className="flex flex-col items-center justify-center">
-          <PrimaryBtn title="Current Job Opening" iconName="" />
-
-          {/* title */}
-          <h3 className="text-brand dark:text-primary mt-2 text-xl font-semibold md:text-[28px]">
-            Interested to join our team?
-          </h3>
+          <SectionHeading
+            title="Joining Our Team"
+            description="We are hiring across a range of roles and expertise"
+          />
 
           <div className="mt-10 rounded-[12px] border-2 bg-[linear-gradient(to_right,_#F4F4F4,_#F0F0F0)] px-2 py-5 md:px-5 md:py-10 lg:px-10 lg:pb-20 dark:bg-[linear-gradient(to_right,#0D0D0D,#0D0D0D)]">
             <div className="flex flex-col items-center justify-between gap-4 md:flex-row lg:gap-[74px]">

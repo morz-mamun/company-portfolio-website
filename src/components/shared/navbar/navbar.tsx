@@ -43,7 +43,7 @@ export default function WebSiteNavbar() {
             {mounted && resolvedTheme === 'light' ? (
               <Button
                 variant="outline"
-                className="rounded-full"
+                className="cursor-pointer rounded-full"
                 size="icon"
                 onClick={() => setTheme('dark')}
               >
@@ -53,7 +53,7 @@ export default function WebSiteNavbar() {
               <Button
                 variant="outline"
                 size="icon"
-                className="rounded-full"
+                className="cursor-pointer rounded-full"
                 onClick={() => setTheme('light')}
               >
                 <Moon className="h-4 w-4" />
@@ -78,7 +78,7 @@ export default function WebSiteNavbar() {
                 <Button
                   variant="outline"
                   size="icon"
-                  className="rounded-full"
+                  className="cursor-pointer rounded-full"
                   onClick={() => setTheme('dark')}
                 >
                   <Sun className="h-4 w-4" />
@@ -87,7 +87,7 @@ export default function WebSiteNavbar() {
                 <Button
                   variant="outline"
                   size="icon"
-                  className="rounded-full"
+                  className="cursor-pointer rounded-full"
                   onClick={() => setTheme('light')}
                 >
                   <Moon className="h-4 w-4" />
