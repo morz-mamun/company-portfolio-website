@@ -2,6 +2,7 @@
 import { Icon } from '@iconify/react/dist/iconify.js';
 import { ArrowUpFromLine, Github, Linkedin, Mail, Twitter } from 'lucide-react';
 import Link from 'next/link';
+import { TextHoverEffect } from '../ui/text-hover-effect';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -19,7 +20,7 @@ export default function Footer() {
                 <div className="md:w-1/2 lg:w-full">
                   <h3 className="mb-2 text-lg font-bold">
                     <span className="dark:text-primary text-brand">
-                      Global Trust Communications
+                      Trust Global Communications
                     </span>
                   </h3>
                   <p className="text-brand dark:text-primary mb-4 text-xs md:text-sm">
@@ -201,11 +202,16 @@ export default function Footer() {
       {/* copyright */}
       <div className="py-5 text-center text-zinc-500">
         <p className="text-xs md:text-sm">
-          © {currentYear} Global Trust Communications. All rights reserved.
+          © {currentYear} Trust Global Communications. All rights reserved.
         </p>
       </div>
 
       {/* bottom pattern */}
+      <div className="border-t">
+        <div className="mx-4 h-[6rem] border-x md:mx-6 md:h-[9rem] lg:h-[12rem]">
+          <TextHoverEffect text="Trust Global Communications" />
+        </div>
+      </div>
     </footer>
   );
 }
