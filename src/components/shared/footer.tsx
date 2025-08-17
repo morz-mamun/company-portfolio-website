@@ -11,7 +11,7 @@ export default function Footer() {
     <footer className="border-t pt-10 md:pt-20">
       <div className="border-t border-b">
         <div className="mx-auto max-w-7xl px-4 md:px-6">
-          <div className="relative border-x bg-[#F5F5F5] dark:bg-[#0D0D0D]">
+          <div className="relative border-x bg-[#F5F5F5] dark:bg-[#030712]">
             {/* footer content */}
             <div className="grid grid-cols-2 gap-8 px-4 py-8 md:grid-cols-3 md:px-6 md:py-12 lg:grid-cols-5">
               {/* about us and contact us */}
@@ -174,7 +174,7 @@ export default function Footer() {
             <div className="absolute right-2 bottom-4 hidden lg:block">
               <button
                 onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-                className="shadow-primary/70 dark:shadow-brand/50 flex cursor-pointer items-center gap-2 rounded-full px-4 py-3 shadow-lg transition-colors"
+                className="shadow-primary/70 flex cursor-pointer items-center gap-2 rounded-full px-4 py-3 shadow-lg transition-colors dark:shadow-lg"
               >
                 <ArrowUpFromLine
                   size={24}
@@ -187,11 +187,11 @@ export default function Footer() {
             <div className="flex items-center justify-center lg:hidden">
               <button
                 onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-                className="bg-brand dark:bg-primary dark:text-primary shadow-primary/70 dark:shadow-brand/50 flex cursor-pointer items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold text-white shadow-lg transition-colors"
+                className="bg-brand dark:bg-primary shadow-primary/70 flex cursor-pointer items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold text-white shadow-lg transition-colors dark:text-black dark:shadow-lg"
               >
                 <ArrowUpFromLine
                   size={24}
-                  className="dark:text-primary animate-bounce text-white"
+                  className="animate-bounce text-white dark:text-black"
                 />
                 Back to Top
               </button>
