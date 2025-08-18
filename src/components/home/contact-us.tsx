@@ -5,10 +5,10 @@ import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css';
 import { ArrowBigRight } from 'lucide-react';
 import SectionHeading from '../shared/section-heading';
-import { Input } from '../ui/input';
 import { Textarea } from '../ui/textarea';
 import { useEffect } from 'react';
 import { toast } from 'sonner';
+import InputWithLabel from '../form/form-fields/input-with-label';
 
 type ContactFormValues = {
   email: string;
@@ -61,48 +61,32 @@ export default function ContactUs() {
       <form className="mt-8 px-3 md:px-0" onSubmit={handleSubmit(onSubmit)}>
         <div className="my-4 grid grid-cols-2 items-start gap-3 md:gap-4">
           {/* Email */}
-          <div className="space-y-2">
-            <label className="text-brand dark:text-textPrimary text-sm font-semibold">
-              Email
-            </label>
-            <Input
-              type="email"
-              placeholder="Email"
-              className="mt-2 placeholder:text-xs md:placeholder:text-sm"
-              {...register('email', {
-                required: 'Email is required',
-                pattern: {
-                  value: /^\S+@\S+$/i,
-                  message: 'Invalid email address',
-                },
-              })}
-            />
-            {errors.email && (
-              <p className="text-xs text-red-600">{errors.email.message}</p>
-            )}
-          </div>
+          <InputWithLabel
+            name="email"
+            label="Email"
+            type="email"
+            placeholder="Enter your email"
+            register={register}
+            error={errors.email}
+            rules={{
+              required: 'Email is required',
+              pattern: {
+                value: /^\S+@\S+$/i,
+                message: 'Invalid email address',
+              },
+            }}
+          />
 
           {/* Full Name */}
-          <div className="space-y-2">
-            <label className="text-brand dark:text-primary text-sm font-semibold">
-              Full Name
-            </label>
-            <Input
-              type="text"
-              className="mt-2 placeholder:text-xs md:placeholder:text-sm"
-              placeholder="Full Name"
-              {...register('name', {
-                required: 'Full Name is required',
-                minLength: {
-                  value: 3,
-                  message: 'Name must be at least 3 characters',
-                },
-              })}
-            />
-            {errors.name && (
-              <p className="text-xs text-red-600">{errors.name.message}</p>
-            )}
-          </div>
+          <InputWithLabel
+            name="name"
+            label="Full Name"
+            type="text"
+            placeholder="Full Name"
+            register={register}
+            error={errors.name}
+            rules={{ required: 'Full name is required' }}
+          />
         </div>
 
         <div className="my-4 grid grid-cols-2 items-start gap-3 md:gap-4">
@@ -130,20 +114,15 @@ export default function ContactUs() {
           </div>
 
           {/* Company Name */}
-          <div className="space-y-2">
-            <label className="text-brand dark:text-primary text-sm font-semibold">
-              Company Name
-            </label>
-            <Input
-              type="text"
-              className="mt-2 placeholder:text-xs md:placeholder:text-sm"
-              placeholder="Company Name"
-              {...register('company', { required: 'Company Name is required' })}
-            />
-            {errors.company && (
-              <p className="text-xs text-red-600">{errors.company.message}</p>
-            )}
-          </div>
+          <InputWithLabel
+            name="company"
+            label="Company Name"
+            type="text"
+            placeholder="Company Name"
+            register={register}
+            error={errors.company}
+            rules={{ required: 'Company name is required' }}
+          />
         </div>
 
         {/* Message */}

@@ -60,6 +60,7 @@ export default function WebSiteNavbar() {
               </Button>
             )}
             <NavbarButton
+              href="/contact-us"
               className="rounded-full text-base font-medium"
               variant="dark"
             >
@@ -161,6 +162,7 @@ export default function WebSiteNavbar() {
             {/* navbar right button */}
             <div className="mt-4 flex w-full flex-col gap-4">
               <NavbarButton
+                href="/contact-us"
                 className="rounded-full text-base font-medium"
                 variant="dark"
               >

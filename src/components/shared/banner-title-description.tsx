@@ -8,7 +8,7 @@ export default function BannerTitleAndDescription({
 }: {
   sectionData: TBannerData;
 }) {
-  const { title, description, mobileTitle } = sectionData;
+  const { title, description, mobileTitle, buttonVisivility } = sectionData;
   return (
     <div className="mx-2 mt-[28px] max-w-5xl text-center lg:mx-auto">
       {/* Content title with animation for desktop */}
@@ -32,11 +32,13 @@ export default function BannerTitleAndDescription({
       </p>
 
       {/* Get free discovery call button */}
-      <PrimaryBtn
-        title="Get a Free Discovery Call"
-        iconName=""
-        className="mx-auto mt-5 md:mt-10"
-      />
+      {buttonVisivility && (
+        <PrimaryBtn
+          title="Get a Free Discovery Call"
+          iconName=""
+          className="mx-auto mt-5 md:mt-10"
+        />
+      )}
     </div>
   );
 }

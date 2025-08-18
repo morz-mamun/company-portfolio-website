@@ -9,4 +9,5 @@ export const homeBannerData = {
     'Digital Marketing &',
     'Technology Solutions',
   ],
+  buttonVisivility: true,
 };

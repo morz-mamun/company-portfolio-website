@@ -3,4 +3,5 @@ export const saasAffiliatedToolsBannerData = {
   description:
     'Design and launch custom Micro SaaS tools and affiliate automation systems to drive recurring revenue and engagement.',
   mobileTitle: ['SaaS & Affiliate Tools'],
+  buttonVisivility: true,
 };
