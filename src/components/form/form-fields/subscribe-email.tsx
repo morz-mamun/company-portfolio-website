@@ -26,7 +26,7 @@ export function EmailSubscription() {
   };
 
   return (
-    <div className="mx-auto w-full max-w-sm">
+    <div className="mx-auto w-full max-w-sm px-3">
       <form
         onSubmit={handleSubmit(onSubmit)}
         className="flex overflow-hidden rounded-lg border border-gray-100 bg-white p-1 shadow-md"
@@ -41,12 +41,12 @@ export function EmailSubscription() {
               message: 'Invalid email address',
             },
           })}
-          className="flex-1 border-0 px-2 py-5 text-sm shadow-none placeholder:text-gray-500 focus-visible:ring-0 focus-visible:ring-offset-0"
+          className="flex-1 border-0 px-2 text-sm shadow-none placeholder:text-gray-500 focus-visible:ring-0 focus-visible:ring-offset-0 md:py-5"
         />
         <Button
           type="submit"
           disabled={isSubmitting}
-          className="hover:bg-[] cursor-pointer rounded-[8px] border-0 bg-black px-4 py-5 text-sm font-medium text-white shadow-[inset_2px_2px_4px_0_rgba(255,254,254,0.25)] disabled:opacity-50"
+          className="hover:bg-[] cursor-pointer rounded-[8px] border-0 bg-black px-4 text-xs font-medium text-white shadow-[inset_2px_2px_4px_0_rgba(255,254,254,0.25)] disabled:opacity-50 md:py-5 md:text-sm"
         >
           {isSubmitting ? '...' : 'Subscribe'}
         </Button>

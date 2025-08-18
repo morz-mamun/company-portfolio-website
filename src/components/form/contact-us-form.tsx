@@ -47,8 +47,8 @@ export default function ContactUsForm() {
     });
   }, [register]);
   return (
-    <form className="px-3 md:px-0" onSubmit={handleSubmit(onSubmit)}>
-      <div className="grid grid-cols-2 items-start gap-3 md:gap-4">
+    <form className="md:px-0" onSubmit={handleSubmit(onSubmit)}>
+      <div className="grid grid-cols-2 items-start gap-3 md:grid-cols-1 md:gap-4 lg:grid-cols-2">
         {/* first name */}
         <InputWithLabel
           name="firstName"
@@ -120,7 +120,7 @@ export default function ContactUsForm() {
           Write your message here
         </label>
         <Textarea
-          className="mt-2 h-48 placeholder:text-xs md:placeholder:text-sm"
+          className="mt-2 placeholder:text-xs md:h-24 md:placeholder:text-sm lg:h-48"
           placeholder="What we can do for you?"
           {...register('message', {
             required: 'Message is required',

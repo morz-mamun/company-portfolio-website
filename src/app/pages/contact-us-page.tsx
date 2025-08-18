@@ -9,26 +9,28 @@ export default function ContactUsPage() {
   return (
     <main className="mx-auto min-h-screen max-w-7xl overflow-hidden pb-10">
       {/* Banner Section */}
-      <div className="mt-20 md:mt-28 lg:mt-20">
+      <div className="mt-20">
         <BannerTitleAndDescription sectionData={contactUsBannerData} />
       </div>
 
       {/* top content */}
-      <div className="mx-auto my-20 grid max-w-6xl grid-cols-1 gap-28 md:grid-cols-2">
+      <div className="mx-auto my-10 grid max-w-6xl grid-cols-1 px-3 md:my-16 md:grid-cols-2 md:gap-10 lg:my-20 lg:gap-28">
         {/* contact us form */}
         <ContactUsForm />
-        {/* right side */}
+        {/* right side content */}
         <div>
           {/* map */}
-          <div>
-            <h3 className="font-space-grotesk text-2xl font-bold">Visit Us</h3>
-            <p className="flex items-center gap-2">
+          <div className="mt-10 md:mt-0">
+            <h3 className="font-space-grotesk text-xl font-bold md:text-2xl">
+              Visit Us
+            </h3>
+            <p className="mt-1 flex items-center gap-2 text-xs md:items-start md:text-sm lg:items-center">
               <Icon icon="hugeicons:location-09" className="text-[#7E7E7E]" />
               <span className="text-[#0F0E0E]">
                 Singapore Market, Agrabad, Chittagong, Bangladesh.
               </span>
             </p>
-            <div className="my-5 h-[200px]">
+            <div className="my-5 md:h-[170px] lg:h-[200px]">
               <iframe
                 className="h-full w-full rounded-2xl"
                 allowFullScreen={true}
@@ -45,15 +47,15 @@ export default function ContactUsPage() {
           {/* contact us */}
           <div className="space-y-4">
             <div className="space-y-1">
-              <h3 className="font-space-grotesk text-2xl font-bold">
+              <h3 className="font-space-grotesk text-xl font-bold md:text-2xl">
                 Chat with us
               </h3>
-              <p className="flex items-center gap-2 text-sm text-[#0F0E0E]">
+              <p className="flex items-center gap-2 text-xs text-[#0F0E0E] md:text-sm">
                 Speak to our friendly team through live chat.
               </p>
             </div>
             <div className="space-y-2">
-              <p className="flex items-center gap-2 text-sm">
+              <p className="flex items-center gap-2 text-xs md:text-sm">
                 <div className="flex items-center gap-2">
                   <Icon
                     icon="hugeicons:time-quarter-pass"
@@ -66,11 +68,11 @@ export default function ContactUsPage() {
                   Book Now
                 </button>
               </p>
-              <p className="flex items-center gap-2 text-sm">
+              <p className="flex items-center gap-2 text-xs md:text-sm">
                 <Icon icon="fluent:chat-16-filled" className="text-[#7E7E7E]" />
                 <span className="text-[#0F0E0E]">Start a live chat</span>
               </p>
-              <p className="flex items-center gap-2 text-sm">
+              <p className="flex items-center gap-2 text-xs md:text-sm">
                 <Icon icon="material-symbols:mail" className="text-[#7E7E7E]" />
                 <span className="text-[#0F0E0E]">
                   Ready to connect? Email us!
@@ -81,12 +83,14 @@ export default function ContactUsPage() {
           {/* call us */}
           <div className="mt-5 space-y-3">
             <div className="space-y-1">
-              <h3 className="font-space-grotesk text-2xl font-bold">Call us</h3>
-              <p className="flex items-center gap-2 text-sm text-[#0F0E0E]">
+              <h3 className="font-space-grotesk text-xl font-bold md:text-2xl">
+                Call us
+              </h3>
+              <p className="flex items-center gap-2 text-xs text-[#0F0E0E] md:text-sm">
                 Call our team Sat-Thu from 10am to 6pm.
               </p>
             </div>
-            <p className="flex items-center gap-2 text-sm">
+            <p className="flex items-center gap-2 text-xs md:text-sm">
               <Icon
                 icon="fluent:call-add-24-filled"
                 className="text-[#7E7E7E]"
@@ -97,11 +101,11 @@ export default function ContactUsPage() {
         </div>
       </div>
       {/* news letter section */}
-      <div className="bg-[#F2F2F2] py-12 shadow-[0_2px_4px_0_rgba(0,0,0,0.25)]">
+      <div className="bg-[#F2F2F2] py-8 shadow-[0_2px_4px_0_rgba(0,0,0,0.25)] md:py-12">
         <SectionHeading
           title="Join our weekly Newsletter"
           description="Stay up to date with the latest news, announcements and newsletter."
-          className="mb-10 text-sm md:text-base lg:text-base"
+          className="mb-5 text-xs md:mb-10 md:text-xs lg:text-base"
         />
 
         <EmailSubscription />
