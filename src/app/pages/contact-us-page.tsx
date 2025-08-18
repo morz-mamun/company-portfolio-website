@@ -55,19 +55,19 @@ export default function ContactUsPage() {
               </p>
             </div>
             <div className="space-y-2">
-              <p className="flex items-center gap-2 text-xs md:text-sm">
-                <div className="flex items-center gap-2">
+              <div className="flex items-center gap-2 text-xs md:text-sm">
+                <p className="flex items-center gap-2">
                   <Icon
                     icon="hugeicons:time-quarter-pass"
                     className="text-[#7E7E7E]"
                   />
                   <span className="text-[#0F0E0E]">Set the meeting time</span>
-                </div>
+                </p>
                 {/* book now button */}
                 <button className="bg-brand cursor-pointer rounded-md px-3 py-1 font-semibold text-white shadow-[inset_2px_2px_12px_0_rgba(218,218,218,0.25)]">
                   Book Now
                 </button>
-              </p>
+              </div>
               <p className="flex items-center gap-2 text-xs md:text-sm">
                 <Icon icon="fluent:chat-16-filled" className="text-[#7E7E7E]" />
                 <span className="text-[#0F0E0E]">Start a live chat</span>
