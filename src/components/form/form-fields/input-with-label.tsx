@@ -23,7 +23,7 @@ export default function InputWithLabel({
 }: TInputWithLabelProps) {
   return (
     <div className="space-y-2">
-      <label className="text-brand dark:text-textPrimary text-sm font-semibold">
+      <label className="text-brand dark:text-primary text-sm font-semibold">
         {label}
       </label>
       <Input
