@@ -1,5 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
+import DemoBlogCard from '@/components/cards/demo-blog-card';
+
 export default async function Blogs() {
   const res = await fetch('https://tgc-admin.vercel.app/api/blogs', {
     next: { revalidate: 60 }, // Revalidate every 60s (ISR)
@@ -14,11 +16,9 @@ export default async function Blogs() {
   return (
     <div className="mx-auto max-w-3xl space-y-6 py-10">
       <h1 className="text-3xl font-bold">Latest Blogs</h1>
+
       {blogs?.map((blog: any) => (
-        <div key={blog._id}>
-          <h2>{blog.title}</h2>
-          <p>{blog.description}</p>
-        </div>
+        <DemoBlogCard key={blog.id} blog={blog} />
       ))}
     </div>
   );
