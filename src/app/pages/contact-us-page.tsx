@@ -25,8 +25,11 @@ export default function ContactUsPage() {
               Visit Us
             </h3>
             <p className="mt-1 flex items-center gap-2 text-xs md:items-start md:text-sm lg:items-center">
-              <Icon icon="hugeicons:location-09" className="text-[#7E7E7E]" />
-              <span className="text-[#0F0E0E]">
+              <Icon
+                icon="hugeicons:location-09"
+                className="dark:text-primary/80 text-[#7E7E7E]"
+              />
+              <span className="dark:text-primary/80 text-[#0F0E0E]">
                 Singapore Market, Agrabad, Chittagong, Bangladesh.
               </span>
             </p>
@@ -50,7 +53,7 @@ export default function ContactUsPage() {
               <h3 className="font-space-grotesk text-xl font-bold md:text-2xl">
                 Chat with us
               </h3>
-              <p className="flex items-center gap-2 text-xs text-[#0F0E0E] md:text-sm">
+              <p className="dark:text-primary/80 flex items-center gap-2 text-xs text-[#0F0E0E] md:text-sm">
                 Speak to our friendly team through live chat.
               </p>
             </div>
@@ -61,7 +64,9 @@ export default function ContactUsPage() {
                     icon="hugeicons:time-quarter-pass"
                     className="text-[#7E7E7E]"
                   />
-                  <span className="text-[#0F0E0E]">Set the meeting time</span>
+                  <span className="dark:text-primary/80 text-[#0F0E0E]">
+                    Set the meeting time
+                  </span>
                 </p>
                 {/* book now button */}
                 <button className="bg-brand cursor-pointer rounded-md px-3 py-1 font-semibold text-white shadow-[inset_2px_2px_12px_0_rgba(218,218,218,0.25)]">
@@ -70,11 +75,13 @@ export default function ContactUsPage() {
               </div>
               <p className="flex items-center gap-2 text-xs md:text-sm">
                 <Icon icon="fluent:chat-16-filled" className="text-[#7E7E7E]" />
-                <span className="text-[#0F0E0E]">Start a live chat</span>
+                <span className="dark:text-primary/80 text-[#0F0E0E]">
+                  Start a live chat
+                </span>
               </p>
               <p className="flex items-center gap-2 text-xs md:text-sm">
                 <Icon icon="material-symbols:mail" className="text-[#7E7E7E]" />
-                <span className="text-[#0F0E0E]">
+                <span className="dark:text-primary/80 text-[#0F0E0E]">
                   Ready to connect? Email us!
                 </span>
               </p>
@@ -86,7 +93,7 @@ export default function ContactUsPage() {
               <h3 className="font-space-grotesk text-xl font-bold md:text-2xl">
                 Call us
               </h3>
-              <p className="flex items-center gap-2 text-xs text-[#0F0E0E] md:text-sm">
+              <p className="dark:text-primary/80 flex items-center gap-2 text-xs text-[#0F0E0E] md:text-sm">
                 Call our team Sat-Thu from 10am to 6pm.
               </p>
             </div>
@@ -95,13 +102,15 @@ export default function ContactUsPage() {
                 icon="fluent:call-add-24-filled"
                 className="text-[#7E7E7E]"
               />
-              <span className="text-[#0F0E0E]">+880123456789</span>
+              <span className="dark:text-primary/80 text-[#0F0E0E]">
+                +880123456789
+              </span>
             </p>
           </div>
         </div>
       </div>
       {/* news letter section */}
-      <div className="bg-[#F2F2F2] py-8 shadow-[0_2px_4px_0_rgba(0,0,0,0.25)] md:py-12">
+      <div className="bg-[#F2F2F2] py-8 shadow-[0_2px_4px_0_rgba(0,0,0,0.25)] md:py-12 dark:bg-[#0D0D0D]">
         <SectionHeading
           title="Join our weekly Newsletter"
           description="Stay up to date with the latest news, announcements and newsletter."

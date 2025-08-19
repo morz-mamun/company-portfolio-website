@@ -82,7 +82,7 @@ export default function Footer() {
                       href="/about"
                       className="text-brand dark:text-primary text-xs transition-colors md:text-base"
                     >
-                      What we are
+                      Who we are
                     </Link>
                   </li>
                   <li className="hover:font-medium hover:underline">

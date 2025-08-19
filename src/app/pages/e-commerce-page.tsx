@@ -1,5 +1,4 @@
 import BannerTitleAndDescription from '@/components/shared/banner-title-description';
-import ExploreOurSolution from '@/components/what-we-do/ai-automation/explore-our-solution';
 import WhyChooseUs from '@/components/what-we-do/shared/why-choose-us';
 import LetsBuildFutureBusiness from '@/components/what-we-do/shared/lets-build-future-business';
 import ServiceDescription from '@/components/what-we-do/shared/service-description';
@@ -10,6 +9,7 @@ import {
   whyChooseUsData,
 } from '@/constants/what-we-do-data/e-commerce-data';
 import { eCommerceBannerData } from '@/constants/banner-data/e-commerce-banner-data';
+import ExploreOurSolution from '@/components/what-we-do/e-commerce/explore-our-solution';
 
 export default function ECommercePage() {
   return (
