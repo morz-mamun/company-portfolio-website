@@ -1,5 +1,21 @@
 import { RichText } from '@payloadcms/richtext-lexical/react';
 import type { SerializedEditorState } from '@payloadcms/richtext-lexical/lexical';
+import { toast } from 'sonner';
+import { notFound } from 'next/navigation';
+import {
+  ArrowLeft,
+  BookOpen,
+  Calendar,
+  Clock,
+  Share2,
+  User,
+} from 'lucide-react';
+import { Badge } from '@/components/ui/badge';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { Button } from '@/components/ui/button';
+import { formatDate } from '@/utils/formatDate';
+import Link from 'next/link';
+import NewsLetterSection from '@/components/shared/news-letter-section';
 
 interface BlogDetailPageProps {
   params: Promise<{ category: string; slug: string }>;
@@ -7,33 +23,128 @@ interface BlogDetailPageProps {
 
 export default async function BlogDetails({ params }: BlogDetailPageProps) {
   const { category, slug } = await params;
-  console.log(category, slug);
 
   const res = await fetch(
     `https://tgc-admin.vercel.app/api/blogs?where[category.name][equals]=${category}&where[slug][equals]=${slug}&depth=2&draft=false&locale=undefined&trash=false`,
     { cache: 'no-store' },
   );
 
-  console.log(res);
-
-  if (!res.ok) throw new Error('Failed to fetch blog');
+  if (!res.ok) {
+    toast.error('Something went wrong', {
+      description: 'Please try again later.',
+    });
+    return notFound();
+  }
 
   const data = await res.json();
-  const blog = data.docs[0];
+  const blog = data?.docs[0];
   console.log(blog);
+  const { Author, featuredImage, title, meta, id, createdAt, tags } = blog;
+  const imageUrl =
+    featuredImage?.url ||
+    'https://images.unsplash.com/photo-1544077960-604201fe74bc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1651&q=80';
   const content = blog?.content as SerializedEditorState;
-  console.log('content', content);
-
-  if (!blog) return <p>Blog not found</p>;
+  if (!blog) return notFound();
 
   return (
-    <article className="mx-auto max-w-3xl space-y-6 py-10">
-      <h1 className="text-3xl font-bold">{blog.title}</h1>
-      <p className="text-gray-600">{blog?.meta?.description}</p>
-
-      <div className="payload-richtext">
-        <RichText data={content} />
+    <div className="mx-auto mt-20 max-w-4xl px-4 pb-14">
+      <div className="py-4">
+        <Link href="/blogs">
+          <Button
+            variant="ghost"
+            size="sm"
+            className="text-muted-foreground hover:text-foreground cursor-pointer"
+          >
+            <ArrowLeft className="mr-2 h-4 w-4" />
+            Back to Blog
+          </Button>
+        </Link>
       </div>
-    </article>
+      <div className="mb-8">
+        <div className="mb-6 h-[200px] overflow-hidden rounded-lg">
+          <img
+            src={imageUrl}
+            alt={title}
+            className="h-full w-full object-cover"
+          />
+        </div>
+
+        {/* Article Meta */}
+        <div className="text-muted-foreground mb-6 flex flex-wrap items-center gap-4 text-sm">
+          <div className="flex items-center gap-2">
+            <Calendar className="h-4 w-4" />
+            {formatDate(createdAt)}
+          </div>
+          <div className="flex items-center gap-2">
+            <Clock className="h-4 w-4" />5 min read
+          </div>
+          <Badge variant="default">{category}</Badge>
+        </div>
+
+        {/* Title */}
+        <h1 className="text-foreground font-space-grotesk mb-6 text-4xl leading-tight font-bold md:text-5xl">
+          {title}
+        </h1>
+
+        {/* Author Info */}
+        <div className="border-border mb-8 flex items-center gap-4 rounded-lg border bg-[#ECFEFF] p-4">
+          <Avatar className="h-12 w-12">
+            <AvatarFallback>
+              <User className="h-6 w-6" />
+            </AvatarFallback>
+          </Avatar>
+          <div>
+            <p className="text-card-foreground font-semibold capitalize">
+              {Author?.username}
+            </p>
+            <p className="text-muted-foreground text-sm">
+              Writen by {Author?.username}
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Article Content */}
+      <article className="prose prose-lg mb-12 max-w-none">
+        <div className="payload-richtext">
+          <RichText data={content} />
+        </div>
+      </article>
+
+      {/* Tags */}
+      <div className="mb-12">
+        <h3 className="text-foreground mb-4 text-lg font-semibold">Tags</h3>
+        <div className="flex flex-wrap gap-2">
+          {tags?.map((tag: { label: string; id: string }) => (
+            <Badge
+              key={tag?.id}
+              variant="destructive"
+              className="bg-accent text-accent-foreground border-accent hover:bg-accent/80"
+            >
+              {tag?.label}
+            </Badge>
+          ))}
+        </div>
+      </div>
+
+      {/* Share Section */}
+      <div className="mb-12 rounded-lg border bg-[#ECFEFF] p-8">
+        <div className="flex items-center justify-between">
+          <div>
+            <h3 className="text-card-foreground mb-2 text-lg font-semibold">
+              Enjoyed this article?
+            </h3>
+            <p className="text-muted-foreground">Share it with your network</p>
+          </div>
+          <Button className="hover:bg-primary/90 cursor-pointer bg-[#164E63]">
+            <Share2 className="mr-2 h-4 w-4" />
+            Share
+          </Button>
+        </div>
+      </div>
+
+      {/* Newsletter CTA */}
+      <NewsLetterSection />
+    </div>
   );
 }

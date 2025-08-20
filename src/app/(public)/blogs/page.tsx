@@ -8,6 +8,7 @@ export default async function Blogs() {
     toast.error('Something went wrong', {
       description: 'Please try again later.',
     });
+    return notFound();
   }
   const blogsData = await res.json();
 
