@@ -172,7 +172,6 @@ export default function WebSiteNavbar() {
           </MobileNavMenu>
         </MobileNav>
       </Navbar>
-      {/* Navbar */}
     </div>
   );
 }
