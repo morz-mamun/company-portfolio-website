@@ -5,8 +5,10 @@ import { TBannerData } from '@/types/banners';
 
 export default function BannerTitleAndDescription({
   sectionData,
+  descriptionClassName,
 }: {
   sectionData: TBannerData;
+  descriptionClassName?: string;
 }) {
   const { title, description, mobileTitle, buttonVisivility } = sectionData;
   return (
@@ -27,7 +29,9 @@ export default function BannerTitleAndDescription({
         <AnimatedText data={mobileTitle} />
       </div>
       {/* Content description */}
-      <p className="text-brand/80 dark:text-primary/70 mx-auto mt-[14px] max-w-[320px] text-sm md:max-w-[800px] md:text-xl">
+      <p
+        className={`${descriptionClassName} text-brand/80 dark:text-primary/70 mx-auto mt-[14px] max-w-[320px] text-sm md:max-w-[800px] md:text-xl`}
+      >
         {description}
       </p>
 

@@ -1,25 +1,19 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-
-import DemoBlogCard from '@/components/cards/demo-blog-card';
+import BlogsPage from '@/app/pages/blogs-page';
+import { notFound } from 'next/navigation';
+import { toast } from 'sonner';
 
 export default async function Blogs() {
-  const res = await fetch('https://tgc-admin.vercel.app/api/blogs', {
-    next: { revalidate: 60 }, // Revalidate every 60s (ISR)
-  });
+  const res = await fetch('https://tgc-admin.vercel.app/api/blogs');
+  if (!res.ok) {
+    toast.error('Something went wrong', {
+      description: 'Please try again later.',
+    });
+  }
+  const blogsData = await res.json();
 
-  if (!res.ok) throw new Error('Failed to fetch blogs');
-
-  const data = await res.json();
-  const blogs = data.docs;
-  console.log(blogs);
-
-  return (
-    <div className="mx-auto max-w-3xl space-y-6 py-10">
-      <h1 className="text-3xl font-bold">Latest Blogs</h1>
-
-      {blogs?.map((blog: any) => (
-        <DemoBlogCard key={blog.id} blog={blog} />
-      ))}
-    </div>
-  );
+  // if no blogs data found it will return not found component
+  if (!blogsData.docs || blogsData.docs.length === 0) {
+    notFound();
+  }
+  return <BlogsPage blogsData={blogsData} />;
 }
