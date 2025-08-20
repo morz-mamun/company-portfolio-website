@@ -2,12 +2,14 @@
 'use client';
 import BlogCard from '@/components/cards/blog-card';
 import BannerTitleAndDescription from '@/components/shared/banner-title-description';
+import NewsLetterSection from '@/components/shared/news-letter-section';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { blogsBannerData } from '@/constants/banner-data/blogs-banner-data';
 import { TBlog } from '@/types/blog';
 import { Icon } from '@iconify/react/dist/iconify.js';
 import { Search } from 'lucide-react';
+import { notFound } from 'next/navigation';
 import { useMemo, useState } from 'react';
 
 export default function BlogsPage({ blogsData }: any) {
@@ -195,13 +197,10 @@ export default function BlogsPage({ blogsData }: any) {
       )}
 
       {/* No Results */}
-      {filteredBlogs.length === 0 && (
-        <div className="py-12 text-center">
-          <p className="text-gray-500">
-            No blogs found matching your criteria.
-          </p>
-        </div>
-      )}
+      {filteredBlogs?.length === 0 && notFound()}
+
+      {/* newsletter section */}
+      <NewsLetterSection />
     </main>
   );
 }
