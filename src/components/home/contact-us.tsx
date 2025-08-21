@@ -8,12 +8,13 @@ import { Textarea } from '../ui/textarea';
 import { useEffect } from 'react';
 import { toast } from 'sonner';
 import InputWithLabel from '../form/form-fields/input-with-label';
+import axios from 'axios';
 
 type ContactFormValues = {
   email: string;
   name: string;
   phone: string;
-  company: string;
+  companyName?: string;
   message: string;
 };
 
@@ -29,13 +30,24 @@ export default function ContactUs() {
     mode: 'onChange', // real-time validation
   });
 
-  const onSubmit = (data: ContactFormValues) => {
-    console.log('Form Data:', data);
-    toast.success('Form submitted successfully!', {
-      description: 'We will get back to you soon.',
-    });
-    reset();
-    // send data to backend here
+  const onSubmit = async (data: ContactFormValues) => {
+    try {
+      const res = await axios.post(
+        'https://tgc-admin.vercel.app/api/contacts',
+        data,
+      );
+      if (res.status === 200) {
+        toast.success('Form submitted successfully!', {
+          description: 'We will get back to you soon.',
+        });
+        reset();
+      }
+    } catch (error) {
+      toast.error('Form submission failed.', {
+        description: 'Please try again.',
+      });
+      console.error('Error submitting form:', error);
+    }
   };
 
   // Watch for changes in the "phone" field and update the value in the form
@@ -114,13 +126,13 @@ export default function ContactUs() {
 
           {/* Company Name */}
           <InputWithLabel
-            name="company"
+            name="companyName"
             label="Company Name"
             type="text"
             placeholder="Company Name"
             register={register}
-            error={errors.company}
-            rules={{ required: 'Company name is required' }}
+            error={errors.companyName}
+            // rules={{ required: 'Company name is required' }}
           />
         </div>
 
@@ -130,7 +142,7 @@ export default function ContactUs() {
             Write your message here
           </label>
           <Textarea
-            className="mt-2 placeholder:text-xs md:placeholder:text-sm"
+            className="mt-2 min-h-32 placeholder:text-xs md:placeholder:text-sm"
             placeholder="What we can do for you?"
             {...register('message', {
               required: 'Message is required',

@@ -2,6 +2,7 @@ import PrimaryBtn from '../buttons/primary-btn';
 import BorderXPattern from '../shared/border-x-pattern';
 import { Icon } from '@iconify/react';
 import SectionHeading from '../shared/section-heading';
+import { socialMediaData } from '@/constants/social-media-data';
 
 export default function JoiningOurTeam() {
   return (
@@ -24,13 +25,16 @@ export default function JoiningOurTeam() {
                 </p>
               </div>
               {/* right button */}
-              <button className="group text-brand shadow-primary/60 hover:bg-brand flex cursor-pointer items-center gap-2 rounded-[17px] bg-[#FAFAFA] px-2 py-4 font-semibold shadow-lg duration-500 ease-in-out hover:text-white hover:transition md:w-[280px] lg:px-5 lg:py-4">
+              <a
+                href={socialMediaData?.linkedin}
+                target="_blank"
+                className="group text-brand shadow-primary/60 hover:bg-brand flex cursor-pointer items-center gap-2 rounded-[17px] bg-[#FAFAFA] px-2 py-4 font-semibold shadow-lg duration-500 ease-in-out hover:text-white hover:transition md:w-[280px] lg:px-5 lg:py-4"
+              >
                 <span className="text-sm md:text-lg lg:text-xl">
-                  {' '}
                   View open positions
                 </span>
                 <Icon icon="icons8:right-round" width={18} height={18} />
-              </button>
+              </a>
             </div>
           </div>
           {/* border x design */}

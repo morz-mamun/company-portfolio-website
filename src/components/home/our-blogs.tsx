@@ -4,6 +4,7 @@ import PrimaryBtn from '../buttons/primary-btn';
 import { toast } from 'sonner';
 import { notFound } from 'next/navigation';
 import { TBlog } from '@/types/blog';
+import Link from 'next/link';
 
 export default async function OurBlogs() {
   const res = await fetch('https://tgc-admin.vercel.app/api/blogs?limit=3');
@@ -43,7 +44,9 @@ export default async function OurBlogs() {
 
       {/* view all button */}
       <div className="mt-10 flex items-center justify-center">
-        <PrimaryBtn title="View All Blogs" iconName="" />
+        <Link href="/blogs">
+          <PrimaryBtn title="View All Blogs" iconName="" />
+        </Link>
       </div>
     </section>
   );
