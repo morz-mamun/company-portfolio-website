@@ -44,12 +44,12 @@ export default function BlogCard({
             </p>
             {/* showing tags */}
             <div className="flex flex-wrap">
-              {tags?.slice(0, 2).map((tag) => {
+              {tags?.slice(0, 2).map((tag, index) => {
                 return (
                   // make box for each tag
                   <span
+                    key={index}
                     className="mr-2 rounded-sm border bg-[#F4F4F4] px-1 py-[2px] text-[12px] font-medium"
-                    key={tag?.id}
                   >
                     {tag?.label}
                   </span>

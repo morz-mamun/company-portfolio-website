@@ -144,7 +144,7 @@ export default function BlogsPage({ blogsData }: any) {
 
       {/* Blog Grid */}
       <div className="mx-2 mb-8 grid grid-cols-1 gap-4 md:mx-4 md:grid-cols-2 lg:mx-6 lg:grid-cols-3 lg:gap-6">
-        {paginatedBlogs.map((blog: any) => (
+        {paginatedBlogs?.map((blog: any) => (
           <BlogCard blog={blog} key={blog.id} />
         ))}
       </div>

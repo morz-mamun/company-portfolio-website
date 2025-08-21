@@ -1,21 +1,14 @@
 import { RichText } from '@payloadcms/richtext-lexical/react';
 import type { SerializedEditorState } from '@payloadcms/richtext-lexical/lexical';
-import { toast } from 'sonner';
 import { notFound } from 'next/navigation';
-import {
-  ArrowLeft,
-  BookOpen,
-  Calendar,
-  Clock,
-  Share2,
-  User,
-} from 'lucide-react';
+import { ArrowLeft, Calendar, Clock, Share2, User } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Button } from '@/components/ui/button';
 import { formatDate } from '@/utils/formatDate';
 import Link from 'next/link';
 import NewsLetterSection from '@/components/shared/news-letter-section';
+import { toast } from 'sonner';
 
 interface BlogDetailPageProps {
   params: Promise<{ category: string; slug: string }>;
@@ -29,14 +22,15 @@ export default async function BlogDetails({ params }: BlogDetailPageProps) {
     { cache: 'no-store' },
   );
 
-  if (!res.ok) {
-    toast.error('Something went wrong', {
-      description: 'Please try again later.',
-    });
+  console.log('form blog details page', res);
+
+  if (res.ok === false) {
     return notFound();
   }
 
   const data = await res.json();
+  console.log(data);
+
   const blog = data?.docs[0];
   console.log(blog);
   const { Author, featuredImage, title, meta, id, createdAt, tags } = blog;

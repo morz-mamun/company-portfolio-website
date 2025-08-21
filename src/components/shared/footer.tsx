@@ -83,43 +83,37 @@ export default function Footer() {
               <div className="flex flex-col space-y-3 lg:mx-auto">
                 <h4 className="text-lg font-semibold">Quick Links</h4>
                 <ul className="space-y-2 text-sm">
-                  <li className="hover:font-medium hover:underline">
-                    <Popover open={isOpen} onOpenChange={setIsOpen}>
-                      <PopoverTrigger asChild>
-                        <button className="cursor-pointer text-base">
-                          What we do
-                          {/* <ArrowUpFromLine size={16} /> */}
-                        </button>
-                      </PopoverTrigger>
-                      <PopoverContent
-                        align="start"
-                        sideOffset={8}
-                        className="w-[300px] p-2"
-                      >
-                        <div className="space-y-1">
-                          {whatWeDoItemsData?.map((item, idx) => {
-                            const subIsActive = item?.link === pathName;
-                            return (
-                              <Link
-                                href={item.link}
-                                key={`link-${idx}`}
-                                onClick={() => setIsOpen(false)}
-                                className={`relative flex items-center gap-2 rounded-md px-2 py-1 text-sm text-neutral-600 transition hover:bg-[#CCCCCC]/40 md:text-base dark:text-neutral-300 dark:hover:bg-neutral-800/60 ${subIsActive ? 'bg-[#CCCCCC]/40 px-2 py-1 dark:bg-neutral-800/60' : ''}`}
-                              >
-                                <Icon
-                                  icon={item?.icon}
-                                  width={16}
-                                  height={16}
-                                />
-                                {item.name}
-                              </Link>
-                            );
-                          })}
-                        </div>
-                      </PopoverContent>
-                    </Popover>
-                  </li>
-                  <li className="hover:font-medium hover:underline">
+                  <Popover open={isOpen} onOpenChange={setIsOpen}>
+                    <PopoverTrigger asChild>
+                      <button className="cursor-pointer text-base hover:underline">
+                        What we do
+                        {/* <ArrowUpFromLine size={16} /> */}
+                      </button>
+                    </PopoverTrigger>
+                    <PopoverContent
+                      align="start"
+                      sideOffset={8}
+                      className="w-[300px] p-2"
+                    >
+                      <div className="space-y-1">
+                        {whatWeDoItemsData?.map((item, idx) => {
+                          const subIsActive = item?.link === pathName;
+                          return (
+                            <Link
+                              href={item.link}
+                              key={`link-${idx}`}
+                              onClick={() => setIsOpen(false)}
+                              className={`relative flex items-center gap-2 rounded-md px-2 py-1 text-sm text-neutral-600 transition hover:bg-[#CCCCCC]/40 md:text-base dark:text-neutral-300 dark:hover:bg-neutral-800/60 ${subIsActive ? 'bg-[#CCCCCC]/40 px-2 py-1 dark:bg-neutral-800/60' : ''}`}
+                            >
+                              <Icon icon={item?.icon} width={16} height={16} />
+                              {item.name}
+                            </Link>
+                          );
+                        })}
+                      </div>
+                    </PopoverContent>
+                  </Popover>
+                  <li className="hover:underline">
                     <Link
                       href="/who-we-are"
                       className="text-brand dark:text-primary text-xs transition-colors md:text-base"
@@ -127,9 +121,9 @@ export default function Footer() {
                       Who we are
                     </Link>
                   </li>
-                  <li className="hover:font-medium hover:underline">
+                  <li className="hover:underline">
                     <Link
-                      href="/contact"
+                      href="/contact-us"
                       className="text-brand dark:text-primary text-xs transition-colors md:text-base"
                     >
                       Contact
@@ -141,7 +135,7 @@ export default function Footer() {
               <div className="flex flex-col space-y-3 lg:mx-auto">
                 <h4 className="text-md font-semibold">Privacy Policy</h4>
                 <ul className="space-y-2 text-sm">
-                  <li className="hover:font-medium hover:underline">
+                  <li className="hover:underline">
                     <Link
                       href="#/privacy-policy"
                       className="text-brand dark:text-primary text-xs transition-colors md:text-base"
@@ -149,7 +143,7 @@ export default function Footer() {
                       Privacy Policy
                     </Link>
                   </li>
-                  <li className="hover:font-medium hover:underline">
+                  <li className="hover:underline">
                     <Link
                       href="#/terms-and-conditions"
                       className="text-brand dark:text-primary text-xs transition-colors md:text-base"

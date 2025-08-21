@@ -1,3 +1,4 @@
+import PrimaryBtn from '@/components/buttons/primary-btn';
 import ContactUsForm from '@/components/form/contact-us-form';
 import BannerTitleAndDescription from '@/components/shared/banner-title-description';
 import NewsLetterSection from '@/components/shared/news-letter-section';
@@ -68,9 +69,11 @@ export default function ContactUsPage() {
                   </span>
                 </p>
                 {/* book now button */}
-                <button className="bg-brand cursor-pointer rounded-md px-3 py-1 font-semibold text-white shadow-[inset_2px_2px_12px_0_rgba(218,218,218,0.25)]">
-                  Book Now
-                </button>
+                <PrimaryBtn
+                  title="Book Now"
+                  iconName=""
+                  className="!rounded-md !px-3 !py-1 !text-sm !shadow-[inset_2px_2px_12px_0_rgba(218,218,218,0.25)]"
+                />
               </div>
               <p className="flex items-center gap-2 text-xs md:text-sm">
                 <Icon icon="fluent:chat-16-filled" className="text-[#7E7E7E]" />
