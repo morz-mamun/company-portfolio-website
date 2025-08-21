@@ -132,7 +132,6 @@ export default function ContactUs() {
             placeholder="Company Name"
             register={register}
             error={errors.companyName}
-            // rules={{ required: 'Company name is required' }}
           />
         </div>
 
