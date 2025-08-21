@@ -98,12 +98,12 @@ export default function BlogsPage({ blogsData }: any) {
 
   return (
     <main className="mx-auto min-h-screen max-w-7xl overflow-hidden">
-      <div className="mt-28">
+      <div className="mt-20 lg:mt-28">
         <BannerTitleAndDescription sectionData={blogsBannerData} />
       </div>
 
       {/* search button */}
-      <div className="mx-auto mt-8 mb-16 flex max-w-xs overflow-hidden rounded-lg border border-gray-100 bg-white p-1 shadow-md">
+      <div className="mx-auto mt-8 mb-10 flex max-w-xs overflow-hidden rounded-lg border border-gray-100 bg-white p-1 shadow-md lg:mb-16">
         <Input
           type="text"
           placeholder="Search any blog"
@@ -130,10 +130,10 @@ export default function BlogsPage({ blogsData }: any) {
                 setSelectedCategory(category as string);
                 setCurrentPage(1);
               }}
-              className={`cursor-pointer rounded-[8px] p-5 text-sm shadow-[0_4px_8px_0_rgba(0,0,0,0.25)] ${
+              className={`cursor-pointer rounded-[8px] text-xs shadow-[0_4px_8px_0_rgba(0,0,0,0.25)] lg:p-5 lg:text-sm ${
                 selectedCategory === category
-                  ? 'border border-black bg-black text-white hover:bg-gray-800'
-                  : 'border-gray-300 bg-[#FDFDFD] text-gray-700 hover:bg-gray-50'
+                  ? 'hover:bg-[] border border-black bg-black text-white dark:border-white dark:bg-white dark:text-black'
+                  : 'bg-[#FDFDFD] text-gray-700 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-200'
               }`}
             >
               {category as string}
@@ -143,7 +143,7 @@ export default function BlogsPage({ blogsData }: any) {
       </div>
 
       {/* Blog Grid */}
-      <div className="mx-6 mb-8 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <div className="mx-2 mb-8 grid grid-cols-1 gap-4 md:mx-4 md:grid-cols-2 lg:mx-6 lg:grid-cols-3 lg:gap-6">
         {paginatedBlogs.map((blog: any) => (
           <BlogCard blog={blog} key={blog.id} />
         ))}

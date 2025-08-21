@@ -41,14 +41,14 @@ export default function ContactUsForm() {
         'https://tgc-admin.vercel.app/api/contacts',
         formData,
       );
-      if (res.status === 200) {
-        toast.success('Form submitted successfully!', {
+      if (res.data) {
+        toast.success('Thank you for reaching out!', {
           description: 'We will get back to you soon.',
         });
         reset();
       }
     } catch (error) {
-      toast.error('Form submission failed.', {
+      toast.error('Something went wrong.', {
         description: 'Please try again.',
       });
       console.error('Error submitting form:', error);

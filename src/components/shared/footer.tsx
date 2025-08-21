@@ -1,11 +1,25 @@
 'use client';
 import { Icon } from '@iconify/react/dist/iconify.js';
-import { ArrowUpFromLine, Github, Linkedin, Mail, Twitter } from 'lucide-react';
+import {
+  ArrowUpFromLine,
+  Facebook,
+  Github,
+  Linkedin,
+  Mail,
+  Twitter,
+} from 'lucide-react';
 import Link from 'next/link';
 import { TextHoverEffect } from '../ui/text-hover-effect';
+import { socialMediaData } from '@/constants/social-media-data';
+import { Popover, PopoverContent, PopoverTrigger } from '../ui/popover';
+import { useState } from 'react';
+import { whatWeDoItemsData } from '@/constants/navbar-data/what-we-do-items-data';
+import { usePathname } from 'next/navigation';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
+  const [isOpen, setIsOpen] = useState(false);
+  const pathName = usePathname();
 
   return (
     <footer className="border-t pt-10 md:pt-20">
@@ -70,35 +84,47 @@ export default function Footer() {
                 <h4 className="text-lg font-semibold">Quick Links</h4>
                 <ul className="space-y-2 text-sm">
                   <li className="hover:font-medium hover:underline">
-                    <Link
-                      href="/"
-                      className="text-brand dark:text-primary text-xs transition-colors md:text-base"
-                    >
-                      What We Do
-                    </Link>
+                    <Popover open={isOpen} onOpenChange={setIsOpen}>
+                      <PopoverTrigger asChild>
+                        <button className="cursor-pointer text-base">
+                          What we do
+                          {/* <ArrowUpFromLine size={16} /> */}
+                        </button>
+                      </PopoverTrigger>
+                      <PopoverContent
+                        align="start"
+                        sideOffset={8}
+                        className="w-[300px] p-2"
+                      >
+                        <div className="space-y-1">
+                          {whatWeDoItemsData?.map((item, idx) => {
+                            const subIsActive = item?.link === pathName;
+                            return (
+                              <Link
+                                href={item.link}
+                                key={`link-${idx}`}
+                                onClick={() => setIsOpen(false)}
+                                className={`relative flex items-center gap-2 rounded-md px-2 py-1 text-sm text-neutral-600 transition hover:bg-[#CCCCCC]/40 md:text-base dark:text-neutral-300 dark:hover:bg-neutral-800/60 ${subIsActive ? 'bg-[#CCCCCC]/40 px-2 py-1 dark:bg-neutral-800/60' : ''}`}
+                              >
+                                <Icon
+                                  icon={item?.icon}
+                                  width={16}
+                                  height={16}
+                                />
+                                {item.name}
+                              </Link>
+                            );
+                          })}
+                        </div>
+                      </PopoverContent>
+                    </Popover>
                   </li>
                   <li className="hover:font-medium hover:underline">
                     <Link
-                      href="/about"
+                      href="/who-we-are"
                       className="text-brand dark:text-primary text-xs transition-colors md:text-base"
                     >
                       Who we are
-                    </Link>
-                  </li>
-                  <li className="hover:font-medium hover:underline">
-                    <Link
-                      href="/services"
-                      className="text-brand dark:text-primary text-xs transition-colors md:text-base"
-                    >
-                      Results
-                    </Link>
-                  </li>
-                  <li className="hover:font-medium hover:underline">
-                    <Link
-                      href="/contact"
-                      className="text-brand dark:text-primary text-xs transition-colors md:text-base"
-                    >
-                      Resources
                     </Link>
                   </li>
                   <li className="hover:font-medium hover:underline">
@@ -117,7 +143,7 @@ export default function Footer() {
                 <ul className="space-y-2 text-sm">
                   <li className="hover:font-medium hover:underline">
                     <Link
-                      href="/privacy-policy"
+                      href="#/privacy-policy"
                       className="text-brand dark:text-primary text-xs transition-colors md:text-base"
                     >
                       Privacy Policy
@@ -125,7 +151,7 @@ export default function Footer() {
                   </li>
                   <li className="hover:font-medium hover:underline">
                     <Link
-                      href="/terms-and-conditions"
+                      href="#/terms-and-conditions"
                       className="text-brand dark:text-primary text-xs transition-colors md:text-base"
                     >
                       Terms & Conditions
@@ -140,28 +166,28 @@ export default function Footer() {
                 </h4>
                 <div className="flex items-center gap-4">
                   <a
-                    href="#"
+                    href={socialMediaData?.facebook}
                     target="_blank"
                     className="text-brand dark:text-primary text-xs transition-colors md:text-base"
                   >
-                    <Github size={20} />
+                    <Facebook size={20} />
                   </a>
                   <a
-                    href="#"
+                    href={socialMediaData?.linkedin}
                     target="_blank"
                     className="text-brand dark:text-primary text-xs transition-colors md:text-base"
                   >
                     <Linkedin size={20} />
                   </a>
                   <a
-                    href="#"
+                    href={socialMediaData?.twitter}
                     target="_blank"
                     className="text-brand dark:text-primary text-xs transition-colors md:text-base"
                   >
                     <Twitter size={20} />
                   </a>
                   <a
-                    href="mailto:morzmamun@gmail.com"
+                    href={socialMediaData?.email}
                     target="_blank"
                     className="text-brand dark:text-primary text-xs transition-colors md:text-base"
                   >

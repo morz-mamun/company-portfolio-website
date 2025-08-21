@@ -3,6 +3,7 @@ import { useForm } from 'react-hook-form';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { toast } from 'sonner';
+import axios from 'axios';
 
 interface EmailFormData {
   email: string;
@@ -17,12 +18,25 @@ export function EmailSubscription() {
   } = useForm<EmailFormData>();
 
   const onSubmit = async (data: EmailFormData) => {
-    // Handle subscription logic here
-    console.log('Subscribing email:', data.email);
-    toast.success('Subscribed successfully!', {
-      description: 'We will get back to you soon.',
-    });
-    reset();
+    try {
+      const res = await axios.post(
+        'https://tgc-admin.vercel.app/api/newsLetter',
+        data,
+      );
+      console.log(res);
+
+      if (res.data) {
+        toast.success('Thank you for subscribing!', {
+          description: 'We will get back to you soon.',
+        });
+        reset();
+      }
+    } catch (error) {
+      toast.error('Subscription failed.', {
+        description: 'Please try again.',
+      });
+      console.error('Error submitting form:', error);
+    }
   };
 
   return (
@@ -41,14 +55,14 @@ export function EmailSubscription() {
               message: 'Invalid email address',
             },
           })}
-          className="flex-1 border-0 px-2 text-sm shadow-none placeholder:text-gray-500 focus-visible:ring-0 focus-visible:ring-offset-0 md:py-5"
+          className="flex-1 border-0 px-2 text-sm text-black shadow-none placeholder:text-gray-500 focus-visible:ring-0 focus-visible:ring-offset-0 md:py-5"
         />
         <Button
           type="submit"
           disabled={isSubmitting}
           className="hover:bg-[] cursor-pointer rounded-[8px] border-0 bg-black px-4 text-xs font-medium text-white shadow-[inset_2px_2px_4px_0_rgba(255,254,254,0.25)] disabled:opacity-50 md:py-5 md:text-sm"
         >
-          {isSubmitting ? '...' : 'Subscribe'}
+          {isSubmitting ? 'Subscribing...' : 'Subscribe'}
         </Button>
       </form>
       {errors.email && (

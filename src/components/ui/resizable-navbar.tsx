@@ -107,7 +107,7 @@ export const NavBody = ({ children, className, visible }: NavBodyProps) => {
       //   minWidth: '900px',
       // }}
       className={cn(
-        'relative z-[60] mx-auto hidden w-full flex-row items-center justify-between self-start border-b border-zinc-200 bg-white px-8 py-2 lg:flex lg:max-w-[970px] xl:max-w-[1228px] dark:border-zinc-800/50 dark:bg-neutral-950/80',
+        'relative z-[60] mx-auto hidden w-full flex-row items-center justify-between self-start border-b border-zinc-200 bg-white px-8 py-2 lg:flex lg:max-w-[970px] xl:max-w-[1228px] dark:border-zinc-800/50 dark:bg-[#030712]',
         visible &&
           'rounded-full bg-white/80 px-4 lg:min-w-[950px] xl:min-w-[1180px] dark:bg-neutral-950/80',
         className,
@@ -218,7 +218,7 @@ export const MobileNav = ({ children, className, visible }: MobileNavProps) => {
         width: visible ? '90%' : '100%',
         paddingRight: visible ? '12px' : '0px',
         paddingLeft: visible ? '12px' : '0px',
-        borderRadius: visible ? '4px' : '2rem',
+        borderRadius: visible ? '4px' : '0px',
         y: visible ? 10 : 0,
       }}
       transition={{
@@ -227,7 +227,7 @@ export const MobileNav = ({ children, className, visible }: MobileNavProps) => {
         damping: 50,
       }}
       className={cn(
-        'relative z-50 mx-auto flex w-full max-w-[calc(100vw-2rem)] flex-col items-center justify-between bg-transparent px-0 py-2 md:max-w-[calc(100vw-4rem)] lg:hidden',
+        'relative z-50 mx-auto flex w-full max-w-[calc(100vw-28px)] flex-col items-center justify-between border-b bg-white px-0 py-2 md:max-w-[calc(100vw-55px)] lg:hidden dark:bg-[#030712]',
         visible && 'bg-white/80 dark:bg-neutral-950/80',
         className,
       )}
