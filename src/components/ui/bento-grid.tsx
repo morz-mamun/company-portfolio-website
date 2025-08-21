@@ -1,6 +1,7 @@
 'use client';
 import { cn } from '@/lib/utils';
 import { BorderBeam } from '../magicui/border-beam';
+import Link from 'next/link';
 
 export const BentoGrid = ({
   className,
@@ -26,16 +27,17 @@ export const BentoGridItem = ({
   title,
   description,
   image,
-  // icon,
+  link,
 }: {
   className?: string;
   title?: string | React.ReactNode;
   description?: string | React.ReactNode;
   image?: string;
-  // icon?: React.ReactNode;
+  link: string;
 }) => {
   return (
-    <div
+    <Link
+      href={link || '#'}
       className={cn(
         'group/bento shadow-input row-span-1 flex h-full flex-col justify-between space-y-4 rounded-xl bg-white p-4 shadow-lg transition duration-200 hover:shadow-xl dark:border-white/[0.2] dark:bg-black dark:shadow-none',
         'relative overflow-hidden border',
@@ -61,6 +63,6 @@ export const BentoGridItem = ({
         />
       </div>
       <BorderBeam duration={8} size={100} />
-    </div>
+    </Link>
   );
 };

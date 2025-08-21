@@ -32,7 +32,7 @@ export default function Error({
           Sorry, an unexpected error has occurred. We’re working on fixing it.
         </p>
         <div className="flex flex-col gap-4 sm:flex-row">
-          <Button onClick={() => reset()} className="gap-2">
+          <Button onClick={() => reset()} className="cursor-pointer gap-2">
             <RefreshCw className="h-4 w-4" />
             Try again
           </Button>
