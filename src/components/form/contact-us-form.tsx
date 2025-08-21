@@ -5,14 +5,14 @@ import InputWithLabel from './form-fields/input-with-label';
 import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css';
 import { Textarea } from '../ui/textarea';
-import { ArrowBigRight } from 'lucide-react';
 import { toast } from 'sonner';
+import axios from 'axios';
 
 type ContactFormValues = {
   email: string;
-  name: string;
+  firstName: string;
+  lastName?: string;
   phone: string;
-  company: string;
   message: string;
 };
 
@@ -28,13 +28,31 @@ export default function ContactUsForm() {
     mode: 'onChange', // real-time validation
   });
 
-  const onSubmit = (data: ContactFormValues) => {
-    console.log('Form Data:', data);
-    toast.success('Form submitted successfully!', {
-      description: 'We will get back to you soon.',
-    });
-    reset();
-    // send data to backend here
+  const onSubmit = async (data: ContactFormValues) => {
+    const name = data?.firstName + ' ' + data?.lastName;
+    const formData = {
+      name: name,
+      email: data.email,
+      phone: data.phone,
+      message: data.message,
+    };
+    try {
+      const res = await axios.post(
+        'https://tgc-admin.vercel.app/api/contacts',
+        formData,
+      );
+      if (res.status === 200) {
+        toast.success('Form submitted successfully!', {
+          description: 'We will get back to you soon.',
+        });
+        reset();
+      }
+    } catch (error) {
+      toast.error('Form submission failed.', {
+        description: 'Please try again.',
+      });
+      console.error('Error submitting form:', error);
+    }
   };
 
   // Watch for changes in the "phone" field and update the value in the form
@@ -56,7 +74,7 @@ export default function ContactUsForm() {
           type="text"
           placeholder="First Name"
           register={register}
-          error={errors.name}
+          error={errors.firstName}
           rules={{ required: 'First Name is required' }}
         />
         {/* last name */}
@@ -66,7 +84,7 @@ export default function ContactUsForm() {
           type="text"
           placeholder="last Name"
           register={register}
-          error={errors.name}
+          error={errors.lastName}
           // rules={{ required: 'First Name is required' }}
         />
       </div>

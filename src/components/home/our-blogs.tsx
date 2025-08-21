@@ -1,38 +1,26 @@
 import SectionHeading from '../shared/section-heading';
 import BlogCard from '../cards/blog-card';
 import PrimaryBtn from '../buttons/primary-btn';
+import { toast } from 'sonner';
+import { notFound } from 'next/navigation';
+import { TBlog } from '@/types/blog';
+import Link from 'next/link';
 
-const blogs = [
-  {
-    _id: '1',
-    imageUrl:
-      'https://pub-3c3fbc3b66a54a4ab707f64d0f564e7d.r2.dev/service06.jpg',
-    date: '2025-08-02T00:00:00.000Z',
-    title: 'Smart Security in 2025',
-    description:
-      'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.',
-  },
-  {
-    _id: '2',
-    imageUrl:
-      'https://pub-3c3fbc3b66a54a4ab707f64d0f564e7d.r2.dev/service01.png',
-    date: '2025-08-02T00:00:00.000Z',
-    title: 'Smart Security in 2025',
-    description:
-      'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.',
-  },
-  {
-    _id: '3',
-    imageUrl:
-      'https://pub-3c3fbc3b66a54a4ab707f64d0f564e7d.r2.dev/service02.png',
-    date: '2025-08-02T00:00:00.000Z',
-    title: 'Smart Security in 2025',
-    description:
-      'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.',
-  },
-];
+export default async function OurBlogs() {
+  const res = await fetch('https://tgc-admin.vercel.app/api/blogs?limit=3');
+  if (!res.ok) {
+    toast.error('Something went wrong', {
+      description: 'Please try again later.',
+    });
+    throw new Error('Failed to fetch data');
+  }
+  const blogsData = await res.json();
+  const allBlogs = blogsData.docs;
 
-export default function OurBlogs() {
+  // if no blogs data found it will return not found component
+  if (!blogsData.docs || blogsData.docs.length === 0) {
+    notFound();
+  }
   return (
     <section className="border-y py-10 lg:py-14">
       {/* section heading */}
@@ -43,20 +31,22 @@ export default function OurBlogs() {
 
       {/* blogs */}
       <div className="mt-10 hidden gap-4 px-4 lg:grid lg:grid-cols-3">
-        {blogs?.map((blog, index) => (
-          <BlogCard blog={blog} key={index} />
+        {allBlogs?.map((blog: TBlog) => (
+          <BlogCard blog={blog} key={blog.id} hasBorder={true} />
         ))}
       </div>
       {/* for medium device */}
       <div className="mt-10 grid grid-cols-1 gap-2 px-2 md:grid-cols-2 md:gap-4 md:px-4 lg:hidden">
-        {blogs?.slice(0, 2)?.map((blog, index) => (
-          <BlogCard blog={blog} key={index} />
+        {allBlogs?.slice(0, 2)?.map((blog: TBlog) => (
+          <BlogCard blog={blog} key={blog.id} hasBorder={true} />
         ))}
       </div>
 
       {/* view all button */}
       <div className="mt-10 flex items-center justify-center">
-        <PrimaryBtn title="View All Blogs" iconName="" />
+        <Link href="/blogs">
+          <PrimaryBtn title="View All Blogs" iconName="" />
+        </Link>
       </div>
     </section>
   );

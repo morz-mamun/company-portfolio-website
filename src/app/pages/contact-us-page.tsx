@@ -1,7 +1,6 @@
 import ContactUsForm from '@/components/form/contact-us-form';
-import { EmailSubscription } from '@/components/form/form-fields/subscribe-email';
 import BannerTitleAndDescription from '@/components/shared/banner-title-description';
-import SectionHeading from '@/components/shared/section-heading';
+import NewsLetterSection from '@/components/shared/news-letter-section';
 import { contactUsBannerData } from '@/constants/banner-data/contact-us-banner-data';
 import { Icon } from '@iconify/react/dist/iconify.js';
 
@@ -110,15 +109,7 @@ export default function ContactUsPage() {
         </div>
       </div>
       {/* news letter section */}
-      <div className="bg-[#F2F2F2] py-8 shadow-[0_2px_4px_0_rgba(0,0,0,0.25)] md:py-12 dark:bg-[#0D0D0D]">
-        <SectionHeading
-          title="Join our weekly Newsletter"
-          description="Stay up to date with the latest news, announcements and newsletter."
-          className="mb-5 text-xs md:mb-10 md:text-xs lg:text-base"
-        />
-
-        <EmailSubscription />
-      </div>
+      <NewsLetterSection />
     </main>
   );
 }

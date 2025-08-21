@@ -7,12 +7,12 @@ export const navItems = [
     name: 'Who we are',
     link: '#/who-we-are',
   },
+  // {
+  //   name: 'Results',
+  //   link: '#/results',
+  // },
   {
-    name: 'Results',
-    link: '#/results',
-  },
-  {
-    name: 'Resources',
-    link: '#/resources',
+    name: 'Blogs',
+    link: '/blogs',
   },
 ];
