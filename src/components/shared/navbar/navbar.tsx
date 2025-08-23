@@ -10,25 +10,18 @@ import {
   MobileNavToggle,
   MobileNavMenu,
 } from '@/components/ui/resizable-navbar';
-import { useEffect, useState } from 'react';
-import { Button } from '../../ui/button';
-import { Moon, Sun } from 'lucide-react';
-import { useTheme } from 'next-themes';
+import { useState } from 'react';
 import { Popover, PopoverContent, PopoverTrigger } from '../../ui/popover';
 import Link from 'next/link';
 import { whatWeDoItemsData } from '@/constants/navbar-data/what-we-do-items-data';
 import { Icon } from '@iconify/react/dist/iconify.js';
 import { usePathname } from 'next/navigation';
 import { navItems } from '@/constants/navbar-data/main-nav-items-data';
+import ThemeToggleButton from '@/components/buttons/theme-toggle-btn';
 
 export default function WebSiteNavbar() {
-  const { resolvedTheme, setTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
-
-  // Effect to check if the theme is mounted - to avoid hydration errors
-  useEffect(() => setMounted(true), []);
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   return (
@@ -40,25 +33,7 @@ export default function WebSiteNavbar() {
           <NavItems items={navItems} />
           <div className="z-[999] flex items-center gap-4">
             {/* Theme Toggle Button */}
-            {mounted && resolvedTheme === 'light' ? (
-              <Button
-                variant="outline"
-                className="cursor-pointer rounded-full"
-                size="icon"
-                onClick={() => setTheme('dark')}
-              >
-                <Sun className="h-4 w-4" />
-              </Button>
-            ) : (
-              <Button
-                variant="outline"
-                size="icon"
-                className="cursor-pointer rounded-full"
-                onClick={() => setTheme('light')}
-              >
-                <Moon className="h-4 w-4" />
-              </Button>
-            )}
+            <ThemeToggleButton />
             <NavbarButton
               href="/contact-us"
               className="rounded-full text-base font-medium"
@@ -75,25 +50,7 @@ export default function WebSiteNavbar() {
             <NavbarLogo />
             <div className="z-[999] flex items-center gap-2">
               {/* Theme Toggle Button */}
-              {mounted && resolvedTheme === 'light' ? (
-                <Button
-                  variant="outline"
-                  size="icon"
-                  className="cursor-pointer rounded-full"
-                  onClick={() => setTheme('dark')}
-                >
-                  <Sun className="h-4 w-4" />
-                </Button>
-              ) : (
-                <Button
-                  variant="outline"
-                  size="icon"
-                  className="cursor-pointer rounded-full"
-                  onClick={() => setTheme('light')}
-                >
-                  <Moon className="h-4 w-4" />
-                </Button>
-              )}
+              <ThemeToggleButton />
               <MobileNavToggle
                 isOpen={isMobileMenuOpen}
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}

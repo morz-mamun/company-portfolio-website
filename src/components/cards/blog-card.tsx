@@ -49,7 +49,7 @@ export default function BlogCard({
                   // make box for each tag
                   <span
                     key={index}
-                    className="mr-2 rounded-sm border bg-[#F4F4F4] px-1 py-[2px] text-[12px] font-medium"
+                    className="dark:bg-card mr-2 rounded-sm border bg-[#F4F4F4] px-1 py-[2px] text-[12px] font-medium"
                   >
                     {tag?.label}
                   </span>
