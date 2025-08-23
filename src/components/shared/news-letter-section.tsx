@@ -7,7 +7,7 @@ export default function NewsLetterSection() {
       <SectionHeading
         title="Join our weekly Newsletter"
         description="Stay up to date with the latest news, announcements and newsletter."
-        className="mb-5 text-xs md:mb-10 md:text-xs lg:text-base"
+        descriptionClassName="mb-5 text-xs md:mb-10 md:text-xs lg:text-base"
       />
 
       <EmailSubscription />

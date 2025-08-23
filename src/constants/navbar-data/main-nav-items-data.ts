@@ -5,7 +5,7 @@ export const navItems = [
   },
   {
     name: 'Who we are',
-    link: '#/who-we-are',
+    link: '/who-we-are',
   },
   // {
   //   name: 'Results',

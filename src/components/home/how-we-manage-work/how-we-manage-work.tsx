@@ -12,7 +12,7 @@ export default function HowWeManageWork() {
       <SectionHeading
         title="How we manage our work?"
         description="We build smarter systems, powerful websites and scalable automation workflows for modern brands, e-commerce stores and SaaS platforms across the U.S and beyond."
-        className="mx-auto max-w-[975px] text-center"
+        descriptionClassName="mx-auto max-w-[975px] text-center"
       />
       <div className="relative mt-10 overflow-hidden border-y px-4 lg:px-6">
         {/* content container */}
