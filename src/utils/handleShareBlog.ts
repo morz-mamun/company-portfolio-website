@@ -1,6 +1,6 @@
 import { toast } from 'sonner';
 
-export const handleShareBlog = async ({ title }: { title: string }) => {
+export const handleShareBlog = async (title: string) => {
   const shareData = {
     title,
     text: `Check out this article: ${title}`,

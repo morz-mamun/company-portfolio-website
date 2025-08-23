@@ -1,5 +1,11 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
 export type TBlog = {
   id: string;
+  Author?: {
+    username: string;
+  };
+  content?: any;
   featuredImage: {
     url: string;
   };
