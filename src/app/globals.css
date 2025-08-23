@@ -263,18 +263,23 @@
 .payload-richtext h1 {
   font-size: 2rem;
 }
+
 .payload-richtext h2 {
   font-size: 1.75rem;
 }
+
 .payload-richtext h3 {
   font-size: 1.5rem;
 }
+
 .payload-richtext h4 {
   font-size: 1.25rem;
 }
+
 .payload-richtext h5 {
   font-size: 1.125rem;
 }
+
 .payload-richtext h6 {
   font-size: 1rem;
 }
@@ -385,4 +390,42 @@
 
 .payload-richtext u {
   text-decoration: underline;
+}
+
+.payload-richtext strike {
+  text-decoration: line-through;
+}
+
+/* * Dark mode: selected country fix */
+.dark .react-tel-input .selected-flag {
+  background-color: #1f2937 !important;
+  /* gray-800 */
+  color: #f9fafb !important;
+  /* text-white */
+}
+
+.dark .react-tel-input .flag-dropdown {
+  background-color: #1f2937 !important;
+  /* gray-200 */
+  border: 1px solid #68696a !important;
+  /* gray-200 */
+}
+.dark .react-tel-input .selected-flag .flag {
+  color: #f9fafb !important;
+  /* gray-800 */
+}
+
+/* Dark mode: all countries background/text */
+.dark .react-tel-input .country-list .country {
+  background-color: #1f2937;
+  /* gray-800 */
+  color: #f9fafb;
+  @apply hover:!bg-gray-600;
+  /* text-white */
+}
+
+/* Dark mode: highlighted country (hovered or keyboard-selected) */
+.dark .react-tel-input .country-list .country.highlight {
+  @apply !bg-gray-600;
+  color: #ffffff;
 }

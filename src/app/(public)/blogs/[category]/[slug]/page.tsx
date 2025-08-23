@@ -8,7 +8,6 @@ import { Button } from '@/components/ui/button';
 import { formatDate } from '@/utils/formatDate';
 import Link from 'next/link';
 import NewsLetterSection from '@/components/shared/news-letter-section';
-import { toast } from 'sonner';
 
 interface BlogDetailPageProps {
   params: Promise<{ category: string; slug: string }>;
@@ -29,11 +28,8 @@ export default async function BlogDetails({ params }: BlogDetailPageProps) {
   }
 
   const data = await res.json();
-  console.log(data);
-
   const blog = data?.docs[0];
-  console.log(blog);
-  const { Author, featuredImage, title, meta, id, createdAt, tags } = blog;
+  const { Author, featuredImage, title, createdAt, tags } = blog;
   const imageUrl =
     featuredImage?.url ||
     'https://images.unsplash.com/photo-1544077960-604201fe74bc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1651&q=80';
@@ -41,7 +37,7 @@ export default async function BlogDetails({ params }: BlogDetailPageProps) {
   if (!blog) return notFound();
 
   return (
-    <div className="mx-auto mt-20 max-w-4xl px-4 pb-14">
+    <main className="mx-auto max-w-4xl px-4 pt-16 pb-14 md:pt-20">
       <div className="py-4">
         <Link href="/blogs">
           <Button
@@ -139,6 +135,6 @@ export default async function BlogDetails({ params }: BlogDetailPageProps) {
 
       {/* Newsletter CTA */}
       <NewsLetterSection />
-    </div>
+    </main>
   );
 }

@@ -113,9 +113,10 @@ export default function ContactUs() {
                 onChange={(phone) =>
                   setValue('phone', phone, { shouldValidate: true })
                 }
-                inputClass="!w-full !border !border-gray-300 dark:!border-gray-600 !rounded-md !bg-white dark:!bg-input/20 !text-gray-900 dark:!text-gray-100 focus:!border-gray-500 dark:focus:!border-primary"
+                inputClass="!w-full !border !border-gray-300 dark:!border-gray-600 !rounded-md !bg-white dark:!bg-input/20 !text-gray-900 dark:!text-gray-100 focus:!border-gray-500 dark:focus:!border-primary !py-5"
                 dropdownClass="!border !border-gray-300 dark:!border-gray-600 !rounded-md !bg-white dark:!bg-gray-800 !text-gray-900 dark:!text-gray-100 focus:!border-gray-500 dark:focus:!border-primary"
-                searchClass="!border !border-gray-300 dark:!border-gray-600 !rounded-md !bg-white dark:!bg-gray-800 !text-gray-900 dark:!text-gray-100 focus:!border-gray-500 dark:focus:!border-primary"
+                disableSearchIcon
+                searchClass="!border !border-gray-300 dark:!border-gray-600 !rounded-md !bg-white dark:!bg-gray-800 !text-gray-900 dark:!text-gray-100 focus:!border-white dark:focus:!border-none"
               />
             </div>
             {errors.phone && (
