@@ -16,7 +16,7 @@ export function AnimatedListItem({ children }: { children: React.ReactNode }) {
       animate={{ scale: 1, opacity: 1, originY: 0 }}
       exit={{ scale: 0, opacity: 0 }}
       transition={{ type: 'spring', stiffness: 350, damping: 40 }}
-      layout
+      layout="position"
       className="mx-auto w-full"
     >
       {children}
@@ -54,7 +54,10 @@ export const AnimatedList = React.memo(
 
     return (
       <div
-        className={cn(`flex flex-col items-center gap-4`, className)}
+        className={cn(
+          `flex flex-col items-center gap-4 overflow-hidden`,
+          className,
+        )}
         {...props}
       >
         <AnimatePresence>
