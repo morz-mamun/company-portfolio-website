@@ -16,7 +16,7 @@ export function AnimatedListItem({ children }: { children: React.ReactNode }) {
       animate={{ scale: 1, opacity: 1, originY: 0 }}
       exit={{ scale: 0, opacity: 0 }}
       transition={{ type: 'spring', stiffness: 350, damping: 40 }}
-      layout="position"
+      layout
       className="mx-auto w-full"
     >
       {children}
@@ -48,14 +48,21 @@ export const AnimatedList = React.memo(
     }, [index, delay, childrenArray.length]);
 
     const itemsToShow = useMemo(() => {
-      const result = childrenArray.slice(0, index + 1).reverse();
-      return result;
+      return childrenArray.slice(0, index + 1);
     }, [index, childrenArray]);
+
+    useEffect(() => {
+      const container = document.getElementById('chat-container');
+      if (container) {
+        container.scrollTop = container.scrollHeight;
+      }
+    }, [itemsToShow]);
 
     return (
       <div
+        id="chat-container"
         className={cn(
-          `flex flex-col items-center gap-4 overflow-hidden`,
+          `flex flex-col justify-end gap-4 overflow-y-auto scroll-smooth`,
           className,
         )}
         {...props}
