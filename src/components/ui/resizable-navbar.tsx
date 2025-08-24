@@ -135,6 +135,7 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
       )}
     >
       {items?.map((item, idx) => {
+        const isActive = item?.link === pathName;
         if (item?.name === 'What we do') {
           return (
             <Popover key={`nav-${idx}`} open={open} onOpenChange={setOpen}>
@@ -144,7 +145,7 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
                     setHovered(idx);
                     setOpen(true);
                   }}
-                  className="text-brand relative cursor-pointer rounded-full px-4 py-1 dark:text-neutral-300"
+                  className="relative cursor-pointer rounded-full px-4 py-1 dark:text-neutral-300"
                 >
                   {hovered === idx && (
                     <motion.div
@@ -191,7 +192,7 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
               setOpen(false);
             }}
             onClick={onItemClick}
-            className="text-brand relative px-4 py-2 dark:text-neutral-300"
+            className={`relative flex items-center rounded-full px-4 py-1 dark:text-neutral-300 ${isActive ? 'border-brand/20 border-2 px-4 py-1' : ''}`}
             key={`link-${idx}`}
           >
             {hovered === idx && (

@@ -63,6 +63,7 @@ export default function WebSiteNavbar() {
             onClose={() => setIsMobileMenuOpen(false)}
           >
             {navItems?.map((item, idx) => {
+              const isActive = item?.link === pathname;
               if (item.name === 'What we do') {
                 return (
                   <Popover
@@ -109,7 +110,11 @@ export default function WebSiteNavbar() {
                   key={`mobile-link-${idx}`}
                   href={item.link}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="relative rounded-full px-3 py-1 text-sm text-neutral-600 transition hover:bg-[#CCCCCC]/40 md:text-base dark:text-neutral-300 dark:hover:bg-neutral-800/60"
+                  className={`relative rounded-full px-3 py-1 text-sm transition md:text-base ${
+                    isActive
+                      ? 'border border-black/20 bg-neutral-100 text-black dark:bg-neutral-800/80 dark:text-white'
+                      : 'text-neutral-600 hover:bg-[#CCCCCC]/40 dark:text-neutral-300 dark:hover:bg-neutral-800/60'
+                  }`}
                 >
                   {item.name}
                 </Link>
