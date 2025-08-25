@@ -46,6 +46,7 @@ export function EmailSubscription() {
         className="flex overflow-hidden rounded-lg border border-gray-100 bg-white p-1 shadow-md"
       >
         <Input
+          id="email"
           type="email"
           placeholder="Enter your Email"
           {...register('email', {

@@ -141,6 +141,7 @@ export default function ContactUs() {
             Write your message here
           </label>
           <Textarea
+            id="message"
             className="mt-2 min-h-32 placeholder:text-xs md:placeholder:text-sm"
             placeholder="What we can do for you?"
             {...register('message', {

@@ -27,6 +27,7 @@ export default function InputWithLabel({
         {label}
       </label>
       <Input
+        id="input-with-label"
         type={type}
         placeholder={placeholder}
         className="mt-2 py-5 placeholder:text-xs md:placeholder:text-sm"
