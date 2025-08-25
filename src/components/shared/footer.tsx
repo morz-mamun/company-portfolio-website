@@ -162,6 +162,7 @@ export default function Footer() {
                   <a
                     href={socialMediaData?.facebook}
                     target="_blank"
+                    aria-label="facebook"
                     className="text-brand dark:text-primary text-xs transition-colors md:text-base"
                   >
                     <Facebook size={20} />
@@ -169,6 +170,7 @@ export default function Footer() {
                   <a
                     href={socialMediaData?.linkedin}
                     target="_blank"
+                    aria-label="linkedin"
                     className="text-brand dark:text-primary text-xs transition-colors md:text-base"
                   >
                     <Linkedin size={20} />
@@ -176,6 +178,7 @@ export default function Footer() {
                   <a
                     href={socialMediaData?.twitter}
                     target="_blank"
+                    aria-label="twitter"
                     className="text-brand dark:text-primary text-xs transition-colors md:text-base"
                   >
                     <Twitter size={20} />
@@ -183,6 +186,7 @@ export default function Footer() {
                   <a
                     href={socialMediaData?.email}
                     target="_blank"
+                    aria-label="email"
                     className="text-brand dark:text-primary text-xs transition-colors md:text-base"
                   >
                     <Mail size={20} />
