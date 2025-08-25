@@ -1,6 +1,7 @@
 'use client';
 
 import { Icon } from '@iconify/react/dist/iconify.js';
+import InlineWidget from '@calcom/embed-react';
 import {
   Drawer,
   DrawerContent,
@@ -34,14 +35,27 @@ export default function PrimaryBtn({
           <DrawerTitle className="text-center">Schedule a Meeting</DrawerTitle>
         </DrawerHeader>
 
-        {/* Cal.com embed */}
-        <div className="flex-1 overflow-hidden px-4 pb-4">
+        <DrawerContent>
+          <DrawerHeader>
+            <DrawerTitle className="text-center">
+              Schedule a Meeting
+            </DrawerTitle>
+          </DrawerHeader>
+
+          <div className="flex-1 overflow-hidden px-4 pb-4">
+            {/* Cal.com embed */}
+            <InlineWidget calLink="md-morshed-alam-hp8ddu/30min" />
+          </div>
+        </DrawerContent>
+
+        {/* Cal.com embed with iframe */}
+        {/* <div className="flex-1 overflow-hidden px-4 pb-4">
           <iframe
             src="https://cal.com/md-morshed-alam-hp8ddu/30min"
             className="h-full w-full rounded-lg border-0"
             allow="camera; microphone; fullscreen; clipboard-read; clipboard-write"
           />
-        </div>
+        </div> */}
       </DrawerContent>
     </Drawer>
   );
