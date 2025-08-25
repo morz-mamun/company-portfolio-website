@@ -23,11 +23,14 @@ export default function InputWithLabel({
 }: TInputWithLabelProps) {
   return (
     <div className="space-y-2">
-      <label className="text-brand dark:text-primary text-sm font-semibold">
+      <label
+        htmlFor={name}
+        className="text-brand dark:text-primary text-sm font-semibold"
+      >
         {label}
       </label>
       <Input
-        id="input-with-label"
+        id={name}
         type={type}
         placeholder={placeholder}
         className="mt-2 py-5 placeholder:text-xs md:placeholder:text-sm"

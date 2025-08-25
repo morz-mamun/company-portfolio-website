@@ -275,6 +275,7 @@ export default function TestimonialCarousel() {
 
         <div className="flex items-center justify-center space-x-2 pt-10">
           <Button
+            aria-label="Previous testimonial"
             variant="outline"
             size="icon"
             onClick={prevTestimonial}
@@ -307,6 +308,7 @@ export default function TestimonialCarousel() {
           </div>
 
           <Button
+            aria-label="Next testimonial"
             variant="outline"
             size="icon"
             onClick={nextTestimonial}

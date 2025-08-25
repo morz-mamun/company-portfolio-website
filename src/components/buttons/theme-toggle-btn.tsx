@@ -14,6 +14,7 @@ export default function ThemeToggleButton() {
       {/* Theme Toggle Button */}
       {mounted && resolvedTheme === 'light' ? (
         <Button
+          aria-label="Toggle dark mode"
           variant="outline"
           className="cursor-pointer rounded-full"
           size="icon"
@@ -23,6 +24,7 @@ export default function ThemeToggleButton() {
         </Button>
       ) : (
         <Button
+          aria-label="Toggle light mode"
           variant="outline"
           size="icon"
           className="cursor-pointer rounded-full"
