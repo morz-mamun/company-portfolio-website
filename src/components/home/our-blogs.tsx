@@ -35,7 +35,11 @@ export default async function OurBlogs() {
           {/* view all button */}
           <div className="mt-10 flex items-center justify-center">
             <Link href="/blogs">
-              <PrimaryBtn title="View All Blogs" iconName="" />
+              <PrimaryBtn
+                title="View All Blogs"
+                iconName=""
+                showCalDrawer={false}
+              />
             </Link>
           </div>
         </>
