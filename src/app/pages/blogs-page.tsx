@@ -10,7 +10,6 @@ import { blogsBannerData } from '@/constants/banner-data/blogs-banner-data';
 import { TBlog } from '@/types/blog';
 import { Icon } from '@iconify/react/dist/iconify.js';
 import { Search } from 'lucide-react';
-import { notFound } from 'next/navigation';
 import { useMemo, useState } from 'react';
 
 export default function BlogsPage({ blogsData }: any) {
