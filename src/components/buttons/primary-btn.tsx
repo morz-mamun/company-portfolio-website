@@ -14,7 +14,7 @@ export default function PrimaryBtn({
   title,
   iconName,
   className,
-  showCalDrawer,
+  showCalDrawer = true,
   onClick,
 }: {
   title: string;

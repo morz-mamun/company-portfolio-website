@@ -2,7 +2,7 @@
 
 import { AlertCircle, Database, RefreshCw, Search } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Card } from '@/components/ui/card';
+import { Card, CardContent } from '@/components/ui/card';
 import { TStatusState } from '@/types/empty-status-state';
 import { useState } from 'react';
 
@@ -52,7 +52,7 @@ export function EmptyStatusState({
           title: title || 'No results found',
           description:
             description || 'Try adjusting your search criteria or filters.',
-          actionLabel: actionLabel || 'Clear filters',
+          //   actionLabel: actionLabel || 'Clear filters',
         };
       case 'empty':
         return {
@@ -95,25 +95,27 @@ export function EmptyStatusState({
 
   return (
     <Card
-      className={`mx-auto flex min-h-[300px] max-w-xs flex-col items-center justify-center text-center md:max-w-xl md:p-8 lg:max-w-3xl ${className}`}
+      className={`mx-auto flex max-w-xs flex-col items-center text-center md:max-w-xl lg:max-w-3xl ${className}`}
     >
-      <div>{getIcon()}</div>
-      <h3 className="font-space-grotesk text-foreground text-2xl font-semibold text-balance md:text-3xl">
-        {content?.title}
-      </h3>
-      <p className="text-muted-foreground max-w-[350px] text-sm text-pretty md:mb-6">
-        {content?.description}
-      </p>
-      {content.actionLabel && (
-        <Button
-          onClick={handleAction}
-          variant={type === 'error' ? 'destructive' : 'default'}
-          className="hover:bg-[] min-w-[120px] cursor-pointer"
-          disabled={loading}
-        >
-          {loading ? 'Please wait...' : content.actionLabel}
-        </Button>
-      )}
+      <CardContent className="flex flex-col items-center gap-4">
+        <div>{getIcon()}</div>
+        <h3 className="font-space-grotesk text-foreground text-2xl font-semibold text-balance md:text-3xl">
+          {content?.title}
+        </h3>
+        <p className="text-muted-foreground max-w-[350px] text-sm text-pretty md:mb-6">
+          {content?.description}
+        </p>
+        {content.actionLabel && (
+          <Button
+            onClick={handleAction}
+            variant={type === 'error' ? 'destructive' : 'default'}
+            className="hover:bg-[] min-w-[120px] cursor-pointer"
+            disabled={loading}
+          >
+            {loading ? 'Please wait...' : content.actionLabel}
+          </Button>
+        )}
+      </CardContent>
     </Card>
   );
 }
