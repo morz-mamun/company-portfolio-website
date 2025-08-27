@@ -9,9 +9,6 @@ import Link from 'next/link';
 export default async function OurBlogs() {
   const res = await fetch('https://tgc-admin.vercel.app/api/blogs?limit=3');
   if (!res.ok) {
-    toast.error('Something went wrong', {
-      description: 'Please try again later.',
-    });
     throw new Error('Failed to fetch data');
   }
   const blogsData = await res.json();

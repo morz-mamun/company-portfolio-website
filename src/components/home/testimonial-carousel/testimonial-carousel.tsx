@@ -290,7 +290,7 @@ export default function TestimonialCarousel() {
               <button
                 key={index}
                 onClick={() => goToSlide(index)}
-                className={`relative h-2 transform rounded-full transition-all duration-500 ease-out hover:scale-125 ${
+                className={`relative h-2 transform cursor-pointer rounded-full transition-all duration-500 ease-out hover:scale-125 ${
                   index === currentIndex
                     ? 'w-8 bg-gray-600 shadow-md'
                     : 'w-2 bg-gray-300 hover:bg-gray-400'

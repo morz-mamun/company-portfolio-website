@@ -82,7 +82,7 @@ export default function Footer() {
               {/* quick links */}
               <div className="flex flex-col space-y-3 lg:mx-auto">
                 <h4 className="text-lg font-semibold">Quick Links</h4>
-                <ul className="space-y-2 text-sm">
+                <div className="space-y-2 text-sm">
                   <Popover open={isOpen} onOpenChange={setIsOpen}>
                     <PopoverTrigger asChild>
                       <button className="cursor-pointer text-base hover:underline">
@@ -113,23 +113,19 @@ export default function Footer() {
                       </div>
                     </PopoverContent>
                   </Popover>
-                  <li className="hover:underline">
-                    <Link
-                      href="/who-we-are"
-                      className="text-brand dark:text-primary text-xs transition-colors md:text-base"
-                    >
-                      Who we are
-                    </Link>
-                  </li>
-                  <li className="hover:underline">
-                    <Link
-                      href="/contact-us"
-                      className="text-brand dark:text-primary text-xs transition-colors md:text-base"
-                    >
-                      Contact
-                    </Link>
-                  </li>
-                </ul>
+                  <Link
+                    href="/who-we-are"
+                    className="text-brand dark:text-primary hover:urderline text-xs transition-colors md:text-base"
+                  >
+                    Who we are
+                  </Link>
+                  <Link
+                    href="/contact-us"
+                    className="text-brand dark:text-primary hover:urderline text-xs transition-colors md:text-base"
+                  >
+                    Contact
+                  </Link>
+                </div>
               </div>
               {/* privacy policy */}
               <div className="flex flex-col space-y-3 lg:mx-auto">

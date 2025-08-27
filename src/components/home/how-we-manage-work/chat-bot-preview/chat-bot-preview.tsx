@@ -23,7 +23,7 @@ export default function ChatBotPreview() {
       {/* bottom content */}
       <div className="max-w-[544px] space-y-2 p-2 transition-transform duration-300 group-hover:-translate-y-8 lg:mx-2">
         <h4 className="font-space-grotesk text-lg font-bold md:text-xl lg:text-2xl">
-          Collaborate our clients with AI Chatbot
+          Collaborate Our Clients With AI Chatbot
         </h4>
         <p className="text-brand dark:text-primary text-xs md:text-sm lg:text-base">
           AI Chatbot is a powerful tool that can help you automate your business
