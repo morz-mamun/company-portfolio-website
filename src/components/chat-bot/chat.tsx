@@ -15,10 +15,9 @@ export function Chat() {
     transport: new DefaultChatTransport({ api: '/api/chat-bot' }),
   });
 
-  // State for input
-  const [input, setInput] = useState('');
-  const [errorMessage, setErrorMessage] = useState<string | null>(null);
-  const messagesEndRef = useRef<HTMLDivElement>(null);
+  console.log(status, 'from chat.tsx -->');
+
+  // console.log("error from chat.tsx -->", error);
 
   // Type-safe initial message
   const initialMessage: UIMessage = {
@@ -32,18 +31,21 @@ export function Chat() {
     ],
   };
 
-  // Prepend welcome message only once
-  const [hasInit, setHasInit] = useState(false);
-  const allMessages = hasInit ? messages : [initialMessage, ...messages];
-
+  const [allMessages, setAllMessages] = useState<UIMessage[]>([initialMessage]);
+  // State for input
+  const [input, setInput] = useState('');
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
+  const messagesEndRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
-    setHasInit(true);
-  }, []);
+    // Whenever new messages arrive from useChat, merge them with the initial message
+    setAllMessages([initialMessage, ...messages]);
+  }, [messages]);
+  console.log('from chat.tsx -->', allMessages);
 
   // Auto scroll to bottom
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
-  }, [allMessages]);
+  }, []);
 
   // Handle errors
   useEffect(() => {
@@ -74,7 +76,7 @@ export function Chat() {
     <div className="flex h-full flex-col">
       {/* Messages list */}
       <div className="flex-1 overflow-y-auto pr-1">
-        {allMessages.map((message) => (
+        {allMessages?.map((message) => (
           <ChatMessage key={message.id} message={message} />
         ))}
         {errorMessage && (

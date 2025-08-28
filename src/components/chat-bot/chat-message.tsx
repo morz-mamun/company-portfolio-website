@@ -3,14 +3,11 @@ import { cn } from '@/lib/utils';
 import { Bot, User } from 'lucide-react';
 
 export function ChatMessage({ message }: { message: UIMessage }) {
-  console.log('showing message from ChatMessage -->', message);
-
   // UIMessage parts contain structured content
   const textContent =
     message.parts
       ?.map((part) => (part.type === 'text' ? part.text : ''))
       .join(' ') ?? '';
-
   return (
     <div
       className={cn(
