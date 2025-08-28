@@ -1,4 +1,3 @@
-import PrimaryBtn from '../buttons/primary-btn';
 import BorderXPattern from '../shared/border-x-pattern';
 import { Icon } from '@iconify/react';
 import SectionHeading from '../shared/section-heading';

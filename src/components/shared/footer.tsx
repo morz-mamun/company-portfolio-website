@@ -3,7 +3,6 @@ import { Icon } from '@iconify/react/dist/iconify.js';
 import {
   ArrowUpFromLine,
   Facebook,
-  Github,
   Linkedin,
   Mail,
   Twitter,
