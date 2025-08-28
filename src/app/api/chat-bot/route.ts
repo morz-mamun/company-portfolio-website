@@ -1,4 +1,4 @@
-import { getPersonalInfo } from '@/utils/getPersonalInfo';
+import { getCompanyInfo } from '@/utils/getCompanyInfo';
 import { createOpenAI } from '@ai-sdk/openai';
 import { convertToModelMessages, streamText, TextPart } from 'ai';
 import { NextResponse } from 'next/server';
@@ -21,23 +21,30 @@ export async function POST(req: Request) {
 
     // Extract the last user question
     const userQuestion = modelMessages[modelMessages.length - 1].content;
-    const relevantInfo = getPersonalInfo(userQuestion[0] as TextPart);
+    const relevantInfo = getCompanyInfo(userQuestion[0] as TextPart);
 
-    // System prompt
-    let systemPrompt = `You are a helpful AI assistant for a personal portfolio website.
-Your primary goal is to answer questions about the developer’s background, skills, projects, and services in a friendly and informative tone.
-However, if the user asks a general question (like about sports, weather, etc.), still answer it accurately and politely.
+    // Generate system prompt
+    let systemPrompt = `You are a professional AI assistant for the Trust Global Communication website.
+Your goal is to answer questions about the company, services, solutions, industries, clients, and contact information in a friendly, professional, and informative tone.
 
-After answering unrelated questions, add this note:
-"💡 By the way, feel free to ask me about my projects, skills, or services too!"
+Guidelines:
+- Keep answers concise (under 200 tokens) and informative.
+- When mentioning a service, suggest its link with emoji. Example:
+  - AI Automation: [Learn more](/ai-automation) 🤖
+  - Web & Software Development: [Learn more](/web-software-development) 💻
+- Include emojis/icons for services and industries.
+- For queries about specific services, automatically include a personalized CTA:
+  "📞 Interested in <Service Name>? Schedule a consultation <emoji> or email us at info@trustglobalcommunication.com to discuss your project."
+- For general services, projects, or contact queries, include a CTA:
+  "📞 Schedule a consultation or email us at info@trustglobalcommunication.com to discuss your project or business needs."
+- If the question is unrelated, answer politely and accurately.
+- After unrelated answers, add:
+  "💡 By the way, feel free to ask me about our services, solutions, or how we can help your business!"
 
-If the question is unclear, politely ask for clarification.
-Keep answers short and under 200 tokens.`;
+If the question is unclear, politely ask for clarification.`;
 
     if (relevantInfo.length > 0) {
-      systemPrompt += `\n\nReference information about the developer:\n${relevantInfo.join(
-        '\n',
-      )}`;
+      systemPrompt += `\n\nReference information about the company:\n${relevantInfo.join('\n')}`;
     }
 
     // Generate streaming response using OpenAI

@@ -14,11 +14,6 @@ export function Chat() {
   const { messages, sendMessage, status, error } = useChat({
     transport: new DefaultChatTransport({ api: '/api/chat-bot' }),
   });
-
-  console.log(status, 'from chat.tsx -->');
-
-  // console.log("error from chat.tsx -->", error);
-
   // Type-safe initial message
   const initialMessage: UIMessage = {
     id: 'welcome-message',
@@ -26,7 +21,7 @@ export function Chat() {
     parts: [
       {
         type: 'text',
-        text: 'Hi! Ask me anything about me, my projects, or my services! You can also use voice input—just select your language and tap the mic!',
+        text: `Hi! 👋 Ask me about our services or how we can help your business. 💬`,
       },
     ],
   };

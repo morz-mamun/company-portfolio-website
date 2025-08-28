@@ -1,79 +1,74 @@
-// personal-data.ts
-const personalData = [
+export const companyData = [
   {
-    id: 'about-me',
-    name: 'About Me',
+    id: 'about-us',
+    name: 'About Trust Global Communication',
     description:
-      "I'm a MERN stack developer with experience in building full-stack applications. I specialize in React, Next.js, Remix, Tailwind CSS, MongoDB, and Express.",
+      'Trust Global Communication is a leading technology solutions company, empowering businesses worldwide with AI automation, digital marketing, web development, and scalable SaaS solutions.',
     details:
-      "Currently, I'm looking for a full-time position as a frontend developer or MERN stack developer. Previously, I worked as a frontend developer at Monster Studio. I love solving real-world problems with clean, scalable code and intuitive UI. I'm always learning and eager to expand my knowledge in the ever-evolving world of web development. ",
+      'We focus on building smarter systems, powerful websites, and scalable automation workflows for modern brands, e-commerce stores, and SaaS platforms across the U.S. and beyond.',
   },
   {
-    id: 'skills',
-    name: 'Skills',
-    description: 'My core technical skills and tools I use.',
-    features: [
-      'React',
-      'Next.js',
-      'TypeScript',
-      'Remix',
-      'Redux Toolkit',
-      'React Router',
-      'Tailwind CSS',
-      'Node.js',
-      'Express.js',
-      'MongoDB',
-      'Mongoose',
-      'JWT',
-      'Axios',
-      'Firebase',
-      'EmailJS',
-      'AI Integration',
-      'youtube API',
-      'Socket.IO',
-      'REST API',
-      'Framer Motion',
-    ],
+    id: 'mission',
+    name: 'Our Mission',
+    description:
+      'To empower businesses with cutting-edge technology solutions that drive growth, efficiency, and innovation.',
   },
   {
-    id: 'projects',
-    name: 'Projects',
-    description: "Some of the key projects I've built.",
-    details:
-      '1. Developed and maintained 20+ dynamic FreeTool sites (Like: Youtube money calculator) using Remix with monorepo.\n' +
-      '2. Implemented a custom Rich Text Editor called Yoopta in project. \n.' +
-      '3. E-commerce Platform - A full-stack e-commerce platform with Stripe payment integration.\n' +
-      '4. Task Management platform - A full-stack task management platform with drag-and-drop functionality with DnD kit.\n' +
-      '4. Admin Chat Dashboard - Real-time chat using WhatsApp and Discord with Socket.IO.\n' +
-      '5. ERP System - A full-stack inventory and sales management system.\n' +
-      '6. AI Chatbot - Product support chatbot using OpenRouter and DeepSeek R1.',
-  },
-  {
-    id: 'education',
-    name: 'Education',
-    description: 'My academic background.',
-    details:
-      'Studying Textile Engineering and pursuing web development as a career path.',
-  },
-  {
-    id: 'experience',
-    name: 'Experience',
-    description: 'My work experience so far.',
-    details:
-      "Worked as a Web Developer at Monster Studio (Nov 2024 – Apr 2025), contributing to a large-scale MERN stack e-commerce platform with WhatsApp Cloud API and Discord Bot integrations. Built reusable components, REST APIs, and managed a Nx monorepo. Led a small frontend team. Previously, from Aug 2024 – Nov 2024, focused on UI implementation, responsive design, version control, and collaboration with designers. Earlier, at Delta Coder (Apr 2024 – Jun 2024), developed a multilingual app 'Delta Translator' with real-time translation API integration, following agile practices.",
+    id: 'vision',
+    name: 'Our Vision',
+    description:
+      'To be a global leader in digital transformation, helping companies adopt AI-driven automation and innovative technology solutions for long-term success.',
   },
   {
     id: 'services',
-    name: 'Services',
-    description: 'Services I can offer as a developer.',
+    name: 'Our Services',
+    description:
+      'We offer end-to-end technology solutions tailored to your business needs.',
     features: [
-      'MERN stack web development with Next.js and Remix',
-      'Responsive UI design',
-      'API integrations',
-      'Chatbot development with AI Integration',
-      'Real-time chat systems with Socket.IO',
+      'AI Automation – Workflow automation, predictive analytics, and AI-driven decision support.',
+      'Web & Software Development – Custom websites, web apps, mobile apps, and SaaS platforms.',
+      'Digital Marketing & SEO – SEO, PPC, social media marketing, and growth strategies.',
+      'SaaS & Affiliate Tools – Cloud-based tools for business automation and affiliate management.',
+      'E-commerce & Affiliate Services – Shopify, WooCommerce, affiliate integrations, and optimization.',
+      'IoT & Smart Security Solutions – Smart devices, security systems, and IoT integrations.',
+    ],
+  },
+  {
+    id: 'industries',
+    name: 'Industries We Serve',
+    description:
+      'We provide solutions across multiple industries, including e-commerce, SaaS, healthcare, finance, education, and logistics.',
+  },
+  {
+    id: 'clients',
+    name: 'Our Clients & Case Studies',
+    description:
+      'We have successfully partnered with startups, SMEs, and enterprise clients across the U.S. and internationally.',
+    features: [
+      'E-commerce: Improved conversion by 40% with AI-driven automation.',
+      'SaaS: Developed scalable SaaS tools adopted by 50+ clients.',
+      'Healthcare: Automated patient workflow and appointment scheduling.',
+      'Education: Built e-learning platforms with real-time analytics.',
+    ],
+  },
+  {
+    id: 'contact',
+    name: 'Contact Us',
+    description:
+      'Reach out to discuss your project, partnership, or business needs.',
+    details:
+      'Email: info@trustglobalcommunication.com\nPhone: +1-555-123-4567\nAddress: 123 Innovation Drive, Tech City, USA',
+  },
+  {
+    id: 'why-choose-us',
+    name: 'Why Choose Us',
+    description:
+      'We combine deep technology expertise, innovative solutions, and a client-first approach to deliver measurable results.',
+    features: [
+      'Experienced team of AI and software specialists',
+      'Proven track record with global clients',
+      'Focus on innovation, efficiency, and scalability',
+      'Dedicated support and long-term partnership mindset',
     ],
   },
 ];
-
-export default personalData;

@@ -29,7 +29,7 @@ export function ChatButton() {
           <BotMessageSquare size={28} className="dark:text-brand" />
         </button>
       </SheetTrigger>
-      <SheetContent className="border-brand/20 bg-background/90 shadow-primary/70 dark:shadow-brand/70 h-[550px] w-full max-w-[375px] rounded-lg border px-3 pt-4 shadow-md backdrop-blur-md md:mr-2 md:max-w-[400px]">
+      <SheetContent className="border-brand/20 bg-background/90 shadow-primary/70 dark:shadow-brand/70 w-full max-w-[375px] border px-3 pt-4 shadow-md backdrop-blur-md md:max-w-[400px]">
         <SheetTitle>
           <div className="flex items-center gap-2">
             <div className="bg-primary/20 flex h-8 w-8 items-center justify-center rounded-full">
