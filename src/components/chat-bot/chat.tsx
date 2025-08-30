@@ -14,6 +14,9 @@ export function Chat() {
   const { messages, sendMessage, status, error } = useChat({
     transport: new DefaultChatTransport({ api: '/api/chat-bot' }),
   });
+
+  console.log(status);
+
   // Type-safe initial message
   const initialMessage: UIMessage = {
     id: 'welcome-message',
@@ -31,16 +34,17 @@ export function Chat() {
   const [input, setInput] = useState('');
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const messagesEndRef = useRef<HTMLDivElement>(null);
+  const isLoading = status === 'submitted' || status === 'streaming';
+
   useEffect(() => {
     // Whenever new messages arrive from useChat, merge them with the initial message
     setAllMessages([initialMessage, ...messages]);
   }, [messages]);
-  console.log('from chat.tsx -->', allMessages);
 
   // Auto scroll to bottom
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
-  }, []);
+  }, [allMessages, isLoading, errorMessage]);
 
   // Handle errors
   useEffect(() => {
@@ -65,17 +69,20 @@ export function Chat() {
     setInput('');
   };
 
-  const isLoading = status === 'submitted' || status === 'streaming';
-
   return (
     <div className="flex h-full flex-col">
       {/* Messages list */}
-      <div className="flex-1 overflow-y-auto pr-1">
+      <div className="mx-2 flex-1 overflow-y-auto">
         {allMessages?.map((message) => (
           <ChatMessage key={message.id} message={message} />
         ))}
+        {isLoading && (
+          <p className="text-muted-foreground mt-2 animate-pulse text-xs">
+            Thinking...
+          </p>
+        )}
         {errorMessage && (
-          <div className="bg-destructive/10 text-destructive my-2 rounded-lg p-3">
+          <div className="bg-destructive/10 text-destructive my-2 rounded-lg p-2">
             {errorMessage}
           </div>
         )}
@@ -84,13 +91,14 @@ export function Chat() {
 
       {/* Input section */}
       <div className="space-y-3 border-t p-4">
-        <div className="flex justify-between">
+        {/* This is for voice input */}
+        {/* <div className="flex justify-between">
           <span className="text-muted-foreground text-xs">Voice Input:</span>
           <VoiceRecorder
             onTranscript={handleVoiceTranscript}
             isDisabled={isLoading}
           />
-        </div>
+        </div> */}
 
         <form
           onSubmit={handleSubmit}
@@ -104,13 +112,15 @@ export function Chat() {
               className="flex-1"
               disabled={isLoading}
             />
-            <Button type="submit" size="icon" disabled={isLoading}>
+            <Button
+              type="submit"
+              size="icon"
+              disabled={isLoading}
+              className="cursor-pointer"
+            >
               <Send className="h-4 w-4" />
             </Button>
           </div>
-          {isLoading && (
-            <p className="text-muted-foreground mt-2 text-xs">Thinking...</p>
-          )}
         </form>
       </div>
     </div>
