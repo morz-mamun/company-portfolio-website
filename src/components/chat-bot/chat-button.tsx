@@ -1,19 +1,11 @@
 'use client';
 
 import { useState } from 'react';
-import {
-  Sheet,
-  SheetContent,
-  SheetTitle,
-  SheetTrigger,
-} from '@/components/ui/sheet';
 import { BotMessageSquare, MessageCircle, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Chat } from './chat';
 import { Button } from '../ui/button';
 import { Card } from '../ui/card';
-import { ScrollArea } from '../ui/scroll-area';
-
 export function ChatButton() {
   const [isOpen, setIsOpen] = useState(false);
 

@@ -8,7 +8,7 @@ import { Input } from '@/components/ui/input';
 import { Send } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { ChatMessage } from './chat-message';
-import { VoiceRecorder } from './voice-recorder';
+// import { VoiceRecorder } from './voice-recorder';
 
 export function Chat() {
   const { messages, sendMessage, status, error } = useChat({
