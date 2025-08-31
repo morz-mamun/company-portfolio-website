@@ -36,24 +36,18 @@ export default function PrimaryBtn({
   return (
     <Drawer direction="right">
       <DrawerTrigger asChild>{button}</DrawerTrigger>
-
-      <DrawerContent>
-        <DrawerHeader>
-          <DrawerTitle className="text-center">Schedule a Meeting</DrawerTitle>
+      <DrawerContent className="overflow-x-hidden overflow-y-scroll">
+        <DrawerHeader className="">
+          <DrawerTitle className="text-center capitalize">
+            Schedule a Meeting
+          </DrawerTitle>
         </DrawerHeader>
 
-        <DrawerContent>
-          <DrawerHeader>
-            <DrawerTitle className="text-center">
-              Schedule a Meeting
-            </DrawerTitle>
-          </DrawerHeader>
+        <div className="flex-1">
+          {/* Cal.com embed */}
+          <InlineWidget calLink="md-morshed-alam-hp8ddu/30min" />
+        </div>
 
-          <div className="flex-1 overflow-y-auto px-4 pb-4">
-            {/* Cal.com embed */}
-            <InlineWidget calLink="md-morshed-alam-hp8ddu/30min" />
-          </div>
-        </DrawerContent>
         {/* Cal.com embed with iframe */}
         {/* <div className="flex-1 overflow-hidden px-4 pb-4">
           <iframe
