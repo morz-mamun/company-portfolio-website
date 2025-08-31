@@ -49,7 +49,7 @@ export default function PrimaryBtn({
             </DrawerTitle>
           </DrawerHeader>
 
-          <div className="flex-1 overflow-hidden px-4 pb-4">
+          <div className="flex-1 overflow-y-auto px-4 pb-4">
             {/* Cal.com embed */}
             <InlineWidget calLink="md-morshed-alam-hp8ddu/30min" />
           </div>
