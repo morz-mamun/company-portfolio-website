@@ -15,15 +15,16 @@ export default function BannerTitleAndDescription({
     <div className="mx-2 mt-[28px] max-w-5xl text-center lg:mx-auto">
       {/* Content title with animation for desktop */}
       <TextAnimate
-        as="h2"
+        as="h1"
         delay={0.1}
         duration={1}
         by="character"
         animation="fadeIn"
-        className="font-space-grotesk dark:text-primary hidden bg-[linear-gradient(to_bottom,_#100F0F,_#5C5B5B)] bg-clip-text text-3xl font-bold text-transparent md:text-[48px] lg:mx-20 lg:block lg:text-[40px] xl:mx-0 xl:text-[50px]"
+        className="font-space-grotesk dark:text-primary hidden bg-gradient-to-b from-[#011659] via-[#0A2F89] to-[#1F55BB] bg-clip-text text-3xl font-bold text-transparent md:text-[48px] lg:mx-20 lg:block lg:text-[40px] xl:mx-0 xl:text-[50px]"
       >
         {title}
       </TextAnimate>
+
       {/* Content title with animation for mobile */}
       <div className="lg:hidden">
         <AnimatedText data={mobileTitle} />
