@@ -335,7 +335,7 @@ export const NavbarButton = ({
   | React.ComponentPropsWithoutRef<'button'>
 )) => {
   const baseStyles =
-    'px-4 py-2 rounded-md bg-white button bg-white text-black text-sm font-bold relative cursor-pointer hover:-translate-y-0.5 transition duration-200 inline-block text-center';
+    'px-5 py-2 rounded-md bg-white button bg-white text-black text-sm font-bold relative cursor-pointer hover:-translate-y-0.5 transition duration-200 inline-block text-center';
 
   const variantStyles = {
     primary:
@@ -343,7 +343,7 @@ export const NavbarButton = ({
     secondary: 'bg-transparent shadow-none dark:text-white',
     dark: 'bg-black text-white shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]',
     gradient:
-      'bg-gradient-to-b from-[#000750] to-[#002667] backdrop-blur-[5px] text-white',
+      'bg-gradient-to-b from-[#000750] to-[#002667] hover:bg-gradient-to-b hover:from-[#000EAC] hover:to-[#00163C] backdrop-blur-[5px] shadow-[inset_2px_3px_9px_0_rgba(0,0,0,0.25)] text-white ',
   };
 
   return (

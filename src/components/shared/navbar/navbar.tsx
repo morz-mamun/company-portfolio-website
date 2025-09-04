@@ -126,7 +126,7 @@ export default function WebSiteNavbar() {
               <NavbarButton
                 href="/contact-us"
                 className="rounded-full text-base font-medium"
-                variant="dark"
+                variant="gradient"
               >
                 Contact
               </NavbarButton>

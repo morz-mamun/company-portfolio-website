@@ -25,7 +25,7 @@ export default function PrimaryBtn({
   const button = (
     <button
       onClick={onClick}
-      className={`shadow-primary/60 flex cursor-pointer items-center gap-2 rounded-full bg-gradient-to-b from-[#000750] to-[#002667] px-6 py-3 text-xs font-semibold text-white shadow-lg backdrop-blur-[5px] transition duration-300 ease-in-out hover:scale-105 hover:font-bold md:text-base ${className}`}
+      className={`flex cursor-pointer items-center gap-2 rounded-full bg-gradient-to-b from-[#000750] to-[#002667] px-6 py-3 text-xs font-semibold text-white shadow-[inset_2px_3px_9px_0_rgba(0,0,0,0.25)] backdrop-blur-[5px] transition duration-200 ease-in-out hover:scale-105 hover:bg-gradient-to-b hover:from-[#000EAC] hover:to-[#00163C] hover:font-bold hover:shadow-sm md:text-base ${className}`}
     >
       <span>{title}</span>
       <Icon icon={iconName} width={20} height={20} />

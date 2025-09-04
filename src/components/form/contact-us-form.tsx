@@ -159,7 +159,7 @@ export default function ContactUsForm() {
       <div className="w-full pt-6">
         <button
           type="submit"
-          className="bg-brand dark:bg-primary hover:text-brand flex w-full transform cursor-pointer items-center justify-center gap-2 rounded-md border px-4 py-2 text-center text-sm font-semibold text-white transition duration-300 ease-in-out hover:scale-95 hover:bg-gray-100 md:text-base dark:text-black"
+          className="w-full transform cursor-pointer items-center justify-center gap-2 rounded-md border bg-gradient-to-b from-[#000750] to-[#002667] px-4 py-[10px] text-center text-sm font-semibold text-white transition duration-200 ease-in-out hover:bg-gradient-to-b hover:from-[#000EAC] hover:to-[#00163C] md:text-base"
         >
           Send message
         </button>
