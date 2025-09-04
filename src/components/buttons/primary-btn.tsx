@@ -1,5 +1,4 @@
 'use client';
-
 import { Icon } from '@iconify/react/dist/iconify.js';
 import InlineWidget from '@calcom/embed-react';
 import {
@@ -26,7 +25,7 @@ export default function PrimaryBtn({
   const button = (
     <button
       onClick={onClick}
-      className={`bg-brand dark:bg-primary shadow-primary/60 hover:text-brand dark:hover:bg-brand dark:text-brand flex cursor-pointer items-center gap-2 rounded-full px-6 py-3 text-xs font-semibold text-white shadow-lg transition duration-300 ease-in-out hover:scale-105 hover:bg-gray-100 hover:font-bold md:text-base dark:hover:text-white ${className}`}
+      className={`shadow-primary/60 flex cursor-pointer items-center gap-2 rounded-full bg-gradient-to-b from-[#000750] to-[#002667] px-6 py-3 text-xs font-semibold text-white shadow-lg transition duration-300 ease-in-out hover:scale-105 hover:font-bold md:text-base ${className}`}
     >
       <span>{title}</span>
       <Icon icon={iconName} width={20} height={20} />
