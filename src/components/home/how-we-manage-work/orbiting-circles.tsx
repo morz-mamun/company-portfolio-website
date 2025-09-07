@@ -29,9 +29,9 @@ export default function OrbitingCirclesAnimation() {
       </div>
       {/* bottom content */}
       <div className="max-w-[544px] space-y-2 p-2 transition-transform duration-300 group-hover:-translate-y-8 lg:mx-2">
-        <h4 className="font-space-grotesk text-lg font-bold md:text-xl lg:text-2xl">
+        <h3 className="font-space-grotesk text-lg font-bold md:text-xl lg:text-2xl">
           Next-level work with next-gen tools
-        </h4>
+        </h3>
         <p className="text-brand dark:text-primary text-xs md:text-sm lg:text-base">
           It is a long established fact that a reader will be distracted by the
           readable content of a page when looking at its layout.
