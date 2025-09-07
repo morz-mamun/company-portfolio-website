@@ -1,5 +1,6 @@
 import HomeBanner from '@/components/home/banner';
 import ContactUs from '@/components/home/contact-us';
+import ExploreServices from '@/components/home/explore-services';
 import FAQ from '@/components/home/faq';
 import HowWeManageWork from '@/components/home/how-we-manage-work/how-we-manage-work';
 import JoiningOurTeam from '@/components/home/joining-our-team';
@@ -30,6 +31,11 @@ export default function HomePage() {
       {/* our services */}
       <div>
         <OurServices />
+      </div>
+
+      {/* Explore Services */}
+      <div className="my-10 border-y md:my-20">
+        <ExploreServices />
       </div>
 
       {/* How We Manage Work */}
