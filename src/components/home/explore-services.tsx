@@ -43,7 +43,7 @@ export default function ExploreServices() {
         description="We offer a wide range of services to help you succeed in the digital world. From custom software development to digital marketing, we've got you covered."
         descriptionClassName="lg:mb-20 mb-10 lg:max-w-[850px] xl:max-w-[974px] "
       />
-      <div className="bg-[#F9F9F9] backdrop-blur-[5px] dark:bg-[#121212]">
+      <div className="bg-[#F9F9F9] backdrop-blur-[5px] dark:bg-[#030712]">
         <div className="relative mx-auto h-[500px] max-w-5xl md:h-[600px]">
           {/* Central Toggle Button */}
           <motion.div
@@ -61,7 +61,7 @@ export default function ExploreServices() {
               onClick={toggleExplore}
               className="relative h-20 w-20 cursor-pointer rounded-full border-1 bg-gradient-to-r from-[#19DDDD] via-[#BDFF7C] to-[#E51177] p-0.5 shadow-[0_1px_1px_4px_rgba(255,109,184,0.20)] hover:scale-105 md:h-40 md:w-40"
             >
-              <div className="flex h-full w-full items-center justify-center rounded-full bg-white">
+              <div className="flex h-full w-full items-center justify-center rounded-full bg-white dark:bg-[#030712]">
                 <span className="font-space-grotesk text-sm font-bold md:text-3xl">
                   {isExploring ? 'Close' : 'Explore'}
                 </span>
@@ -91,7 +91,7 @@ export default function ExploreServices() {
                     />
                   )}
                 </div>
-                <span className="text-[10px] font-medium whitespace-nowrap text-gray-700 md:text-sm">
+                <span className="text-[10px] font-medium whitespace-nowrap md:text-sm">
                   {service.name}
                 </span>
               </div>
@@ -115,7 +115,7 @@ export default function ExploreServices() {
                             : -20,
                         }}
                         transition={{ duration: 0.8, delay: subIndex * 0.5 }}
-                        className="cursor-pointer text-[10px] text-gray-600 hover:text-gray-800 md:py-1.5 md:text-xs"
+                        className="text-[10px] text-gray-600 md:py-1.5 md:text-xs dark:text-gray-400"
                       >
                         • {subService}
                       </motion.div>
@@ -123,7 +123,7 @@ export default function ExploreServices() {
                   {service.subServices.length > 2 && (
                     <Link
                       href={service.link}
-                      className="cursor-pointer text-[10px] text-gray-500 md:py-1 md:pt-2 md:text-xs"
+                      className="cursor-pointer text-[10px] text-gray-600 hover:text-gray-800 md:py-1.5 md:text-xs dark:text-gray-400"
                     >
                       +{service.subServices.length - 2} more services...
                     </Link>
