@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 import SectionHeading from '../shared/section-heading';
 import { exploreServices } from '@/constants/explore-services-data';
+import { Ripple } from '../magicui/ripple';
 export default function ExploreServices() {
   const [isExploring, setIsExploring] = useState(false);
   const [visibleSubServices, setVisibleSubServices] = useState<{
@@ -44,7 +45,7 @@ export default function ExploreServices() {
         descriptionClassName="lg:mb-20 mb-10 lg:max-w-[850px] xl:max-w-[974px] "
       />
       <div className="bg-[#F9F9F9] backdrop-blur-[5px] dark:bg-[#030712]">
-        <div className="relative mx-auto h-[500px] max-w-5xl md:h-[600px]">
+        <div className="relative mx-auto h-[500px] max-w-5xl overflow-hidden md:h-[600px]">
           {/* Central Toggle Button */}
           <motion.div
             className="absolute top-3/7 left-1/2 z-20 -translate-x-1/2 -translate-y-1/2 md:top-1/2"
@@ -68,7 +69,7 @@ export default function ExploreServices() {
               </div>
             </button>
           </motion.div>
-
+          <Ripple />
           {/* Service Items */}
           {exploreServices?.map((service, index) => (
             <motion.div
