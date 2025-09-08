@@ -6,20 +6,20 @@ export default function VideoSection() {
     <section className="relative mx-auto my-16 max-w-screen-xl">
       <div className="mx-auto max-w-screen-lg">
         <div className="relative overflow-hidden rounded-[28px] border border-gray-200 bg-gray-50 p-4 dark:border-gray-700 dark:bg-gray-800">
-          <ShineBorder shineColor={['#A07CFE', '#FE8FB5', '#FFBE7B']} />
+          <ShineBorder shineColor={['#011659', '#0A2F89', '#1F55BB']} />
           <div className="relative">
             <HeroVideoDialog
               className="block dark:hidden"
               animationStyle="from-center"
               videoSrc="https://www.youtube.com/embed/qh3NGpYRG3I?si=4rb-zSdDkVK9qxxb"
-              thumbnailSrc="/banner.png"
+              thumbnailSrc="/banner.jpg"
               thumbnailAlt="Hero Video"
             />
             <HeroVideoDialog
               className="hidden dark:block"
               animationStyle="from-center"
               videoSrc="https://www.youtube.com/embed/qh3NGpYRG3I?si=4rb-zSdDkVK9qxxb"
-              thumbnailSrc="/banner.png"
+              thumbnailSrc="/banner.jpg"
               thumbnailAlt="Hero Video"
             />
           </div>

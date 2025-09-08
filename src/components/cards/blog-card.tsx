@@ -64,7 +64,7 @@ export default function BlogCard({
             {shortDescription}
           </p>
         </div>
-        {hasBorder && <BorderBeam />}
+        {hasBorder && <BorderBeam size={100} />}
       </div>
     </Link>
   );

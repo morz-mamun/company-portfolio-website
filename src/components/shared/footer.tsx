@@ -194,7 +194,7 @@ export default function Footer() {
             <div className="absolute right-2 bottom-4 hidden lg:block">
               <button
                 onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-                className="shadow-primary/70 flex cursor-pointer items-center gap-2 rounded-full px-4 py-3 shadow-lg transition-colors dark:shadow-lg"
+                className="shadow-primary/70 flex cursor-pointer items-center gap-2 rounded-full bg-gradient-to-b from-[#000750] to-[#002667] px-4 py-3 text-white shadow-lg transition-colors hover:scale-105 hover:bg-gradient-to-b hover:from-[#000EAC] hover:to-[#00163C] dark:shadow-lg"
               >
                 <ArrowUpFromLine
                   size={24}
@@ -207,7 +207,7 @@ export default function Footer() {
             <div className="flex items-center justify-center lg:hidden">
               <button
                 onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-                className="bg-brand dark:bg-primary shadow-primary/70 flex cursor-pointer items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold text-white shadow-lg transition-colors dark:text-black dark:shadow-lg"
+                className="shadow-primary/70 flex cursor-pointer items-center gap-2 rounded-full bg-gradient-to-b from-[#000750] to-[#002667] px-4 py-3 text-white shadow-lg transition-colors hover:scale-105 hover:bg-gradient-to-b hover:from-[#000EAC] hover:to-[#00163C] dark:shadow-lg"
               >
                 <ArrowUpFromLine
                   size={24}
