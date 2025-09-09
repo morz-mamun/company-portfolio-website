@@ -10,7 +10,7 @@ export default function OrbitingCirclesAnimation() {
           <Icons.semrush />
           <Icons.openai />
           <Icons.perflexity />
-          <Icons.photoshop />
+          <Icons.midjourney />
         </OrbitingCircles>
         <OrbitingCircles iconSize={25} radius={130} reverse speed={3}>
           <Icons.openai />
