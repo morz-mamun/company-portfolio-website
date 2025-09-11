@@ -55,6 +55,15 @@ export const metadata: Metadata = {
   description: 'Trust Global Communications',
 };
 
+/**
+ * The root layout component.
+ *
+ * This component is used to wrap the entire app. It sets up the global theme,
+ * and font families.
+ *
+ * @param {ReactNode} children The children to render.
+ * @returns {JSX.Element} The root layout component.
+ */
 export default function RootLayout({
   children,
 }: Readonly<{
