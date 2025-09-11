@@ -3,7 +3,6 @@ import { Icon } from '@iconify/react/dist/iconify.js';
 import {
   ArrowUpFromLine,
   Facebook,
-  Github,
   Linkedin,
   Mail,
   Twitter,
@@ -32,7 +31,7 @@ export default function Footer() {
               <div className="col-span-2 flex flex-col justify-between md:col-span-3 md:flex-row md:gap-5 lg:col-span-2 lg:flex-col lg:gap-0">
                 {/* about us */}
                 <div className="md:w-1/2 lg:w-full">
-                  <h3 className="mb-2 text-lg font-bold">
+                  <h3 className="font-inter mb-2 text-lg font-bold">
                     <span className="dark:text-primary text-brand">
                       Trust Global Communications
                     </span>
@@ -46,7 +45,9 @@ export default function Footer() {
                 </div>
                 {/* contact us */}
                 <div className="space-y-1 md:w-1/2 lg:w-full lg:space-y-2">
-                  <h4 className="text-lg font-semibold lg:mb-4">Contact Us</h4>
+                  <h4 className="font-inter text-lg font-semibold lg:mb-4">
+                    Contact Us
+                  </h4>
                   {/* address */}
                   <p className="dark:text-primary text-brand flex items-start gap-1 text-xs md:text-sm">
                     <Icon
@@ -81,7 +82,9 @@ export default function Footer() {
 
               {/* quick links */}
               <div className="flex flex-col space-y-3 lg:mx-auto">
-                <h4 className="text-lg font-semibold">Quick Links</h4>
+                <h4 className="font-inter text-lg font-semibold">
+                  Quick Links
+                </h4>
                 <div className="flex flex-col items-start space-y-2 text-sm">
                   <Popover open={isOpen} onOpenChange={setIsOpen}>
                     <PopoverTrigger asChild>
@@ -129,7 +132,9 @@ export default function Footer() {
               </div>
               {/* privacy policy */}
               <div className="flex flex-col space-y-3 lg:mx-auto">
-                <h4 className="text-md font-semibold">Privacy Policy</h4>
+                <h4 className="font-inter text-md font-semibold">
+                  Privacy Policy
+                </h4>
                 <ul className="space-y-2 text-sm">
                   <li className="hover:underline">
                     <Link
@@ -151,7 +156,7 @@ export default function Footer() {
               </div>
               {/* social links and follow us */}
               <div className="col-span-2 mx-auto flex flex-col space-y-3 md:col-span-1 lg:mx-auto">
-                <h4 className="mb-4 text-center text-lg font-semibold md:text-start">
+                <h4 className="font-inter mb-4 text-center text-lg font-semibold md:text-start">
                   Follow Us
                 </h4>
                 <div className="flex items-center gap-4">

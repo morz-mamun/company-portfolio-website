@@ -18,7 +18,7 @@ export default function TransformIdeaToReality() {
               <IconSvg />
             </div>
             <div className="z-10 mt-4 flex flex-col items-center text-center text-black dark:text-white">
-              <h3 className="mb-4 text-2xl font-bold md:text-3xl lg:text-4xl">
+              <h3 className="font-inter mb-4 text-2xl font-bold md:text-3xl lg:text-4xl">
                 Let’s Transform Your Idea Into Reality.
               </h3>
               <p className="mb-4 text-base font-medium">

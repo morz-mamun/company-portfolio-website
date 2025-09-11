@@ -25,7 +25,7 @@ export default function FAQ() {
         >
           {accordionItems?.map(({ value, title, content }) => (
             <AccordionItem key={value} value={value}>
-              <AccordionTrigger className="cursor-pointer rounded-none border-b px-3">
+              <AccordionTrigger className="font-inter cursor-pointer rounded-none border-b px-3">
                 {title}
               </AccordionTrigger>
               <AccordionContent className="flex flex-col gap-4 border-b p-3 text-balance">

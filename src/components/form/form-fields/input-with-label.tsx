@@ -25,7 +25,7 @@ export default function InputWithLabel({
     <div className="space-y-2">
       <label
         htmlFor={name}
-        className="text-brand dark:text-primary text-sm font-semibold"
+        className="font-inter text-brand dark:text-primary text-sm font-semibold"
       >
         {label}
       </label>

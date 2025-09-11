@@ -57,7 +57,7 @@ export default function BlogCard({
               })}
             </div>
           </div>
-          <h3 className="text-brand font-bold md:h-12 dark:text-neutral-200">
+          <h3 className="font-inter text-brand font-bold md:h-12 dark:text-neutral-200">
             {shortTitle}
           </h3>
           <p className="text-brand/90 dark:text-neutral-300">
