@@ -1,4 +1,3 @@
-import { FaqItem, homePageFaq } from '@/constants/faq-data/faq-data';
 import SectionHeading from './section-heading';
 import {
   Accordion,
@@ -7,17 +6,14 @@ import {
   AccordionTrigger,
 } from '../ui/accordion';
 import BorderXPattern from './border-x-pattern';
-type FAQProps = {
-  data: FaqItem[];
-};
-export default function FAQ({ data }: FAQProps) {
+import { TFaqSection } from '@/types/faq';
+export default function FAQ({ data }: { data: TFaqSection }) {
+  const { title, description, items } = data;
+
   return (
     <section className="relative mx-auto max-w-7xl border-y">
       <div className="relative mx-4 max-w-4xl border-x px-2 py-14 md:mx-10 md:px-10 lg:mx-auto">
-        <SectionHeading
-          title="Frequently Asked Questions"
-          description="Answers to common questions about Trust Global and its features."
-        />
+        <SectionHeading title={title} description={description} />
         {/* FAQ Accordion */}
         <Accordion
           type="single"
@@ -25,7 +21,7 @@ export default function FAQ({ data }: FAQProps) {
           className="mt-12 w-full"
           defaultValue="item-1"
         >
-          {data?.map(({ value, title, content }) => (
+          {items?.map(({ value, title, content }) => (
             <AccordionItem key={value} value={value}>
               <AccordionTrigger className="font-inter cursor-pointer rounded-none border-b px-3">
                 {title}

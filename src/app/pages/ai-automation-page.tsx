@@ -10,7 +10,7 @@ import {
 } from '@/constants/what-we-do-data/ai-automation-data';
 import { aiAutomationBannerData } from '@/constants/banner-data/ai-automation-banner-data';
 import FAQ from '@/components/shared/faq';
-import { aiAutomationFaq } from '@/constants/faq-data/faq-data';
+import { aiAutomationFaqSectionData } from '@/constants/faq-data/ai-automation-faq';
 
 export default function AiAutomationPage() {
   return (
@@ -42,7 +42,7 @@ export default function AiAutomationPage() {
 
       {/* FAQ section */}
       <div className="mb-10 md:mb-20">
-        <FAQ data={aiAutomationFaq} />
+        <FAQ data={aiAutomationFaqSectionData} />
       </div>
     </main>
   );
