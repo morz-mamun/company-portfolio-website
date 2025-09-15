@@ -9,6 +9,8 @@ import {
   whyChooseUsData,
 } from '@/constants/what-we-do-data/ai-automation-data';
 import { aiAutomationBannerData } from '@/constants/banner-data/ai-automation-banner-data';
+import FAQ from '@/components/shared/faq';
+import { aiAutomationFaq } from '@/constants/faq-data/faq-data';
 
 export default function AiAutomationPage() {
   return (
@@ -37,6 +39,9 @@ export default function AiAutomationPage() {
       <div>
         <LetsBuildFutureBusiness sectionData={letsBuildFutureBusinessData} />
       </div>
+
+      {/* FAQ section */}
+      <FAQ data={aiAutomationFaq} />
     </main>
   );
 }

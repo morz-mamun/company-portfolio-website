@@ -23,11 +23,11 @@ export default function ServiceDescription({
         </div>
         {/* description */}
         <div className="col-span-1 mx-auto space-y-4 lg:col-span-3">
-          <h3
-            className={`text-brand dark:text-primary font-space-grotesk mx-auto text-center text-xl font-bold md:text-[30px] lg:mx-0 lg:text-start ${TitleClassName}`}
+          <h2
+            className={`text-brand dark:text-primary font-inter mx-auto text-center text-xl font-bold md:text-[30px] lg:mx-0 lg:text-start ${TitleClassName}`}
           >
             {title}
-          </h3>
+          </h2>
           <div className="max-w-xl text-sm md:text-base">
             <p className="text-brand/70 dark:text-primary/70">
               {descriptionOne}

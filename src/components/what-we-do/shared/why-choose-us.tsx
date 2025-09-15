@@ -14,7 +14,7 @@ export default function WhyChooseUs({
       {/* section heading */}
       <SectionHeading
         title={sectionTitle}
-        titleClassName="max-w-[300px] md:max-w-lg mx-auto"
+        titleClassName="max-w-[300px] md:max-w-2xl mx-auto"
       />
       {/* marque */}
       <Marquee pauseOnHover className="mt-10 [--duration:20s] md:mt-14">

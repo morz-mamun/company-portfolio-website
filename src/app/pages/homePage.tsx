@@ -1,7 +1,7 @@
 import HomeBanner from '@/components/home/banner';
 import ContactUs from '@/components/home/contact-us';
 import ExploreServices from '@/components/home/explore-services';
-import FAQ from '@/components/home/faq';
+import FAQ from '@/components/shared/faq';
 import HowWeManageWork from '@/components/home/how-we-manage-work/how-we-manage-work';
 import JoiningOurTeam from '@/components/home/joining-our-team';
 import OurBlogs from '@/components/home/our-blogs';
@@ -10,6 +10,7 @@ import TestimonialCarousel from '@/components/home/testimonial-carousel/testimon
 import TransformIdeaToReality from '@/components/home/transform-idea-to-reality/transform-idea-to-reality';
 import TrustedBy from '@/components/home/trusted-by';
 import VideoSection from '@/components/home/video-section';
+import { homePageFaq } from '@/constants/faq-data/faq-data';
 
 export default function HomePage() {
   return (
@@ -57,7 +58,7 @@ export default function HomePage() {
       <JoiningOurTeam />
 
       {/* FAQ Section */}
-      <FAQ />
+      <FAQ data={homePageFaq} />
 
       {/* Contact us */}
       <div className="mb-10 md:mb-20">

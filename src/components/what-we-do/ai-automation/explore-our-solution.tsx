@@ -5,6 +5,7 @@ import {
   facilityAndSecurityAutomation,
   multiAgentOrchestrationData,
   servicesSectionTitleData,
+  voiceAndChatbotAssistant,
   workflowAutomationData,
 } from '@/constants/what-we-do-data/ai-automation-data';
 import BorderXPattern from '@/components/shared/border-x-pattern';
@@ -28,6 +29,8 @@ export default function ExploreOurSolution() {
           <Service sectionData={multiAgentOrchestrationData} />
           {/* Facility and Security Automation */}
           <Service sectionData={facilityAndSecurityAutomation} />
+          {/* Voice and Chatbot Assistant */}
+          <Service sectionData={voiceAndChatbotAssistant} />
 
           {/* border-x pattern design */}
           <BorderXPattern className="absolute top-0 -left-4 w-4 md:-left-44 md:w-44" />

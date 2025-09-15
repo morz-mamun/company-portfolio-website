@@ -20,7 +20,7 @@ export default function BannerTitleAndDescription({
         duration={1}
         by="character"
         animation="fadeIn"
-        className="font-inter mx-1 bg-gradient-to-b from-[#011659] via-[#0A2F89] to-[#1F55BB] bg-clip-text text-base font-bold text-transparent md:mx-7 md:text-[32px] lg:mx-20 lg:text-[38px] xl:mx-0 xl:text-[48px] dark:bg-gradient-to-b dark:from-[#3B82F6] dark:via-[#274690] dark:to-[#1A2A6C]"
+        className="font-inter mx-1 bg-gradient-to-b from-[#011659] via-[#0A2F89] to-[#1F55BB] bg-clip-text text-base leading-14 font-bold text-transparent md:mx-7 md:text-[32px] lg:mx-20 lg:text-[38px] xl:mx-0 xl:text-[48px] dark:bg-gradient-to-b dark:from-[#3B82F6] dark:via-[#274690] dark:to-[#1A2A6C]"
       >
         {title}
       </TextAnimate>
