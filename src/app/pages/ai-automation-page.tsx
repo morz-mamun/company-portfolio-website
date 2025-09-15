@@ -41,7 +41,9 @@ export default function AiAutomationPage() {
       </div>
 
       {/* FAQ section */}
-      <FAQ data={aiAutomationFaq} />
+      <div className="mb-10 md:mb-20">
+        <FAQ data={aiAutomationFaq} />
+      </div>
     </main>
   );
 }

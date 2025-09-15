@@ -58,7 +58,9 @@ export default function HomePage() {
       <JoiningOurTeam />
 
       {/* FAQ Section */}
-      <FAQ data={homePageFaq} />
+      <div className="my-10 md:my-20">
+        <FAQ data={homePageFaq} />
+      </div>
 
       {/* Contact us */}
       <div className="mb-10 md:mb-20">

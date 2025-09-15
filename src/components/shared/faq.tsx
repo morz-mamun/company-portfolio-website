@@ -12,7 +12,7 @@ type FAQProps = {
 };
 export default function FAQ({ data }: FAQProps) {
   return (
-    <section className="relative mx-auto my-10 max-w-7xl border-y md:my-20">
+    <section className="relative mx-auto max-w-7xl border-y">
       <div className="relative mx-4 max-w-4xl border-x px-2 py-14 md:mx-10 md:px-10 lg:mx-auto">
         <SectionHeading
           title="Frequently Asked Questions"
