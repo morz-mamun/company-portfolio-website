@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 export default function AnimatedText({ data }: { data: string[] | undefined }) {
   return (
     <motion.div
-      className="font-space-grotesk flex flex-wrap justify-center text-center text-3xl font-bold md:text-[50px]"
+      className="font-space-grotesk flex flex-wrap justify-center text-center text-[17px] font-bold md:text-3xl"
       initial="hidden"
       animate="visible"
       variants={{
@@ -22,7 +22,7 @@ export default function AnimatedText({ data }: { data: string[] | undefined }) {
       {data?.map((part, index) => (
         <motion.span
           key={index}
-          className="dark:text-primary inline-block bg-[linear-gradient(to_bottom,_#100F0F,_#5C5B5B)] bg-clip-text text-transparent"
+          className="dark:text-primary inline-block bg-gradient-to-b from-[#011659] via-[#0A2F89] to-[#1F55BB] bg-clip-text text-transparent dark:bg-gradient-to-b dark:from-[#3B82F6] dark:via-[#274690] dark:to-[#1A2A6C]"
           variants={{
             hidden: { opacity: 0, y: 50 },
             visible: {

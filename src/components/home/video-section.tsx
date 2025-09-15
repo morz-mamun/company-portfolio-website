@@ -3,7 +3,7 @@ import { ShineBorder } from '../magicui/shine-border';
 
 export default function VideoSection() {
   return (
-    <section className="relative mx-auto my-16 max-w-screen-xl">
+    <section className="relative mx-auto my-10 max-w-screen-xl md:my-16">
       <div className="mx-auto max-w-screen-lg">
         <div className="relative overflow-hidden rounded-[28px] border border-gray-200 bg-gray-50 p-4 dark:border-gray-700 dark:bg-gray-800">
           <ShineBorder shineColor={['#011659', '#0A2F89', '#1F55BB']} />
