@@ -1,4 +1,4 @@
-import AiAutomationPage from '@/app/pages/ai-automation-page';
+import AiBpoSolutionsPage from '@/app/pages/ai-bpo-solutions-page';
 export default function AiAutomation() {
-  return <AiAutomationPage />;
+  return <AiBpoSolutionsPage />;
 }
