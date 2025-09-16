@@ -1,7 +1,7 @@
 export const whatWeDoItemsData = [
   {
-    name: 'AI Automation',
-    link: '/ai-automation',
+    name: 'Automation & AI Multi-Agent Systems',
+    link: '/automation-ai-multi-agent-systems',
     icon: 'mdi:robot-outline', // Represents automation & AI
   },
   {
@@ -15,18 +15,28 @@ export const whatWeDoItemsData = [
     icon: 'mdi:chart-line', // Growth / analytics
   },
   {
-    name: 'SaaS & Affiliate Tools',
-    link: '/saas-affiliate-tools',
+    name: 'SaaS & Automation Tools',
+    link: '/saas-automation-tools',
     icon: 'mdi:cloud-outline', // Cloud-based SaaS tools
   },
   {
-    name: 'E-commerce & Affiliate Services',
-    link: '/e-commerce-affiliate-service',
+    name: 'E-commerce & Management Services',
+    link: '/ecommerce-management-services',
     icon: 'mdi:cart-outline', // Shopping / e-commerce
+  },
+  {
+    name: 'AI BPO Solutions',
+    link: '/ai-bpo-solutions',
+    icon: 'mdi:robot-outline', // AI BPO Solutions
   },
   {
     name: 'IoT & Smart Security Solutions',
     link: '/iot-smart-security-solutions',
     icon: 'mdi:cctv', // Security camera / smart security
+  },
+  {
+    name: 'Emerging AI Services',
+    link: 'emerging-ai-services',
+    icon: 'mdi:robot-outline', // Emerging AI
   },
 ];

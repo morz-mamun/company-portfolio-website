@@ -159,7 +159,7 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
               <PopoverContent
                 align="start"
                 sideOffset={8}
-                className="w-[300px] p-2"
+                className="w-[350px] p-2"
                 onMouseEnter={() => setOpen(true)}
                 onMouseLeave={() => setOpen(false)}
               >

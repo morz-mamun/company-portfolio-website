@@ -81,7 +81,7 @@ export default function WebSiteNavbar() {
                       side="right"
                       sideOffset={-40}
                       alignOffset={30}
-                      className="w-[260px] p-2 md:w-[300px] dark:bg-[#0A0A0A]"
+                      className="w-[270px] p-2 md:w-[330px] dark:bg-[#0A0A0A]"
                     >
                       <div className="flex flex-col gap-1">
                         {whatWeDoItemsData?.map((item, idx) => {
@@ -91,7 +91,7 @@ export default function WebSiteNavbar() {
                               href={item.link}
                               key={`link-${idx}`}
                               onClick={() => setOpen(false)}
-                              className={`relative flex items-center rounded-md px-2 py-1 text-sm text-neutral-600 transition hover:bg-[#CCCCCC]/40 md:text-base dark:text-neutral-300 dark:hover:bg-neutral-800/60 ${subIsActive ? 'bg-[#CCCCCC]/40 px-2 py-1 dark:bg-neutral-800/60' : ''}`}
+                              className={`relative flex items-center rounded-md py-1 text-[13px] text-neutral-600 transition hover:bg-[#CCCCCC]/40 md:px-2 md:text-base dark:text-neutral-300 dark:hover:bg-neutral-800/60 ${subIsActive ? 'bg-[#CCCCCC]/40 px-2 py-1 dark:bg-neutral-800/60' : ''}`}
                             >
                               <Icon icon={item?.icon} className="mr-2" />
                               {item.name}
