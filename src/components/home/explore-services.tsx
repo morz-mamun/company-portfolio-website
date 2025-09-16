@@ -48,7 +48,7 @@ export default function ExploreServices() {
         <div className="relative mx-auto h-[500px] max-w-5xl overflow-hidden md:h-[600px]">
           {/* Central Toggle Button */}
           <motion.div
-            className="absolute top-3/7 left-1/2 z-20 -translate-x-1/2 -translate-y-1/2 md:top-1/2"
+            className="absolute top-1/2 left-1/2 z-20 -translate-x-1/2 -translate-y-1/2"
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{
               opacity: 1,
@@ -60,9 +60,12 @@ export default function ExploreServices() {
           >
             <button
               onClick={toggleExplore}
-              className="relative h-20 w-20 cursor-pointer rounded-full border-1 bg-gradient-to-r from-[#19DDDD] via-[#BDFF7C] to-[#E51177] p-0.5 shadow-[0_1px_1px_4px_rgba(255,109,184,0.20)] hover:scale-105 md:h-40 md:w-40"
+              className="group relative h-20 w-20 cursor-pointer rounded-full border-1 bg-gradient-to-t from-[#19DDDD] via-[#BDFF7C] to-[#E51177] p-0.5 shadow-[0_1px_1px_4px_rgba(255,109,184,0.20)] transition duration-300 ease-out hover:scale-105 md:h-40 md:w-40"
             >
-              <div className="flex h-full w-full items-center justify-center rounded-full bg-white dark:bg-[#030712]">
+              {/* Gradient Glow Layer */}
+              <span className="absolute -inset-1 rounded-full bg-gradient-to-t from-[#19DDDD] via-[#BDFF7C] to-[#E51177] opacity-0 blur-xl transition duration-300 group-hover:opacity-100" />
+
+              <div className="relative z-10 flex h-full w-full items-center justify-center rounded-full bg-white dark:bg-[#030712]">
                 <span className="font-inter text-sm font-bold md:text-3xl">
                   {isExploring ? 'Close' : 'Explore'}
                 </span>
