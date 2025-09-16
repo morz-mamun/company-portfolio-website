@@ -11,7 +11,7 @@ export default function NotFound() {
 
       {/* middle content */}
       <div className="rounded-[20px] border-2 bg-[linear-gradient(182deg,#100F0F_48.65%,#5C5B5B_83.27%)] bg-clip-text px-2 pt-5 font-bold text-transparent shadow-[0_4px_3px_0_rgba(0,0,0,0.25),0_2px_1.7px_0_rgba(180,180,180,0.25)] md:rounded-[40px] md:border-[6px] md:px-5 lg:border-[6px] lg:px-[32px] lg:pt-10 dark:bg-[linear-gradient(182deg,#f5f5f5_48.65%,#a1a1a1_83.27%)]">
-        <p className="font-space-grotesk text-xs md:text-2xl lg:text-[32px]">
+        <p className="font-inter text-xs md:text-2xl lg:text-[32px]">
           <span className="text-xl md:text-[32px] lg:text-[50px]">ERROR</span>{' '}
           <br />
           Sorry, <br />

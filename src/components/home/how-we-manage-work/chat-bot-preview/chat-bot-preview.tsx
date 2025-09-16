@@ -22,7 +22,7 @@ export default function ChatBotPreview() {
       </div>
       {/* bottom content */}
       <div className="max-w-[544px] space-y-2 p-2 transition-transform duration-300 group-hover:-translate-y-8 lg:mx-2">
-        <h3 className="font-space-grotesk text-lg font-bold md:text-xl lg:text-2xl">
+        <h3 className="font-inter text-lg font-bold md:text-xl lg:text-2xl">
           Collaborate Our Clients With AI Chatbot
         </h3>
         <p className="text-brand dark:text-primary text-xs md:text-sm lg:text-base">

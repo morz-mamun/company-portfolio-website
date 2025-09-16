@@ -21,7 +21,7 @@ export default function ContactUsPage() {
         <div>
           {/* map */}
           <div className="mt-10 md:mt-0">
-            <h3 className="font-space-grotesk text-xl font-bold md:text-2xl">
+            <h3 className="font-inter text-xl font-bold md:text-2xl">
               Visit Us
             </h3>
             <p className="mt-1 flex items-center gap-2 text-xs md:items-start md:text-sm lg:items-center">
@@ -50,7 +50,7 @@ export default function ContactUsPage() {
           {/* contact us */}
           <div className="space-y-4">
             <div className="space-y-1">
-              <h3 className="font-space-grotesk text-xl font-bold md:text-2xl">
+              <h3 className="font-inter text-xl font-bold md:text-2xl">
                 Chat with us
               </h3>
               <p className="dark:text-primary/80 flex items-center gap-2 text-xs text-[#0F0E0E] md:text-sm">
@@ -92,7 +92,7 @@ export default function ContactUsPage() {
           {/* call us */}
           <div className="mt-5 space-y-3">
             <div className="space-y-1">
-              <h3 className="font-space-grotesk text-xl font-bold md:text-2xl">
+              <h3 className="font-inter text-xl font-bold md:text-2xl">
                 Call us
               </h3>
               <p className="dark:text-primary/80 flex items-center gap-2 text-xs text-[#0F0E0E] md:text-sm">

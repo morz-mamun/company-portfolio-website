@@ -99,7 +99,7 @@ export function EmptyStatusState({
     >
       <CardContent className="flex flex-col items-center gap-4">
         <div>{getIcon()}</div>
-        <h3 className="font-space-grotesk text-foreground text-2xl font-semibold text-balance md:text-3xl">
+        <h3 className="font-inter text-foreground text-2xl font-semibold text-balance md:text-3xl">
           {content?.title}
         </h3>
         <p className="text-muted-foreground max-w-[350px] text-sm text-pretty md:mb-6">

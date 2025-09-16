@@ -27,14 +27,14 @@ export default function OrbitingCirclesAnimation() {
           {/* <Icons.openai />
           <Icons.n8n /> */}
         </OrbitingCircles>
-        <p className="font-space-grotesk absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-2xl font-semibold text-[#3D3D3D] md:text-4xl dark:text-[#F6F6F6]">
+        <p className="font-inter absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-2xl font-semibold text-[#3D3D3D] md:text-4xl dark:text-[#F6F6F6]">
           TGC
         </p>
         <div className="from-background pointer-events-none absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-t"></div>
       </div>
       {/* bottom content */}
       <div className="max-w-[544px] space-y-2 p-2 transition-transform duration-300 group-hover:-translate-y-8 lg:mx-2">
-        <h3 className="font-space-grotesk text-lg font-bold md:text-xl lg:text-2xl">
+        <h3 className="font-inter text-lg font-bold md:text-xl lg:text-2xl">
           Next-level work with next-gen tools
         </h3>
         <p className="text-brand dark:text-primary text-xs md:text-sm lg:text-base">

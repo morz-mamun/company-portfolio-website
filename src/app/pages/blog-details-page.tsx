@@ -59,7 +59,7 @@ export default function BlogDetailsPage({ blog }: { blog: TBlog }) {
         </div>
 
         {/* Title */}
-        <h1 className="text-foreground font-space-grotesk mb-6 text-2xl leading-tight font-bold md:text-4xl lg:text-5xl dark:text-white">
+        <h1 className="font-inter text-foreground mb-6 text-2xl leading-tight font-bold md:text-4xl lg:text-5xl dark:text-white">
           {title}
         </h1>
 
