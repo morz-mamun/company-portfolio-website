@@ -57,7 +57,8 @@ export const exploreServices: Service[] = [
     name: 'E-commerce & Affiliate Services',
     link: '/e-commerce-affiliate-service',
     color: 'bg-blue-500',
-    position: 'bottom-2/5 m:bottom-1/3 lg:left-16 left-1 md:left-5',
+    position:
+      'bottom-7/20 md:bottom-2/5 m:bottom-1/3 lg:left-16 left-1 md:left-5',
     subServices: [
       'Online Store Development',
       'Payment Gateway Integration',
@@ -71,7 +72,7 @@ export const exploreServices: Service[] = [
     name: 'IoT & Smart Security Solutions',
     link: '/iot-smart-security-solutions',
     color: 'bg-purple-500',
-    position: 'bottom-2/5 md:bottom-1/3 lg:right-16 right-1 md:right-5',
+    position: 'bottom-7/20 md:bottom-2/5 lg:right-16 right-1 md:right-5',
     subServices: [
       'Smart Home Systems',
       'Security Camera Setup',
@@ -85,7 +86,7 @@ export const exploreServices: Service[] = [
     name: 'SAAS & Affiliate tools',
     link: '/saas-affiliate-tools',
     color: 'bg-teal-400',
-    position: 'bottom-24 md:bottom-28 left-1/2 -translate-x-1/2',
+    position: 'bottom-20 md:bottom-28 left-1/2 -translate-x-1/2',
     subServices: [
       'SaaS Platform Development',
       'Subscription Management',
