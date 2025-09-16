@@ -1,4 +1,4 @@
-import AiAutomationPage from '@/app/pages/ai-automation-page';
+import EmergingApiServicesPage from '@/app/pages/emerging-ai-services-page';
 export default function AiAutomation() {
-  return <AiAutomationPage />;
+  return <EmergingApiServicesPage />;
 }

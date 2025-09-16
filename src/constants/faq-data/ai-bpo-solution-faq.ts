@@ -42,6 +42,6 @@ export const aiBpoSolutionFaq: TFaqItem[] = [
 export const aiBpoSolutionFaqSectionData: TFaqSection = {
   title: 'Frequently Asked Questions',
   description:
-    'Answers to common questions about Trust Global and its features.',
+    'Answers to common questions about AI BPO Solutions and its features.',
   items: aiBpoSolutionFaq,
 };

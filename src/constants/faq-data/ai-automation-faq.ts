@@ -49,6 +49,6 @@ export const aiAutomationFaq: TFaqItem[] = [
 export const aiAutomationFaqSectionData: TFaqSection = {
   title: 'Frequently Asked Questions',
   description:
-    'Answers to common questions about Trust Global and its features.',
+    'Answers to common questions about Automation Ai Multi-Agent Systems and its features.',
   items: aiAutomationFaq,
 };
