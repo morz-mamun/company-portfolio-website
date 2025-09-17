@@ -2,7 +2,6 @@ import BannerTitleAndDescription from '@/components/shared/banner-title-descript
 import WhyChooseUs from '@/components/what-we-do/shared/why-choose-us';
 import LetsBuildFutureBusiness from '@/components/what-we-do/shared/lets-build-future-business';
 import ServiceDescription from '@/components/what-we-do/shared/service-description';
-
 import {
   letsBuildFutureBusinessData,
   serviceDescriptionData,
@@ -10,6 +9,8 @@ import {
 } from '@/constants/what-we-do-data/e-commerce-data';
 import { eCommerceBannerData } from '@/constants/banner-data/e-commerce-banner-data';
 import ExploreOurSolution from '@/components/what-we-do/e-commerce/explore-our-solution';
+import FAQ from '@/components/shared/faq';
+import { eCommerceFaqSectionData } from '@/constants/faq-data/e-commerce-faq';
 
 export default function ECommercePage() {
   return (
@@ -33,6 +34,11 @@ export default function ECommercePage() {
       {/* let's build future of your business */}
       <div>
         <LetsBuildFutureBusiness sectionData={letsBuildFutureBusinessData} />
+      </div>
+
+      {/* FAQ section */}
+      <div className="mb-10 md:mb-20">
+        <FAQ data={eCommerceFaqSectionData} />
       </div>
     </main>
   );

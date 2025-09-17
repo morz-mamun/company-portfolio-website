@@ -1,7 +1,7 @@
 export const eCommerceBannerData = {
-  title: 'E-commerce & Affiliate Services',
+  title: 'E-commerce Management Services',
   description:
-    'Launch and scale your online business with modern affiliate models, automation and performance-driven strategies.',
+    'Launch, optimize, and automate online stores and marketplace operations with AI-powered solutions that boost visibility, increase conversions, and streamline day-to-day management.',
   mobileTitle: ['E-commerce &', 'Affiliate Services'],
   buttonVisivility: true,
 };
