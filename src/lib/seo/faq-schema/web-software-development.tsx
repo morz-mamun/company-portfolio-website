@@ -1,4 +1,4 @@
-export const webSoftwareDevelopmentFaq = {
+export const webSoftwareDevelopmentFaqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
   mainEntity: [

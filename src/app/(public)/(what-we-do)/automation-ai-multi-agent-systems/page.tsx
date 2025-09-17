@@ -1,5 +1,5 @@
 import AiAutomationPage from '@/app/pages/ai-automation-page';
-import { aiAutomationFaq } from '@/lib/seo/faq-schema';
+import { aiAutomationFaqSchema } from '@/lib/seo/faq-schema';
 import { Metadata } from 'next';
 import Script from 'next/script';
 
@@ -17,7 +17,9 @@ export default function AiAutomation() {
         id="faq-schema"
         type="application/ld+json"
         strategy="afterInteractive"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(aiAutomationFaq) }}
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(aiAutomationFaqSchema),
+        }}
       />
     </>
   );

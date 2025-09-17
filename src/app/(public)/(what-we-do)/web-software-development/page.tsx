@@ -1,5 +1,5 @@
 import WebAndSoftwareDevlopmentPage from '@/app/pages/web-software-development-page';
-import { webSoftwareDevelopmentFaq } from '@/lib/seo/faq-schema';
+import { webSoftwareDevelopmentFaqSchema } from '@/lib/seo/faq-schema';
 import { Metadata } from 'next';
 import Script from 'next/script';
 
@@ -17,7 +17,7 @@ export default function WebAndSoftwareDevlopment() {
         type="application/ld+json"
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(webSoftwareDevelopmentFaq),
+          __html: JSON.stringify(webSoftwareDevelopmentFaqSchema),
         }}
       />
     </>

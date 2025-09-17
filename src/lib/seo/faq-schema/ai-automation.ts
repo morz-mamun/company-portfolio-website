@@ -1,4 +1,4 @@
-export const aiAutomationFaq = {
+export const aiAutomationFaqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
   mainEntity: [
