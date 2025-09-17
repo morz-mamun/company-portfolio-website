@@ -1,7 +1,6 @@
 export const saasAffiliatedToolsBannerData = {
-  title: 'SaaS & Affiliate Tools',
+  title: 'SaaS Products & Automation Tools',
   description:
-    'Design and launch custom Micro SaaS tools and affiliate automation systems to drive recurring revenue and engagement.',
-  mobileTitle: ['SaaS & Affiliate Tools'],
+    'Develop scalable SaaS platforms and AI-powered automation tools that save time, reduce costs, and maximize business growth. Our solutions help brands streamline operations, enhance user experiences, and achieve measurable results across digital channels.',
   buttonVisivility: true,
 };

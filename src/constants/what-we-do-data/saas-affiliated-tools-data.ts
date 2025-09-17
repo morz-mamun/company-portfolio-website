@@ -1,42 +1,42 @@
 import { TMarqueeData, TServiceDescription, TServices } from '@/types/services';
 
 export const serviceDescriptionData: TServiceDescription = {
-  title: 'Build Smarter Platforms. Track Performance. Scale Recurring Revenue.',
+  title: 'Build Smarter. Automate Faster. Scale with Confidence.',
   descriptionOne:
-    "At Trust Global Communications, we design and develop scalable SaaS products and affiliate marketing tools that fuel growth. Whether you're launching a micro SaaS, managing partners, or building recurring revenue systems—we turn your vision into streamlined, profitable platforms.",
+    'At TGCX, we specialize in developing advanced SaaS Products & Automation Tools that streamline operations, save time, and drive measurable growth. Our AI-powered platforms and automation workflows help businesses optimize efficiency, increase conversions, and scale effortlessly.',
   descriptionTwo:
-    'Our approach blends technical precision with marketing insight, so your software isn’t just functional—it’s conversion-ready, monetizable, and built for scale.',
+    'From affiliate marketing automation to AI content creation and workflow tools, every solution is designed to perform reliably, integrate seamlessly with your existing systems, and unlock new growth opportunities.',
   image: 'https://pub-3c3fbc3b66a54a4ab707f64d0f564e7d.r2.dev/banner03.png',
 };
 
 // indivisual sub services data -->
 // all services section title data -->
-export const servicesSectionTitleData = 'Discover how we can add value';
+export const servicesSectionTitleData = 'Our Core SaaS & Automation Services';
 
-// Micro SaaS Development data -->
-export const microSaaSDevelopmentData: TServices = {
+// SaaS Product Development data -->
+export const saasProductDevelopmentData: TServices = {
   data: {
-    title: '1. Micro SaaS Development',
+    title: '1. SaaS Product Development',
     description:
-      "We specialize in building lightweight SaaS tools that solve specific pain points—fast. Whether it's a CRM add-on, AI assistant, dashboard tool, or automation service, we handle everything from idea to MVP and beyond.",
+      'Our SaaS Product Development services deliver custom-built, multi-tenant platforms with subscription billing, AI-enhanced features, and full compliance. Every product is designed for scalability, security, and long-term growth.',
     image: 'https://pub-3c3fbc3b66a54a4ab707f64d0f564e7d.r2.dev/service10.png',
-    imageAlt: 'micro-saas-development',
+    imageAlt: 'saas-product-development',
   },
   subServices: [
     {
-      title: 'Custom MVP design and full-stack development.',
+      title: 'Multi-tenant SaaS platforms with robust architecture.',
       icon: 'tabler:message-chatbot-filled',
     },
     {
-      title: 'Admin dashboards, user accounts and subscription logic.',
+      title: 'Subscription management and billing automation.',
       icon: 'mingcute:voice-fill',
     },
     {
-      title: 'API integrations, security and backend infrastructure.',
+      title: 'AI-enhanced features for smarter user experiences.',
       icon: 'pixel:calender-solid',
     },
     {
-      title: 'Scalable architecture with SaaS metrics built-in.',
+      title: 'Scalable, secure, and compliant from day one.',
       icon: 'pixel:machine-learning',
     },
   ],
@@ -46,31 +46,30 @@ export const microSaaSDevelopmentData: TServices = {
   },
 };
 
-// Affiliate Tracking Dashboards data -->
+// Affiliate Marketing Automation Tools data -->
 export const affiliateTrackingDashboardsData: TServices = {
   data: {
-    title: '2. Affiliate Tracking Dashboards',
+    title: '2. Affiliate Marketing Automation Tools',
     description:
-      'We connect your apps, tools, and systems through visual workflow builders like n8n, Zapier, and Make—automating everything from lead follow-ups to report generation.',
+      'Our Affiliate Marketing Automation Tools help businesses recruit, track, and scale affiliate programs without manual effort. AI-driven dashboards, commission tracking, and fraud detection make managing affiliates effortless.',
     image: 'https://pub-3c3fbc3b66a54a4ab707f64d0f564e7d.r2.dev/service09.png',
-    imageAlt: 'affiliate-tracking-dashboards',
+    imageAlt: 'affiliate-marketing-automation-tools',
   },
   subServices: [
     {
-      title:
-        'Custom or third-party (Post Affiliate Pro, Tapfiliate) dashboard setups.',
+      title: 'Automated affiliate recruitment and onboarding.',
       icon: 'mingcute:code-fill',
     },
     {
-      title: 'Click tracking, referral codes and commission logic.',
+      title: 'Commission tracking and performance dashboards.',
       icon: 'ix:workspace',
     },
     {
-      title: 'Payout workflows and exportable reports.',
+      title: 'AI-powered fraud detection for secure operations.',
       icon: 'pixel:calender-solid',
     },
     {
-      title: 'Partner onboarding, status tracking and alerts.',
+      title: 'Scalable affiliate programs with minimal manual effort.',
       icon: 'streamline-plump:cog-automation-solid',
     },
   ],
@@ -80,32 +79,30 @@ export const affiliateTrackingDashboardsData: TServices = {
   },
 };
 
-// Multi-Agent Orchestration data -->
-export const ecommerceFunnelsAndIntegrationsData: TServices = {
+// E-commerce Growth Strategy Tools data -->
+export const ecommerceGrowthStrategyToolsData: TServices = {
   data: {
-    title: '3. E-commerce Funnels & Integrations',
+    title: '3. E-commerce Growth Strategy Tools',
     description:
-      'From landing pages to checkouts, we build ecommerce funnels that convert visitors into buyersand buyers into loyal subscribers. We also connect your store to everything: CRMs, payment gateways, inventory, and email.',
+      'We design E-commerce Growth Strategy Tools that automate product research, pricing optimization, competitor monitoring, and analytics for online stores. Sellers on Shopify, Amazon, Walmart, and eBay can scale faster and make data-driven decisions.',
     image: 'https://pub-3c3fbc3b66a54a4ab707f64d0f564e7d.r2.dev/service09.png',
-    imageAlt: 'multi-agent-orchestration',
+    imageAlt: 'ecommerce-growth-strategy-tools',
   },
   subServices: [
     {
-      title:
-        'One-click upsells, abandoned cart flows, and checkout optimization.',
+      title: 'AI-powered product research for smarter inventory decisions.',
       icon: 'mdi:face-agent',
     },
     {
-      title:
-        'Shopify, WooCommerce, Stripe, PayPal, Mailchimp, Klaviyo integrations.',
+      title: 'Pricing optimization to maximize revenue and competitiveness.',
       icon: 'ic:baseline-api',
     },
     {
-      title: 'Zapier/n8n automation for post-purchase workflows.',
+      title: 'Competitor monitoring for actionable insights.',
       icon: 'ri:speak-ai-fill',
     },
     {
-      title: 'GA4 & Facebook Pixel event tracking and reporting.',
+      title: 'Analytics dashboards to track growth and performance.',
       icon: 'fluent:settings-cog-multiple-24-filled',
     },
   ],
@@ -115,32 +112,95 @@ export const ecommerceFunnelsAndIntegrationsData: TServices = {
   },
 };
 
-// Workflow Automation data -->
-export const subscriptionAndPaymentSystemsData: TServices = {
+// AI Content Creation Platforms data -->
+export const aiContentCreationPlatformsData: TServices = {
   data: {
-    title: '4. Subscription & Payment Systems',
+    title: '4. AI Content Creation Platforms',
     description:
-      'We build secure, scalable subscription and billing systems that work across currencies, platforms, and business models. Whether it’s monthly access, digital downloads, or premium upgrades, we make getting paid frictionless.',
+      'With our AI Content Creation Platforms, businesses generate SEO-optimized blogs, ad copy, videos, and graphics in seconds. These tools combine AI automation with human oversight to maintain quality and relevance.',
     image: 'https://pub-3c3fbc3b66a54a4ab707f64d0f564e7d.r2.dev/service10.png',
-    imageAlt: 'facility-and-security-automation',
+    imageAlt: 'ai-content-creation-platforms',
   },
   subServices: [
     {
-      title:
-        'Stripe, Paddle, PayPal, Razorpay, and Coinbase Commerce integrations.',
+      title: 'Automated blog writing and SEO content generation.',
       icon: 'hugeicons:ai-security-03',
     },
     {
-      title:
-        'Subscription logic (free trials, upgrades, downgrades, cancellations).',
+      title: 'AI ad copy and creative generation for campaigns.',
       icon: 'material-symbols:sensors-rounded',
     },
     {
-      title: 'Auto-renewals, failed payment handling and webhook events.',
+      title: 'Video and graphic content automation for faster production.',
       icon: 'ri:calendar-schedule-fill',
     },
     {
-      title: 'Detailed revenue reporting and dashboard integration.',
+      title: 'Platforms designed for scalability and content consistency.',
+      icon: 'material-symbols:dashboard-2-rounded',
+    },
+  ],
+  styleClasses: {
+    ServiceTitleAndDescriptionClass: 'lg:order-last',
+    subServicesClass: 'lg:order-first',
+  },
+};
+
+// AI-Powered Marketing Funnel Optimizer data -->
+export const aiPoweredMarketingFunnelOptimizerData: TServices = {
+  data: {
+    title: '5. AI-Powered Marketing Funnel Optimizer',
+    description:
+      'Our AI-Powered Marketing Funnel Optimizer dynamically tests, personalizes, and tracks user behavior to maximize conversions. Funnels adapt automatically to user intent, improving lead generation and sales.',
+    image: 'https://pub-3c3fbc3b66a54a4ab707f64d0f564e7d.r2.dev/service10.png',
+    imageAlt: 'ai-content-creation-platforms',
+  },
+  subServices: [
+    {
+      title: 'AI split testing for optimal funnel performance.',
+      icon: 'hugeicons:ai-security-03',
+    },
+    {
+      title: 'Personalized user experiences based on behavior tracking.',
+      icon: 'material-symbols:sensors-rounded',
+    },
+    {
+      title: 'Automated conversion optimization for higher ROI.',
+      icon: 'ri:calendar-schedule-fill',
+    },
+    {
+      title: 'Data-driven funnels that evolve with audience actions.',
+      icon: 'material-symbols:dashboard-2-rounded',
+    },
+  ],
+  styleClasses: {
+    ServiceTitleAndDescriptionClass: 'lg:order-first',
+    subServicesClass: 'lg:order-last',
+  },
+};
+// Smart Review & Testimonial Collectors data -->
+export const smartReviewAndTestimonialCollectorsData: TServices = {
+  data: {
+    title: '6. Smart Review & Testimonial Collectors',
+    description:
+      'Our Smart Review & Testimonial Collectors automate review collection and analysis across platforms like Google, Trustpilot, Yelp, and social media, building credibility and improving search rankings.',
+    image: 'https://pub-3c3fbc3b66a54a4ab707f64d0f564e7d.r2.dev/service10.png',
+    imageAlt: 'ai-content-creation-platforms',
+  },
+  subServices: [
+    {
+      title: 'Automated review and testimonial collection.',
+      icon: 'hugeicons:ai-security-03',
+    },
+    {
+      title: 'Cross-platform analytics and reporting.',
+      icon: 'material-symbols:sensors-rounded',
+    },
+    {
+      title: 'Display tools to showcase social proof effectively.',
+      icon: 'ri:calendar-schedule-fill',
+    },
+    {
+      title: 'AI-driven insights to boost online reputation.',
       icon: 'material-symbols:dashboard-2-rounded',
     },
   ],
@@ -182,6 +242,6 @@ export type TLetsBuildFutureBusiness = {
 export const letsBuildFutureBusinessData: TLetsBuildFutureBusiness = {
   title: 'Ready to Build Your Platform, Product, or Passive Income Machine?',
   description:
-    'Book your free strategy session today—we’ll map your growth roadmap from visibility to profitability.',
+    'Ready to launch your SaaS product or supercharge growth with AI tools? Contact TGCX today to discover how our SaaS Products & Automation Tools can streamline operations, scale your business, and drive measurable results.',
   image: 'https://pub-3c3fbc3b66a54a4ab707f64d0f564e7d.r2.dev/hexagon.png',
 };

@@ -9,6 +9,8 @@ import {
 } from '@/constants/what-we-do-data/saas-affiliated-tools-data';
 import { saasAffiliatedToolsBannerData } from '@/constants/banner-data/saas-affiliated-tools-banner-data';
 import ExploreOurSolution from '@/components/what-we-do/sass-affiliated-tools/explore-our-solution';
+import FAQ from '@/components/shared/faq';
+import { saasAffiliatedToolsFaqSectionData } from '@/constants/faq-data/saas-affiliated-tools-faq';
 
 export default function SaasAffiliatedToolsPage() {
   return (
@@ -34,6 +36,11 @@ export default function SaasAffiliatedToolsPage() {
       {/* let's build future of your business */}
       <div>
         <LetsBuildFutureBusiness sectionData={letsBuildFutureBusinessData} />
+      </div>
+
+      {/* FAQ section */}
+      <div className="mb-10 md:mb-20">
+        <FAQ data={saasAffiliatedToolsFaqSectionData} />
       </div>
     </main>
   );
