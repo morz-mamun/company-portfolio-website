@@ -1,7 +1,6 @@
 export const iotSmartSecurityBannerData = {
   title: 'IoT & Smart Security Solutions',
   description:
-    'Secure your business with intelligent IoT systems that monitor, control and protect digital and physical environments.',
-  mobileTitle: ['IoT & Smart Security', 'Solutions'],
+    'Connect devices, protect assets, and automate monitoring with intelligent IoT integration and AI-powered security systems. Our solutions help businesses reduce risks, improve compliance, and enhance operational efficiency.',
   buttonVisivility: true,
 };

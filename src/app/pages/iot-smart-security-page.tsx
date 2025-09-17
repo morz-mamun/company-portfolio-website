@@ -3,10 +3,10 @@ import WhyChooseUs from '@/components/what-we-do/shared/why-choose-us';
 import LetsBuildFutureBusiness from '@/components/what-we-do/shared/lets-build-future-business';
 import ServiceDescription from '@/components/what-we-do/shared/service-description';
 import {
-  letsBuildFutureBusinessData,
   serviceDescriptionData,
-} from '@/constants/what-we-do-data/ai-automation-data';
-import { whyChooseUsData } from '@/constants/what-we-do-data/iot-smart-security-data';
+  whyChooseUsData,
+  letsBuildFutureBusinessData,
+} from '@/constants/what-we-do-data/iot-smart-security-data';
 import { iotSmartSecurityBannerData } from '@/constants/banner-data/iot-smart-security-banner-data';
 import ExploreOurSolution from '@/components/what-we-do/iot-smart-security/explore-our-solution';
 

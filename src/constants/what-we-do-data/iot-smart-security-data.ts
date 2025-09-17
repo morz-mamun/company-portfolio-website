@@ -1,43 +1,43 @@
 import { TMarqueeData, TServiceDescription, TServices } from '@/types/services';
 
 export const serviceDescriptionData: TServiceDescription = {
-  title: 'Secure Smarter. Monitor in Real Time. Control from Anywhere.',
+  title: 'Secure Smarter. Monitor Faster. Protect Confidently.',
   descriptionOne:
-    "At Trust Global Communications, we build secure, connected environments using IoT, AI, and automation—so you can manage, monitor, and protect your assets with confidence. Whether you're securing a building, monitoring a remote facility, or integrating smart systems into daily operations, our solutions offer visibility, control, and peace of mind.",
+    'At TGCX, we specialize in IoT & Smart Security Solutions that combine AI-driven surveillance, IoT automation, and smart access control to safeguard enterprises. From smart CCTV systems to cloud-based security dashboards, every solution is designed to reduce risks, improve compliance, and streamline operations.',
   descriptionTwo:
-    'From offices and retail spaces to industrial sites and smart buildings—we make your infrastructure intelligent, secure, and scalable',
+    'Our systems integrate seamlessly with existing platforms, ensuring scalable, reliable, and 24/7 intelligent protection.',
   image: 'https://pub-3c3fbc3b66a54a4ab707f64d0f564e7d.r2.dev/banner01.png',
 };
 
 // indivisual sub services data -->
 // all services section title data -->
-export const servicesSectionTitleData = 'Discover how we can add value';
+export const servicesSectionTitleData = 'Our Core IoT & Security Services';
 
-// IoT Access Control & Real-Time Monitoring data -->
-export const iotAccessControlAndRealTimeMonitoringData: TServices = {
+// Smart Surveillance Systems data -->
+export const smartSurveillanceSystemsData: TServices = {
   data: {
-    title: '1. IoT Access Control & Real-Time Monitoring',
+    title: '1. Smart Surveillance Systems',
     description:
-      'We help you modernize physical access with IoT-powered systems that track entries, control access remotely, and alert you in real time.',
+      'Our Smart Surveillance Systems leverage AI-enabled CCTV and cloud monitoring to detect threats in real-time and prevent incidents before they escalate. Human teams are supported by AI analytics for faster, more accurate monitoring.',
     image: 'https://pub-3c3fbc3b66a54a4ab707f64d0f564e7d.r2.dev/banner01.png',
-    imageAlt: 'iot-access-control-and-real-time-monitoring',
+    imageAlt: 'smart-surveillance-systems',
   },
   subServices: [
     {
-      title: 'Biometric, RFID, and voice activated smart locks.',
+      title: 'AI-powered CCTV and cloud surveillance security.',
       icon: 'tabler:message-chatbot-filled',
     },
     {
-      title: 'Entry logging and role-based access permissions.',
+      title:
+        'Facial recognition and motion detection for proactive monitoring.',
       icon: 'mingcute:voice-fill',
     },
     {
-      title: 'Real-time mobile notifications and dashboard monitoring.',
+      title: 'Real-time threat alerts and incident notifications.',
       icon: 'pixel:calender-solid',
     },
     {
-      title:
-        'Cloud-based access history synced to apps like Google Sheets or Notion.',
+      title: 'Scalable surveillance systems for enterprise environments.',
       icon: 'pixel:machine-learning',
     },
   ],
@@ -47,31 +47,30 @@ export const iotAccessControlAndRealTimeMonitoringData: TServices = {
   },
 };
 
-// Smart Alarms, Sensors & Surveillance data -->
-export const smartAlarmsSensorsAndSurveillanceData: TServices = {
+// IoT Device Integration & Automation data -->
+export const iotDeviceIntegrationAndAutomationData: TServices = {
   data: {
-    title: '2. Smart Alarms, Sensors & Surveillance',
+    title: '2. IoT Device Integration & Automation',
     description:
-      'Our intelligent sensor and surveillance systems detect, analyze, and respond to threats before they escalate giving you proactive security, not just reactive alerts.',
+      'We implement IoT Device Integration & Automation to connect smart devices across enterprise environments, enabling predictive maintenance, automated workflows, and seamless communication.',
     image: 'https://pub-3c3fbc3b66a54a4ab707f64d0f564e7d.r2.dev/service09.png',
-    imageAlt: 'workflow-automation',
+    imageAlt: 'iot-device-integration-and-automation',
   },
   subServices: [
     {
-      title: 'Smart CCTV with AI motion and facial recognition.',
+      title: 'Enterprise IoT systems for connected operations.',
       icon: 'mingcute:code-fill',
     },
     {
-      title: 'Smoke, gas, motion, temperature and glass break sensors.',
+      title: 'Automation solutions to optimize workflows.',
       icon: 'ix:workspace',
     },
     {
-      title:
-        'Mobile video feeds, instant alerts, and automated safety workflows.',
+      title: 'Predictive maintenance to reduce downtime.',
       icon: 'pixel:calender-solid',
     },
     {
-      title: 'Integration with emergency response systems.',
+      title: 'Integration with cloud dashboards for real-time insights.',
       icon: 'streamline-plump:cog-automation-solid',
     },
   ],
@@ -81,30 +80,30 @@ export const smartAlarmsSensorsAndSurveillanceData: TServices = {
   },
 };
 
-// Cybersecurity for Websites & IoT Devices data -->
-export const cybersecurityForWebsitesAndIoTDevicesData: TServices = {
+// Access Control & Biometric Security data -->
+export const accessControlAndBiometricSecurityData: TServices = {
   data: {
-    title: '3. Cybersecurity for Websites & IoT Devices',
+    title: '3. Access Control & Biometric Security',
     description:
-      'We secure both digital infrastructure and physical devices offering end-to-end cybersecurity for websites, apps, and smart systems. Our approach combines human expertise with AI-enhanced threat detection and response.',
+      'Our Access Control & Biometric Security solutions provide AI-powered authentication with biometric scanning, facial recognition, and RFID to protect sensitive areas.',
     image: 'https://pub-3c3fbc3b66a54a4ab707f64d0f564e7d.r2.dev/service09.png',
-    imageAlt: 'multi-agent-orchestration',
+    imageAlt: 'access-control-and-biometric-security',
   },
   subServices: [
     {
-      title: 'Firewalls, malware protection, and DDoS mitigation.',
+      title: 'Biometric access control for secure entry.',
       icon: 'mdi:face-agent',
     },
     {
-      title: 'SSL, 2FA, token systems and website hardening.',
+      title: 'AI security systems for enhanced protection.',
       icon: 'ic:baseline-api',
     },
     {
-      title: 'Encrypted data flows across IoT devices and APIs.',
+      title: 'Smart identity verification for employees and visitors.',
       icon: 'ri:speak-ai-fill',
     },
     {
-      title: 'Risk assessments, audits and real-time security alerts.',
+      title: 'Enterprise-grade access control and monitoring.',
       icon: 'fluent:settings-cog-multiple-24-filled',
     },
   ],
@@ -114,36 +113,68 @@ export const cybersecurityForWebsitesAndIoTDevicesData: TServices = {
   },
 };
 
-// Workflow Automation data -->
-export const industrialAndOfficeAutomationData: TServices = {
+// Cloud-Based Security Monitoring data -->
+export const cloudBasedSecurityMonitoringData: TServices = {
   data: {
-    title: '4. Industrial & Office Automation',
+    title: '4. Cloud-Based Security Monitoring',
     description:
-      'Transform your workplace into a smart, self-regulating environment. Our automation solutions help reduce energy usage, increase safety, and simplify facility management through real-time data and control.',
+      'Cloud-Based Security Monitoring delivers centralized dashboards to track IoT devices, detect vulnerabilities, and send instant alerts for suspicious activity.',
     image: 'https://pub-3c3fbc3b66a54a4ab707f64d0f564e7d.r2.dev/service10.png',
-    imageAlt: 'facility-and-security-automation',
+    imageAlt: 'cloud-based-security-monitoring',
   },
   subServices: [
     {
-      title: 'Automated lighting, HVAC and environmental controls.',
+      title: 'IoT security management platforms for centralized monitoring.',
       icon: 'hugeicons:ai-security-03',
     },
     {
-      title: 'AI-triggered workflows based on motion, schedule, or behavior.',
+      title: 'Real-time AI security analytics and alerts.',
       icon: 'material-symbols:sensors-rounded',
     },
     {
-      title: 'Smart scheduling for utilities and device usage.',
+      title: 'Remote monitoring solutions for 24/7 coverage.',
       icon: 'ri:calendar-schedule-fill',
     },
     {
-      title: 'Central dashboard for multiple locations or departments.',
+      title: 'Integration with enterprise systems for seamless oversight.',
       icon: 'material-symbols:dashboard-2-rounded',
     },
   ],
   styleClasses: {
     ServiceTitleAndDescriptionClass: 'lg:order-last',
     subServicesClass: 'lg:order-first',
+  },
+};
+// Risk Prevention & Cybersecurity
+export const riskPreventionAndCybersecurityData: TServices = {
+  data: {
+    title: '5. Risk Prevention & Cybersecurity',
+    description:
+      'Our Risk Prevention & Cybersecurity combines AI threat detection with compliance protocols to protect networks, prevent intrusions, and ensure GDPR, HIPAA, and ISO compliance.',
+    image: 'https://pub-3c3fbc3b66a54a4ab707f64d0f564e7d.r2.dev/service10.png',
+    imageAlt: 'cloud-based-security-monitoring',
+  },
+  subServices: [
+    {
+      title: 'AI cybersecurity solutions for proactive threat detection.',
+      icon: 'hugeicons:ai-security-03',
+    },
+    {
+      title: 'IoT risk prevention strategies for enterprise networks.',
+      icon: 'material-symbols:sensors-rounded',
+    },
+    {
+      title: 'Compliance management with GDPR, HIPAA, and ISO standards.',
+      icon: 'ri:calendar-schedule-fill',
+    },
+    {
+      title: 'Continuous monitoring and vulnerability management.',
+      icon: 'material-symbols:dashboard-2-rounded',
+    },
+  ],
+  styleClasses: {
+    ServiceTitleAndDescriptionClass: 'lg:order-first',
+    subServicesClass: 'lg:order-last',
   },
 };
 
@@ -179,6 +210,6 @@ export type TLetsBuildFutureBusiness = {
 export const letsBuildFutureBusinessData: TLetsBuildFutureBusiness = {
   title: 'Make Your Spaces Smarter. Make Your Operations Safer',
   description:
-    'Let’s build a secure, intelligent environment tailored to your business.',
+    'Want to secure your enterprise with IoT and AI-powered security? Contact TGCX today to discover how our IoT & Smart Security Solutions can build a smarter, safer, and more connected business.',
   image: 'https://pub-3c3fbc3b66a54a4ab707f64d0f564e7d.r2.dev/hexagon.png',
 };
