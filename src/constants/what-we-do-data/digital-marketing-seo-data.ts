@@ -42,8 +42,8 @@ export const seoData: TServices = {
     },
   ],
   styleClasses: {
-    ServiceTitleAndDescriptionClass: 'order-1',
-    subServicesClass: 'order-2',
+    ServiceTitleAndDescriptionClass: 'lg:order-first',
+    subServicesClass: 'lg:order-last',
   },
 };
 
@@ -76,8 +76,8 @@ export const paidAdsData: TServices = {
     },
   ],
   styleClasses: {
-    ServiceTitleAndDescriptionClass: 'order-2',
-    subServicesClass: 'order-1',
+    ServiceTitleAndDescriptionClass: 'lg:order-last',
+    subServicesClass: 'lg:order-first',
   },
 };
 
@@ -110,8 +110,8 @@ export const socialMediaData: TServices = {
     },
   ],
   styleClasses: {
-    ServiceTitleAndDescriptionClass: 'order-1',
-    subServicesClass: 'order-2',
+    ServiceTitleAndDescriptionClass: 'lg:order-first',
+    subServicesClass: 'lg:order-last',
   },
 };
 
@@ -143,8 +143,8 @@ export const contentStrategyData: TServices = {
     },
   ],
   styleClasses: {
-    ServiceTitleAndDescriptionClass: 'order-2',
-    subServicesClass: 'order-1',
+    ServiceTitleAndDescriptionClass: 'lg:order-last',
+    subServicesClass: 'lg:order-first',
   },
 };
 
@@ -176,8 +176,8 @@ export const brandingAndLeadGenerationData: TServices = {
     },
   ],
   styleClasses: {
-    ServiceTitleAndDescriptionClass: 'order-1',
-    subServicesClass: 'order-2',
+    ServiceTitleAndDescriptionClass: 'lg:order-first',
+    subServicesClass: 'lg:order-last',
   },
 };
 

@@ -29,7 +29,7 @@ export default function WebAndSoftwareDevlopmentPage() {
         />
       </div>
       {/* explore our services / solutions */}
-      <div className="my-14">
+      <div className="my-10 md:my-14">
         <ExploreOurSolution />
       </div>
       {/* why client choose us */}

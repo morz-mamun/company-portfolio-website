@@ -5,14 +5,18 @@ import { TBannerData } from '@/types/banners';
 
 export default function BannerTitleAndDescription({
   sectionData,
+  className,
   descriptionClassName,
 }: {
   sectionData: TBannerData;
+  className?: string;
   descriptionClassName?: string;
 }) {
   const { title, description, mobileTitle, buttonVisivility } = sectionData;
   return (
-    <div className="mx-auto mt-3 max-w-[350px] text-center md:mt-[28px] md:max-w-5xl">
+    <div
+      className={`${className} mx-auto mt-3 max-w-[350px] text-center md:mt-[28px] md:max-w-5xl`}
+    >
       {/* Content title with animation for desktop */}
       <TextAnimate
         as="h1"

@@ -11,7 +11,7 @@ export default function ServiceTitleAndDescription({
     <div
       className={`mx-auto flex flex-col space-y-4 lg:col-span-2 lg:mx-0 lg:space-y-5 ${className}`}
     >
-      <h3 className="font-inter text-xl font-bold md:text-[32px]">
+      <h3 className="font-inter text-lg font-bold md:text-[32px]">
         {data?.title}
       </h3>
       <p className="text-brand/70 dark:text-primary/70 text-sm md:text-base">

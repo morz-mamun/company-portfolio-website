@@ -23,7 +23,7 @@ export default function ECommercePage() {
         <ServiceDescription sectionData={serviceDescriptionData} />
       </div>
       {/* explore our services / solutions */}
-      <div className="my-14">
+      <div className="my-5 md:my-14">
         <ExploreOurSolution />
       </div>
       {/* why client choose us */}

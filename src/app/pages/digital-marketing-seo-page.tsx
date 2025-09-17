@@ -18,18 +18,19 @@ export default function DigitalMarketingAndSeoPage() {
       <div className="mt-20 md:mt-28 lg:mt-32">
         <BannerTitleAndDescription
           sectionData={digitalMarketingSeoBannerData}
+          className="md:!max-w-3xl"
         />
       </div>
       {/* service description section */}
       <div className="mt-14">
         <ServiceDescription
           sectionData={serviceDescriptionData}
-          TitleClassName="lg:max-w-2xl "
+          TitleClassName="md:!max-w-2xl"
           descriptionTwoClassName="mt-4"
         />
       </div>
       {/* explore our services / solutions */}
-      <div className="my-14">
+      <div className="my-5 md:my-14">
         <ExploreOurSolution />
       </div>
       {/* why client choose us */}
