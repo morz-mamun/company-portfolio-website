@@ -1,43 +1,44 @@
 import { TMarqueeData, TServiceDescription, TServices } from '@/types/services';
 
 export const serviceDescriptionData: TServiceDescription = {
-  title:
-    'Attract the Right Traffic. Build a Memorable Brand. Convert With Confidence.',
+  title: 'Rank Higher. Advertise Smarter. Convert Better.',
   descriptionOne:
-    "At Trust Global Communications, we blend creative strategy with performance-driven execution to grow your brand, traffic, and revenue across every digital touchpoint. Whether you're launching a new product, scaling your online presence, or optimizing conversions—we build campaigns that connect, convert, and compound your growth.",
+    'Our Digital Marketing & SEO solutions combine AI-driven strategies, programmatic SEO, paid advertising, and content marketing to help businesses reach the right audience at the right time.',
   descriptionTwo:
-    'From SEO and paid ads to content and brand visibility, our digital marketing team is your engine for sustainable success.',
+    'From local campaigns to international expansion, every strategy is data-driven, fully optimized, and designed to increase visibility, generate leads, and maximize ROI. We focus on measurable results that grow your brand, improve engagement, and drive conversions across all digital channels.',
   image: 'https://pub-3c3fbc3b66a54a4ab707f64d0f564e7d.r2.dev/baner04.jpg',
 };
 
 // indivisual sub services data -->
 
 // all services section title data -->
-export const servicesSectionTitleData = 'Discover how we can add value';
-// SEO data -->
-export const seoData: TServices = {
+export const servicesSectionTitleData = 'Our Core Digital Marketing Services';
+// AI-Powered SEO (On-Page, Off-Page, Technical) data -->
+export const aiPoweredSeoData: TServices = {
   data: {
-    title: '1. SEO (On-Page, Off-Page, Technical)',
+    title: '1. AI-Powered SEO (On-Page, Off-Page, Technical)',
     description:
-      'We take a 360° approach to SEO optimizing your website inside and out. From technical health to high-authority backlinks, we make sure your brand shows up where it matters most.',
+      'Our AI-Powered SEO solutions cover programmatic SEO, keyword clustering, and multilingual targeting, combined with technical improvements like schema markup, site speed optimization, and advanced crawling strategies. These methods improve rankings, increase organic traffic, and enhance website authority.',
     image: 'https://pub-3c3fbc3b66a54a4ab707f64d0f564e7d.r2.dev/service10.png',
-    imageAlt: 'seo-on-page-off-page-technical',
+    imageAlt: 'ai-powered-seo',
   },
   subServices: [
     {
-      title: 'On-Page SEO: keyword mapping, meta tags, internal linking.',
+      title: 'On-page SEO optimization for higher search visibility.',
       icon: 'tabler:message-chatbot-filled',
     },
     {
-      title: 'Off-Page SEO: white-hat link building, citations, digital PR.',
+      title:
+        'Off-page link-building strategies to strengthen domain authority.',
       icon: 'mingcute:voice-fill',
     },
     {
-      title: 'Technical SEO: speed, schema, mobile optimization, crawl audits.',
+      title:
+        'Technical SEO audits for site speed, schema, and crawl efficiency.',
       icon: 'pixel:calender-solid',
     },
     {
-      title: 'Tools: Surfer SEO, Ahrefs, SEMrush, Screaming Frog',
+      title: 'Programmatic SEO solutions to scale content and keyword reach.',
       icon: 'pixel:machine-learning',
     },
   ],
@@ -47,31 +48,30 @@ export const seoData: TServices = {
   },
 };
 
-// Paid Ads data -->
-export const paidAdsData: TServices = {
+// Paid Ad Campaigns (Google, Meta, LinkedIn) data -->
+export const paidAdCampaignsData: TServices = {
   data: {
-    title: '2. Paid Ads (Google, Meta, TikTok)',
+    title: '2. Paid Ad Campaigns (Google, Meta, LinkedIn)',
     description:
-      'We design, launch, and optimize paid campaigns that put your offer in front of the right audience at the right time. Whether it’s search intent or scroll-stopping visuals, we deliver clicks that turn into customers.',
+      'With Paid Ad Campaigns, we run AI-optimized ads on Google Ads, Meta, and LinkedIn, leveraging predictive bidding, audience segmentation, and retargeting to reduce CPC and maximize ROAS. Campaigns are continuously optimized for cost efficiency and conversions.',
     image: 'https://pub-3c3fbc3b66a54a4ab707f64d0f564e7d.r2.dev/service09.png',
     imageAlt: 'paid-ads-google-meta-tiktok',
   },
   subServices: [
     {
-      title: 'Google Ads(Search, Display, YouTube)',
+      title: 'Google Ads management with AI-driven targeting and bidding.',
       icon: 'mingcute:code-fill',
     },
     {
-      title:
-        'Meta Ads (Facebook & Instagram retargeting + lookalike audiences)',
+      title: 'Meta (Facebook/Instagram) campaigns for audience engagement.',
       icon: 'ix:workspace',
     },
     {
-      title: 'TikTok & short-form video ad campaigns',
+      title: 'LinkedIn B2B ads for lead generation and professional targeting.',
       icon: 'pixel:calender-solid',
     },
     {
-      title: 'Conversion tracking, budget optimization, and A/B testing',
+      title: 'ROI-focused ad strategies with ongoing optimization.',
       icon: 'streamline-plump:cog-automation-solid',
     },
   ],
@@ -81,31 +81,32 @@ export const paidAdsData: TServices = {
   },
 };
 
-// Social Media data -->
-export const socialMediaData: TServices = {
+// Content Marketing & Copywritinga data -->
+export const contentMarketingCopywritingData: TServices = {
   data: {
-    title: '3. (Social Media Marketing & Analytics)',
+    title: '3. Content Marketing & Copywriting',
     description:
-      'Social media should do more than just post,it should perform. We create platform-specific strategies that blend storytelling, social proof, and trend awareness to drive engagement and conversions.',
+      'Our Content Marketing & Copywriting combines AI tools and human expertise to produce blogs, long-form articles, email copy, and social content. Each piece is crafted to rank in search engines while building brand authority and audience trust',
     image: 'https://pub-3c3fbc3b66a54a4ab707f64d0f564e7d.r2.dev/service09.png',
-    imageAlt: 'social-media-marketing-analytics',
+    imageAlt: 'content-marketing-copywriting',
   },
   subServices: [
     {
       title:
-        'Content calendars, reels, and stories for Meta, TikTok, LinkedIn, and X.',
+        'SEO-optimized blogs and long-form content to increase organic traffic.',
       icon: 'mdi:face-agent',
     },
     {
-      title: 'Brand voice development + visual consistency.',
+      title: 'Email and social copywriting for engagement and conversion.',
       icon: 'ic:baseline-api',
     },
     {
-      title: 'Community management and engagement tracking.',
+      title:
+        'AI-assisted content creation with human editing for tone and authority.',
       icon: 'ri:speak-ai-fill',
     },
     {
-      title: 'Real-time analytics dashboards and insights.',
+      title: 'Strategic content planning aligned with marketing goals.',
       icon: 'fluent:settings-cog-multiple-24-filled',
     },
   ],
@@ -115,30 +116,30 @@ export const socialMediaData: TServices = {
   },
 };
 
-// Content Strategy data -->
-export const contentStrategyData: TServices = {
+// Marketing Funnel Automation data -->
+export const marketingFunnelAutomationData: TServices = {
   data: {
-    title: '4. Content Strategy & Funnel Copy',
+    title: '4. Marketing Funnel Automation',
     description:
-      'From top of funnel awareness to post-purchase retention, we create content that moves people. Backed by SEO and behavioral insights, every word is crafted to educate, persuade, and inspire action.',
+      'With Marketing Funnel Automation, we design AI-driven sales funnels that nurture leads through personalized email sequences, retargeting campaigns, and automated drip workflows. Funnels are continuously tested and optimized for higher conversion rates.',
     image: 'https://pub-3c3fbc3b66a54a4ab707f64d0f564e7d.r2.dev/service10.png',
-    imageAlt: 'facility-and-security-automation',
+    imageAlt: 'marketing-funnel-automation',
   },
   subServices: [
     {
-      title: 'SEO blog strategy, topic clustering and content briefs.',
+      title: 'Automated lead nurturing sequences with AI personalization.',
       icon: 'hugeicons:ai-security-03',
     },
     {
-      title: 'Landing pages, service pages, and product copy.',
+      title: 'Retargeting campaigns to recover lost opportunities.',
       icon: 'material-symbols:sensors-rounded',
     },
     {
-      title: 'Email sequences, social captions, ad copy and funnel flows.',
+      title: 'Optimized funnels for CRO and revenue growth.',
       icon: 'ri:calendar-schedule-fill',
     },
     {
-      title: 'Human-written, AI-assisted, and conversion-optimized.',
+      title: 'End-to-end sales funnel design and implementation.',
       icon: 'material-symbols:dashboard-2-rounded',
     },
   ],
@@ -148,36 +149,68 @@ export const contentStrategyData: TServices = {
   },
 };
 
-// Branding and Lead Generation data -->
-export const brandingAndLeadGenerationData: TServices = {
+// Social Media Growth & Branding data -->
+export const socialMediaGrowthBrandingData: TServices = {
   data: {
-    title: '5. Branding & Lead Generation Campaigns',
+    title: '5. Social Media Growth & Branding',
     description:
-      'We help you create a brand that stands out and a lead gen system that brings in qualified prospects daily. From the first click to the final sale, we engineer every step of the customer journey to build trust and drive conversions.',
+      'Our Social Media Growth & Branding services leverage AI-assisted tools for automated posting, trend analysis, and audience engagement. We manage content calendars, influencer partnerships, and campaigns to expand reach and strengthen brand presence.',
     image: 'https://pub-3c3fbc3b66a54a4ab707f64d0f564e7d.r2.dev/service10.png',
-    imageAlt: 'facility-and-security-automation',
+    imageAlt: 'social-media-growth-branding',
   },
   subServices: [
     {
-      title: 'Brand identity, messaging and creative guidelines.',
+      title: 'AI-powered social media management across all major platforms.',
       icon: 'hugeicons:ai-security-03',
     },
     {
-      title: 'Lead magnets, opt-in flows, and personaligated content.',
+      title: 'Automated posting and engagement monitoring.',
       icon: 'material-symbols:sensors-rounded',
     },
     {
-      title: 'Landing pages and nurturing sequences.',
+      title: 'Influencer collaborations to boost visibility and trust.',
       icon: 'ri:calendar-schedule-fill',
     },
     {
-      title: 'Campaigns across social, email, paid media and more.',
+      title: 'Brand growth campaigns tailored to target audiences.',
       icon: 'material-symbols:dashboard-2-rounded',
     },
   ],
   styleClasses: {
     ServiceTitleAndDescriptionClass: 'lg:order-first',
     subServicesClass: 'lg:order-last',
+  },
+};
+// Email Marketing & Lead Nurturing data -->
+export const emailMarketingLeadNurturingData: TServices = {
+  data: {
+    title: '6. Email Marketing & Lead Nurturing',
+    description:
+      'With Email Marketing & Lead Nurturing, we craft AI-personalized campaigns that segment audiences, optimize subject lines, and improve open and click-through rates. Automated drip campaigns maintain engagement until leads are ready to convert.',
+    image: 'https://pub-3c3fbc3b66a54a4ab707f64d0f564e7d.r2.dev/service10.png',
+    imageAlt: 'social-media-growth-branding',
+  },
+  subServices: [
+    {
+      title: 'Personalized email campaigns powered by AI.',
+      icon: 'hugeicons:ai-security-03',
+    },
+    {
+      title: 'Automated drip sequences to nurture leads efficiently.',
+      icon: 'material-symbols:sensors-rounded',
+    },
+    {
+      title: 'Audience segmentation for higher engagement and conversions.',
+      icon: 'ri:calendar-schedule-fill',
+    },
+    {
+      title: 'Optimized subject lines and content for maximum open rates.',
+      icon: 'material-symbols:dashboard-2-rounded',
+    },
+  ],
+  styleClasses: {
+    ServiceTitleAndDescriptionClass: 'lg:order-last',
+    subServicesClass: 'lg:order-first',
   },
 };
 
@@ -213,6 +246,6 @@ export type TLetsBuildFutureBusiness = {
 export const letsBuildFutureBusinessData: TLetsBuildFutureBusiness = {
   title: 'Let’s Elevate Your Brand and Performance',
   description:
-    'Book your free strategy session today—we’ll map your growth roadmap from visibility to profitability.',
+    'Ready to elevate your digital presence and drive measurable growth? Contact TGCX today to discover how our AI-powered Digital Marketing & SEO can boost rankings, increase conversions, and scale your business.',
   image: 'https://pub-3c3fbc3b66a54a4ab707f64d0f564e7d.r2.dev/hexagon.png',
 };

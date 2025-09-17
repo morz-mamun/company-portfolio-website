@@ -41,8 +41,8 @@ export const microSaaSDevelopmentData: TServices = {
     },
   ],
   styleClasses: {
-    ServiceTitleAndDescriptionClass: 'order-1',
-    subServicesClass: 'order-2',
+    ServiceTitleAndDescriptionClass: 'lg:order-first',
+    subServicesClass: 'lg:order-last',
   },
 };
 
@@ -75,8 +75,8 @@ export const affiliateTrackingDashboardsData: TServices = {
     },
   ],
   styleClasses: {
-    ServiceTitleAndDescriptionClass: 'order-2',
-    subServicesClass: 'order-1',
+    ServiceTitleAndDescriptionClass: 'lg:order-last',
+    subServicesClass: 'lg:order-first',
   },
 };
 
@@ -110,8 +110,8 @@ export const ecommerceFunnelsAndIntegrationsData: TServices = {
     },
   ],
   styleClasses: {
-    ServiceTitleAndDescriptionClass: 'order-1',
-    subServicesClass: 'order-2',
+    ServiceTitleAndDescriptionClass: 'lg:order-first',
+    subServicesClass: 'lg:order-last',
   },
 };
 
@@ -145,8 +145,8 @@ export const subscriptionAndPaymentSystemsData: TServices = {
     },
   ],
   styleClasses: {
-    ServiceTitleAndDescriptionClass: 'order-2',
-    subServicesClass: 'order-1',
+    ServiceTitleAndDescriptionClass: 'lg:order-last',
+    subServicesClass: 'lg:order-first',
   },
 };
 

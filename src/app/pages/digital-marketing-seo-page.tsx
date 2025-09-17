@@ -2,7 +2,6 @@ import BannerTitleAndDescription from '@/components/shared/banner-title-descript
 import WhyChooseUs from '@/components/what-we-do/shared/why-choose-us';
 import LetsBuildFutureBusiness from '@/components/what-we-do/shared/lets-build-future-business';
 import ServiceDescription from '@/components/what-we-do/shared/service-description';
-
 import {
   letsBuildFutureBusinessData,
   serviceDescriptionData,
@@ -10,6 +9,8 @@ import {
 } from '@/constants/what-we-do-data/digital-marketing-seo-data';
 import { digitalMarketingSeoBannerData } from '@/constants/banner-data/digital-marketing-seo-banner-data';
 import ExploreOurSolution from '@/components/what-we-do/digital-marketing-seo/explore-our-solution';
+import FAQ from '@/components/shared/faq';
+import { digitalMarketingSeoFaqSectionData } from '@/constants/faq-data/digital-marketing-seo-faq';
 
 export default function DigitalMarketingAndSeoPage() {
   return (
@@ -25,8 +26,7 @@ export default function DigitalMarketingAndSeoPage() {
       <div className="mt-14">
         <ServiceDescription
           sectionData={serviceDescriptionData}
-          TitleClassName="md:!max-w-2xl"
-          descriptionTwoClassName="mt-4"
+          TitleClassName="md:!max-w-xl"
         />
       </div>
       {/* explore our services / solutions */}
@@ -40,6 +40,11 @@ export default function DigitalMarketingAndSeoPage() {
       {/* let's build future of your business */}
       <div>
         <LetsBuildFutureBusiness sectionData={letsBuildFutureBusinessData} />
+      </div>
+
+      {/* FAQ section */}
+      <div className="mb-10 md:mb-20">
+        <FAQ data={digitalMarketingSeoFaqSectionData} />
       </div>
     </main>
   );

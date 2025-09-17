@@ -101,7 +101,7 @@ export default function ExploreServices() {
               </div>
 
               {isExploring && (
-                <div className="absolute top-6 ml-3 w-[150px] md:w-[180px]">
+                <div className="absolute top-6 ml-3 w-[180px] md:w-[270px]">
                   {service.subServices
                     .slice(0, 2)
                     .map((subService, subIndex) => (
