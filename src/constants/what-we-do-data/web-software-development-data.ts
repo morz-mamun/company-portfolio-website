@@ -1,39 +1,44 @@
 import { TMarqueeData, TServiceDescription, TServices } from '@/types/services';
 
 export const serviceDescriptionData: TServiceDescription = {
-  title: 'Custom-Built. Scalable. Future-Ready.',
+  title: 'Build Smarter. Scale Seamlessly. Launch with Confidence.',
   descriptionOne:
-    "At Trust Global Communications, we design and develop powerful digital products that grow with your business. From custom websites to complex software systems, our solutions are built for performance, usability, and scale. Whether you're a startuplaunchingyour first platform or an enterprise modernizing legacy tech—we turn your ideas into secure, scalable software.",
+    'Our Web & Software Development services deliver fast, secure, and scalable websites, apps, and software that drive results. From product strategy to cloud deployment, we craft solutions focused on performance, reliability, and growth.',
+  descriptionTwo:
+    'Every project is designed to integrate with your existing tools while preparing your stack for future scalability and AI automation.',
   image: 'https://pub-3c3fbc3b66a54a4ab707f64d0f564e7d.r2.dev/service16.png',
 };
 
 // indivisual sub services data -->
 // all services section title data -->
-export const servicesSectionTitleData = 'Explore our solutions';
-// Full Stack Web & App Development data -->
-export const fullStackWebAndAppDevelopmentData: TServices = {
+export const servicesSectionTitleData = 'Our Core Development Services';
+// Custom Web Development data -->
+export const customWebDevelopmentData: TServices = {
   data: {
-    title: '1. (Full-Stack Web & App Development)',
+    title: '1. Custom Web Development',
     description:
-      'We build robust, user-friendly websites and applications using modern frontend and backend technologies. Our full-stack team handles everything from UI design to server-side logic so your product looks great and performs flawlessly.',
+      'We create Custom Web Development solutions focused on conversion, speed, and SEO performance. Every website is built with semantic HTML, clean information architecture, and Core Web Vitals best practices to ensure fast loading, higher rankings, and seamless analytics integration.',
     image: 'https://pub-3c3fbc3b66a54a4ab707f64d0f564e7d.r2.dev/service15.png',
-    imageAlt: 'full-stack-web-and-app-development',
+    imageAlt: 'custom-web-development',
   },
   subServices: [
     {
-      title: 'Responsive websites, mobile apps and PWA solutions.',
+      title: 'High-performance websites optimized for SEO and speed.',
       icon: 'tabler:message-chatbot-filled',
     },
     {
-      title: 'React, Vue, Angular, Node.js, Laravel, Python, Next.js, etc.',
+      title:
+        'Headless CMS development for flexible, future-proof content management.',
       icon: 'mingcute:voice-fill',
     },
     {
-      title: 'UX/UI design, secure coding and clean architecture.',
+      title:
+        'Built-in analytics and A/B testing hooks for data-driven decisions.',
       icon: 'pixel:calender-solid',
     },
     {
-      title: 'Optimized for speed, SEO, and cross-device performance.',
+      title:
+        'Website redesign services to refresh and modernize your online presence.',
       icon: 'pixel:machine-learning',
     },
   ],
@@ -43,30 +48,30 @@ export const fullStackWebAndAppDevelopmentData: TServices = {
   },
 };
 
-// Web portals, CMS & APIs data -->
-export const webPortalsCmsAndApisData: TServices = {
+// Enterprise Software & SaaS Solutions data -->
+export const enterpriseSoftwareAndSaaSSolutionsData: TServices = {
   data: {
-    title: '2. Web Portals, CMS & APIs',
+    title: '2. Enterprise Software & SaaS Solutions',
     description:
-      'We create custom web portals and powerful CMS platforms that make managing your digital presence easy. We develop secure, scalable APIs to connect systems and streamline operations.',
+      'Our Enterprise Software & SaaS Solutions provide cloud-native apps with robust authentication, role-based access, billing, audit logs, and observability. These systems scale effortlessly for multi-tenant environments while remaining secure and ready for future AI automation.',
     image: 'https://pub-3c3fbc3b66a54a4ab707f64d0f564e7d.r2.dev/service14.png',
-    imageAlt: 'web-portals-cms-and-apis',
+    imageAlt: 'enterprise-software-and-saas-solutions',
   },
   subServices: [
     {
-      title: 'Custom CMS & Software Architecture & Integration.',
+      title: 'SaaS applications are designed for scalability and reliability.',
       icon: 'mingcute:code-fill',
     },
     {
-      title: 'Client and admin portals for B2B/B2C platforms.',
+      title: 'Multi-tenant architecture with secure user management.',
       icon: 'ix:workspace',
     },
     {
-      title: 'Restful & GraphQL APIs for seamless integrations.',
+      title: 'Cloud applications with future AI integration potential.',
       icon: 'pixel:calender-solid',
     },
     {
-      title: 'Single sign-on (SSO), permissions and user roles.',
+      title: 'Full product engineering from concept to deployment.',
       icon: 'streamline-plump:cog-automation-solid',
     },
   ],
@@ -76,30 +81,30 @@ export const webPortalsCmsAndApisData: TServices = {
   },
 };
 
-// Software Architecture & Integration data -->
-export const softwareArchitectureAndIntegrationData: TServices = {
+// Mobile App Development data -->
+export const mobileAppDevelopmentData: TServices = {
   data: {
-    title: '3. (Software Architecture & Integration)',
+    title: '3. Mobile App Development',
     description:
-      'We don’t just build software we architect it. Our team designs scalable, modular systems that integrate smoothly with your existing tech stack, helping you save time, reduce costs, and avoid technical debt.',
+      'With Mobile App Development, we build native and cross-platform apps (iOS/Android) that combine offline support, secure storage, push notifications, and analytics. App UX aligns with web funnels, and CI/CD pipelines ensure rapid, reliable releases.',
     image: 'https://pub-3c3fbc3b66a54a4ab707f64d0f564e7d.r2.dev/service12.png',
-    imageAlt: 'software-architecture-and-integration',
+    imageAlt: 'mobile-app-development',
   },
   subServices: [
     {
-      title: 'Clean architecture and scalable backend systems.',
+      title: 'Seamless iOS and Android experiences with intuitive UX.',
       icon: 'mdi:face-agent',
     },
     {
-      title: 'Third-party platform integrations (CRMs, ERPs, IoT, AI APIs).',
+      title: 'Cross-platform apps for wider reach and cost efficiency.',
       icon: 'ic:baseline-api',
     },
     {
-      title: 'Microservices, containers (Docker) and CI/CD pipelines.',
+      title: 'Integrated analytics and push notifications for engagement.',
       icon: 'ri:speak-ai-fill',
     },
     {
-      title: 'Database design: SQL, NoSQL, Firebase, MongoDB.',
+      title: 'CI/CD pipelines for rapid, error-free updates.',
       icon: 'fluent:settings-cog-multiple-24-filled',
     },
   ],
@@ -109,30 +114,30 @@ export const softwareArchitectureAndIntegrationData: TServices = {
   },
 };
 
-// Ongoing Technical Support & Maintenance data -->
-export const ongoinTechnicalSupportAndMaintenanceData: TServices = {
+// Software Architecture & Scalability data -->
+export const softwareArchitectureAndScalabilityData: TServices = {
   data: {
-    title: '4. Ongoing Technical Support & Maintenance',
+    title: '4. Software Architecture & Scalability',
     description:
-      'Technology doesn’t stop at launch and neither do we. We provide proactive technical support, maintenance, and performance optimization to ensure your product stays updated, fast, and secure.',
+      'Our Software Architecture & Scalability services ensure your software systems are stable, reliable, and ready for growth. We optimize databases, caching, microservices, API gateways, and autoscaling strategies to maintain performance and security.',
     image: 'https://pub-3c3fbc3b66a54a4ab707f64d0f564e7d.r2.dev/service12.png',
-    imageAlt: 'ongoing-technical-support-and-maintenance',
+    imageAlt: 'software-architecture-and-scalability',
   },
   subServices: [
     {
-      title: 'Bug fixes, feature updates and code audits.',
+      title: 'Scalable software architecture for long-term growth.',
       icon: 'hugeicons:ai-security-03',
     },
     {
-      title: 'Uptime monitoring, SSL, backups and firewall setup.',
+      title: 'Modular designs with microservices and API strategies.',
       icon: 'material-symbols:sensors-rounded',
     },
     {
-      title: 'Performance optimization and server scaling.',
+      title: 'Cost-efficient cloud scaling and caching/CDN optimization.',
       icon: 'ri:calendar-schedule-fill',
     },
     {
-      title: 'Ongoing UX improvements and roadmap planning.',
+      title: 'Security-by-design with SSO, rate limiting, and monitoring.',
       icon: 'material-symbols:dashboard-2-rounded',
     },
   ],
@@ -174,6 +179,6 @@ export type TLetsBuildFutureBusiness = {
 export const letsBuildFutureBusinessData: TLetsBuildFutureBusiness = {
   title: 'Let’s Build the Future of Your Business',
   description:
-    'Whether it’s a website, app, or complex software system, we’ll bring your vision to life.',
+    'Ready to build fast, scalable, and high-performing software? Contact TGCX today to discover how our Web & Software Development services can transform your digital presence and accelerate your business growth.',
   image: 'https://pub-3c3fbc3b66a54a4ab707f64d0f564e7d.r2.dev/hexagon.png',
 };

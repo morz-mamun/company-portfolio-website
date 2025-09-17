@@ -28,7 +28,7 @@ export default function ServiceDescription({
           >
             {title}
           </h2>
-          <div className="max-w-xl text-sm md:text-base">
+          <div className="max-w-xl space-y-4 text-sm md:text-base">
             <p className="text-brand/70 dark:text-primary/70">
               {descriptionOne}
             </p>

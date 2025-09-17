@@ -1,7 +1,6 @@
 export const webAndSoftwareDevelopmentBannerData = {
   title: 'Web & Software Development',
   description:
-    'Build powerful, scalable digital platforms customized for your business using modern frameworks and agile development practices.',
-  mobileTitle: ['Web & Software Development'],
+    'Reimagine digital experiences with fast, secure, and scalable websites, apps, and software that boost conversions, enhance performance, and grow with your business.',
   buttonVisivility: true,
 };

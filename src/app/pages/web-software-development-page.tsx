@@ -1,9 +1,11 @@
 import BannerTitleAndDescription from '@/components/shared/banner-title-description';
+import FAQ from '@/components/shared/faq';
 import LetsBuildFutureBusiness from '@/components/what-we-do/shared/lets-build-future-business';
 import ServiceDescription from '@/components/what-we-do/shared/service-description';
 import WhyChooseUs from '@/components/what-we-do/shared/why-choose-us';
 import ExploreOurSolution from '@/components/what-we-do/web-software-development/explore-our-solution';
 import { webAndSoftwareDevelopmentBannerData } from '@/constants/banner-data/web-software-development-data';
+import { webSoftwareDevelopmentFaqSectionData } from '@/constants/faq-data/web-software-development-faq';
 import {
   serviceDescriptionData,
   whyChooseUsData,
@@ -23,7 +25,7 @@ export default function WebAndSoftwareDevlopmentPage() {
       <div className="mt-14">
         <ServiceDescription
           sectionData={serviceDescriptionData}
-          TitleClassName="max-w-md"
+          TitleClassName="max-w-xl"
         />
       </div>
       {/* explore our services / solutions */}
@@ -37,6 +39,11 @@ export default function WebAndSoftwareDevlopmentPage() {
       {/* let's build future of your business */}
       <div>
         <LetsBuildFutureBusiness sectionData={letsBuildFutureBusinessData} />
+      </div>
+
+      {/* FAQ section */}
+      <div className="mb-10 md:mb-20">
+        <FAQ data={webSoftwareDevelopmentFaqSectionData} />
       </div>
     </main>
   );
