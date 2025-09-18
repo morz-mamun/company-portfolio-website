@@ -3,4 +3,5 @@ export type TBannerData = {
   description: string;
   mobileTitle?: string[] | undefined;
   buttonVisivility?: boolean;
+  titleBtnVisibility?: boolean;
 };

@@ -7,5 +7,6 @@ export const homeBannerData = {
     'Empowering Business with AI automation,',
     'Digital Marketing & Technology Solutions',
   ],
+  titleBtnVisibility: true,
   buttonVisivility: true,
 };
