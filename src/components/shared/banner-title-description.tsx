@@ -1,31 +1,9 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { TextAnimate } from '../magicui/text-animate';
 import BannerTitleBtn from '../buttons/banner-title-btn';
 import PrimaryBtn from '../buttons/primary-btn';
-import { TextAnimate } from '../magicui/text-animate';
 import { TBannerData } from '@/types/banners';
-
-const gradients = [
-  'bg-gradient-to-b from-red-200 to-transparent',
-  'bg-gradient-to-b from-blue-200 to-transparent',
-  'bg-gradient-to-b from-green-200 to-transparent',
-  'bg-gradient-to-b from-yellow-200 to-transparent',
-  'bg-gradient-to-b from-purple-200 to-transparent',
-  'bg-gradient-to-b from-pink-200 to-transparent',
-  'bg-gradient-to-b from-indigo-200 to-transparent',
-  'bg-gradient-to-b from-teal-200 to-transparent',
-  'bg-gradient-to-b from-orange-200 to-transparent',
-  'bg-gradient-to-b from-cyan-200 to-transparent',
-  'bg-gradient-to-b from-lime-200 to-transparent',
-  'bg-gradient-to-b from-emerald-200 to-transparent',
-  'bg-gradient-to-b from-violet-200 to-transparent',
-  'bg-gradient-to-b from-fuchsia-200 to-transparent',
-  'bg-gradient-to-b from-rose-200 to-transparent',
-  'bg-gradient-to-b from-sky-200 to-transparent',
-  'bg-gradient-to-b from-amber-200 to-transparent',
-  'bg-gradient-to-b from-slate-200 to-transparent',
-];
 
 export default function BannerTitleAndDescription({
   sectionData,
@@ -39,23 +17,13 @@ export default function BannerTitleAndDescription({
   const { title, description, buttonVisivility, titleBtnVisibility } =
     sectionData;
 
-  // Gradient state
-  const [currentGradientIndex, setCurrentGradientIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentGradientIndex((prevIndex) =>
-        Math.floor(Math.random() * gradients?.length),
-      );
-    }, 5000);
-
-    return () => clearInterval(interval);
-  }, []);
-
   return (
     <div
-      className={`relative ${gradients[currentGradientIndex]} mx-auto mt-3 pt-20 text-center transition-all delay-[5000ms] ease-in-out md:mt-7 md:pt-21 lg:pt-28 ${className}`}
+      className={`relative mx-auto mt-3 overflow-hidden pt-20 text-center md:mt-7 md:pt-21 lg:pt-28 ${className}`}
     >
+      {/* Animated gradient background with fade bottom */}
+      <div className="animate-gradient-slow fade-bottom absolute inset-0 -z-10"></div>
+
       {/* Banner title button */}
       {titleBtnVisibility && (
         <div className="mb-5 md:mb-7">
@@ -63,7 +31,7 @@ export default function BannerTitleAndDescription({
         </div>
       )}
 
-      {/* Content title with animation for desktop */}
+      {/* Content title */}
       <TextAnimate
         as="h1"
         delay={0.1}
@@ -82,7 +50,7 @@ export default function BannerTitleAndDescription({
         {description}
       </p>
 
-      {/* Get free discovery call button */}
+      {/* Button */}
       {buttonVisivility && (
         <PrimaryBtn
           title="Get a Free Discovery Call"
@@ -90,6 +58,54 @@ export default function BannerTitleAndDescription({
           className="mx-auto mt-5 md:mt-10"
         />
       )}
+
+      {/* Tailwind custom CSS for gradient animation + fade */}
+      <style jsx>{`
+        .animate-gradient-slow {
+          background: linear-gradient(
+            -45deg,
+            #fef9c3,
+            #bfdbfe,
+            #bbf7d0,
+            #fbcfe8,
+            #c7d2fe
+          );
+          background-size: 400% 400%;
+          animation: gradientShift 30s ease infinite;
+        }
+
+        /* Fade out at bottom */
+        .fade-bottom {
+          -webkit-mask-image: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 1),
+            rgba(0, 0, 0, 0)
+          );
+          -webkit-mask-repeat: no-repeat;
+          -webkit-mask-position: top;
+          -webkit-mask-size: 100% 100%;
+          mask-image: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 1),
+            rgba(0, 0, 0, 0)
+          );
+          mask-repeat: no-repeat;
+          mask-position: top;
+          mask-size: 100% 100%;
+        }
+
+        @keyframes gradientShift {
+          0% {
+            background-position: 0% 50%;
+          }
+          50% {
+            background-position: 100% 50%;
+          }
+          100% {
+            background-position: 0% 50%;
+          }
+        }
+      `}</style>
     </div>
   );
 }
