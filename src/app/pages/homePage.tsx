@@ -10,10 +10,7 @@ import TestimonialCarousel from '@/components/home/testimonial-carousel/testimon
 import TransformIdeaToReality from '@/components/home/transform-idea-to-reality/transform-idea-to-reality';
 import TrustedBy from '@/components/home/trusted-by';
 import VideoSection from '@/components/home/video-section';
-import {
-  homePageFaq,
-  homePageFaqSectionData,
-} from '@/constants/faq-data/home-page-faq';
+import { homePageFaqSectionData } from '@/constants/faq-data/home-page-faq';
 
 export default function HomePage() {
   return (

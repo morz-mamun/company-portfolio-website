@@ -1,6 +1,5 @@
 import PrimaryBtn from '../buttons/primary-btn';
 import { TextAnimate } from '../magicui/text-animate';
-import AnimatedText from './animated-text';
 import { TBannerData } from '@/types/banners';
 
 export default function BannerTitleAndDescription({
@@ -12,7 +11,7 @@ export default function BannerTitleAndDescription({
   className?: string;
   descriptionClassName?: string;
 }) {
-  const { title, description, mobileTitle, buttonVisivility } = sectionData;
+  const { title, description, buttonVisivility } = sectionData;
   return (
     <div
       className={`${className} mx-auto mt-3 max-w-[350px] text-center md:mt-[28px] md:max-w-5xl`}
@@ -28,11 +27,6 @@ export default function BannerTitleAndDescription({
       >
         {title}
       </TextAnimate>
-
-      {/* Content title with animation for mobile */}
-      {/* <div className="lg:hidden">
-        <AnimatedText data={mobileTitle} />
-      </div> */}
       {/* Content description */}
       <p
         className={`${descriptionClassName} text-brand/80 dark:text-primary/70 mx-auto mt-3 max-w-[320px] text-xs md:mt-[14px] md:max-w-[610px] md:text-base lg:max-w-[800px] lg:text-xl`}
