@@ -1,6 +1,5 @@
 'use client';
 import { cn } from '@/lib/utils';
-import { BorderBeam } from '../magicui/border-beam';
 import Link from 'next/link';
 
 export const BentoGrid = ({
