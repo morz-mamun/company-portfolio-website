@@ -13,7 +13,7 @@ export const BentoGrid = ({
   return (
     <div
       className={cn(
-        'mx-auto grid max-w-7xl auto-rows-[20rem] grid-cols-1 gap-2 md:auto-rows-[23rem] md:grid-cols-4 lg:grid-cols-6 lg:gap-4',
+        'mx-auto grid max-w-7xl auto-rows-[20rem] grid-cols-1 gap-2 md:auto-rows-[23rem] md:grid-cols-4 lg:grid-cols-6 lg:gap-5',
         className,
       )}
     >
@@ -39,41 +39,35 @@ export const BentoGridItem = ({
     <Link
       href={link || '#'}
       className={cn(
-        'group/bento row-span-1 flex h-full flex-col justify-between space-y-4 rounded-xl bg-white p-4 shadow-lg transition duration-200 dark:border-white/[0.2] dark:bg-black',
-        'relative border',
-        // 'hover:shadow-[0_0_10px_3px_rgba(0,123,255,0.5),0_0_20px_6px_rgba(0,123,255,0.3)]',
-        // 'hover:shadow-[0_0_10px_5px_rgba(0,123,255,0.6),0_0_20px_10px_rgba(0,180,255,0.4),0_0_30px_15px_rgba(0,220,255,0.2)]',
-        // 'hover:shadow-[0_0_10px_5px_rgba(0,150,255,0.8),0_0_30px_15px_rgba(0,150,255,0.5)]',
-        // second priority
-        // 'hover:shadow-[0_0_10px_3px_rgba(10,47,137,0.5),0_0_20px_6px_rgba(10,47,137,0.3)]',
-        'hover:shadow-[0_0_15px_5px_rgba(10,47,137,0.7),0_0_25px_10px_rgba(10,47,137,0.5)]',
-        // 'hover:shadow-[0_0_12px_4px_rgba(10,47,137,0.9),0_0_28px_12px_rgba(10,47,137,0.6)]',
-        // 'hover:shadow-[0_0_10px_5px_rgba(10,47,137,0.6),0_0_20px_10px_rgba(20,60,180,0.4),0_0_30px_15px_rgba(50,100,220,0.2)]',
-        // 'hover:shadow-[0_0_8px_3px_rgba(10,47,137,0.8),0_0_20px_8px_rgba(10,47,137,0.5),0_0_35px_12px_rgba(10,47,137,0.3)]',
+        'group relative row-span-1 flex h-full flex-col justify-between rounded-xl',
         'transition duration-300 hover:translate-y-[-2px]',
         className,
       )}
     >
-      {/* content */}
-      <div className="">
-        {/* transition duration-200 group-hover/bento:translate-x-2 */}
-        {/* {icon} */}
-        <h2 className="font-inter text-brand mt-2 mb-2 font-semibold dark:text-neutral-200">
-          {title}
-        </h2>
-        <p className="text-brand/90 text-xs font-normal md:text-sm dark:text-neutral-300">
-          {description}
-        </p>
+      {/* Hover Glow Background */}
+      <div className="absolute -inset-2 z-0 rounded-[inherit] bg-gradient-to-r from-purple-500 via-purple-400 to-blue-500 opacity-0 blur-sm transition-all duration-300 ease-out group-hover:opacity-100" />
+
+      {/* Card Content */}
+      <div className="relative z-10 flex h-full flex-col justify-between space-y-4 rounded-xl border bg-white p-4 shadow-lg dark:border-white/[0.2] dark:bg-black">
+        {/* text */}
+        <div>
+          <h2 className="font-inter text-brand mt-2 mb-2 font-semibold dark:text-neutral-200">
+            {title}
+          </h2>
+          <p className="text-brand/90 text-xs font-normal md:text-sm dark:text-neutral-300">
+            {description}
+          </p>
+        </div>
+
+        {/* image */}
+        <div className="flex w-full flex-1 overflow-hidden rounded-xl">
+          <img
+            src={image}
+            alt="service image"
+            className="h-full w-full object-cover transition duration-200 group-hover:scale-105"
+          />
+        </div>
       </div>
-      {/* image */}
-      <div className="flex w-full flex-1 overflow-hidden rounded-xl">
-        <img
-          src={image}
-          alt="service image"
-          className="h-full w-full object-cover transition duration-200 group-hover/bento:scale-105"
-        />
-      </div>
-      {/* <BorderBeam duration={8} size={100} /> */}
     </Link>
   );
 };
