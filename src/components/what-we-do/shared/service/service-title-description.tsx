@@ -14,7 +14,7 @@ export default function ServiceTitleAndDescription({
       <h3 className="font-inter text-lg font-bold md:text-[32px]">
         {data?.title}
       </h3>
-      <p className="text-brand/70 dark:text-primary/70 text-sm md:text-base">
+      <p className="text-brand dark:text-primary/70 text-sm md:text-base">
         {data?.description}
       </p>
       {/* image */}
