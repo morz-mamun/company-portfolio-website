@@ -4,3 +4,5 @@ export { digitalMarketingSeoFaqSchema } from './digital-marketing-seo';
 export { saasAutomationToolsFaqSchema } from './saas-automation-tools';
 export { ecommerceManagementServiceFaqSchema } from './ecommerce-management-service';
 export { aiBpoSolutionFaqSchema } from './ai-bpo-solution';
+export { iotSmartSecuritySolutionFaqSchema } from './iot-smart-security-solution';
+export { emergingAiServicesFaqSchema } from './emerging-ai-services';
