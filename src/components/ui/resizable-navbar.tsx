@@ -229,7 +229,7 @@ export const MobileNav = ({ children, className, visible }: MobileNavProps) => {
       }}
       className={cn(
         'relative z-50 mx-auto flex w-full max-w-[calc(100vw-28px)] flex-col items-center justify-between border-b bg-white px-0 py-2 md:max-w-[calc(100vw-55px)] lg:hidden dark:bg-[#030712]',
-        visible && 'bg-white/80 dark:bg-neutral-950/80',
+        visible && 'bg-white dark:bg-neutral-950/80',
         className,
       )}
     >
@@ -335,7 +335,7 @@ export const NavbarButton = ({
   | React.ComponentPropsWithoutRef<'button'>
 )) => {
   const baseStyles =
-    'px-5 py-2 rounded-md bg-white button bg-white text-black text-sm font-bold relative cursor-pointer hover:-translate-y-0.5 transition duration-200 inline-block text-center';
+    'px-5 py-2 rounded-md bg-white button text-black text-sm font-bold relative cursor-pointer hover:-translate-y-0.5 transition duration-200 inline-block text-center';
 
   const variantStyles = {
     primary:

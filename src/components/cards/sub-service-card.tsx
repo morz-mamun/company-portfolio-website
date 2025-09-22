@@ -13,7 +13,7 @@ export default function SubServiceCard({ item }: { item: TSubServices }) {
           icon={item?.icon}
           className="text-4xl text-[#3D3D3D] group-hover:text-[#0908C3] md:text-[80px] dark:text-[#F6F6F6]"
         />
-        <p className="text-brand dark:text-primary/70 text-center text-xs text-balance group-hover:text-[#0908C3] md:text-base">
+        <p className="text-brand dark:text-primary text-center text-xs text-balance group-hover:text-[#0908C3] md:text-base">
           {item?.title}
         </p>
       </div>
