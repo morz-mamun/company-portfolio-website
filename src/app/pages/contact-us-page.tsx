@@ -9,10 +9,7 @@ export default function ContactUsPage() {
   return (
     <main className="mx-auto min-h-screen max-w-7xl overflow-hidden pb-10">
       {/* Banner Section */}
-      <div className="mt-20">
-        <BannerTitleAndDescription sectionData={contactUsBannerData} />
-      </div>
-
+      <BannerTitleAndDescription sectionData={contactUsBannerData} />
       {/* top content */}
       <div className="mx-auto my-10 grid max-w-6xl grid-cols-1 px-3 md:my-16 md:grid-cols-2 md:gap-10 lg:my-20 lg:gap-28">
         {/* contact us form */}

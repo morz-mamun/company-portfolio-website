@@ -16,14 +16,12 @@ export default function DigitalMarketingAndSeoPage() {
   return (
     <main className="mx-auto min-h-screen max-w-7xl overflow-hidden">
       {/* Banner Section */}
-      <div className="mt-20 md:mt-28 lg:mt-32">
-        <BannerTitleAndDescription
-          sectionData={digitalMarketingSeoBannerData}
-          className="md:!max-w-3xl"
-        />
-      </div>
+      <BannerTitleAndDescription
+        sectionData={digitalMarketingSeoBannerData}
+        descriptionClassName="!max-w-[920px]"
+      />
       {/* service description section */}
-      <div className="mt-14">
+      <div className="mt-10 lg:mt-14">
         <ServiceDescription
           sectionData={serviceDescriptionData}
           TitleClassName="md:!max-w-xl"

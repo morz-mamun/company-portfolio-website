@@ -16,13 +16,11 @@ export default function WebAndSoftwareDevlopmentPage() {
   return (
     <main className="mx-auto min-h-screen max-w-7xl overflow-hidden">
       {/* Banner Section */}
-      <div className="mt-20 md:mt-28 lg:mt-32">
-        <BannerTitleAndDescription
-          sectionData={webAndSoftwareDevelopmentBannerData}
-        />
-      </div>
+      <BannerTitleAndDescription
+        sectionData={webAndSoftwareDevelopmentBannerData}
+      />
       {/* service description section */}
-      <div className="mt-14">
+      <div className="mt-10 lg:mt-14">
         <ServiceDescription
           sectionData={serviceDescriptionData}
           TitleClassName="max-w-xl"

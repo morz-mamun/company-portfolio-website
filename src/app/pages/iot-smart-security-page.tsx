@@ -14,11 +14,9 @@ export default function IotSmartSecurityPage() {
   return (
     <main className="mx-auto min-h-screen max-w-7xl overflow-hidden">
       {/* Banner Section */}
-      <div className="mt-20 md:mt-28 lg:mt-32">
-        <BannerTitleAndDescription sectionData={iotSmartSecurityBannerData} />
-      </div>
+      <BannerTitleAndDescription sectionData={iotSmartSecurityBannerData} />
       {/* service description section */}
-      <div className="mt-14">
+      <div className="mt-10 lg:mt-14">
         <ServiceDescription sectionData={serviceDescriptionData} />
       </div>
       {/* explore our services / solutions */}

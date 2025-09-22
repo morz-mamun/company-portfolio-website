@@ -98,10 +98,7 @@ export default function BlogsPage({ blogsData }: any) {
 
   return (
     <main className="mx-auto min-h-screen max-w-7xl overflow-hidden">
-      <div className="mt-20 lg:mt-28">
-        <BannerTitleAndDescription sectionData={blogsBannerData} />
-      </div>
-
+      <BannerTitleAndDescription sectionData={blogsBannerData} />
       {/* all blogs with pagination */}
       {allBlogs?.length > 0 ? (
         <div className="space-y-10">

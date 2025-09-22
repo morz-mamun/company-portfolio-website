@@ -45,7 +45,7 @@ export default function BannerTitleAndDescription({
 
       {/* Content description */}
       <p
-        className={`${descriptionClassName} text-brand dark:text-primary/70 mx-auto mt-3 max-w-[320px] text-xs md:mt-[14px] md:max-w-[610px] md:text-base lg:max-w-[800px] lg:text-xl`}
+        className={`${descriptionClassName} text-brand dark:text-primary/70 mx-auto mt-3 max-w-[350px] text-xs text-balance md:mt-[14px] md:max-w-[610px] md:text-base lg:max-w-[800px] lg:text-xl`}
       >
         {description}
       </p>
