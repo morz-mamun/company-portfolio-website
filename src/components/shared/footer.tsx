@@ -199,7 +199,7 @@ export default function Footer() {
             <div className="absolute right-2 bottom-4 hidden lg:block">
               <button
                 onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-                className="flex cursor-pointer items-center gap-2 rounded-full bg-gradient-to-b from-[#000750] to-[#002667] px-4 py-3 text-white shadow-lg transition-colors hover:scale-105 hover:bg-gradient-to-b hover:from-[#000EAC] hover:to-[#00163C] dark:shadow-lg"
+                className="flex cursor-pointer items-center gap-2 rounded-full bg-gradient-to-b from-[#0908C3] to-[#0C34E9] px-4 py-3 text-white shadow-lg transition-colors hover:scale-105 hover:bg-gradient-to-b hover:from-[#000EAC] hover:to-[#00163C] dark:shadow-lg"
               >
                 <ArrowUpFromLine
                   size={24}
@@ -212,7 +212,7 @@ export default function Footer() {
             <div className="flex items-center justify-center lg:hidden">
               <button
                 onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-                className="flex cursor-pointer items-center gap-2 rounded-full bg-gradient-to-b from-[#000750] to-[#002667] px-4 py-3 text-white shadow-lg transition-colors hover:scale-105 hover:bg-gradient-to-b hover:from-[#000EAC] hover:to-[#00163C] dark:shadow-lg"
+                className="flex cursor-pointer items-center gap-2 rounded-full bg-gradient-to-b from-[#0908C3] to-[#0C34E9] px-4 py-3 text-white shadow-lg transition-colors hover:scale-105 hover:bg-gradient-to-b hover:from-[#000EAC] hover:to-[#00163C] dark:shadow-lg"
               >
                 <ArrowUpFromLine
                   size={24}
@@ -231,12 +231,12 @@ export default function Footer() {
         </p>
       </div>
 
-      {/* bottom pattern */}
+      {/* bottom pattern
       <div className="border-t">
         <div className="mx-4 h-[6rem] border-x md:mx-6 md:h-[9rem] lg:h-[12rem]">
           <TextHoverEffect text="Trust Global Communications" />
         </div>
-      </div>
+      </div> */}
     </footer>
   );
 }
