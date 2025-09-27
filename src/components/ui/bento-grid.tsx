@@ -63,7 +63,7 @@ export const BentoGridItem = ({
           <img
             src={image}
             alt="service image"
-            className="h-full w-full object-cover transition duration-200 group-hover:scale-105"
+            className="h-full w-full object-fill transition duration-200 group-hover:scale-105"
           />
         </div>
       </div>

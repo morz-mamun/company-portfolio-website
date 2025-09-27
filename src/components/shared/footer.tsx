@@ -74,7 +74,7 @@ export default function Footer() {
                       width="14"
                       height="14"
                     />
-                    Monday to Friday: 9:00 AM to 6:00 PM STD
+                    Saturday to Thursday : 9:00 AM - 5:00 PM STD
                   </p>
                 </div>
               </div>
@@ -84,10 +84,11 @@ export default function Footer() {
                 <h4 className="font-inter text-lg font-semibold">
                   Quick Links
                 </h4>
+
                 <div className="flex flex-col items-start space-y-2 text-sm">
                   <Popover open={isOpen} onOpenChange={setIsOpen}>
                     <PopoverTrigger asChild>
-                      <button className="cursor-pointer text-base hover:underline">
+                      <button className="relative inline-block cursor-pointer text-base after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-current after:transition-all after:duration-300 hover:after:w-full">
                         What we do
                         {/* <ArrowUpFromLine size={16} /> */}
                       </button>
@@ -95,7 +96,7 @@ export default function Footer() {
                     <PopoverContent
                       align="start"
                       sideOffset={8}
-                      className="w-[300px] p-2"
+                      className="w-[330px] p-2"
                     >
                       <div className="space-y-1">
                         {whatWeDoItemsData?.map((item, idx) => {
@@ -105,7 +106,11 @@ export default function Footer() {
                               href={item.link}
                               key={`link-${idx}`}
                               onClick={() => setIsOpen(false)}
-                              className={`relative flex items-center gap-2 rounded-md px-2 py-1 text-sm text-neutral-600 transition hover:bg-[#CCCCCC]/40 md:text-base dark:text-neutral-300 dark:hover:bg-neutral-800/60 ${subIsActive ? 'bg-[#CCCCCC]/40 px-2 py-1 dark:bg-neutral-800/60' : ''}`}
+                              className={`relative flex items-center gap-2 rounded-md px-2 py-1 text-sm text-neutral-600 transition hover:bg-[#CCCCCC]/40 md:text-base dark:text-neutral-300 dark:hover:bg-neutral-800/60 ${
+                                subIsActive
+                                  ? 'bg-[#CCCCCC]/40 px-2 py-1 dark:bg-neutral-800/60'
+                                  : ''
+                              }`}
                             >
                               <Icon icon={item?.icon} width={16} height={16} />
                               {item.name}
@@ -115,44 +120,49 @@ export default function Footer() {
                       </div>
                     </PopoverContent>
                   </Popover>
+
                   <Link
                     href="/who-we-are"
-                    className="text-brand dark:text-primary hover:urderline text-xs transition-colors hover:underline md:text-base"
+                    className="text-brand dark:text-primary relative inline-block text-xs transition-colors after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-current after:transition-all after:duration-300 hover:after:w-full md:text-base"
                   >
                     Who we are
                   </Link>
+
                   <Link
                     href="/contact-us"
-                    className="text-brand dark:text-primary hover:urderline text-xs transition-colors hover:underline md:text-base"
+                    className="text-brand dark:text-primary relative inline-block text-xs transition-colors after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-current after:transition-all after:duration-300 hover:after:w-full md:text-base"
                   >
                     Contact
                   </Link>
                 </div>
               </div>
+
               {/* privacy policy */}
               <div className="flex flex-col space-y-3 lg:mx-auto">
                 <h4 className="font-inter text-md font-semibold">
                   Privacy Policy
                 </h4>
+
                 <ul className="space-y-2 text-sm">
-                  <li className="hover:underline">
+                  <li>
                     <Link
                       href="#/privacy-policy"
-                      className="text-brand dark:text-primary text-xs transition-colors md:text-base"
+                      className="text-brand dark:text-primary relative inline-block text-xs transition-colors after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-current after:transition-all after:duration-300 hover:after:w-full md:text-base"
                     >
                       Privacy Policy
                     </Link>
                   </li>
-                  <li className="hover:underline">
+                  <li>
                     <Link
                       href="#/terms-and-conditions"
-                      className="text-brand dark:text-primary text-xs transition-colors md:text-base"
+                      className="text-brand dark:text-primary relative inline-block text-xs transition-colors after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-current after:transition-all after:duration-300 hover:after:w-full md:text-base"
                     >
                       Terms & Conditions
                     </Link>
                   </li>
                 </ul>
               </div>
+
               {/* social links and follow us */}
               <div className="col-span-2 mx-auto flex flex-col space-y-3 md:col-span-1 lg:mx-auto">
                 <h4 className="font-inter mb-4 text-center text-lg font-semibold md:text-start">
