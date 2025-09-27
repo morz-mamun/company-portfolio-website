@@ -7,8 +7,8 @@ export default function OurServices() {
       {/* section heading */}
       <SectionHeading
         title="Our Services"
-        description="We build smarter systems, powerful websites and scalable automation workflows for modern brands, ecommerce stores and SaaS platforms across the U.S and beyond."
-        descriptionClassName="mb-10 lg:!max-w-[800px] xl:!max-w-[800px]"
+        description="Trust Global Communications (TGCX) delivers Automation, AI Multi-Agent, Digital Marketing, E-Commerce, Software, and Smart Security Solutions that help businesses scale with smarter strategies and future-ready tools."
+        descriptionClassName="mb-10 lg:!max-w-[1050px] xl:!max-w-[1050px]"
       />
 
       {/* our services with bento grid card */}

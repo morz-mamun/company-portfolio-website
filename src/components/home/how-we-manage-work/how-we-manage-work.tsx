@@ -10,9 +10,9 @@ export default function HowWeManageWork() {
     <section>
       {/* section title */}
       <SectionHeading
-        title="How we manage our work?"
-        description="We build smarter systems, powerful websites and scalable automation workflows for modern brands, e-commerce stores and SaaS platforms across the U.S and beyond."
-        descriptionClassName="mx-auto max-w-[975px] text-center"
+        title="From Strategy to Automation: How We Work"
+        description="We combine AI automation, cutting-edge software, and strategic workflows to deliver smarter systems and scalable solutions. Whether it’s building websites, e-commerce stores, or SaaS platforms, we streamline processes to help modern brands grow efficiently."
+        descriptionClassName="mx-auto !max-w-[850px] text-center"
       />
       <div className="relative mt-10 overflow-hidden border-y px-4 lg:px-6">
         {/* content container */}

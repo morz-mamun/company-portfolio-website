@@ -116,11 +116,11 @@ const Analytics = () => {
       {/* bottom content */}
       <div className="max-w-[544px] space-y-2 p-2 transition-transform duration-300 group-hover:-translate-y-8 lg:mx-2">
         <h3 className="font-inter text-lg font-semibold md:text-xl lg:text-2xl">
-          Analytics
+          Analytics That Drive Decisions
         </h3>
         <p className="text-brand dark:text-primary mt-0 text-xs md:mt-8 md:text-sm lg:mt-0 lg:text-base">
-          It is a long established fact that a reader will be distracted by the
-          readable content of a page when looking at its layout.
+          Our Analytics tools provide real-time insights, track performance
+          helping you to make data-driven decisions that maximize impact.
         </p>
       </div>
     </div>

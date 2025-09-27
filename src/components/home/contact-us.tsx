@@ -60,15 +60,19 @@ export default function ContactUs() {
   }, [register]);
 
   return (
-    <section className="mx-auto max-w-xl lg:max-w-2xl">
+    <section className="">
       {/* section heading */}
       <SectionHeading
         title="Contact Us"
-        description="Explore articles, case studies and insights on the latest in digital marketing, AI Automation and business growth."
+        description="Have a project or question? Get in touch with Trust Global Communications today and discover how our AI, automation, and digital solutions can help your business grow."
+        descriptionClassName="!max-w-[850px]"
       />
 
       {/* contact form */}
-      <form className="mt-8 px-3 md:px-0" onSubmit={handleSubmit(onSubmit)}>
+      <form
+        className="mx-auto mt-8 max-w-xl px-3 md:px-0 lg:max-w-2xl"
+        onSubmit={handleSubmit(onSubmit)}
+      >
         <div className="my-4 grid grid-cols-2 items-start gap-3 md:gap-4">
           {/* Email */}
           <InputWithLabel

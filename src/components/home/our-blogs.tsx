@@ -14,8 +14,8 @@ export default async function OurBlogs() {
     <section className="border-y py-10 lg:py-14">
       {/* section heading */}
       <SectionHeading
-        title="Our Latest Blogs"
-        description="Explore articles, case studies and insights on the latest in digital marketing, AI Automation and business growth. "
+        title="Latest Insights & Articles"
+        description="Explore our blogs, case studies, and expert insights on AI automation, digital marketing, and technology strategies to drive business growth."
       />
 
       {/* All Blogs */}

@@ -55,8 +55,7 @@ export default function Footer() {
                       width="18"
                       height="18"
                     />
-                    Sheikh Kamal Software technology park, Chittagong,
-                    Bangladesh.
+                    Chattogram Software technology park, Chittagong, Bangladesh.
                   </p>
                   {/* email address */}
                   <p className="dark:text-primary text-brand flex items-center gap-1 text-xs md:text-sm">
@@ -231,12 +230,12 @@ export default function Footer() {
         </p>
       </div>
 
-      {/* bottom pattern
+      {/* bottom pattern */}
       <div className="border-t">
         <div className="mx-4 h-[6rem] border-x md:mx-6 md:h-[9rem] lg:h-[12rem]">
           <TextHoverEffect text="Trust Global Communications" />
         </div>
-      </div> */}
+      </div>
     </footer>
   );
 }

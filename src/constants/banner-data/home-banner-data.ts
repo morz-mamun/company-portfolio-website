@@ -1,8 +1,9 @@
 export const homeBannerData = {
   title:
     'Empowering Business with AI automation, Digital Marketing & Technology Solutions',
+  // 'AI Automation, Digital Marketing & SaaS Solutions to Scale Your Business',
   description:
-    'We build smarter systems, powerful websites and scalable automation workflows for modern brands, e-commerce stores and SaaS platforms across the U.S and beyond.',
+    'We create smarter systems, scalable automation, and high-performing websites for modern brands, SaaS platforms, and e-commerce businesses across the U.S. and beyond.',
   mobileTitle: [
     'Empowering Business with AI automation,',
     'Digital Marketing & Technology Solutions',

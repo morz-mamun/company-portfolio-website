@@ -181,7 +181,7 @@ export default function TestimonialCarousel() {
   return (
     <section className="mx-auto max-w-4xl overflow-hidden p-2 md:p-6 lg:p-8">
       <SectionHeading
-        title="People love working with Trust Global Communication."
+        title="People love working with Trust Global Communications"
         descriptionClassName="mb-8 md:mb-10 lg:mb-14"
       />
 

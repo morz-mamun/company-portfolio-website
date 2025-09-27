@@ -3,42 +3,42 @@ import { TFaqItem, TFaqSection } from '@/types/faq';
 export const homePageFaq: TFaqItem[] = [
   {
     value: 'item-1',
-    title: 'What is Trust Global Communications?',
+    title:
+      'How can Trust Global Communications improve my business operations?',
     content: [
-      'Trust Global Communications is a cutting-edge AI-powered platform that revolutionizes the way you manage your communication needs.',
-      'With Trust Global Communications, you can effortlessly send, receive, and manage messages, ensuring your communication experience is efficient, secure, and hassle-free.',
+      'Trust Global Communications leverages AI automation, digital marketing, and technology solutions to streamline workflows, reduce manual tasks, and enhance productivity across your business.',
     ],
   },
   {
     value: 'item-2',
-    title: 'What is Trust Global Communications?',
+    title:
+      'How quickly can I implement AI and automation solutions in my company?',
     content: [
-      'Trust Global Communications is a cutting-edge AI-powered platform that revolutionizes the way you manage your communication needs.',
-      'With Trust Global Communications, you can effortlessly send, receive, and manage messages, ensuring your communication experience is efficient, secure, and hassle-free.',
+      'Our team assesses your business processes and deploys tailored AI automation and multi-agent systems rapidly, ensuring minimal downtime while maximizing efficiency and ROI.',
     ],
   },
   {
     value: 'item-3',
-    title: 'Return Policy',
+    title: 'Are your services suitable for small and mid-sized businesses?',
     content: [
-      "We stand behind our products with a comprehensive 30-day return policy. If you're not completely satisfied, simply return the item in its original condition.",
-      'Our hassle-free return process includes free return shipping and full refunds processed within 48 hours of receiving the returned item.',
+      'Yes! We design scalable solutions—from AI automation to e-commerce management and digital marketing that grow with your business, whether you are a startup or an established enterprise.',
     ],
   },
   {
     value: 'item-4',
-    title: 'Return Policy',
+    title:
+      'How does Trust Global Communications help increase revenue and efficiency?',
     content: [
-      "We stand behind our products with a comprehensive 30-day return policy. If you're not completely satisfied, simply return the item in its original condition.",
-      'Our hassle-free return process includes free return shipping and full refunds processed within 48 hours of receiving the returned item.',
+      'By integrating intelligent automation, data-driven marketing, and optimized workflows, we help businesses boost conversions, reduce operational costs, and improve overall performance.',
     ],
   },
   {
     value: 'item-5',
-    title: 'Return Policy',
+    title:
+      'What makes Trust Global Communications’ solutions different from other providers?',
     content: [
-      "We stand behind our products with a comprehensive 30-day return policy. If you're not completely satisfied, simply return the item in its original condition.",
-      'Our hassle-free return process includes free return shipping and full refunds processed within 48 hours of receiving the returned item.',
+      'We combine AI-powered tools, expert strategies, and seamless integration across platforms.',
+      'Our focus is on delivering measurable results, future-ready innovations, and end-to-end support for your business growth.',
     ],
   },
 ];

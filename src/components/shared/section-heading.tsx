@@ -12,14 +12,16 @@ export default function SectionHeading({
   descriptionClassName?: string;
 }) {
   return (
-    <div className={`mx-auto max-w-[974px] space-y-3 text-center ${className}`}>
+    <div
+      className={`mx-auto max-w-[1050px] space-y-3 text-center ${className}`}
+    >
       <h2
         className={`font-inter text-brand dark:text-primary text-[22px] font-bold md:text-4xl ${titleClassName}`}
       >
         {title}
       </h2>
       <p
-        className={`${descriptionClassName} text-brand dark:text-primary/70 mx-auto max-w-[320px] text-sm md:mb-14 md:max-w-[650px] md:text-base lg:max-w-[750px] lg:text-xl`}
+        className={`${descriptionClassName} text-brand dark:text-primary/70 mx-auto max-w-[320px] text-sm text-balance md:mb-14 md:max-w-[650px] md:text-base lg:max-w-[750px] lg:text-xl`}
       >
         {description}
       </p>

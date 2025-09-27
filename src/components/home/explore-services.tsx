@@ -60,9 +60,9 @@ export default function ExploreServices() {
     <section className="pt-10 lg:pt-20">
       {/* Section heading */}
       <SectionHeading
-        title="Explore Our Services"
-        description="We offer a wide range of services to help you succeed in the digital world. From custom software development to digital marketing, we've got you covered."
-        descriptionClassName="lg:mb-20 mb-10 lg:max-w-[850px] xl:max-w-[974px]"
+        title="Find The Right Service"
+        description="Click a service to explore our AI, software, and digital solutions designed to help your business succeed."
+        descriptionClassName="lg:mb-20 mb-10 lg:max-w-[850px] xl:!max-w-[974px]"
       />
 
       <div className="border bg-[#F9F9F9] backdrop-blur-[5px] lg:pt-10 dark:bg-[#030712]">

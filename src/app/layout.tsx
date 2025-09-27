@@ -51,8 +51,9 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-  title: 'Trust Global Communications',
-  description: 'Trust Global Communications',
+  title: 'TGCX | AI Automation & Digital Marketing Solutions',
+  description:
+    'Boost business growth with TGCX: AI automation, digital marketing, software, e-commerce, and smart technology solutions designed for modern brands.',
 };
 
 /**
