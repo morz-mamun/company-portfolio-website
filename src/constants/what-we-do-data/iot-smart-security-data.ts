@@ -21,6 +21,7 @@ export const smartSurveillanceSystemsData: TServices = {
       'Our Smart Surveillance Systems leverage AI-enabled CCTV and cloud monitoring to detect threats in real-time and prevent incidents before they escalate. Human teams are supported by AI analytics for faster, more accurate monitoring.',
     image: 'https://pub-3c3fbc3b66a54a4ab707f64d0f564e7d.r2.dev/banner01.png',
     imageAlt: 'smart-surveillance-systems',
+    isLink: true,
   },
   subServices: [
     {
@@ -55,6 +56,7 @@ export const iotDeviceIntegrationAndAutomationData: TServices = {
       'We implement IoT Device Integration & Automation to connect smart devices across enterprise environments, enabling predictive maintenance, automated workflows, and seamless communication.',
     image: 'https://pub-3c3fbc3b66a54a4ab707f64d0f564e7d.r2.dev/service09.png',
     imageAlt: 'iot-device-integration-and-automation',
+    isLink: true,
   },
   subServices: [
     {
@@ -88,6 +90,7 @@ export const accessControlAndBiometricSecurityData: TServices = {
       'Our Access Control & Biometric Security solutions provide AI-powered authentication with biometric scanning, facial recognition, and RFID to protect sensitive areas.',
     image: 'https://pub-3c3fbc3b66a54a4ab707f64d0f564e7d.r2.dev/service09.png',
     imageAlt: 'access-control-and-biometric-security',
+    isLink: true,
   },
   subServices: [
     {
@@ -121,6 +124,7 @@ export const cloudBasedSecurityMonitoringData: TServices = {
       'Cloud-Based Security Monitoring delivers centralized dashboards to track IoT devices, detect vulnerabilities, and send instant alerts for suspicious activity.',
     image: 'https://pub-3c3fbc3b66a54a4ab707f64d0f564e7d.r2.dev/service10.png',
     imageAlt: 'cloud-based-security-monitoring',
+    isLink: true,
   },
   subServices: [
     {
@@ -153,6 +157,7 @@ export const riskPreventionAndCybersecurityData: TServices = {
       'Our Risk Prevention & Cybersecurity combines AI threat detection with compliance protocols to protect networks, prevent intrusions, and ensure GDPR, HIPAA, and ISO compliance.',
     image: 'https://pub-3c3fbc3b66a54a4ab707f64d0f564e7d.r2.dev/service10.png',
     imageAlt: 'cloud-based-security-monitoring',
+    isLink: true,
   },
   subServices: [
     {

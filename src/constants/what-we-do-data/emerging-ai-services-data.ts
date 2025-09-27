@@ -22,6 +22,7 @@ export const generativeAISolutionsData: TServices = {
       'Our Generative AI Solutions create content, visuals, video ads, synthetic audio, and AI avatars for faster marketing and engaging brand experiences. Businesses can streamline storytelling, design, and media production with AI-powered creativity.',
     image: 'https://pub-3c3fbc3b66a54a4ab707f64d0f564e7d.r2.dev/service10.png',
     imageAlt: 'generative-ai-solutions',
+    isLink: true,
   },
   subServices: [
     {
@@ -55,6 +56,7 @@ export const aiForFinanceHealthcareEducationData: TServices = {
       'We deliver industry-specific AI solutions to automate risk assessment in finance, support diagnostics in healthcare, and provide personalized learning in education. Each system is tailored to improve efficiency, accuracy, and decision-making.',
     image: 'https://pub-3c3fbc3b66a54a4ab707f64d0f564e7d.r2.dev/service09.png',
     imageAlt: 'ai-for-finance-healthcare-education',
+    isLink: true,
   },
   subServices: [
     {
@@ -88,6 +90,7 @@ export const predictiveAnalyticsAndForecastingModelsData: TServices = {
       'Our Predictive Analytics & Forecasting Models analyze historical and real-time data to anticipate demand, customer behavior, and market trends, helping businesses make informed strategic decisions.',
     image: 'https://pub-3c3fbc3b66a54a4ab707f64d0f564e7d.r2.dev/service09.png',
     imageAlt: 'predictive-analytics-and-forecasting-models',
+    isLink: true,
   },
   subServices: [
     {
@@ -121,6 +124,7 @@ export const aiDrivenPersonalizationEnginesData: TServices = {
       'We build AI Personalization Engines that adapt websites, apps, and campaigns in real time based on user intent, behavior, and preferences, improving engagement and conversions.',
     image: 'https://pub-3c3fbc3b66a54a4ab707f64d0f564e7d.r2.dev/service10.png',
     imageAlt: 'ai-driven-personalization-engines',
+    isLink: true,
   },
   subServices: [
     {
@@ -153,6 +157,7 @@ export const rDForFutureAITechnologiesData: TServices = {
       'TGCX invests in AI R&D to explore multi-modal AI, Web3 + AI integration, neuro-marketing, and ethical AI frameworks. We help businesses remain future-ready, innovative, and compliant.',
     image: 'https://pub-3c3fbc3b66a54a4ab707f64d0f564e7d.r2.dev/service10.png',
     imageAlt: 'R&D-for-Future-AI-Technologies',
+    isLink: true,
   },
   subServices: [
     {

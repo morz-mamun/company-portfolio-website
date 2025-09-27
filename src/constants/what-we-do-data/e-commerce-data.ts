@@ -20,6 +20,7 @@ export const ecommerceWebsiteAndMarketplaceStoreDevelopmentData: TServices = {
       'Our E-commerce Website & Marketplace Store Development services create custom online stores and seller accounts with professional branding, intuitive UX, and SEO-optimized product pages to drive conversions and revenue.',
     image: 'https://pub-3c3fbc3b66a54a4ab707f64d0f564e7d.r2.dev/banner02.jpg',
     imageAlt: 'ecommerce-website-and-marketplace-store-development',
+    isLink: true,
   },
   subServices: [
     {
@@ -53,6 +54,7 @@ export const amazonWalmartEtsyEbayAndShopifyOptimizationData: TServices = {
       'With our Amazon, Walmart, Etsy, eBay & Shopify Optimization, we improve visibility and sales through AI-driven product SEO, PPC campaigns, and competitor analysis. Enhanced content and dynamic pricing strategies ensure maximum marketplace performance.',
     image: 'https://pub-3c3fbc3b66a54a4ab707f64d0f564e7d.r2.dev/service09.png',
     imageAlt: 'amazon-walmart-etsy-ebay-and-shopify-optimization',
+    isLink: true,
   },
   subServices: [
     {
@@ -86,6 +88,7 @@ export const affiliateNetworkSetupAndManagementData: TServices = {
       'Our Affiliate Network Setup & Management services expand your reach while tracking commissions, conversions, and ROI using AI-powered dashboards. We handle program setup, partner onboarding, and performance optimization for measurable results.',
     image: 'https://pub-3c3fbc3b66a54a4ab707f64d0f564e7d.r2.dev/service09.png',
     imageAlt: 'multi-agent-orchestration',
+    isLink: true,
   },
   subServices: [
     {
@@ -119,6 +122,7 @@ export const aiPoweredProductRecommendationSystemsData: TServices = {
       'Our AI-Powered Product Recommendation Systems deliver personalized shopping experiences that increase upsells, cross-sells, and overall revenue. AI analyzes customer behavior to offer relevant product suggestions in real-time.',
     image: 'https://pub-3c3fbc3b66a54a4ab707f64d0f564e7d.r2.dev/service10.png',
     imageAlt: 'ai-powered-product-recommendation-systems',
+    isLink: true,
   },
   subServices: [
     {
@@ -151,6 +155,7 @@ export const automatedOrderAndInventoryManagementData: TServices = {
       'With Automated Order & Inventory Management, we deploy AI-powered systems to synchronize stock across marketplaces, automate order processing, and forecast inventory needs, preventing overstock and shortages.',
     image: 'https://pub-3c3fbc3b66a54a4ab707f64d0f564e7d.r2.dev/service10.png',
     imageAlt: 'automated-order-and-inventory-management',
+    isLink: true,
   },
   subServices: [
     {

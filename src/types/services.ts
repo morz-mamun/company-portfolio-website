@@ -11,6 +11,7 @@ export type TSubServiceTitleAndDescription = {
   description: string;
   image: string;
   imageAlt?: string;
+  isLink?: boolean;
 };
 export type TSubServices = {
   title: string;
@@ -18,12 +19,15 @@ export type TSubServices = {
 };
 
 export type TServices = {
-  data: {
-    title: string;
-    description: string;
-    image: string;
-    imageAlt?: string;
-  };
+  // data: {
+  //   title: string;
+  //   description: string;
+  //   image: string;
+  //   imageAlt?: string;
+  //   isLink?: boolean;
+  // };
+
+  data: TSubServiceTitleAndDescription;
   subServices: TSubServices[];
   styleClasses?: {
     ServiceTitleAndDescriptionClass?: string;

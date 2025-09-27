@@ -22,6 +22,7 @@ export const aiBpoSolutionsData: TServices = {
       'Our AI Call Center Solutions deploy intelligent voice assistants and smart IVR systems to route calls efficiently, reduce wait times, and improve customer satisfaction. Human agents work alongside AI to ensure faster and more accurate query resolution.',
     image: 'https://pub-3c3fbc3b66a54a4ab707f64d0f564e7d.r2.dev/service10.png',
     imageAlt: 'ai-bpo-solutions',
+    isLink: true,
   },
   subServices: [
     {
@@ -55,6 +56,7 @@ export const customerSupportAndHelpdeskOutsourcingData: TServices = {
       'With Customer Support & Helpdesk Outsourcing, we combine AI chatbots, ticket automation, and knowledge base management to provide fast, accurate, and multilingual support, 24/7.',
     image: 'https://pub-3c3fbc3b66a54a4ab707f64d0f564e7d.r2.dev/service09.png',
     imageAlt: 'customer-support-and-helpdesk-outsourcing',
+    isLink: true,
   },
   subServices: [
     {
@@ -88,6 +90,7 @@ export const backOfficeProcessOutsourcingData: TServices = {
       'Our Back Office Process Outsourcing automates data entry, billing, HR, payroll, and document processing with AI-powered systems, reducing errors and turnaround times while maintaining compliance.',
     image: 'https://pub-3c3fbc3b66a54a4ab707f64d0f564e7d.r2.dev/service09.png',
     imageAlt: 'back-office-process-outsourcing',
+    isLink: true,
   },
   subServices: [
     {
@@ -121,6 +124,7 @@ export const technicalSupportOutsourcingData: TServices = {
       'With Technical Support Outsourcing, our AI-supported teams provide monitoring, troubleshooting, and escalation management for IT, SaaS, and enterprise systems, ensuring seamless operations.',
     image: 'https://pub-3c3fbc3b66a54a4ab707f64d0f564e7d.r2.dev/service10.png',
     imageAlt: 'technical-support-outsourcing',
+    isLink: true,
   },
   subServices: [
     {
@@ -153,6 +157,7 @@ export const aiLeadGenerationAndSalesSupportData: TServices = {
       'Our AI Lead Generation & Sales Support services use AI-driven lead scoring, qualification, and nurturing to increase conversion rates, shorten sales cycles, and allow your sales team to focus on high-quality prospects.',
     image: 'https://pub-3c3fbc3b66a54a4ab707f64d0f564e7d.r2.dev/service10.png',
     imageAlt: 'ai-lead-generation-and-sales-support',
+    isLink: true,
   },
   subServices: [
     {

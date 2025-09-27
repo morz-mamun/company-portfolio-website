@@ -21,6 +21,7 @@ export const saasProductDevelopmentData: TServices = {
       'Our SaaS Product Development services deliver custom-built, multi-tenant platforms with subscription billing, AI-enhanced features, and full compliance. Every product is designed for scalability, security, and long-term growth.',
     image: 'https://pub-3c3fbc3b66a54a4ab707f64d0f564e7d.r2.dev/service10.png',
     imageAlt: 'saas-product-development',
+    isLink: true,
   },
   subServices: [
     {
@@ -54,6 +55,7 @@ export const affiliateTrackingDashboardsData: TServices = {
       'Our Affiliate Marketing Automation Tools help businesses recruit, track, and scale affiliate programs without manual effort. AI-driven dashboards, commission tracking, and fraud detection make managing affiliates effortless.',
     image: 'https://pub-3c3fbc3b66a54a4ab707f64d0f564e7d.r2.dev/service09.png',
     imageAlt: 'affiliate-marketing-automation-tools',
+    isLink: true,
   },
   subServices: [
     {
@@ -87,6 +89,7 @@ export const ecommerceGrowthStrategyToolsData: TServices = {
       'We design E-commerce Growth Strategy Tools that automate product research, pricing optimization, competitor monitoring, and analytics for online stores. Sellers on Shopify, Amazon, Walmart, and eBay can scale faster and make data-driven decisions.',
     image: 'https://pub-3c3fbc3b66a54a4ab707f64d0f564e7d.r2.dev/service09.png',
     imageAlt: 'ecommerce-growth-strategy-tools',
+    isLink: true,
   },
   subServices: [
     {
@@ -120,6 +123,7 @@ export const aiContentCreationPlatformsData: TServices = {
       'With our AI Content Creation Platforms, businesses generate SEO-optimized blogs, ad copy, videos, and graphics in seconds. These tools combine AI automation with human oversight to maintain quality and relevance.',
     image: 'https://pub-3c3fbc3b66a54a4ab707f64d0f564e7d.r2.dev/service10.png',
     imageAlt: 'ai-content-creation-platforms',
+    isLink: true,
   },
   subServices: [
     {
@@ -153,6 +157,7 @@ export const aiPoweredMarketingFunnelOptimizerData: TServices = {
       'Our AI-Powered Marketing Funnel Optimizer dynamically tests, personalizes, and tracks user behavior to maximize conversions. Funnels adapt automatically to user intent, improving lead generation and sales.',
     image: 'https://pub-3c3fbc3b66a54a4ab707f64d0f564e7d.r2.dev/service10.png',
     imageAlt: 'ai-content-creation-platforms',
+    isLink: true,
   },
   subServices: [
     {
@@ -185,6 +190,7 @@ export const smartReviewAndTestimonialCollectorsData: TServices = {
       'Our Smart Review & Testimonial Collectors automate review collection and analysis across platforms like Google, Trustpilot, Yelp, and social media, building credibility and improving search rankings.',
     image: 'https://pub-3c3fbc3b66a54a4ab707f64d0f564e7d.r2.dev/service10.png',
     imageAlt: 'ai-content-creation-platforms',
+    isLink: true,
   },
   subServices: [
     {

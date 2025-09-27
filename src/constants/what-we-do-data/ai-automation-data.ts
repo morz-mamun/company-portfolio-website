@@ -9,8 +9,6 @@ export const serviceDescriptionData: TServiceDescription = {
   image: 'https://pub-3c3fbc3b66a54a4ab707f64d0f564e7d.r2.dev/service11.png',
 };
 
-// indivisual sub services data -->
-
 // all services section title data -->
 export const servicesSectionTitleData = 'Our Core Automation Services';
 
@@ -22,6 +20,7 @@ export const aiChatBotAndVoiceAssistantData: TServices = {
       'We design and deploy multi-agent ecosystems where AI agents collaborate, share data, and execute tasks autonomously, driving smarter operations and higher productivity.',
     image: 'https://pub-3c3fbc3b66a54a4ab707f64d0f564e7d.r2.dev/service10.png',
     imageAlt: 'ai-chatbot-and-voice-assistant',
+    isLink: true,
   },
   subServices: [
     {
@@ -56,6 +55,7 @@ export const workflowAutomationData: TServices = {
       'Eliminate repetitive tasks and streamline operations by connecting your apps and platforms with low-code/no-code tools or custom APIs. Our workflow automation services ensure efficiency and accuracy across business processes.',
     image: 'https://pub-3c3fbc3b66a54a4ab707f64d0f564e7d.r2.dev/service09.png',
     imageAlt: 'workflow-automation',
+    isLink: true,
   },
   subServices: [
     {
@@ -90,6 +90,7 @@ export const multiAgentOrchestrationData: TServices = {
       'Combine AI intelligence with RPA to create systems that think and act, not just follow instructions. Intelligent Process Automation helps reduce human error, improve compliance, and speed up operations.',
     image: 'https://pub-3c3fbc3b66a54a4ab707f64d0f564e7d.r2.dev/service09.png',
     imageAlt: 'multi-agent-orchestration',
+    isLink: true,
   },
   subServices: [
     {
@@ -123,6 +124,7 @@ export const facilityAndSecurityAutomation: TServices = {
       'Transform raw data into actionable insights with AI-powered pipelines and real-time dashboards. Our solutions enable predictive analytics, enhanced reporting, and faster, data-driven decision-making.',
     image: 'https://pub-3c3fbc3b66a54a4ab707f64d0f564e7d.r2.dev/service10.png',
     imageAlt: 'facility-and-security-automation',
+    isLink: true,
   },
   subServices: [
     {
@@ -156,6 +158,7 @@ export const voiceAndChatbotAssistant: TServices = {
       'Engage customers 24/7 with conversational AI assistants across websites, apps, and call centers. From chatbots to voice-enabled virtual agents, our solutions improve user experience and reduce support costs.',
     image: 'https://pub-3c3fbc3b66a54a4ab707f64d0f564e7d.r2.dev/service10.png',
     imageAlt: 'facility-and-security-automation',
+    isLink: true,
   },
   subServices: [
     {

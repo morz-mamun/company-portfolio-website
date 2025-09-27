@@ -21,6 +21,7 @@ export const aiPoweredSeoData: TServices = {
       'Our AI-Powered SEO solutions cover programmatic SEO, keyword clustering, and multilingual targeting, combined with technical improvements like schema markup, site speed optimization, and advanced crawling strategies. These methods improve rankings, increase organic traffic, and enhance website authority.',
     image: 'https://pub-3c3fbc3b66a54a4ab707f64d0f564e7d.r2.dev/service10.png',
     imageAlt: 'ai-powered-seo',
+    isLink: true,
   },
   subServices: [
     {
@@ -56,6 +57,7 @@ export const paidAdCampaignsData: TServices = {
       'With Paid Ad Campaigns, we run AI-optimized ads on Google Ads, Meta, and LinkedIn, leveraging predictive bidding, audience segmentation, and retargeting to reduce CPC and maximize ROAS. Campaigns are continuously optimized for cost efficiency and conversions.',
     image: 'https://pub-3c3fbc3b66a54a4ab707f64d0f564e7d.r2.dev/service09.png',
     imageAlt: 'paid-ads-google-meta-tiktok',
+    isLink: true,
   },
   subServices: [
     {
@@ -89,6 +91,7 @@ export const contentMarketingCopywritingData: TServices = {
       'Our Content Marketing & Copywriting combines AI tools and human expertise to produce blogs, long-form articles, email copy, and social content. Each piece is crafted to rank in search engines while building brand authority and audience trust',
     image: 'https://pub-3c3fbc3b66a54a4ab707f64d0f564e7d.r2.dev/service09.png',
     imageAlt: 'content-marketing-copywriting',
+    isLink: true,
   },
   subServices: [
     {
@@ -124,6 +127,7 @@ export const marketingFunnelAutomationData: TServices = {
       'With Marketing Funnel Automation, we design AI-driven sales funnels that nurture leads through personalized email sequences, retargeting campaigns, and automated drip workflows. Funnels are continuously tested and optimized for higher conversion rates.',
     image: 'https://pub-3c3fbc3b66a54a4ab707f64d0f564e7d.r2.dev/service10.png',
     imageAlt: 'marketing-funnel-automation',
+    isLink: true,
   },
   subServices: [
     {
@@ -157,6 +161,7 @@ export const socialMediaGrowthBrandingData: TServices = {
       'Our Social Media Growth & Branding services leverage AI-assisted tools for automated posting, trend analysis, and audience engagement. We manage content calendars, influencer partnerships, and campaigns to expand reach and strengthen brand presence.',
     image: 'https://pub-3c3fbc3b66a54a4ab707f64d0f564e7d.r2.dev/service10.png',
     imageAlt: 'social-media-growth-branding',
+    isLink: true,
   },
   subServices: [
     {
@@ -189,6 +194,7 @@ export const emailMarketingLeadNurturingData: TServices = {
       'With Email Marketing & Lead Nurturing, we craft AI-personalized campaigns that segment audiences, optimize subject lines, and improve open and click-through rates. Automated drip campaigns maintain engagement until leads are ready to convert.',
     image: 'https://pub-3c3fbc3b66a54a4ab707f64d0f564e7d.r2.dev/service10.png',
     imageAlt: 'social-media-growth-branding',
+    isLink: true,
   },
   subServices: [
     {

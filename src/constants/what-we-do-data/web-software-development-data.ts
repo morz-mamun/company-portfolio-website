@@ -20,6 +20,7 @@ export const customWebDevelopmentData: TServices = {
       'We create Custom Web Development solutions focused on conversion, speed, and SEO performance. Every website is built with semantic HTML, clean information architecture, and Core Web Vitals best practices to ensure fast loading, higher rankings, and seamless analytics integration.',
     image: 'https://pub-3c3fbc3b66a54a4ab707f64d0f564e7d.r2.dev/service15.png',
     imageAlt: 'custom-web-development',
+    isLink: true,
   },
   subServices: [
     {
@@ -56,6 +57,7 @@ export const enterpriseSoftwareAndSaaSSolutionsData: TServices = {
       'Our Enterprise Software & SaaS Solutions provide cloud-native apps with robust authentication, role-based access, billing, audit logs, and observability. These systems scale effortlessly for multi-tenant environments while remaining secure and ready for future AI automation.',
     image: 'https://pub-3c3fbc3b66a54a4ab707f64d0f564e7d.r2.dev/service14.png',
     imageAlt: 'enterprise-software-and-saas-solutions',
+    isLink: true,
   },
   subServices: [
     {
@@ -89,6 +91,7 @@ export const mobileAppDevelopmentData: TServices = {
       'With Mobile App Development, we build native and cross-platform apps (iOS/Android) that combine offline support, secure storage, push notifications, and analytics. App UX aligns with web funnels, and CI/CD pipelines ensure rapid, reliable releases.',
     image: 'https://pub-3c3fbc3b66a54a4ab707f64d0f564e7d.r2.dev/service12.png',
     imageAlt: 'mobile-app-development',
+    isLink: true,
   },
   subServices: [
     {
@@ -122,6 +125,7 @@ export const softwareArchitectureAndScalabilityData: TServices = {
       'Our Software Architecture & Scalability services ensure your software systems are stable, reliable, and ready for growth. We optimize databases, caching, microservices, API gateways, and autoscaling strategies to maintain performance and security.',
     image: 'https://pub-3c3fbc3b66a54a4ab707f64d0f564e7d.r2.dev/service12.png',
     imageAlt: 'software-architecture-and-scalability',
+    isLink: true,
   },
   subServices: [
     {
