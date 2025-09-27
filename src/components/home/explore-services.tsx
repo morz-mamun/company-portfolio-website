@@ -1,11 +1,12 @@
 'use client';
 
 import { useState } from 'react';
-import { motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import Link from 'next/link';
 import SectionHeading from '../shared/section-heading';
 import { exploreServices } from '@/constants/explore-services-data';
 import { Ripple } from '../magicui/ripple';
+
 export default function ExploreServices() {
   const [isExploring, setIsExploring] = useState(false);
   const [visibleSubServices, setVisibleSubServices] = useState<{
@@ -15,11 +16,30 @@ export default function ExploreServices() {
 
   const toggleExplore = () => {
     if (isExploring) {
-      setIsExploring(false);
-      setVisibleSubServices({});
+      // Animate out subservices first
+      exploreServices?.forEach((service, serviceIndex) => {
+        service?.subServices.slice(0, 2).forEach((_, subIndex) => {
+          setTimeout(
+            () => {
+              setVisibleSubServices((prev) => ({
+                ...prev,
+                [`${service.id}-${subIndex}`]: false,
+              }));
+            },
+            serviceIndex * 200 + subIndex * 150,
+          );
+        });
+      });
+
+      // After animations end, hide everything
+      setTimeout(() => {
+        setIsExploring(false);
+        setVisibleSubServices({});
+      }, 800); // matches exit animation duration
     } else {
       setIsExploring(true);
 
+      // Animate in subservices with stagger
       exploreServices?.forEach((service, serviceIndex) => {
         service?.subServices.slice(0, 2).forEach((_, subIndex) => {
           setTimeout(
@@ -38,14 +58,15 @@ export default function ExploreServices() {
 
   return (
     <section className="pt-10 lg:pt-20">
-      {/* section heading */}
+      {/* Section heading */}
       <SectionHeading
         title="Explore Our Services"
         description="We offer a wide range of services to help you succeed in the digital world. From custom software development to digital marketing, we've got you covered."
-        descriptionClassName="lg:mb-20 mb-10 lg:max-w-[850px] xl:max-w-[974px] "
+        descriptionClassName="lg:mb-20 mb-10 lg:max-w-[850px] xl:max-w-[974px]"
       />
-      <div className="bg-[#F9F9F9] backdrop-blur-[5px] dark:bg-[#030712]">
-        <div className="relative mx-auto h-[500px] max-w-5xl overflow-hidden md:h-[600px]">
+
+      <div className="border bg-[#F9F9F9] backdrop-blur-[5px] lg:pt-10 dark:bg-[#030712]">
+        <div className="relative mx-auto h-[500px] max-w-5xl overflow-hidden md:h-[700px]">
           {/* Central Toggle Button */}
           <motion.div
             className="absolute top-1/2 left-1/2 z-20 -translate-x-1/2 -translate-y-1/2"
@@ -60,19 +81,31 @@ export default function ExploreServices() {
           >
             <button
               onClick={toggleExplore}
-              className="group relative h-20 w-20 cursor-pointer rounded-full border-1 bg-gradient-to-t from-[#19DDDD] via-[#BDFF7C] to-[#E51177] p-0.5 shadow-[0_1px_1px_4px_rgba(255,109,184,0.20)] transition duration-300 ease-out hover:scale-105 md:h-40 md:w-40"
+              className="group relative h-20 w-20 cursor-pointer rounded-full border-1 bg-gradient-to-t from-[#19DDDD] via-[#BDFF7C] to-[#E51177] p-0.5 shadow-[0_1px_1px_4px_rgba(255,109,184,0.20)] transition duration-300 ease-out hover:scale-105 md:h-32 md:w-32 lg:h-40 lg:w-40"
             >
               {/* Gradient Glow Layer */}
               <span className="absolute -inset-1 rounded-full bg-gradient-to-t from-[#19DDDD] via-[#BDFF7C] to-[#E51177] opacity-0 blur-xl transition duration-300 group-hover:opacity-100" />
 
-              <div className="relative z-10 flex h-full w-full items-center justify-center rounded-full bg-white dark:bg-[#030712]">
-                <span className="font-inter text-sm font-bold md:text-3xl">
-                  {isExploring ? 'Close' : 'Explore'}
-                </span>
+              <div className="relative z-10 flex h-full w-full items-center justify-center overflow-hidden rounded-full bg-white dark:bg-[#030712]">
+                <AnimatePresence mode="wait">
+                  <motion.span
+                    key={isExploring ? 'services' : 'explore'}
+                    initial={{ opacity: 0, y: 8, scale: 0.9 }}
+                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                    exit={{ opacity: 0, y: -8, scale: 0.9 }}
+                    transition={{ duration: 0.3, ease: 'easeOut' }}
+                    className="font-inter text-sm font-bold md:text-2xl lg:text-3xl"
+                  >
+                    {isExploring ? 'Services' : 'Explore'}
+                  </motion.span>
+                </AnimatePresence>
               </div>
             </button>
           </motion.div>
+
+          {/* Background Ripple Effect */}
           <Ripple />
+
           {/* Service Items */}
           {exploreServices?.map((service, index) => (
             <motion.div
@@ -101,7 +134,7 @@ export default function ExploreServices() {
               </div>
 
               {isExploring && (
-                <div className="absolute top-6 ml-3 w-[180px] md:w-[270px]">
+                <div className="absolute ml-3 w-[180px] md:top-6 md:w-[270px]">
                   {service.subServices
                     .slice(0, 2)
                     .map((subService, subIndex) => (
@@ -118,15 +151,16 @@ export default function ExploreServices() {
                             ? 0
                             : -20,
                         }}
-                        transition={{ duration: 0.8, delay: subIndex * 0.5 }}
+                        transition={{ duration: 0.6 }}
                         className="text-[10px] text-gray-600 md:py-1.5 md:text-xs dark:text-gray-400"
                       >
                         • {subService}
                       </motion.div>
                     ))}
+
                   {service.subServices.length > 2 && (
                     <Link
-                      href={service.link}
+                      href={service?.link}
                       className="cursor-pointer text-[10px] text-gray-600 hover:text-gray-800 md:py-1.5 md:text-xs dark:text-gray-400"
                     >
                       +{service.subServices.length - 2} more services...
