@@ -3,7 +3,10 @@ export const servicesData = [
     title: 'Automation & AI Multi-Agent Systems',
     description:
       'Revolutionize operations using intelligent AI agents and automation workflows that can reduce manual tasks, optimize productivity, and improve response time.',
-    image: 'https://pub-3c3fbc3b66a54a4ab707f64d0f564e7d.r2.dev/service07.jpg',
+    // image: 'https://pub-3c3fbc3b66a54a4ab707f64d0f564e7d.r2.dev/service07.jpg',
+    // image: 'https://ik.imagekit.io/uc8ejfj1j/drop-folder/Automation___AI_Multi-Agent_Systems_ut6WSrt6g.png',
+    image:
+      'https://ik.imagekit.io/uc8ejfj1j/drop-folder/Copilot_20250925_160634_tiqRE1v4xY.png',
     link: '/automation-ai-multi-agent-systems',
     className: 'lg:col-span-2 md:col-span-2',
   },
@@ -11,7 +14,8 @@ export const servicesData = [
     title: 'Web & Software Development',
     description:
       'Reimagine digital experiences with fast, secure, and scalable websites, apps, and software that boost conversions, enhance performance, and grow with your business.',
-    image: 'https://pub-3c3fbc3b66a54a4ab707f64d0f564e7d.r2.dev/service06.jpg',
+    image:
+      'https://ik.imagekit.io/uc8ejfj1j/drop-folder/Web___Software_Development_GZhKfVNwG.png',
     link: '/web-software-development',
     className: 'lg:col-span-2 md:col-span-2',
   },

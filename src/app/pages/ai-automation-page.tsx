@@ -18,7 +18,7 @@ export default function AiAutomationPage() {
       {/* Banner Section */}
       <BannerTitleAndDescription sectionData={aiAutomationBannerData} />
       {/* service description section */}
-      <div className="mt-14">
+      <div className="mt-10 lg:mt-14">
         <ServiceDescription
           sectionData={serviceDescriptionData}
           TitleClassName="md:max-w-lg max-w-sm px-[2px]"

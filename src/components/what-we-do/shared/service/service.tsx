@@ -24,7 +24,7 @@ export default function Service({ sectionData }: { sectionData: TServices }) {
         </div>
       </div>
       {/* book now button */}
-      <PrimaryBtn title="Book Now" iconName="" className="mt-10" />
+      {/* <PrimaryBtn title="Book Now" iconName="" className="mt-10" /> */}
     </div>
   );
 }

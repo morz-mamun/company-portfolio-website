@@ -3,6 +3,7 @@ export type TServiceDescription = {
   descriptionOne?: string;
   descriptionTwo?: string;
   image: string;
+  isLink?: boolean;
 };
 
 export type TSubServiceTitleAndDescription = {
