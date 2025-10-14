@@ -36,7 +36,7 @@ export default function Footer() {
                       Trust Global Communications
                     </span>
                   </h3>
-                  <p className="text-brand dark:text-primary mb-4 text-xs md:text-sm">
+                  <p className="text-brand dark:text-primary mb-4 max-w-[425px] text-xs md:text-sm">
                     We are a team of passionate professionals dedicated to
                     providing exceptional services to our clients. With a strong
                     focus on quality, innovation, and customer satisfaction, we
@@ -137,19 +137,19 @@ export default function Footer() {
                 </div>
               </div>
 
-              {/* privacy policy */}
+              {/* privacy policy, terms and conditions */}
               <div className="flex flex-col space-y-3 lg:mx-auto">
                 <h4 className="font-inter text-md font-semibold">
-                  Privacy Policy
+                  Legal Documents
                 </h4>
 
                 <ul className="space-y-2 text-sm">
                   <li>
                     <Link
-                      href="#/privacy-policy"
+                      href="/privacy-policy"
                       className="text-brand dark:text-primary relative inline-block text-xs transition-colors after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-current after:transition-all after:duration-300 hover:after:w-full md:text-base"
                     >
-                      Privacy Policy
+                      Privacy & Policy
                     </Link>
                   </li>
                   <li>
