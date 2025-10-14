@@ -81,7 +81,7 @@ export function PrivacyPolicyPage() {
       <BannerTitleAndDescription sectionData={privacyPolicyBannerData} />
       {/* Main Content */}
       <div className="bg-background mt-10 min-h-screen md:mt-12 lg:mt-20">
-        <div className="mx-auto max-w-7xl">
+        <div className="mx-auto max-w-6xl">
           <div className="flex gap-4 lg:gap-12">
             {/* Sidebar */}
             <aside className="hidden w-64 shrink-0 md:block xl:w-72">
