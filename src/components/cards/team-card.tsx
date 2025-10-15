@@ -12,18 +12,31 @@ export default function TeamCard({
   openModal: (member: TTeamMember) => void;
 }) {
   const [hoveredMember, setHoveredMember] = useState<number | null>(null);
+
+  const isHovered = hoveredMember === member.id;
+
   return (
     <div
-      className={`animate-fade-in-up max-w-3xs transform transition-all duration-500 ease-out md:max-w-xs`}
+      className="animate-fade-in-up relative max-w-3xs transform transition-all duration-500 ease-out md:max-w-xs"
       style={{
         animationDelay: `${index * 150}ms`,
         animationFillMode: 'both',
       }}
+      onMouseEnter={() => setHoveredMember(member.id)}
+      onMouseLeave={() => setHoveredMember(null)}
     >
+      {/* Hover Glow Background - shows only on hovered card */}
+      <div
+        className={`absolute -inset-1 z-0 rounded-[1rem] bg-gradient-to-r from-purple-500 via-purple-400 to-blue-500 blur-sm transition-all duration-300 ease-out ${
+          isHovered ? 'opacity-100' : 'opacity-0'
+        }`}
+      />
+
+      {/* Card */}
       <Card
-        className={`bg-card border-border/50 relative cursor-pointer overflow-hidden p-0 transition-all duration-300 ease-out hover:-translate-y-2 hover:scale-105 hover:shadow-2xl ${hoveredMember === member.id ? 'ring-primary/20 ring-2' : ''} `}
-        onMouseEnter={() => setHoveredMember(member.id)}
-        onMouseLeave={() => setHoveredMember(null)}
+        className={`bg-background border-border/50 relative z-10 cursor-pointer overflow-hidden p-0 transition-all duration-300 ease-out hover:-translate-y-2 hover:scale-105 hover:shadow-2xl ${
+          isHovered ? 'ring-primary/20 ring-2' : ''
+        }`}
         onClick={() => openModal(member)}
       >
         {/* Image Container */}
@@ -34,9 +47,12 @@ export default function TeamCard({
               alt={member.name}
               className="border-primary/20 h-full w-full rounded-full border-4 object-cover transition-all duration-300"
             />
+
             {/* Hover Overlay */}
             <div
-              className={`from-primary/80 to-accent/80 absolute inset-0 flex items-center justify-center rounded-full bg-gradient-to-br transition-all duration-300 ${hoveredMember === member.id ? 'opacity-90' : 'opacity-0'} `}
+              className={`from-primary/80 to-accent/80 absolute inset-0 flex items-center justify-center rounded-full bg-gradient-to-br transition-all duration-300 ${
+                isHovered ? 'opacity-90' : 'opacity-0'
+              }`}
             >
               <div className="p-4 text-center text-white">
                 <div className="text-sm font-medium">Learn More</div>
@@ -56,7 +72,9 @@ export default function TeamCard({
 
           {/* Bio - Shows on hover */}
           <div
-            className={`overflow-hidden transition-all duration-300 ease-out ${hoveredMember === member.id ? 'max-h-32 opacity-100' : 'max-h-0 opacity-0'} `}
+            className={`overflow-hidden transition-all duration-300 ease-out ${
+              isHovered ? 'max-h-32 opacity-100' : 'max-h-0 opacity-0'
+            }`}
           >
             <p className="text-muted-foreground text-sm leading-relaxed">
               {member.bio}

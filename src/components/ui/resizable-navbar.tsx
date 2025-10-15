@@ -145,7 +145,7 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
                     setHovered(idx);
                     setOpen(true);
                   }}
-                  className="relative cursor-pointer rounded-full px-4 py-1 dark:text-neutral-300"
+                  className="relative cursor-pointer rounded-full px-4 py-1 dark:text-white"
                 >
                   {hovered === idx && (
                     <motion.div
@@ -171,7 +171,7 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
                         href={item.link}
                         key={`link-${idx}`}
                         onClick={() => setOpen(false)}
-                        className={`relative flex items-center gap-2 rounded-md px-2 py-1 text-sm text-neutral-600 transition hover:bg-[#CCCCCC]/40 md:text-base dark:text-neutral-300 dark:hover:bg-neutral-800/60 ${subIsActive ? 'bg-[#CCCCCC]/40 px-2 py-1 dark:bg-neutral-800/60' : ''}`}
+                        className={`relative flex items-center gap-2 rounded-md px-2 py-1 text-sm text-neutral-600 transition hover:bg-[#CCCCCC]/40 md:text-base dark:text-white dark:hover:bg-neutral-800/60 ${subIsActive ? 'bg-[#CCCCCC]/40 from-[#0908C3] to-[#0C34E9] px-2 py-1 dark:bg-gradient-to-b' : ''}`}
                       >
                         <Icon icon={item?.icon} width={16} height={16} />
                         {item.name}
@@ -192,13 +192,13 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
               setOpen(false);
             }}
             onClick={onItemClick}
-            className={`relative flex items-center rounded-full px-4 py-1 dark:text-neutral-300 ${isActive ? 'border-brand/20 border-2 px-4 py-1' : ''}`}
+            className={`relative flex items-center rounded-full px-4 py-1 dark:text-white ${isActive ? 'border-brand/20 border-2 px-4 py-1 dark:border-blue-600' : ''}`}
             key={`link-${idx}`}
           >
             {hovered === idx && (
               <motion.div
                 layoutId="hovered"
-                className="absolute inset-0 h-full w-full rounded-full bg-[#CCCCCC] dark:bg-neutral-800"
+                className="absolute inset-0 h-full w-full rounded-full bg-[#CCCCCC] from-[#0908C3] to-[#0C34E9] dark:bg-gradient-to-b"
               />
             )}
             <span className="relative z-20">{item.name}</span>

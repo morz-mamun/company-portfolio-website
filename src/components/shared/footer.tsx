@@ -88,7 +88,7 @@ export default function Footer() {
                 <div className="flex flex-col items-start space-y-2 text-sm">
                   <Popover open={isOpen} onOpenChange={setIsOpen}>
                     <PopoverTrigger asChild>
-                      <button className="relative inline-block cursor-pointer text-base after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-current after:transition-all after:duration-300 hover:after:w-full">
+                      <button className="relative inline-block cursor-pointer text-base after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-gradient-to-r after:from-[#0908C3] after:to-[#0C34E9] after:transition-all after:duration-300 hover:after:w-full dark:hover:text-blue-600">
                         What we do
                         {/* <ArrowUpFromLine size={16} /> */}
                       </button>
@@ -123,14 +123,14 @@ export default function Footer() {
 
                   <Link
                     href="/who-we-are"
-                    className="text-brand dark:text-primary relative inline-block text-xs transition-colors after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-current after:transition-all after:duration-300 hover:after:w-full md:text-base"
+                    className="text-brand dark:text-primary relative inline-block text-xs transition-colors after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-gradient-to-r after:from-[#0908C3] after:to-[#0C34E9] after:transition-all after:duration-300 hover:after:w-full md:text-base dark:hover:text-blue-600"
                   >
                     Who we are
                   </Link>
 
                   <Link
                     href="/contact-us"
-                    className="text-brand dark:text-primary relative inline-block text-xs transition-colors after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-current after:transition-all after:duration-300 hover:after:w-full md:text-base"
+                    className="text-brand dark:text-primary relative inline-block text-xs transition-colors after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-gradient-to-r after:from-[#0908C3] after:to-[#0C34E9] after:transition-all after:duration-300 hover:after:w-full md:text-base dark:hover:text-blue-600"
                   >
                     Contact
                   </Link>
@@ -147,7 +147,7 @@ export default function Footer() {
                   <li>
                     <Link
                       href="/privacy-policy"
-                      className="text-brand dark:text-primary relative inline-block text-xs transition-colors after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-current after:transition-all after:duration-300 hover:after:w-full md:text-base"
+                      className="text-brand dark:text-primary relative inline-block text-xs transition-colors after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-gradient-to-r after:from-[#0908C3] after:to-[#0C34E9] after:transition-all after:duration-300 hover:after:w-full md:text-base dark:hover:text-blue-600"
                     >
                       Privacy & Policy
                     </Link>
@@ -155,7 +155,7 @@ export default function Footer() {
                   <li>
                     <Link
                       href="#/terms-and-conditions"
-                      className="text-brand dark:text-primary relative inline-block text-xs transition-colors after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-current after:transition-all after:duration-300 hover:after:w-full md:text-base"
+                      className="text-brand dark:text-primary relative inline-block text-xs transition-colors after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-gradient-to-r after:from-[#0908C3] after:to-[#0C34E9] after:transition-all after:duration-300 hover:after:w-full md:text-base dark:hover:text-blue-600"
                     >
                       Terms & Conditions
                     </Link>
@@ -175,7 +175,7 @@ export default function Footer() {
                     aria-label="facebook"
                     className="text-brand dark:text-primary text-xs transition-colors md:text-base"
                   >
-                    <Facebook size={20} />
+                    <Facebook size={20} className="hover:text-blue-600" />
                   </a>
                   <a
                     href={socialMediaData?.linkedin}
@@ -183,7 +183,7 @@ export default function Footer() {
                     aria-label="linkedin"
                     className="text-brand dark:text-primary text-xs transition-colors md:text-base"
                   >
-                    <Linkedin size={20} />
+                    <Linkedin size={20} className="hover:text-blue-600" />
                   </a>
                   <a
                     href={socialMediaData?.twitter}
@@ -191,7 +191,7 @@ export default function Footer() {
                     aria-label="twitter"
                     className="text-brand dark:text-primary text-xs transition-colors md:text-base"
                   >
-                    <Twitter size={20} />
+                    <Twitter size={20} className="hover:text-blue-600" />
                   </a>
                   <a
                     href={socialMediaData?.email}
@@ -199,7 +199,7 @@ export default function Footer() {
                     aria-label="email"
                     className="text-brand dark:text-primary text-xs transition-colors md:text-base"
                   >
-                    <Mail size={20} />
+                    <Mail size={20} className="hover:text-blue-600" />
                   </a>
                 </div>
               </div>

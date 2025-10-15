@@ -12,14 +12,13 @@ export default function JoiningOurTeam() {
             title="Join Our Team"
             description="We are hiring across a range of roles and expertise"
           />
-
-          <div className="mt-10 rounded-[12px] border-2 bg-[linear-gradient(to_right,_#F4F4F4,_#F0F0F0)] px-2 py-5 md:px-5 md:py-10 lg:px-10 lg:pb-20 dark:bg-[linear-gradient(to_right,#0D0D0D,#0D0D0D)]">
-            <div className="flex flex-col items-center justify-between gap-4 md:flex-row lg:gap-[74px]">
+          <div className="relative mt-10 flex w-full max-w-5xl overflow-hidden rounded-[2rem] border px-3 py-6 md:py-14 lg:px-10">
+            <div className="z-10 flex w-full flex-col items-center justify-between gap-4 md:flex-row lg:gap-[74px]">
               <div className="space-y-4">
-                <h3 className="font-inter text-2xl font-semibold md:text-[28px]">
+                <h3 className="font-inter text-2xl font-semibold md:text-3xl lg:text-[32px]">
                   Join us
                 </h3>
-                <p className="text-brand/70 dark:text-primary/70 text-sm md:text-lg lg:text-xl">
+                <p className="text-brand/70 text-sm md:text-base lg:text-lg dark:text-white/80">
                   We are hiring across a range of roles and expertise
                 </p>
               </div>
@@ -27,14 +26,16 @@ export default function JoiningOurTeam() {
               <a
                 href={socialMediaData?.linkedin}
                 target="_blank"
-                className="group text-brand shadow-primary/60 hover:bg-brand flex cursor-pointer items-center gap-2 rounded-[17px] bg-[#FAFAFA] px-2 py-4 font-semibold shadow-lg duration-500 ease-in-out hover:text-white hover:transition md:w-[280px] lg:px-5 lg:py-4"
+                className="flex w-fit cursor-pointer items-center gap-2 rounded-lg bg-gradient-to-b from-[#0908C3] to-[#0C34E9] px-6 py-3 text-xs font-semibold text-white shadow-[inset_2px_3px_9px_0_rgba(0,0,0,0.25)] backdrop-blur-[5px] transition duration-200 ease-in-out hover:scale-105 hover:bg-gradient-to-b hover:from-[#000EAC] hover:to-[#00163C] hover:font-bold hover:shadow-sm md:py-4 md:text-base"
               >
-                <span className="text-sm md:text-lg lg:text-xl">
+                <span className="text-sm md:text-base lg:text-xl">
                   View open positions
                 </span>
                 <Icon icon="icons8:right-round" width={18} height={18} />
               </a>
             </div>
+            {/* transparent gradient */}
+            <div className="absolute inset-x-0 bottom-0 h-full bg-gradient-to-b from-transparent to-white to-70% dark:to-black"></div>
           </div>
           {/* border x design */}
           <BorderXPattern className="-left-4 w-4 md:-left-6 md:w-6" />

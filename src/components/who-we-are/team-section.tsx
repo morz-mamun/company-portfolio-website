@@ -21,7 +21,7 @@ export default function TeamSection() {
     setSelectedMember(null);
   };
   return (
-    <div className="relative mx-4 mt-12 overflow-hidden py-10 lg:mt-20">
+    <div className="relative mx-4 my-12 h-[650px] overflow-hidden py-10 lg:my-20 lg:mt-20">
       <SectionHeading
         title="Meet Our Team"
         description="Our skilled team delivering innovative, data-driven solutions with expertise and collaboration."

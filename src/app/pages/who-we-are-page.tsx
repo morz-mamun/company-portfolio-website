@@ -14,12 +14,10 @@ export default function WhoWeArePage() {
   return (
     <main className="mx-auto min-h-screen max-w-7xl overflow-hidden">
       {/* Banner Section */}
-      <div className="mt-20 md:mt-28">
-        <BannerTitleAndDescription
-          sectionData={whoWeAreBannerData}
-          descriptionClassName="md:!max-w-[600px] !max-w-[350px]"
-        />
-      </div>
+      <BannerTitleAndDescription
+        sectionData={whoWeAreBannerData}
+        descriptionClassName="md:!max-w-[600px] !max-w-[350px]"
+      />
 
       {/* who we are */}
       <div className="mx-3 mt-16 flex flex-col items-stretch justify-between gap-8 md:mx-4 md:mt-20 md:flex-row md:gap-10 md:py-8 lg:mt-24 lg:gap-20 lg:py-12 xl:gap-28">

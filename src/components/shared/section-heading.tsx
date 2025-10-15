@@ -21,7 +21,7 @@ export default function SectionHeading({
         {title}
       </h2>
       <p
-        className={`${descriptionClassName} text-brand dark:text-primary/70 mx-auto max-w-[320px] text-sm text-balance md:mb-14 md:max-w-[650px] md:text-base lg:max-w-[750px] lg:text-xl`}
+        className={`${descriptionClassName} text-brand mx-auto max-w-[320px] text-sm text-balance md:mb-14 md:max-w-[650px] md:text-base lg:max-w-[750px] lg:text-xl dark:text-white/80`}
       >
         {description}
       </p>
