@@ -18,6 +18,7 @@ import { Icon } from '@iconify/react/dist/iconify.js';
 import { usePathname } from 'next/navigation';
 import { navItems } from '@/constants/navbar-data/main-nav-items-data';
 import ThemeToggleButton from '@/components/buttons/theme-toggle-btn';
+import { AnimatedThemeToggler } from '@/components/ui/animated-theme-toggler';
 
 export default function WebSiteNavbar() {
   const [open, setOpen] = useState(false);
@@ -33,7 +34,10 @@ export default function WebSiteNavbar() {
           <NavItems items={navItems} />
           <div className="z-[999] flex items-center gap-4">
             {/* Theme Toggle Button */}
-            <ThemeToggleButton />
+            <AnimatedThemeToggler
+              duration={600}
+              className="hover:cursor-pointer"
+            />
             <NavbarButton
               href="/contact-us"
               className="rounded-full text-base font-medium"

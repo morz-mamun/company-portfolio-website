@@ -437,3 +437,8 @@
   @apply !bg-gray-600;
   color: #ffffff;
 }
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
