@@ -82,7 +82,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <main className="font-roboto mx-auto max-w-[1440px]">{children}</main>
+          <main className="font-roboto">{children}</main>
         </ThemeProvider>
         <Toaster />
       </body>

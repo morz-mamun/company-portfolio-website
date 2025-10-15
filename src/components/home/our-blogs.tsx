@@ -11,7 +11,7 @@ export default async function OurBlogs() {
   const allBlogs = blogsData?.docs;
 
   return (
-    <section className="border-y py-10 lg:py-14">
+    <section className="py-10 lg:py-14">
       {/* section heading */}
       <SectionHeading
         title="Latest Insights & Articles"

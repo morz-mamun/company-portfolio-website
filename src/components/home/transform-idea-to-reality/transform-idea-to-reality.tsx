@@ -9,7 +9,7 @@ const secondRow = reviews?.slice(reviews.length / 2);
 
 export default function TransformIdeaToReality() {
   return (
-    <section className="border-t">
+    <section className="">
       {/* client feedback marquee */}
       <div className="py-10 md:py-14">
         <div className="container mx-auto flex w-full flex-col items-center justify-center p-2 md:p-4">

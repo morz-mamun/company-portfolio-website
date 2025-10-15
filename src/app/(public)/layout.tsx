@@ -8,11 +8,11 @@ export default function PublicLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <main className="z-10 mx-auto min-h-screen max-w-screen-xl border">
+    <main className="z-10 mx-auto min-h-screen w-full">
       {/* NAVBAR */}
       <WebSiteNavbar />
       <ScrollProgress />
-      <div className="mx-3 border-x md:mx-6">{children}</div>
+      <div className="">{children}</div>
       {/* FOOTER */}
       <Footer />
     </main>

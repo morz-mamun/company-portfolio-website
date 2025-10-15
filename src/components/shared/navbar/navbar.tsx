@@ -52,9 +52,12 @@ export default function WebSiteNavbar() {
         <MobileNav>
           <MobileNavHeader>
             <NavbarLogo />
-            <div className="z-[999] flex items-center gap-2">
+            <div className="z-[999] flex items-center gap-2 md:gap-3">
               {/* Theme Toggle Button */}
-              <ThemeToggleButton />
+              <AnimatedThemeToggler
+                duration={600}
+                className="hover:cursor-pointer"
+              />
               <MobileNavToggle
                 isOpen={isMobileMenuOpen}
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}

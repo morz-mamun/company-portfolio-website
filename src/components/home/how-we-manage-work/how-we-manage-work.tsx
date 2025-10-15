@@ -14,7 +14,7 @@ export default function HowWeManageWork() {
         description="We combine AI automation, cutting-edge software, and strategic workflows to deliver smarter systems and scalable solutions. Whether it’s building websites, e-commerce stores, or SaaS platforms, we streamline processes to help modern brands grow efficiently."
         descriptionClassName="mx-auto !max-w-[850px] text-center"
       />
-      <div className="relative mt-10 overflow-hidden border-y px-4 lg:px-6">
+      <div className="relative mt-10 overflow-hidden border border-y px-4 lg:px-6">
         {/* content container */}
         <div className="relative border-x">
           {/* contain */}

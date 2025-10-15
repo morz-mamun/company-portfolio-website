@@ -5,7 +5,7 @@ import { socialMediaData } from '@/constants/social-media-data';
 
 export default function JoiningOurTeam() {
   return (
-    <section className="border-y px-4 md:px-6">
+    <section className="border px-4 md:px-6">
       <div className="relative border-x px-2 pt-10 pb-[50px] md:px-4 md:pt-[50px] md:pb-[80px] lg:px-10 lg:pt-[50px] lg:pb-[100px] xl:px-[120px] xl:pt-[70px] xl:pb-[150px]">
         <div className="flex flex-col items-center justify-center">
           <SectionHeading

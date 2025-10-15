@@ -14,63 +14,63 @@ import { homePageFaqSectionData } from '@/constants/faq-data/home-page-faq';
 
 export default function HomePage() {
   return (
-    <main className="mx-auto min-h-screen max-w-7xl overflow-hidden">
+    <div className="min-h-screen">
       {/* Banner Section */}
       <HomeBanner />
-      {/* <div className="mt-20 md:mt-28 lg:mt-32">
-      </div> */}
-      {/* Video Section */}
-      <div className="px-2 lg:px-0">
-        <VideoSection />
-      </div>
+      <main className="mx-auto min-h-screen max-w-7xl overflow-hidden">
+        {/* Video Section */}
+        <div className="px-2 lg:px-0">
+          <VideoSection />
+        </div>
 
-      {/* Trusted By Section */}
-      <div className="">
-        <TrustedBy />
-      </div>
+        {/* Trusted By Section */}
+        <div className="">
+          <TrustedBy />
+        </div>
 
-      {/* our services */}
-      <div>
-        <OurServices />
-      </div>
+        {/* our services */}
+        <div>
+          <OurServices />
+        </div>
 
-      {/* Explore Services */}
-      <div className="my-10 border-y md:my-20">
-        <ExploreServices />
-      </div>
+        {/* Explore Services */}
+        <div className="my-10 md:my-20">
+          <ExploreServices />
+        </div>
 
-      {/* How We Manage Work */}
-      <div className="my-10 md:my-20">
-        <HowWeManageWork />
-      </div>
+        {/* How We Manage Work */}
+        <div className="my-10 md:my-20">
+          <HowWeManageWork />
+        </div>
 
-      {/* Testimonial Carousel */}
-      <div className="mb-10 md:mb-20">
-        <TestimonialCarousel />
-      </div>
+        {/* Testimonial Carousel */}
+        <div className="mb-10 md:mb-20">
+          <TestimonialCarousel />
+        </div>
 
-      {/* Our latest blogs */}
-      <div className="mb-10 md:mb-20">
-        <OurBlogs />
-      </div>
+        {/* Our latest blogs */}
+        <div className="mb-10 md:mb-20">
+          <OurBlogs />
+        </div>
 
-      {/* joining our team */}
-      <JoiningOurTeam />
+        {/* joining our team */}
+        <JoiningOurTeam />
 
-      {/* FAQ Section */}
-      <div className="my-10 md:my-20">
-        <FAQ data={homePageFaqSectionData} />
-      </div>
+        {/* FAQ Section */}
+        <div className="my-10 md:my-20">
+          <FAQ data={homePageFaqSectionData} />
+        </div>
 
-      {/* Contact us */}
-      <div className="mb-10 md:mb-20">
-        <ContactUs />
-      </div>
+        {/* Contact us */}
+        <div className="mb-10 md:mb-20">
+          <ContactUs />
+        </div>
 
-      {/* user feedbacks and book your strategy call */}
-      <div>
-        <TransformIdeaToReality />
-      </div>
-    </main>
+        {/* user feedbacks and book your strategy call */}
+        <div>
+          <TransformIdeaToReality />
+        </div>
+      </main>
+    </div>
   );
 }
