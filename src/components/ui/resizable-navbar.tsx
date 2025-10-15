@@ -150,16 +150,16 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
                   {hovered === idx && (
                     <motion.div
                       layoutId="hovered"
-                      className="absolute inset-0 h-full w-full rounded-full bg-[#CCCCCC] dark:bg-neutral-800"
+                      className="absolute inset-0 h-full w-full rounded-full bg-[#CCCCCC] from-[#0908C3] to-[#0C34E9] dark:bg-gradient-to-b"
                     />
                   )}
-                  <span className="relative z-20">{item?.name}</span>
+                  <span className={`relative z-20`}>{item?.name}</span>
                 </button>
               </PopoverTrigger>
               <PopoverContent
                 align="start"
                 sideOffset={8}
-                className="w-[350px] p-2"
+                className="dark:bg-background w-[350px] p-2"
                 onMouseEnter={() => setOpen(true)}
                 onMouseLeave={() => setOpen(false)}
               >

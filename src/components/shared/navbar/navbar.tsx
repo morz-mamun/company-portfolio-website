@@ -81,7 +81,7 @@ export default function WebSiteNavbar() {
                       side="right"
                       sideOffset={-40}
                       alignOffset={30}
-                      className="w-[270px] p-2 md:w-[330px] dark:bg-[#0A0A0A]"
+                      className="dark:bg-background w-[270px] p-2 md:w-[330px]"
                     >
                       <div className="flex flex-col gap-1">
                         {whatWeDoItemsData?.map((item, idx) => {

@@ -14,6 +14,11 @@ import { Popover, PopoverContent, PopoverTrigger } from '../ui/popover';
 import { useState } from 'react';
 import { whatWeDoItemsData } from '@/constants/navbar-data/what-we-do-items-data';
 import { usePathname } from 'next/navigation';
+import {
+  IconBrandInstagram,
+  IconBrandPinterest,
+  IconBrandTiktok,
+} from '@tabler/icons-react';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -177,6 +182,18 @@ export default function Footer() {
                   >
                     <Facebook size={20} className="hover:text-blue-600" />
                   </a>
+                  {/* instagram */}
+                  <a
+                    href={socialMediaData?.instagram}
+                    target="_blank"
+                    aria-label="instagram"
+                    className="text-brand dark:text-primary text-xs transition-colors md:text-base"
+                  >
+                    <IconBrandInstagram
+                      size={20}
+                      className="hover:text-blue-600"
+                    />
+                  </a>
                   <a
                     href={socialMediaData?.linkedin}
                     target="_blank"
@@ -193,13 +210,29 @@ export default function Footer() {
                   >
                     <Twitter size={20} className="hover:text-blue-600" />
                   </a>
+                  {/* pinterest */}
                   <a
-                    href={socialMediaData?.email}
+                    href={socialMediaData?.pinterest}
                     target="_blank"
-                    aria-label="email"
+                    aria-label="pinterest"
                     className="text-brand dark:text-primary text-xs transition-colors md:text-base"
                   >
-                    <Mail size={20} className="hover:text-blue-600" />
+                    <IconBrandPinterest
+                      size={20}
+                      className="hover:text-blue-600"
+                    />
+                  </a>
+                  {/* tiktok */}
+                  <a
+                    href={socialMediaData?.tiktok}
+                    target="_blank"
+                    aria-label="tiktok"
+                    className="text-brand dark:text-primary text-xs transition-colors md:text-base"
+                  >
+                    <IconBrandTiktok
+                      size={20}
+                      className="hover:text-blue-600"
+                    />
                   </a>
                 </div>
               </div>

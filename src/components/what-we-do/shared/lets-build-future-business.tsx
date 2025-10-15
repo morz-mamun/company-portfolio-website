@@ -31,7 +31,7 @@ export default function LetsBuildFutureBusiness({
             />
           </div>
         </div>
-        <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-b from-transparent to-white to-70% dark:h-full dark:from-transparent dark:to-black/70"></div>
+        <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-b from-transparent to-white to-70% dark:h-full dark:from-transparent dark:to-black/30"></div>
       </div>
     </div>
   );
