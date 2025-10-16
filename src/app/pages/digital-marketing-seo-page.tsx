@@ -18,12 +18,13 @@ export default function DigitalMarketingAndSeoPage() {
       {/* Banner Section */}
       <BannerTitleAndDescription
         sectionData={digitalMarketingSeoBannerData}
+        className="!h-[280px] md:!h-[350px] lg:!h-[400px]"
         descriptionClassName="!max-w-[920px]"
       />
       <main className="min-h-screen overflow-hidden">
         <div className="mx-auto max-w-7xl overflow-hidden">
           {/* service description section */}
-          <div className="mt-10 lg:mt-14">
+          <div className="">
             <ServiceDescription
               sectionData={serviceDescriptionData}
               TitleClassName="md:!max-w-xl"

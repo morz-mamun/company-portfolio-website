@@ -18,12 +18,13 @@ export default function EmergingApiServicesPage() {
       {/* Banner Section */}
       <BannerTitleAndDescription
         sectionData={EmergingAiServicesBannerData}
+        className="!h-[250px] md:!h-[350px]"
         descriptionClassName="!max-w-[920px]"
       />
       <main className="min-h-screen overflow-hidden">
         <div className="mx-auto min-h-screen max-w-7xl overflow-hidden">
           {/* service description section */}
-          <div className="mt-10 lg:mt-14">
+          <div className="">
             <ServiceDescription
               sectionData={serviceDescriptionData}
               TitleClassName="md:max-w-lg max-w-sm px-[2px]"

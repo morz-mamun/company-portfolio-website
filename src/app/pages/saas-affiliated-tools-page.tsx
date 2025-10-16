@@ -18,12 +18,13 @@ export default function SaasAffiliatedToolsPage() {
       {/* Banner Section */}
       <BannerTitleAndDescription
         sectionData={saasAffiliatedToolsBannerData}
+        className="!h-[280px] md:!h-[350px] lg:!h-[400px]"
         descriptionClassName="!max-w-[920px]"
       />
       <main className="min-h-screen overflow-hidden">
         <div className="mx-auto min-h-screen max-w-7xl overflow-hidden">
           {/* service description section */}
-          <div className="mt-10 lg:mt-14">
+          <div className="">
             <ServiceDescription sectionData={serviceDescriptionData} />
           </div>
           {/* explore our services / solutions */}

@@ -16,11 +16,14 @@ export default function AiAutomationPage() {
   return (
     <div className="min-h-screen">
       {/* Banner Section */}
-      <BannerTitleAndDescription sectionData={aiAutomationBannerData} />
+      <BannerTitleAndDescription
+        sectionData={aiAutomationBannerData}
+        className="!h-[250px] md:!h-[350px]"
+      />
       <main className="overflow-hidden">
         <div className="mx-auto max-w-7xl overflow-hidden">
           {/* service description section */}
-          <div className="mt-10 lg:mt-14">
+          <div className="">
             <ServiceDescription
               sectionData={serviceDescriptionData}
               TitleClassName="md:max-w-lg max-w-sm px-[2px]"

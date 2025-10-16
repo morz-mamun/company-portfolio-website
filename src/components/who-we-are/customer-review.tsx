@@ -15,7 +15,7 @@ export default function CustomerReview() {
 Their feedback reflects the quality, reliability, and impact of our solutions."
       />
       {/* review marquee */}
-      <div className="relative mt-16 overflow-hidden border-y px-4 lg:px-6">
+      <div className="relative mt-16 overflow-hidden border px-4 lg:px-6">
         <div className="relative border-x py-10 md:py-16 lg:py-20">
           <div className="relative flex h-[400px] w-full items-center justify-center overflow-hidden">
             <Marquee pauseOnHover vertical className="[--duration:20s]">

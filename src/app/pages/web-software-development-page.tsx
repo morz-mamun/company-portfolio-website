@@ -18,11 +18,13 @@ export default function WebAndSoftwareDevlopmentPage() {
       {/* Banner Section */}
       <BannerTitleAndDescription
         sectionData={webAndSoftwareDevelopmentBannerData}
+        className="!h-[250px] md:!h-[350px]"
       />
       <main className="min-h-screen overflow-hidden">
         <div className="mx-auto min-h-screen max-w-7xl overflow-hidden">
           {/* service description section */}
-          <div className="mt-10 lg:mt-14">
+          {/* className="mt-10 lg:mt-14" */}
+          <div className="">
             <ServiceDescription
               sectionData={serviceDescriptionData}
               TitleClassName="max-w-xl"

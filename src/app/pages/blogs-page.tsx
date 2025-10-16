@@ -97,129 +97,136 @@ export default function BlogsPage({ blogsData }: any) {
   };
 
   return (
-    <main className="mx-auto min-h-screen max-w-7xl overflow-hidden">
-      <BannerTitleAndDescription sectionData={blogsBannerData} />
-      {/* all blogs with pagination */}
-      {allBlogs?.length > 0 ? (
-        <div className="space-y-10">
-          {/* search button */}
-          <div className="mx-auto mt-8 flex max-w-xs overflow-hidden rounded-lg border border-gray-100 bg-white p-1 shadow-md">
-            <Input
-              type="text"
-              placeholder="Search any blog"
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-              className="flex-1 border-0 px-2 text-sm shadow-none placeholder:text-gray-500 focus-visible:ring-0 focus-visible:ring-offset-0 md:py-5"
-            />
-            <Button
-              disabled={!searchTerm}
-              className="hover:bg-[] cursor-pointer rounded-[8px] border-0 bg-black px-4 text-xs font-medium text-white shadow-[inset_2px_2px_4px_0_rgba(255,254,254,0.25)] disabled:opacity-50 md:py-5 md:text-sm"
-            >
-              <Search className="h-4 w-4 text-white" />
-            </Button>
-          </div>
-          {/* category tabs */}
-          <div>
-            <div className="flex flex-wrap justify-center gap-2">
-              {allCategories?.map((category, index) => (
-                <Button
-                  key={index}
-                  variant={
-                    selectedCategory === category ? 'default' : 'outline'
-                  }
-                  onClick={() => {
-                    setSelectedCategory(category as string);
-                    setCurrentPage(1);
-                  }}
-                  className={`cursor-pointer rounded-[8px] text-xs shadow-[0_4px_8px_0_rgba(0,0,0,0.25)] lg:p-5 lg:text-sm ${
-                    selectedCategory === category
-                      ? 'hover:bg-[] border border-black bg-black text-white dark:border-white dark:bg-white dark:text-black'
-                      : 'bg-[#FDFDFD] text-gray-700 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-200'
-                  }`}
-                >
-                  {category as string}
-                </Button>
-              ))}
-            </div>
-          </div>
-
-          {/* Blog Grid */}
-          <div className="mx-2 mb-10 grid grid-cols-1 gap-4 md:mx-4 md:grid-cols-2 lg:mx-6 lg:grid-cols-3 lg:gap-6">
-            {paginatedBlogs?.map((blog: any) => (
-              <BlogCard blog={blog} key={blog.id} />
-            ))}
-          </div>
-
-          {/* Pagination */}
-          {totalPages > 1 && (
-            <div className="flex flex-col items-center gap-4">
-              {/* Page Numbers */}
-              <div className="flex items-center gap-2">
-                {generatePageNumbers().map((page, index) => (
-                  <Button
-                    key={index}
-                    variant={currentPage === page ? 'default' : 'outline'}
-                    size="sm"
-                    onClick={() =>
-                      typeof page === 'number' && setCurrentPage(page)
-                    }
-                    disabled={page === '....'}
-                    className={`h-10 w-10 p-0 ${
-                      currentPage === page
-                        ? 'bg-black text-white'
-                        : page === '....'
-                          ? 'cursor-default'
-                          : 'hover:bg-gray-50'
-                    }`}
-                  >
-                    {page}
-                  </Button>
-                ))}
+    <div>
+      <BannerTitleAndDescription
+        sectionData={blogsBannerData}
+        className="md:!h-[300px] lg:!h-[350px]"
+      />
+      <main className="mx-auto mt-2 min-h-screen max-w-7xl overflow-hidden">
+        {/* all blogs with pagination */}
+        {allBlogs?.length > 0 ? (
+          <div className="space-y-10 md:mx-4">
+            <div className="flex items-center justify-between">
+              {/* category tabs */}
+              <div>
+                <div className="flex flex-wrap justify-center gap-2">
+                  {allCategories?.map((category, index) => (
+                    <Button
+                      key={index}
+                      size="sm"
+                      variant={
+                        selectedCategory === category ? 'default' : 'outline'
+                      }
+                      onClick={() => {
+                        setSelectedCategory(category as string);
+                        setCurrentPage(1);
+                      }}
+                      className={`cursor-pointer rounded-[8px] text-xs shadow-[0_4px_8px_0_rgba(0,0,0,0.25)] lg:p-3 lg:text-sm ${
+                        selectedCategory === category
+                          ? 'hover:bg-[] border border-black bg-black text-white dark:bg-gradient-to-b dark:from-[#0908C3] dark:to-[#0C34E9] dark:text-white'
+                          : 'bg-[#FDFDFD] text-gray-700 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-200'
+                      }`}
+                    >
+                      {category as string}
+                    </Button>
+                  ))}
+                </div>
               </div>
-
-              {/* Jump to Page */}
-              <div className="mx-auto mt-0 mb-16 flex w-[200px] overflow-hidden rounded-lg border border-gray-100 bg-white p-1 shadow-md">
-                {/* <span className="text-sm text-gray-600">Jump to page</span> */}
+              {/* search button */}
+              <div className="dark:bg-accent flex max-w-xs items-center gap-1 rounded-lg bg-white p-1 shadow-md">
                 <Input
-                  type="number"
-                  min="1"
-                  max={totalPages}
-                  value={jumpToPage}
-                  onChange={(e) => setJumpToPage(e.target.value)}
-                  className="flex-1 border-0 px-2 text-sm shadow-none placeholder:text-gray-500 focus-visible:ring-0 focus-visible:ring-offset-0 md:py-5"
-                  placeholder="Jump to page"
+                  type="text"
+                  placeholder="Search any blog"
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                  className="flex-1 border-0 !bg-transparent px-2 text-sm shadow-none placeholder:text-gray-500 focus-visible:ring-0 focus-visible:ring-offset-0 md:text-sm dark:text-white dark:placeholder:text-gray-400"
                 />
                 <Button
-                  onClick={handleJumpToPage}
-                  className="hover:bg-[] cursor-pointer rounded-[8px] border-0 bg-black px-4 text-xs font-medium text-white shadow-[inset_2px_2px_4px_0_rgba(255,254,254,0.25)] disabled:opacity-50 md:py-5 md:text-sm"
+                  disabled={!searchTerm}
+                  className="hover:bg-[] cursor-pointer rounded-[8px] border-0 bg-black text-xs font-medium text-white shadow-[inset_2px_2px_4px_0_rgba(255,254,254,0.25)] disabled:opacity-50 md:text-sm"
                 >
-                  <Icon icon="icons8:right-round" />
+                  <Search className="h-4 w-4 text-white" />
                 </Button>
               </div>
             </div>
-          )}
-        </div>
-      ) : (
-        <div className="my-10">
-          <EmptyStatusState
-            type="empty"
-            title="No Blogs Are Available"
-            description="We don't have any blogs to show at the moment. Please check back later!"
-          />
-        </div>
-      )}
-      {/* No Results */}
-      {filteredBlogs?.length === 0 && (
-        <EmptyStatusState
-          type="search"
-          title="No results found"
-          description="Try adjusting your search criteria or filters."
-          className="mb-10"
-        />
-      )}
 
+            {/* Blog Grid */}
+            <div className="mb-10 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 lg:gap-6">
+              {paginatedBlogs?.map((blog: any) => (
+                <BlogCard blog={blog} key={blog.id} />
+              ))}
+            </div>
+
+            {/* Pagination */}
+            {totalPages > 1 && (
+              <div className="flex flex-col items-center gap-4">
+                {/* Page Numbers */}
+                <div className="flex items-center gap-2">
+                  {generatePageNumbers().map((page, index) => (
+                    <Button
+                      key={index}
+                      variant={currentPage === page ? 'default' : 'outline'}
+                      size="sm"
+                      onClick={() =>
+                        typeof page === 'number' && setCurrentPage(page)
+                      }
+                      disabled={page === '....'}
+                      className={`h-10 w-10 p-0 ${
+                        currentPage === page
+                          ? 'bg-black text-white'
+                          : page === '....'
+                            ? 'cursor-default'
+                            : 'hover:bg-gray-50'
+                      }`}
+                    >
+                      {page}
+                    </Button>
+                  ))}
+                </div>
+
+                {/* Jump to Page */}
+                <div className="mx-auto mt-0 mb-16 flex w-[200px] overflow-hidden rounded-lg border border-gray-100 bg-white p-1 shadow-md">
+                  {/* <span className="text-sm text-gray-600">Jump to page</span> */}
+                  <Input
+                    type="number"
+                    min="1"
+                    max={totalPages}
+                    value={jumpToPage}
+                    onChange={(e) => setJumpToPage(e.target.value)}
+                    className="flex-1 border-0 px-2 text-sm shadow-none placeholder:text-gray-500 focus-visible:ring-0 focus-visible:ring-offset-0 md:py-5"
+                    placeholder="Jump to page"
+                  />
+                  <Button
+                    onClick={handleJumpToPage}
+                    className="hover:bg-[] cursor-pointer rounded-[8px] border-0 bg-black px-4 text-xs font-medium text-white shadow-[inset_2px_2px_4px_0_rgba(255,254,254,0.25)] disabled:opacity-50 md:py-5 md:text-sm"
+                  >
+                    <Icon icon="icons8:right-round" />
+                  </Button>
+                </div>
+              </div>
+            )}
+          </div>
+        ) : (
+          <div className="my-10">
+            <EmptyStatusState
+              type="empty"
+              title="No Blogs Are Available"
+              description="We don't have any blogs to show at the moment. Please check back later!"
+            />
+          </div>
+        )}
+        {/* No Results */}
+        {filteredBlogs?.length === 0 && (
+          <EmptyStatusState
+            type="search"
+            title="No results found"
+            description="Try adjusting your search criteria or filters."
+            className="mb-10"
+          />
+        )}
+      </main>
       {/* newsletter section */}
       <NewsLetterSection />
-    </main>
+    </div>
   );
 }

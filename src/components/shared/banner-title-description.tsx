@@ -21,7 +21,7 @@ export default function BannerTitleAndDescription({
   return (
     <BackgroundBeamsWithCollision>
       <div
-        className={`relative z-20 mx-auto overflow-hidden pt-20 text-center md:pt-28 lg:pt-36 ${className} h-[340px] md:h-[500px] lg:h-[550px]`}
+        className={`relative z-20 mx-auto overflow-hidden pt-22 text-center md:pt-24 lg:pt-28 ${className} h-[340px] md:h-[500px] lg:h-[550px]`}
       >
         {/* Light mode animated gradient background with fade bottom */}
         <div className="animate-gradient-slow fade-bottom absolute inset-0 -z-10 dark:hidden"></div>
