@@ -62,7 +62,7 @@ export default function ExploreServices() {
       <SectionHeading
         title="Find The Right Service"
         description="Click a service to explore our AI, software, and digital solutions designed to help your business succeed."
-        descriptionClassName="lg:mb-20 mb-10 lg:max-w-[850px] xl:!max-w-[974px]"
+        descriptionClassName="lg:mb-20 mb-10 lg:max-w-[500px]"
       />
 
       <div className="bg-[#F9F9F9] backdrop-blur-[5px] lg:pt-10 dark:bg-[#030712]">

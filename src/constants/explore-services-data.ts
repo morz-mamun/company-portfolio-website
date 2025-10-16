@@ -28,7 +28,7 @@ export const exploreServices: Service[] = [
     link: '/digital-marketing-seo',
     color: 'bg-pink-500',
     position:
-      'bottom-9/17 md:bottom-3/9 lg:left-1/10 md:left-10 left-1 -translate-y-1/2',
+      'bottom-9/17 md:bottom-3/9 lg:left-1/10 md:left-10 left-3 -translate-y-1/2',
     subServices: [
       'AI-Powered SEO',
       'Paid Ad Campaigns',
@@ -43,7 +43,7 @@ export const exploreServices: Service[] = [
     name: 'Web & Software Development',
     link: '/web-software-development',
     color: 'bg-green-500',
-    position: 'top-1/4 lg:right-1/10 md:right-10 right-1 -translate-y-1/2',
+    position: 'top-1/4 lg:right-1/10 md:right-10 right-3 -translate-y-1/2',
     subServices: [
       'Custom Web Development',
       'Mobile App Development',
@@ -71,7 +71,7 @@ export const exploreServices: Service[] = [
     name: 'IoT & Smart Security Solutions',
     link: '/iot-smart-security-solutions',
     color: 'bg-purple-500',
-    position: 'bottom-7/20 md:bottom-7/13 lg:right-0 right-1 md:right-5',
+    position: 'bottom-7/20 md:bottom-7/13 lg:right-0 right-8 md:right-5',
     subServices: [
       'Smart Surveillance Systems',
       'IoT Device Integration & Automation',
@@ -99,7 +99,7 @@ export const exploreServices: Service[] = [
     name: 'Emerging AI Services',
     link: '/emerging-ai-services',
     color: 'bg-indigo-500',
-    position: 'top-1/4 md:bottom-3/9 lg:left-44 left-1 md:left-5',
+    position: 'top-1/4 md:bottom-3/9 lg:left-44 left-3 md:left-5',
     subServices: [
       'AI Multi-Agent System Development',
       ' AI for Finance, Healthcare & Education',

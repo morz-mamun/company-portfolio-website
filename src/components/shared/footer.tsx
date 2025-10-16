@@ -26,10 +26,10 @@ export default function Footer() {
   const pathName = usePathname();
 
   return (
-    <footer className="border-t pt-10 md:pt-20">
-      <div className="border-t border-b">
-        <div className="mx-auto max-w-7xl px-4 md:px-6">
-          <div className="relative border-x bg-[#F5F5F5] dark:bg-[#030712]">
+    <footer className="w-full pt-10 md:pt-20">
+      <div className="dark:bg-background w-full bg-[#F5F5F5]">
+        <div className="mx-auto max-w-7xl">
+          <div className="relative">
             {/* footer content */}
             <div className="grid grid-cols-2 gap-8 px-4 py-8 md:grid-cols-3 md:px-6 md:py-12 lg:grid-cols-5">
               {/* about us and contact us */}
@@ -237,27 +237,33 @@ export default function Footer() {
                 </div>
               </div>
             </div>
+            {/* copyright */}
+            <div className="pb-5 text-center text-zinc-500">
+              <p className="text-xs md:text-sm">
+                © {currentYear} Trust Global Communications. All rights
+                reserved.
+              </p>
+            </div>
             {/* back to top button for large screens */}
             <div className="absolute right-2 bottom-4 hidden lg:block">
               <button
                 onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-                className="flex cursor-pointer items-center gap-2 rounded-full bg-gradient-to-b from-[#0908C3] to-[#0C34E9] px-4 py-3 text-white shadow-lg transition-colors hover:scale-105 hover:bg-gradient-to-b hover:from-[#000EAC] hover:to-[#00163C] dark:shadow-lg"
+                className="flex cursor-pointer items-center gap-2 rounded-lg bg-gradient-to-b from-[#0908C3] to-[#0C34E9] px-3 pt-3 pb-1 text-white shadow-lg transition-colors hover:scale-105 hover:bg-gradient-to-b hover:from-[#000EAC] hover:to-[#00163C] dark:shadow-lg"
               >
                 <ArrowUpFromLine
                   size={24}
                   className="animate-bounce text-white"
                 />
-                Back to Top
               </button>
             </div>
             {/* back to top button for medium and small screens */}
             <div className="flex items-center justify-center lg:hidden">
               <button
                 onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-                className="flex cursor-pointer items-center gap-2 rounded-full bg-gradient-to-b from-[#0908C3] to-[#0C34E9] px-4 py-3 text-white shadow-lg transition-colors hover:scale-105 hover:bg-gradient-to-b hover:from-[#000EAC] hover:to-[#00163C] dark:shadow-lg"
+                className="flex cursor-pointer items-center justify-center gap-2 rounded-lg bg-gradient-to-b from-[#0908C3] to-[#0C34E9] px-3 pt-3 pb-1 text-sm text-white shadow-lg transition-colors hover:scale-105 hover:bg-gradient-to-b hover:from-[#000EAC] hover:to-[#00163C] dark:shadow-lg"
               >
                 <ArrowUpFromLine
-                  size={24}
+                  size={20}
                   className="animate-bounce text-white"
                 />
                 Back to Top
@@ -266,16 +272,9 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      {/* copyright */}
-      <div className="py-5 text-center text-zinc-500">
-        <p className="text-xs md:text-sm">
-          © {currentYear} Trust Global Communications. All rights reserved.
-        </p>
-      </div>
-
       {/* bottom pattern */}
       <div className="border-t">
-        <div className="mx-4 h-[6rem] border-x md:mx-6 md:h-[9rem] lg:h-[12rem]">
+        <div className="mx-4 h-[6rem] md:mx-6 md:h-[9rem] lg:h-[12rem]">
           <TextHoverEffect text="Trust Global Communications" />
         </div>
       </div>

@@ -17,56 +17,61 @@ export default function HomePage() {
     <div className="min-h-screen">
       {/* Banner Section */}
       <HomeBanner />
-      <main className="mx-auto min-h-screen max-w-7xl overflow-hidden">
-        {/* Video Section */}
-        <div className="px-2 lg:px-0">
-          <VideoSection />
-        </div>
+      <main className="mx-auto min-h-screen overflow-hidden">
+        <div className="mx-auto max-w-7xl">
+          {/* Video Section */}
+          <div className="px-4 md:px-12 lg:px-0">
+            <VideoSection />
+          </div>
 
-        {/* Trusted By Section */}
-        <div className="">
-          <TrustedBy />
-        </div>
+          {/* Trusted By Section */}
+          <div className="">
+            <TrustedBy />
+          </div>
 
-        {/* our services */}
-        <div>
-          <OurServices />
+          <div className="px-1 md:px-0">
+            {/* our services */}
+            <div>
+              <OurServices />
+            </div>
+          </div>
         </div>
-
         {/* Explore Services */}
         <div className="my-10 md:my-20">
           <ExploreServices />
         </div>
 
-        {/* How We Manage Work */}
-        <div className="my-10 md:my-20">
-          <HowWeManageWork />
+        <div className="mx-auto max-w-7xl">
+          {/* How We Manage Work */}
+          <div className="my-10 md:my-20">
+            <HowWeManageWork />
+          </div>
+
+          {/* Testimonial Carousel */}
+          <div className="mb-10 md:mb-20">
+            <TestimonialCarousel />
+          </div>
+
+          {/* Our latest blogs */}
+          <div className="mb-10 px-1 md:mb-20 md:px-0">
+            <OurBlogs />
+          </div>
+
+          {/* joining our team */}
+          <JoiningOurTeam />
+
+          {/* FAQ Section */}
+          <div className="my-10 md:my-20">
+            <FAQ data={homePageFaqSectionData} />
+          </div>
+
+          {/* Contact us */}
+          <div className="mb-10 px-2 md:mb-20 md:px-0">
+            <ContactUs />
+          </div>
+
+          {/* user feedbacks and book your strategy call */}
         </div>
-
-        {/* Testimonial Carousel */}
-        <div className="mb-10 md:mb-20">
-          <TestimonialCarousel />
-        </div>
-
-        {/* Our latest blogs */}
-        <div className="mb-10 md:mb-20">
-          <OurBlogs />
-        </div>
-
-        {/* joining our team */}
-        <JoiningOurTeam />
-
-        {/* FAQ Section */}
-        <div className="my-10 md:my-20">
-          <FAQ data={homePageFaqSectionData} />
-        </div>
-
-        {/* Contact us */}
-        <div className="mb-10 md:mb-20">
-          <ContactUs />
-        </div>
-
-        {/* user feedbacks and book your strategy call */}
         <div>
           <TransformIdeaToReality />
         </div>

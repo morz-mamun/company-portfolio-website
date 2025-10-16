@@ -8,7 +8,6 @@ export const TextHoverEffect = ({
 }: {
   text: string;
   duration?: number;
-  automatic?: boolean;
 }) => {
   const svgRef = useRef<SVGSVGElement>(null);
   const [cursor, setCursor] = useState({ x: 0, y: 0 });
@@ -40,6 +39,7 @@ export const TextHoverEffect = ({
       className="select-none"
     >
       <defs>
+        {/* 🔥 Brighter and more vibrant gradient */}
         <linearGradient
           id="textGradient"
           gradientUnits="userSpaceOnUse"
@@ -49,82 +49,81 @@ export const TextHoverEffect = ({
         >
           {hovered && (
             <>
-              <stop offset="0%" stopColor="#eab308" />
-              <stop offset="25%" stopColor="#ef4444" />
-              <stop offset="50%" stopColor="#3b82f6" />
-              <stop offset="75%" stopColor="#06b6d4" />
-              <stop offset="100%" stopColor="#8b5cf6" />
+              <stop offset="0%" stopColor="#facc15" /> {/* Bright yellow */}
+              <stop offset="25%" stopColor="#f43f5e" /> {/* Hot pink/red */}
+              <stop offset="50%" stopColor="#3b82f6" /> {/* Bright blue */}
+              <stop offset="75%" stopColor="#22d3ee" /> {/* Cyan */}
+              <stop offset="100%" stopColor="#a855f7" />
+              {/* Purple */}
             </>
           )}
         </linearGradient>
 
+        {/* ✨ Glow filter */}
+        <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+          <feGaussianBlur stdDeviation="3" result="blur" />
+          <feMerge>
+            <feMergeNode in="blur" />
+            <feMergeNode in="SourceGraphic" />
+          </feMerge>
+        </filter>
+
+        {/* Motion-based radial mask */}
         <motion.radialGradient
           id="revealMask"
           gradientUnits="userSpaceOnUse"
-          r="20%"
+          r="25%"
           initial={{ cx: '50%', cy: '50%' }}
           animate={maskPosition}
-          transition={{ duration: duration ?? 0, ease: 'easeOut' }}
-
-          // example for a smoother animation below
-
-          //   transition={{
-          //     type: "spring",
-          //     stiffness: 300,
-          //     damping: 50,
-          //   }}
+          transition={{ duration: duration ?? 0.3, ease: 'easeOut' }}
         >
           <stop offset="0%" stopColor="white" />
           <stop offset="100%" stopColor="black" />
         </motion.radialGradient>
+
         <mask id="textMask">
-          <rect
-            x="0"
-            y="0"
-            width="100%"
-            height="100%"
-            fill="url(#revealMask)"
-          />
+          <rect width="100%" height="100%" fill="url(#revealMask)" />
         </mask>
       </defs>
+
+      {/* Background stroke (faint outline) */}
       <text
         x="50%"
         y="50%"
         textAnchor="middle"
         dominantBaseline="middle"
-        strokeWidth="0.3"
+        strokeWidth="0.4"
         className="fill-transparent stroke-neutral-300 font-[helvetica] text-2xl font-bold md:text-3xl lg:text-4xl dark:stroke-neutral-100"
-        style={{ opacity: hovered ? 0.7 : 0 }}
+        style={{ opacity: hovered ? 0.6 : 0 }}
       >
         {text}
       </text>
+
+      {/* Animated drawing stroke */}
       <motion.text
         x="50%"
         y="50%"
         textAnchor="middle"
         dominantBaseline="middle"
-        strokeWidth="0.3"
+        strokeWidth="0.4"
         className="fill-transparent stroke-neutral-400 font-[helvetica] text-2xl font-bold md:text-3xl lg:text-4xl dark:stroke-neutral-300"
         initial={{ strokeDashoffset: 1000, strokeDasharray: 1000 }}
-        animate={{
-          strokeDashoffset: 0,
-          strokeDasharray: 1000,
-        }}
-        transition={{
-          duration: 4,
-          ease: 'easeInOut',
-        }}
+        animate={{ strokeDashoffset: 0, strokeDasharray: 1000 }}
+        transition={{ duration: 4, ease: 'easeInOut' }}
       >
         {text}
       </motion.text>
+
+      {/* 💫 Main glowing text */}
       <text
         x="50%"
         y="50%"
         textAnchor="middle"
         dominantBaseline="middle"
         stroke="url(#textGradient)"
-        strokeWidth="0.3"
+        strokeWidth="1" // Increased for visibility
         mask="url(#textMask)"
+        filter="url(#glow)" // Apply the glow filter
         className="fill-transparent font-[helvetica] text-2xl font-bold md:text-3xl lg:text-4xl"
       >
         {text}

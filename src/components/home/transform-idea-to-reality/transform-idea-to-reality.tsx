@@ -12,8 +12,8 @@ export default function TransformIdeaToReality() {
     <section className="">
       {/* client feedback marquee */}
       <div className="py-10 md:py-14">
-        <div className="container mx-auto flex w-full flex-col items-center justify-center p-2 md:p-4">
-          <div className="relative flex w-full max-w-5xl flex-col items-center justify-center overflow-hidden rounded-[2rem] border p-10 py-14">
+        <div className="container mx-auto flex w-full flex-col items-center justify-center">
+          <div className="relative flex w-full max-w-5xl flex-col items-center justify-center overflow-hidden border p-10 py-14 lg:rounded-[2rem]">
             <div className="z-10 mx-auto size-24 rounded-[2rem] border bg-white/10 p-3 shadow-2xl backdrop-blur-md lg:size-32 dark:bg-black/10">
               <IconSvg />
             </div>
