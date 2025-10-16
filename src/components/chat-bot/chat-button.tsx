@@ -51,13 +51,13 @@ export function ChatButton() {
       <button
         onClick={() => setIsOpen(true)}
         className={cn(
-          'shadow-primary/70 dark:shadow-brand/70 dark:border-brand/50 dark:bg-brand/10 fixed right-3 bottom-10 z-50 cursor-pointer rounded-full border-2 p-3 shadow-xl backdrop-blur-md md:right-4 md:bottom-4',
+          'fixed right-3 bottom-10 z-50 cursor-pointer rounded-full bg-gradient-to-b from-[#0908C3] to-[#0C34E9] p-3 shadow-lg shadow-blue-400 md:right-4 md:bottom-4',
           'flex items-center justify-center',
           'transition-all duration-300 hover:scale-105',
           isOpen ? 'pointer-events-none opacity-0' : 'opacity-100',
         )}
       >
-        <BotMessageSquare size={28} className="dark:text-brand" />
+        <BotMessageSquare size={28} className="text-white" />
       </button>
 
       {/* <Sheet open={isOpen} onOpenChange={setIsOpen}>
