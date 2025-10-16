@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
 import BannerTitleAndDescription from '@/components/shared/banner-title-description';
-import { privacyPolicyBannerData } from '@/constants/banner-data/privacy-policy-banner-data';
+import { termsAndConditionsBannerData } from '@/constants/banner-data/terns-and-condition-banner-data';
 
 const sections = [
   { id: 'introduction', title: 'Introduction' },
@@ -18,7 +18,7 @@ const sections = [
   { id: 'contact-us', title: 'Contact Us' },
 ];
 
-export function PrivacyPolicyPage() {
+export function TermsAndConditionsPage() {
   const [activeSection, setActiveSection] = useState('introduction');
 
   useEffect(() => {
@@ -79,8 +79,8 @@ export function PrivacyPolicyPage() {
   return (
     <main>
       <BannerTitleAndDescription
-        sectionData={privacyPolicyBannerData}
-        className="!h-[200px] lg:!h-[300px]"
+        sectionData={termsAndConditionsBannerData}
+        className="!h-[200px] md:!h-[250px] lg:!h-[300px]"
       />
       {/* Main Content */}
       <div className="bg-background min-h-screen">

@@ -155,7 +155,7 @@ export default function Footer() {
                   </li>
                   <li>
                     <Link
-                      href="#/terms-and-conditions"
+                      href="/terms-and-conditions"
                       className="text-brand dark:text-primary relative inline-block text-xs transition-colors after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-gradient-to-r after:from-[#0908C3] after:to-[#0C34E9] after:transition-all after:duration-300 hover:after:w-full md:text-base dark:hover:text-blue-600"
                     >
                       Terms & Conditions
