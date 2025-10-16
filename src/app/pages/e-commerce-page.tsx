@@ -21,11 +21,9 @@ export default function ECommercePage() {
         className="!h-[250px] md:!h-[350px]"
         descriptionClassName="!max-w-[920px]"
       />
+      {/* service description section */}
+      <ServiceDescription sectionData={serviceDescriptionData} />
       <main className="mx-auto min-h-screen max-w-7xl overflow-hidden">
-        {/* service description section */}
-        <div className="">
-          <ServiceDescription sectionData={serviceDescriptionData} />
-        </div>
         {/* explore our services / solutions */}
         <div className="my-5 md:my-14">
           <ExploreOurSolution />

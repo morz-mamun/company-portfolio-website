@@ -21,15 +21,13 @@ export default function AiBpoSolutionsPage() {
         className="!h-[250px] md:!h-[350px]"
       />
       <main className="min-h-screen overflow-hidden">
+        {/* service description section */}
+        <ServiceDescription
+          sectionData={serviceDescriptionData}
+          TitleClassName="md:max-w-lg max-w-sm px-[2px]"
+          descriptionTwoClassName="mt-3"
+        />
         <div className="mx-auto max-w-7xl overflow-hidden">
-          {/* service description section */}
-          <div className="">
-            <ServiceDescription
-              sectionData={serviceDescriptionData}
-              TitleClassName="md:max-w-lg max-w-sm px-[2px]"
-              descriptionTwoClassName="mt-3"
-            />
-          </div>
           {/* explore our services / solutions */}
           <div className="my-14">
             <ExploreOurSolution />

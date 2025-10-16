@@ -18,7 +18,7 @@ export default function HowWeManageWork() {
         {/* content container */}
         <div className="relative border-x">
           {/* contain */}
-          <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-[2px]">
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-4">
             <ChatBotPreview />
             <OrbitingCirclesAnimation />
             <Analytics />

@@ -23,7 +23,7 @@ export default function Footer() {
 
   return (
     <footer className="w-full pt-10 md:pt-20">
-      <div className="dark:bg-background w-full bg-[#F5F5F5]">
+      <div className="dark:bg-background w-full bg-[#F5F5F7]">
         <div className="mx-auto max-w-7xl">
           <div className="relative">
             {/* footer content */}

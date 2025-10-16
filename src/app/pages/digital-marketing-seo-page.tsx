@@ -22,14 +22,12 @@ export default function DigitalMarketingAndSeoPage() {
         descriptionClassName="!max-w-[920px]"
       />
       <main className="min-h-screen overflow-hidden">
+        {/* service description section */}
+        <ServiceDescription
+          sectionData={serviceDescriptionData}
+          TitleClassName="md:!max-w-xl"
+        />
         <div className="mx-auto max-w-7xl overflow-hidden">
-          {/* service description section */}
-          <div className="">
-            <ServiceDescription
-              sectionData={serviceDescriptionData}
-              TitleClassName="md:!max-w-xl"
-            />
-          </div>
           {/* explore our services / solutions */}
           <div className="my-5 md:my-14">
             <ExploreOurSolution />

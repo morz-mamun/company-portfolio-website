@@ -65,7 +65,7 @@ export default function ExploreServices() {
         descriptionClassName="lg:mb-20 mb-10 lg:max-w-[500px]"
       />
 
-      <div className="bg-[#F9F9F9] backdrop-blur-[5px] lg:pt-10 dark:bg-[#030712]">
+      <div className="bg-[#F5F5F7] backdrop-blur-[5px] lg:pt-10 dark:bg-[#030712]">
         <div className="relative mx-auto h-[500px] max-w-5xl overflow-hidden md:h-[700px]">
           {/* Central Toggle Button */}
           <motion.div

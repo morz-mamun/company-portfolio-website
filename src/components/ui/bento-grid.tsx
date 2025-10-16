@@ -47,7 +47,7 @@ export const BentoGridItem = ({
       <div className="absolute -inset-1 z-0 rounded-[inherit] bg-gradient-to-r from-purple-500 via-purple-400 to-blue-500 opacity-0 blur-sm transition-all duration-300 ease-out group-hover:opacity-100" />
 
       {/* Card Content */}
-      <div className="relative z-10 flex h-full flex-col justify-between space-y-4 rounded-xl border bg-white p-4 shadow-lg dark:border-white/[0.2] dark:bg-black">
+      <div className="relative z-10 flex h-full flex-col justify-between space-y-4 rounded-xl border bg-[#F5F5F7] p-4 shadow-lg dark:border-white/[0.2] dark:bg-black">
         {/* text */}
         <div>
           <h2 className="font-inter text-brand mt-2 mb-2 font-semibold dark:text-neutral-200">

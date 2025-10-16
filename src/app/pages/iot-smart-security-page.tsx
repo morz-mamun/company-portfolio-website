@@ -19,11 +19,9 @@ export default function IotSmartSecurityPage() {
         className="!h-[280px] md:!h-[350px] lg:!h-[400px]"
       />
       <main className="min-h-screen overflow-hidden">
+        {/* service description section */}
+        <ServiceDescription sectionData={serviceDescriptionData} />
         <div className="mx-auto min-h-screen max-w-7xl overflow-hidden">
-          {/* service description section */}
-          <div className="">
-            <ServiceDescription sectionData={serviceDescriptionData} />
-          </div>
           {/* explore our services / solutions */}
           <div className="my-14">
             <ExploreOurSolution />

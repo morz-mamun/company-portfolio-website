@@ -21,15 +21,12 @@ export default function WebAndSoftwareDevlopmentPage() {
         className="!h-[250px] md:!h-[350px]"
       />
       <main className="min-h-screen overflow-hidden">
+        {/* service description section */}
+        <ServiceDescription
+          sectionData={serviceDescriptionData}
+          TitleClassName="max-w-xl"
+        />
         <div className="mx-auto min-h-screen max-w-7xl overflow-hidden">
-          {/* service description section */}
-          {/* className="mt-10 lg:mt-14" */}
-          <div className="">
-            <ServiceDescription
-              sectionData={serviceDescriptionData}
-              TitleClassName="max-w-xl"
-            />
-          </div>
           {/* explore our services / solutions */}
           <div className="my-10 md:my-14">
             <ExploreOurSolution />

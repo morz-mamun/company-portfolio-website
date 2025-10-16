@@ -8,7 +8,7 @@ export default function SubServiceCard({ item }: { item: TSubServices }) {
       <div className="absolute -inset-[6px] z-0 rounded-[inherit] bg-gradient-to-r from-purple-500 via-purple-400 to-blue-500 opacity-0 blur-md transition-all duration-300 ease-out group-hover:opacity-100"></div>
 
       {/* Card Content */}
-      <div className="dark:bg-background relative z-10 flex flex-col items-center justify-center space-y-3 rounded-[12px] border border-[#DBDBDB] bg-white py-5 shadow-[0_2px_4.8px_1px_rgba(0,0,0,0.25)] md:space-y-5 md:py-12 dark:border-[#3D3D3D]">
+      <div className="dark:bg-background relative z-10 flex flex-col items-center justify-center space-y-3 rounded-[12px] border border-[#DBDBDB] bg-[#F5F5F7] py-5 shadow-[0_2px_4.8px_1px_rgba(0,0,0,0.25)] md:space-y-5 md:py-12 dark:border-[#3D3D3D]">
         <Icon
           icon={item?.icon}
           className="text-4xl text-[#3D3D3D] group-hover:text-[#0908C3] md:text-[80px] dark:text-[#F6F6F6]"
