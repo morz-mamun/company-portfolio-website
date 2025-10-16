@@ -14,33 +14,37 @@ import { saasAffiliatedToolsFaqSectionData } from '@/constants/faq-data/saas-aff
 
 export default function SaasAffiliatedToolsPage() {
   return (
-    <main className="mx-auto min-h-screen max-w-7xl overflow-hidden">
+    <div className="min-h-screen">
       {/* Banner Section */}
       <BannerTitleAndDescription
         sectionData={saasAffiliatedToolsBannerData}
         descriptionClassName="!max-w-[920px]"
       />
-      {/* service description section */}
-      <div className="mt-10 lg:mt-14">
-        <ServiceDescription sectionData={serviceDescriptionData} />
-      </div>
-      {/* explore our services / solutions */}
-      <div className="my-14">
-        <ExploreOurSolution />
-      </div>
-      {/* why client choose us */}
-      <div className="my-14">
-        <WhyChooseUs sectionData={whyChooseUsData} />
-      </div>
-      {/* let's build future of your business */}
-      <div>
-        <LetsBuildFutureBusiness sectionData={letsBuildFutureBusinessData} />
-      </div>
+      <main className="min-h-screen overflow-hidden">
+        <div className="mx-auto min-h-screen max-w-7xl overflow-hidden">
+          {/* service description section */}
+          <div className="mt-10 lg:mt-14">
+            <ServiceDescription sectionData={serviceDescriptionData} />
+          </div>
+          {/* explore our services / solutions */}
+          <div className="my-14">
+            <ExploreOurSolution />
+          </div>
+          {/* why client choose us */}
+          <div className="my-14">
+            <WhyChooseUs sectionData={whyChooseUsData} />
+          </div>
+        </div>
+        {/* let's build future of your business */}
+        <div>
+          <LetsBuildFutureBusiness sectionData={letsBuildFutureBusinessData} />
+        </div>
 
-      {/* FAQ section */}
-      <div className="mb-10 md:mb-20">
-        <FAQ data={saasAffiliatedToolsFaqSectionData} />
-      </div>
-    </main>
+        {/* FAQ section */}
+        <div className="mb-10 md:mb-20">
+          <FAQ data={saasAffiliatedToolsFaqSectionData} />
+        </div>
+      </main>
+    </div>
   );
 }

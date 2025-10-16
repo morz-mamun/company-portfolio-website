@@ -7,7 +7,7 @@ export default function BannerTitleBtn() {
     <div className="z-10 flex items-center justify-center">
       <div
         className={cn(
-          'group dark:bg-background rounded-full border border-black/5 bg-neutral-100 text-xs text-white transition-all ease-in hover:cursor-pointer hover:bg-neutral-200 md:text-base dark:border-white/5 dark:hover:bg-neutral-800',
+          'group dark:bg-background rounded-full border border-black/5 bg-neutral-100 text-xs text-white transition-all ease-in hover:cursor-pointer md:text-base dark:border-white/5',
         )}
       >
         <AnimatedShinyText className="inline-flex items-center justify-center px-4 py-2 transition ease-out hover:text-neutral-600 hover:duration-300 hover:dark:text-neutral-400">

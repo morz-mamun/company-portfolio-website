@@ -36,7 +36,7 @@ export const whatWeDoItemsData = [
   },
   {
     name: 'Emerging AI Services',
-    link: 'emerging-ai-services',
+    link: '/emerging-ai-services',
     icon: 'mdi:robot-outline', // Emerging AI
   },
 ];

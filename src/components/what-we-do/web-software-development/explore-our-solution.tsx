@@ -14,7 +14,7 @@ export default function ExploreOurSolution() {
     <section className="pt-14">
       {/* section heading */}
       <SectionHeading title={servicesSectionTitleData} />
-      <div className="relative border-y bg-[#FEFEFE] px-4 md:px-6 dark:bg-[#030712]">
+      <div className="relative border bg-[#FEFEFE] px-4 md:px-6 dark:bg-[#030712]">
         <div className="relative space-y-14 border-x py-14 md:space-y-32">
           {/* Ai Chatbot and Voice Assistant */}
           <Service sectionData={customWebDevelopmentData} />

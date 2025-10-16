@@ -14,37 +14,38 @@ import ExploreOurSolution from '@/components/what-we-do/ai-bpo-solution/explore-
 
 export default function AiBpoSolutionsPage() {
   return (
-    <main className="mx-auto min-h-screen max-w-7xl overflow-hidden">
+    <div className="min-h-screen">
       {/* Banner Section */}
-      <BannerTitleAndDescription
-        sectionData={aiBpoSolutionsBannerData}
-        descriptionClassName="!max-w-[920px]"
-      />
-      {/* service description section */}
-      <div className="mt-10 lg:mt-14">
-        <ServiceDescription
-          sectionData={serviceDescriptionData}
-          TitleClassName="md:max-w-lg max-w-sm px-[2px]"
-          descriptionTwoClassName="mt-3"
-        />
-      </div>
-      {/* explore our services / solutions */}
-      <div className="my-14">
-        <ExploreOurSolution />
-      </div>
-      {/* why client choose us */}
-      <div className="my-14">
-        <WhyChooseUs sectionData={whyChooseUsData} />
-      </div>
-      {/* let's build future of your business */}
-      <div>
-        <LetsBuildFutureBusiness sectionData={letsBuildFutureBusinessData} />
-      </div>
+      <BannerTitleAndDescription sectionData={aiBpoSolutionsBannerData} />
+      <main className="min-h-screen overflow-hidden">
+        <div className="mx-auto max-w-7xl overflow-hidden">
+          {/* service description section */}
+          <div className="mt-10 lg:mt-14">
+            <ServiceDescription
+              sectionData={serviceDescriptionData}
+              TitleClassName="md:max-w-lg max-w-sm px-[2px]"
+              descriptionTwoClassName="mt-3"
+            />
+          </div>
+          {/* explore our services / solutions */}
+          <div className="my-14">
+            <ExploreOurSolution />
+          </div>
+          {/* why client choose us */}
+          <div className="my-14">
+            <WhyChooseUs sectionData={whyChooseUsData} />
+          </div>
+        </div>
+        {/* let's build future of your business */}
+        <div>
+          <LetsBuildFutureBusiness sectionData={letsBuildFutureBusinessData} />
+        </div>
 
-      {/* FAQ section */}
-      <div className="mb-10 md:mb-20">
-        <FAQ data={aiBpoSolutionFaqSectionData} />
-      </div>
-    </main>
+        {/* FAQ section */}
+        <div className="mx-auto mb-10 max-w-7xl md:mb-20">
+          <FAQ data={aiBpoSolutionFaqSectionData} />
+        </div>
+      </main>
+    </div>
   );
 }

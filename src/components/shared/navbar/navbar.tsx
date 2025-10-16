@@ -17,7 +17,6 @@ import { whatWeDoItemsData } from '@/constants/navbar-data/what-we-do-items-data
 import { Icon } from '@iconify/react/dist/iconify.js';
 import { usePathname } from 'next/navigation';
 import { navItems } from '@/constants/navbar-data/main-nav-items-data';
-import ThemeToggleButton from '@/components/buttons/theme-toggle-btn';
 import { AnimatedThemeToggler } from '@/components/ui/animated-theme-toggler';
 
 export default function WebSiteNavbar() {

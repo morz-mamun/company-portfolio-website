@@ -23,10 +23,12 @@ export default function FAQ({ data }: { data: TFaqSection }) {
         >
           {items?.map(({ value, title, content }) => (
             <AccordionItem key={value} value={value}>
-              <AccordionTrigger className="font-inter cursor-pointer rounded-none border-b px-3">
+              <AccordionTrigger
+                className={`font-inter cursor-pointer rounded-none border-b px-3`}
+              >
                 {title}
               </AccordionTrigger>
-              <AccordionContent className="flex flex-col gap-4 border-b p-3">
+              <AccordionContent className="flex flex-col gap-4 border-b bg-[#F5F5F5] p-3 dark:bg-gradient-to-b dark:from-[#00163C] dark:to-[#000EAC]">
                 {content.map((para, i) => (
                   <p key={i}>{para}</p>
                 ))}

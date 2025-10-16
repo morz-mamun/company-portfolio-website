@@ -1,12 +1,6 @@
 'use client';
 import { Icon } from '@iconify/react/dist/iconify.js';
-import {
-  ArrowUpFromLine,
-  Facebook,
-  Linkedin,
-  Mail,
-  Twitter,
-} from 'lucide-react';
+import { ArrowUpFromLine, Linkedin, X } from 'lucide-react';
 import Link from 'next/link';
 import { TextHoverEffect } from '../ui/text-hover-effect';
 import { socialMediaData } from '@/constants/social-media-data';
@@ -15,9 +9,11 @@ import { useState } from 'react';
 import { whatWeDoItemsData } from '@/constants/navbar-data/what-we-do-items-data';
 import { usePathname } from 'next/navigation';
 import {
+  IconBrandFacebook,
   IconBrandInstagram,
   IconBrandPinterest,
   IconBrandTiktok,
+  IconBrandX,
 } from '@tabler/icons-react';
 
 export default function Footer() {
@@ -173,53 +169,63 @@ export default function Footer() {
                 <h4 className="font-inter mb-4 text-center text-lg font-semibold md:text-start">
                   Follow Us
                 </h4>
-                <div className="flex items-center gap-4">
+                <div className="flex items-center gap-2">
+                  <a
+                    href={socialMediaData?.linkedin}
+                    target="_blank"
+                    aria-label="linkedin"
+                    className="text-brand dark:text-primary rounded-full bg-black px-2 py-2 text-xs transition-colors hover:bg-[#0908C3] md:text-base dark:bg-white dark:hover:bg-[#0C34E9]"
+                  >
+                    <Linkedin
+                      size={18}
+                      className="text-white dark:text-black"
+                    />
+                  </a>
+                  <a
+                    href={socialMediaData?.twitter}
+                    target="_blank"
+                    aria-label="twitter"
+                    className="text-brand dark:text-primary rounded-full bg-black px-2 py-2 text-xs transition-colors hover:bg-[#0908C3] md:text-base dark:bg-white dark:hover:bg-[#0C34E9]"
+                  >
+                    <IconBrandX
+                      size={18}
+                      className="text-white dark:text-black"
+                    />
+                  </a>
                   <a
                     href={socialMediaData?.facebook}
                     target="_blank"
                     aria-label="facebook"
-                    className="text-brand dark:text-primary text-xs transition-colors md:text-base"
+                    className="text-brand dark:text-primary rounded-full bg-black px-2 py-2 text-xs transition-colors hover:bg-[#0908C3] md:text-base dark:bg-white dark:hover:bg-[#0C34E9]"
                   >
-                    <Facebook size={20} className="hover:text-blue-600" />
+                    <IconBrandFacebook
+                      size={18}
+                      className="text-white dark:text-black"
+                    />
                   </a>
                   {/* instagram */}
                   <a
                     href={socialMediaData?.instagram}
                     target="_blank"
                     aria-label="instagram"
-                    className="text-brand dark:text-primary text-xs transition-colors md:text-base"
+                    className="text-brand dark:text-primary rounded-full bg-black px-2 py-2 text-xs transition-colors hover:bg-[#0908C3] md:text-base dark:bg-white dark:hover:bg-[#0C34E9]"
                   >
                     <IconBrandInstagram
-                      size={20}
-                      className="hover:text-blue-600"
+                      size={18}
+                      className="text-white dark:text-black"
                     />
                   </a>
-                  <a
-                    href={socialMediaData?.linkedin}
-                    target="_blank"
-                    aria-label="linkedin"
-                    className="text-brand dark:text-primary text-xs transition-colors md:text-base"
-                  >
-                    <Linkedin size={20} className="hover:text-blue-600" />
-                  </a>
-                  <a
-                    href={socialMediaData?.twitter}
-                    target="_blank"
-                    aria-label="twitter"
-                    className="text-brand dark:text-primary text-xs transition-colors md:text-base"
-                  >
-                    <Twitter size={20} className="hover:text-blue-600" />
-                  </a>
+
                   {/* pinterest */}
                   <a
                     href={socialMediaData?.pinterest}
                     target="_blank"
                     aria-label="pinterest"
-                    className="text-brand dark:text-primary text-xs transition-colors md:text-base"
+                    className="text-brand dark:text-primary rounded-full bg-black px-2 py-2 text-xs transition-colors hover:bg-[#0908C3] md:text-base dark:bg-white dark:hover:bg-[#0C34E9]"
                   >
                     <IconBrandPinterest
-                      size={20}
-                      className="hover:text-blue-600"
+                      size={18}
+                      className="text-white dark:text-black"
                     />
                   </a>
                   {/* tiktok */}
@@ -227,11 +233,11 @@ export default function Footer() {
                     href={socialMediaData?.tiktok}
                     target="_blank"
                     aria-label="tiktok"
-                    className="text-brand dark:text-primary text-xs transition-colors md:text-base"
+                    className="text-brand dark:text-primary rounded-full bg-black px-2 py-2 text-xs transition-colors hover:bg-[#0908C3] md:text-base dark:bg-white dark:hover:bg-[#0C34E9]"
                   >
                     <IconBrandTiktok
-                      size={20}
-                      className="hover:text-blue-600"
+                      size={18}
+                      className="text-white dark:text-black"
                     />
                   </a>
                 </div>
