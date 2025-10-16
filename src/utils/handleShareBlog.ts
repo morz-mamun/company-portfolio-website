@@ -15,6 +15,8 @@ export const handleShareBlog = async (title: string) => {
       toast.success('Link copied to clipboard!');
     }
   } catch (err) {
-    toast.error('Failed to share.');
+    toast.error('Failed to share blog', {
+      description: (err as Error).message,
+    });
   }
 };
