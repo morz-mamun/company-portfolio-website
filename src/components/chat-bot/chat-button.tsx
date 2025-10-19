@@ -13,20 +13,22 @@ export function ChatButton() {
     <>
       <div
         className={cn(
-          'fixed right-8 bottom-5 z-50 h-[500px] w-[400px] transition-all duration-300 ease-in-out',
+          'fixed right-8 bottom-5 z-50 h-[calc(100vh-5rem)] w-[400px] transition-all duration-300 ease-in-out',
           isOpen
             ? 'translate-y-0 opacity-100'
             : 'pointer-events-none translate-y-4 opacity-0',
         )}
       >
-        <Card className="border-border/50 flex h-full flex-col p-0 shadow-2xl backdrop-blur-sm">
+        <Card className="bg-background flex h-full flex-col border p-0 shadow-md shadow-blue-400">
           {/* Header */}
           <div className="border-border/50 flex items-center justify-between border-b px-2 py-3">
             <div className="flex items-center gap-2">
               <div className="bg-primary/20 flex h-8 w-8 items-center justify-center rounded-full">
                 <MessageCircle className="h-5 w-5" />
               </div>
-              <h3 className="font-semibold">AI Assistance</h3>
+              <h3 className="font-inter text-lg font-medium">
+                TGCX Ai Assistant
+              </h3>
             </div>
             <Button
               variant="ghost"

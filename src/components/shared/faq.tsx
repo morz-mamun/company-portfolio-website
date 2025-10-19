@@ -28,9 +28,11 @@ export default function FAQ({ data }: { data: TFaqSection }) {
               >
                 {title}
               </AccordionTrigger>
-              <AccordionContent className="flex flex-col gap-4 border-b bg-[#F5F5F5] p-3 dark:bg-gradient-to-b dark:from-[#00163C] dark:to-[#000EAC]">
+              <AccordionContent className="dark:bg-background flex flex-col gap-4 border-b bg-[#F5F5F5] p-3">
                 {content.map((para, i) => (
-                  <p key={i}>{para}</p>
+                  <p key={i} className="text-blue-500">
+                    {para}
+                  </p>
                 ))}
               </AccordionContent>
             </AccordionItem>
