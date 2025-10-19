@@ -1,11 +1,18 @@
 import { getCompanyInfo } from '@/utils/getCompanyInfo';
-import { createOpenAI } from '@ai-sdk/openai';
+// import { createOpenAI } from '@ai-sdk/openai';
+import { createOpenRouter } from '@openrouter/ai-sdk-provider';
+import { google } from '@ai-sdk/google';
 import { convertToModelMessages, streamText, TextPart } from 'ai';
 import { NextResponse } from 'next/server';
 
 // Initialize OpenAI provider
-const openai = createOpenAI({
-  apiKey: process.env.OPENAI_API_KEY,
+// const openai = createOpenAI({
+//   apiKey: process.env.OPENAI_API_KEY,
+// });
+
+// Initialize OpenRouter provider
+const openrouter = createOpenRouter({
+  apiKey: process.env.OPENROUTER_API_KEY,
 });
 
 // Maximum number of previous messages to include
@@ -49,7 +56,9 @@ If the question is unclear, politely ask for clarification.`;
 
     // Generate streaming response using OpenAI
     const result = streamText({
-      model: openai('gpt-4o-mini'),
+      // model: openai('gpt-4o-mini'),
+      // model: google("gemini-2.0-flash"),
+      model: openrouter.chat('google/gemini-2.0-flash-001'),
       system: systemPrompt,
       messages: modelMessages,
       temperature: 0.7,

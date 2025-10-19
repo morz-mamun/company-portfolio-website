@@ -8,7 +8,7 @@ import { Input } from '@/components/ui/input';
 import { Send } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { ChatMessage } from './chat-message';
-// import { VoiceRecorder } from './voice-recorder';
+import { VoiceRecorder } from './voice-recorder';
 
 export function Chat() {
   const { messages, sendMessage, status, error } = useChat({
@@ -92,13 +92,13 @@ export function Chat() {
       {/* Input section */}
       <div className="space-y-3 border-t p-4">
         {/* This is for voice input */}
-        {/* <div className="flex justify-between">
+        <div className="flex justify-between">
           <span className="text-muted-foreground text-xs">Voice Input:</span>
           <VoiceRecorder
             onTranscript={handleVoiceTranscript}
             isDisabled={isLoading}
           />
-        </div> */}
+        </div>
 
         <form
           onSubmit={handleSubmit}
