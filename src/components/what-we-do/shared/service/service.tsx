@@ -1,4 +1,3 @@
-import PrimaryBtn from '@/components/buttons/primary-btn';
 import ServiceTitleAndDescription from './service-title-description';
 import SubServiceCard from '@/components/cards/sub-service-card';
 import { TServices } from '@/types/services';
