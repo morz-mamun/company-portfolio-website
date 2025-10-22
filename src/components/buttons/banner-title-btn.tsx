@@ -21,6 +21,7 @@ export default function BannerTitleBtn() {
             Introducing Trust Global Communications
           </p>
           <ArrowRightIcon className="ml-1 size-3 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" />
+          {/* <ArrowRightIcon className="ml-1 size-3 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" /> */}
         </AnimatedShinyText>
       </div>
     </div>
