@@ -34,7 +34,7 @@ export default function Footer() {
                 <div className="md:w-1/2 lg:w-full">
                   <h3 className="font-inter mb-2 text-lg font-bold">
                     <span className="dark:text-primary text-brand">
-                      Trust Global Communications
+                      CompanyX
                     </span>
                   </h3>
                   <p className="text-brand dark:text-primary mb-4 max-w-[425px] text-xs md:text-sm">
@@ -56,17 +56,17 @@ export default function Footer() {
                       width="18"
                       height="18"
                     />
-                    Chattogram Software technology park, Chittagong, Bangladesh.
+                    Chattogram Software Technology Park, Chittagong, Bangladesh.
                   </p>
                   {/* email address */}
                   <p className="dark:text-primary text-brand flex items-center gap-1 text-xs md:text-sm">
                     <Icon icon="ic:baseline-email" width="14" height="14" />
-                    service@trustglobalcommunications.com
+                    service@companyx.com
                   </p>
                   {/* phone number */}
                   <p className="dark:text-primary text-brand flex items-center gap-1 text-xs md:text-sm">
                     <Icon icon="ic:baseline-phone" width="14" height="14" />
-                    Phone: +8801710205657
+                    Phone: +8801234567890
                   </p>
                   {/* calling time */}
                   <p className="dark:text-primary text-brand flex items-center gap-1 text-xs md:text-sm">
@@ -246,8 +246,7 @@ export default function Footer() {
             {/* copyright */}
             <div className="pb-5 text-center text-zinc-500">
               <p className="text-xs md:text-sm">
-                © {currentYear} Trust Global Communications. All rights
-                reserved.
+                © {currentYear} CompanyX. All rights reserved.
               </p>
             </div>
             {/* back to top button for large screens */}
@@ -281,7 +280,7 @@ export default function Footer() {
       {/* bottom pattern */}
       <div className="border-t">
         <div className="mx-4 h-[6rem] md:mx-6 md:h-[9rem] lg:h-[12rem]">
-          <TextHoverEffect text="Trust Global Communications" />
+          <TextHoverEffect text="CompanyX" />
         </div>
       </div>
     </footer>

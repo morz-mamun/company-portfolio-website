@@ -304,13 +304,19 @@ export const NavbarLogo = () => {
         width={40}
         height={40}
       />
-      <p className="font-sansita">
+      {/* <p className="font-sansita">
         <span className="font-medium tracking-[0.2em] text-black dark:text-white">
           Trust Global
         </span>
         <span className="block text-xs text-black dark:text-white">
           Communications
         </span>
+      </p> */}
+      <p className="font-sansita">
+        <span className="font-medium tracking-[0.2em] text-black dark:text-white">
+          Company
+        </span>
+        <span className="block text-xs text-black dark:text-white">Name</span>
       </p>
     </Link>
   );

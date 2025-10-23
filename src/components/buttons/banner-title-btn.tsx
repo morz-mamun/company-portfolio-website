@@ -18,7 +18,7 @@ export default function BannerTitleBtn() {
               width="20"
               height="20"
             />{' '}
-            Introducing Trust Global Communications
+            Introducing Trust Globe AI
           </p>
           <ArrowRightIcon className="ml-1 size-3 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" />
           {/* <ArrowRightIcon className="ml-1 size-3 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" /> */}
